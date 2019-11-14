@@ -1,0 +1,6 @@
+- Communicate a lot
+  - Even with a styleguide site, etc. stuff is hard to find
+  - Make a component search box (e.g. a `<datalist>`) to quickly find components
+    - Can even uses aliases to help
+  - Newsletters/announcements can help communicate changes
+  - Version history is helpful for traceability and even detailing _why_
