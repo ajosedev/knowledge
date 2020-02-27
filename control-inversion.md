@@ -10,3 +10,8 @@ Super simplified:
 TODO - examples
 
 TODO - State reducer pattern
+
+
+Reading:
+https://kentcdodds.com/blog/inversion-of-control
+https://kentcdodds.com/blog/the-state-reducer-pattern-with-react-hooks
