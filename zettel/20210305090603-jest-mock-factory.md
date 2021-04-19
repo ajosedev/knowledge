@@ -25,6 +25,18 @@ jest.mock('../moduleName', () => ({
 }));
 ```
 
+To only mock a **particular named** export:
+```javascript
+jest.mock('../moduleName', () => {
+    const actual = jest.requireActual('../moduleName');
+
+    return {
+        ...actual,
+        foo: jest.fn(() => 'named mock'),
+    };
+});
+```
+
 ---
 
 Calls to `jest.mock` are hoisted to the top of the code. This creates the limitation that it's not possible to first define a variable and use it inside the factory. An exception is made for variables that start with the work `mock`.
