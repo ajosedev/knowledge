@@ -3,6 +3,13 @@
 The `keyof` operator takes an object type and produces a string or numeric literal union of its keys.
 
 ```typescript
+type Point = { x: number; y: number };
+type P = keyof Point; // type '"x" || "y"'
+
+const coordinate: P = 'z' // Type '"z"' is not assignable to type '"x" | "y"'.
+```
+
+```typescript
 interface Person {
   age: number;
   name: string;
