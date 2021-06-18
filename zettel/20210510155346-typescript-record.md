@@ -3,7 +3,7 @@
 `Record<Keys, Type>`
 Creates a type with a set of properties `Keys` of the type `Type`. This is a much easier way of making a typed object.
 
-```
+```typescript
 interface PageInfo {
   title: string;
 }
