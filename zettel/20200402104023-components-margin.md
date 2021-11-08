@@ -1,6 +1,6 @@
 # Reusable components and margin
 
-Adding margin to the styling of a component makes reusing it in different contexts much harder. As it affects siblings and those around it, it can often lead to pages having unwanted margins from inner components that were initially not used in this way.
+Margin should be thought of as a property that defines the relationship between two elements, rather than tied to a single element. Adding margin to a components' styles makes it much harder to use it in different contexts. As it affects siblings and those around it, it can often lead to pages having unwanted margins from inner components that were initially not used in this way.
 
 Components should only style things within themselves, otherwise it makes component encapsulation harder. Thus, a similar problem with `margin` in components exists when using `z-index`.
 
@@ -13,6 +13,7 @@ Padding is fine as it affects inner, margin is not as it affects outer.
 https://mxstbr.com/thoughts/margin
 
 [[20200314214239-layout-components]] 
+[[20210519122422-first-class-space]]
 
 #components
 #css

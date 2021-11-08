@@ -24,4 +24,6 @@ const callbackRef = useCallback(inputElement => {
 This will be called with the element that the ref is attached to once it exists, and then called with `null` once it no longer exists. This also doesn't have the issue of it firing too early, as it will be re-called if the underlying node changes, e.g. if it is dynamically rendered later.
 Note the `[]` for the deps array.
 
+keywords: autofocus
+
 #react

@@ -8,23 +8,21 @@ Two main methods of sharing state between related components:
 - React.cloneElement
 - Context
 
-An example:
+The former is easier to create, but the latter allows for more flexibility as the child compound component doesn't have to be a direct descendent of its parent.
+
+With React.cloneElement, the parent component will re-render its children extending new props:
 ```javascript
-<Modal>
-  <ModalOpenButton>
-    <Button variant="secondary">Register</Button>
-  </ModalOpenButton>
-  <ModalContents aria-label="Registration form" title="Register">
-    <LoginForm
-      onSubmit={register}
-      submitButton={<Button variant="secondary">Register</Button>}
-    />
-  </ModalContents>
-</Modal>
+{React.Children.map(children, child => (
+    React.cloneElement(child, newProps)
+))}
 ```
 
-TODO:
-compound components (clone)
-compound components (context)
+With React.Context, the parent component will render its children inside of a provider, which the child components may use:
+```javascript
+<Context.Provider value={value}>
+    {children}
+</Context.Provider>
+```
 
+#components
 #react

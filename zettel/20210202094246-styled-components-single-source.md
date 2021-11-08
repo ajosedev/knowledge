@@ -50,4 +50,6 @@ However this approach is better for one-offs, as we don't need contextual stylin
 
 https://www.joshwcomeau.com/css/styled-components/#single-source-of-styles
 
+[[20210716112154-styled-components-ampersand]]
+
 #css

@@ -4,4 +4,8 @@ Use `useLayoutEffect` if the side effect that you are performing makes an observ
 
 Otherwise, use `useEffect`
 
+—
+
+For some more context, `componentDidMount` would render twice before painting once, in order to stop a flicker in the browser if the DOM changes. `useEffect` also runs after mount, but it runs after the first paint. `useLayoutEffect` can help stop a flicker when setting state syncrhonously.
+
 #react

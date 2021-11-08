@@ -1,8 +1,9 @@
 # Layout components
 
-Layout components that apply generic styling to its children elements are more helpful than applying styling directly to the children. This strategy allows you to make fully unopinionated components, and then lay them out as necessary, making the components more flexible. A well-built component should not affect anything outside of itself - for that reason, adding `margin` to components is bad practice.
+Layout components that apply generic styling to its children elements are more helpful than applying styling directly to the children. They allow for fully unopinionated components, that can be used in any context. A well-built component should not affect anything outside of itself - for that reason, adding `margin` to components is bad practice.
 
-Layout components also help you align space to a set scale. Some example components are: `Stack`, `Inline`, and `Box`
+Layout components also help you align space to a set scale through props, etc. rather than applying bespoke values at the component level.
+Some example components are: `Stack`, `Inline`, and `Box`
 
 https://mxstbr.com/thoughts/margin/
 
