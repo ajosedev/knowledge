@@ -6,4 +6,5 @@ Instead use an animated transparent mask, which moves the colour with transforms
 
 https://codepen.io/sdras/pen/akAWPR/
 
+[[animations]]
 [[css]]

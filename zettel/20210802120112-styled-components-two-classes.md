@@ -7,3 +7,4 @@ The other class is **dynamic**, and is different for every element of your style
 https://styled-components.com/docs/faqs#why-do-my-dom-nodes-have-two-classes
 
 [[css]]
+[[cssinjs]]

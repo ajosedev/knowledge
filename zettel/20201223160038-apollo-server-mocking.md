@@ -9,7 +9,6 @@ Ideal scenario would be like `apollo-server`, mocking type for type by default, 
 
 https://www.freecodecamp.org/news/a-new-approach-to-mocking-graphql-data-1ef49de3d491/
 
-[[apollo]]
 [[graphql]]
 [[mocking]]
 [[testing]]

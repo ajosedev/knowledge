@@ -6,6 +6,5 @@
 [[20201223160038-apollo-server-mocking]]
 
 [[graphql]]
-[[apollo]]
 [[mocking]]
 [[testing]]
