@@ -23,7 +23,9 @@ Bidirectional host: Can act as either a 'host' or 'remote'
 Omnidirectional hosts: Acts as both a 'host' and 'remote' at once
 
 ## Where/what could you federate?
+
 Some examples of where to draw some lines:
+
 - UI code
 - Configurations
 - Business logic
@@ -40,6 +42,6 @@ Coming soon, gives stats/graphs/views on how everything is consuming one another
 
 [[20210927141042-module-federation]]
 
-#browsers
-#js
-#web
+[[browsers]]
+[[js]]
+[[web]]

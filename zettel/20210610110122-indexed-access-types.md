@@ -38,4 +38,4 @@ type Person = typeof MyArray[number];
 
 [[20210331123636-mapped-types]]
 
-#ts
+[[ts]]

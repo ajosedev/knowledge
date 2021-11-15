@@ -9,4 +9,4 @@ Named exports:
 - Easier re-exporting
 - Cleaner dynamic imports
 
-#js
+[[js]]

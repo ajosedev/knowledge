@@ -38,5 +38,5 @@ const gender = getProperty(person, "gender");
 
 This can be very helpful for mapped types. [[20210331123636-mapped-types]]
 
-#js
-#ts
+[[js]]
+[[ts]]

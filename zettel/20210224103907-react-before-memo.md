@@ -51,5 +51,5 @@ function ColorPicker({ children }) {
 
 This works with `props.children` as in the example, but also works for a named prop. `<Component logger={<Logger />} />`
 
-#components
-#react
+[[components]]
+[[react]]

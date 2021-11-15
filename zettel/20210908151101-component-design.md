@@ -45,5 +45,5 @@ tl;dr - object props are more consistent, type safe and thus restrictive too. Co
 https://twitter.com/brad_frost/status/1090733766950223878
 https://twitter.com/housecor/status/1405512541846052871
 
-#components
-#react
+[[components]]
+[[react]]

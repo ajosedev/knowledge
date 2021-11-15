@@ -15,4 +15,4 @@ Do not get this type confused with `Object` (uppercase 'o') which describes func
 
 There is also `{}`, which is the **empty type**. This describes an object which has no members on its own, but still has access to all properties and methods defined on the `Object` type.
 
-#ts
+[[ts]]

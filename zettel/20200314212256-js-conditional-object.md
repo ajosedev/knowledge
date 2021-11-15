@@ -11,4 +11,4 @@ You can add a a key/value pairing to an object based on a condition, while decla
 
 Possible to do it after as well, but it would require more lines.
 
-#js
+[[js]]

@@ -6,5 +6,5 @@ This is similar to the logical OR operator (`||`), which returns the right-hand 
 
 Very useful if you consider some falsy values (such as `''` or `0`) as valid.
 
-#js
-#ts
+[[js]]
+[[ts]]

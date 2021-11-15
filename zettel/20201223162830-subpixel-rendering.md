@@ -6,6 +6,6 @@ The fix is to add a tiny rotation, which makes the animation smooth. Although, t
 
 [https://bugzilla.mozilla.org/show_bug.cgi?id=739176](https://bugzilla.mozilla.org/show_bug.cgi?id=739176)
 
-#css
-#animations
-#browsers
+[[css]]
+[[animations]]
+[[browsers]]

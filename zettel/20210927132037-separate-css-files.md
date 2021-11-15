@@ -6,5 +6,5 @@ The main motivation is to enforce a boundary between what exists at runtime and 
 
 https://www.youtube.com/watch?v=23VqED_kO2Q
 
-#components
-#css
+[[components]]
+[[css]]

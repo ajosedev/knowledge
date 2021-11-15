@@ -6,5 +6,5 @@ Additionally, automated fixing can be leveraged to avoid small disagreements on 
 
 Tools like `eslint` and `prettier` are great for this.
 
-#code
-#concepts
+[[code]]
+[[concepts]]

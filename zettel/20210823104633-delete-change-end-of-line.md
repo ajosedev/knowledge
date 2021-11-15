@@ -4,4 +4,4 @@ Much like `A` and `I` operate on the end/start of line respectively, the followi
 `C` - Change from cursor until end of line (i.e. `C$`)
 `D` - Delete from cursor until end of line (i.e. `D$`)
 
-#vim
+[[vim]]

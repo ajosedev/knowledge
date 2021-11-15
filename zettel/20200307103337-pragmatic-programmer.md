@@ -5,6 +5,6 @@
 [[20200307104931-orthogonality]]
 [[20200307105301-dry]]
 
-#abstraction
-#concepts
-#etc
+[[abstraction]]
+[[concepts]]
+[[etc]]

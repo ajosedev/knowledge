@@ -1,3 +1,3 @@
-# Topic - #design
+# Topic - design
 
 #topic-page

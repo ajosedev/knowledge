@@ -11,4 +11,4 @@ fd * -x mv {} prefix-{}
 
 https://github.com/sharkdp/fd#command-execution
 
-#shell
+[[shell]]

@@ -12,5 +12,5 @@ type DataKeys = keyof Data; // "x" | "y"
 type Keys = keyof typeof dataObj;
 ```
 
-#js
-#ts
+[[js]]
+[[ts]]

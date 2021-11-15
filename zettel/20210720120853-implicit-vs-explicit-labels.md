@@ -14,4 +14,4 @@ https://www.w3.org/TR/WCAG20-TECHS/H44.html
 
 > The objective of this technique is to use the `label` element to explicitly associate a form control with a label
 
-#a11y
+[[a11y]]

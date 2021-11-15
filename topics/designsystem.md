@@ -1,4 +1,4 @@
-# Topic - #designsystem
+# Topic - designsystem
 
 #topic-page 
 

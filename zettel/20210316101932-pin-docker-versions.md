@@ -4,5 +4,5 @@ Pinning versions for Docker dependencies is always a good idea to keep everythin
 
 You can pin to varying degrees, whether that be major, minor, or patch versions.
 
-#docker
-#ops
+[[docker]]
+[[ops]]

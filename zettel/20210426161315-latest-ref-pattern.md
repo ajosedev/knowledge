@@ -18,7 +18,7 @@ React.useEffect(() => { callbackRef() }, [])
 
 https://epicreact.dev/the-latest-ref-pattern-in-react/
 
-#react
+[[react]]
 
 Different post — (TODO)
 With functional components, React creates new functions on every render, which have the current props 'trapped' inside of them (in a closure). This means that if a function is still running when a prop updates (e.g. an async function), it will act upon the prop value at the time the async function was _called_ rather than what it is when it _returns_. This is because the older function still has access to the props it was called with, and the new function is disconnected from that.

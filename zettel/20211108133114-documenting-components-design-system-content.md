@@ -21,6 +21,6 @@ Pictures are good, but words are easier to compose and update. Consider the trad
 
 [[20211108131544-documenting-components-design-systems]]
 
-#components
-#design
-#designsystem
+[[components]]
+[[design]]
+[[design]]system

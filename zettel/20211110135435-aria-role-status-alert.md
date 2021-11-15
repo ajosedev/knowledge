@@ -15,4 +15,4 @@ If focus should move to a message, an `alertdialog` is better suited.
 https://w3c.github.io/aria/#alert
 https://w3c.github.io/aria/#status
 
-#a11y
+[[a11y]]

@@ -9,6 +9,6 @@ Before merging to master, it's a good goal to have clean commit messages (as alw
 `git add -p` to add changes on a per-hunk basis
 `git push -f` once all the new commits have been created
 
-This allows you to effectively 'restart' your branch, keeping all your changes unstaged and able to be commited in a more appropriate  order.
+This allows you to effectively 'restart' your branch, keeping all your changes unstaged and able to be commited in a more appropriate order.
 
-#git
+[[git]]

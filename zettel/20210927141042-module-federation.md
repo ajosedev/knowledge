@@ -13,6 +13,6 @@ Imagine each page being a separate microfrontend, with its own tooling, code, re
 https://webpack.js.org/concepts/module-federation/
 https://single-spa.js.org/docs/recommended-setup/#overview
 
-#browsers
-#js
-#web
+[[browsers]]
+[[js]]
+[[web]]

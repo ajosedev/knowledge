@@ -16,4 +16,4 @@ When using the `strictNullChecks` compiler option, `null` and `undefined` are no
 
 There is also the 'Non-null assertion operator' (`!.`) which assers that its operand is non-null and non-undefined, e.g. `foo!.bar` asserts that `foo` is valid and we can call `bar` on it. This only 'ignores' the error, as it doesn't change any of the code at runtime.
 
-#ts
+[[ts]]

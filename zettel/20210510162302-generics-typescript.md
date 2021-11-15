@@ -17,5 +17,5 @@ The generic type variable (`T`) can be named anything - it's helpful to give it 
 Generics can be used in classes, types, interfaces, etc. This is where a lot of power comes from, as they can be passed through a type, to a function, to an interface, and then finally to a React prop for type safety.
 They can also be constrained: e.g. `T extends Lengthwise` so now `arg.length` is valid, and you won't be able to pass in a number as it doesn't have a `.length`
 
-#js
-#ts
+[[js]]
+[[ts]]

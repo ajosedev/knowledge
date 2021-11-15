@@ -24,4 +24,4 @@ When using a type guard style check on the _discriminant_ property (e.g. `kind`)
 
 [[20210705102809-narrowing]]
 
-#ts
+[[ts]]

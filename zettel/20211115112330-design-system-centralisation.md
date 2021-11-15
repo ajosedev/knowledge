@@ -8,5 +8,5 @@ Much like non-UI code, abstracting too early can create a subpar solution that d
 
 [[20211115112656-rule-of-three]]
 
-#concepts
-#designsystem
+[[concepts]]
+[[design]]system

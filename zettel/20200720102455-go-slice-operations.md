@@ -6,4 +6,4 @@ When dealing with lists or similar in Go, square brackets can be used to access 
 `[:4]` will return anything before the fourth byte
 `[4:]` will return anything after (and including) the fourth byte
 
-#go
+[[go]]

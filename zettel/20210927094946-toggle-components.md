@@ -6,5 +6,5 @@ aria-checked
 aria-pressed
 ?
 
-#a11y
-#components
+[[a11y]]
+[[components]]

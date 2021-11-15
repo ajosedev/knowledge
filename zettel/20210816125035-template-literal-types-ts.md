@@ -18,4 +18,4 @@ There's also some included helper types for string manipulation:
 
 https://www.typescriptlang.org/docs/handbook/2/template-literal-types.html
 
-#ts
+[[ts]]

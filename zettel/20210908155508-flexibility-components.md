@@ -14,4 +14,4 @@ Makes your components usable everywhere
 Your component fits all of the use cases well
 However flexibility of how you use the component is not necessarily the same as flexibility in what the component looks like/renders
 
-#components
+[[components]]

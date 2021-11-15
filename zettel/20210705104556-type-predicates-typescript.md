@@ -10,4 +10,4 @@ function isFish(pet: Fish | Bird): pet is Fish {
 
 [[20210705102809-narrowing]]
 
-#ts
+[[ts]]

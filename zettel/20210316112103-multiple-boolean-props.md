@@ -10,22 +10,23 @@ function CommonButton({
   primary,
   warning,
   danger,
-  type = 'button',
+  type = "button",
 }) {
-  let backgroundColor = '#33a1cc'
-  if (primary) backgroundColor = '#17b890'
-  if (warning) backgroundColor = '#ffd166'
-  if (danger) backgroundColor = '#f0544f'
+  let backgroundColor = "#33a1cc";
+  if (primary) backgroundColor = "#17b890";
+  if (warning) backgroundColor = "#ffd166";
+  if (danger) backgroundColor = "#f0544f";
 
   return (
     <button onClick={onClick} type={type} style={{ backgroundColor }}>
       {children}
     </button>
-  )
+  );
 }
 ```
 
 If the user passes multiple variants in the one call, what should happen?
+
 ```javascript
 <CommonButton danger primary warning>
   Click Me!
@@ -35,10 +36,8 @@ If the user passes multiple variants in the one call, what should happen?
 A better solution is to use a single prop that accepts an enum - this makes it easier to not make mistakes, and affords better typing also. It's no longer possible to create an impossible state, and adding new variants in the future is also easier.
 
 ```javascript
-<CommonButton variant="warning">
-  Click Me!
-</CommonButton>
+<CommonButton variant="warning">Click Me!</CommonButton>
 ```
 
-#react
-#smells
+[[react]]
+[[smells]]

@@ -16,5 +16,5 @@ export function PrefixIcon({ icon: Icon }: { icon: IconProps }) {
 }
 ```
 
-#react
-#ts
+[[react]]
+[[ts]]

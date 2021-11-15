@@ -14,5 +14,5 @@ type P = ReturnType<typeof f>;
 //   }
 ```
 
-#js
-#ts
+[[js]]
+[[ts]]

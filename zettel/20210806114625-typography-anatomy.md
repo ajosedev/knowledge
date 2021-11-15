@@ -6,5 +6,5 @@ CSS uses 'half-leading', which is where most of the woes of line-height come fro
 
 [[20210806120022-leading-trim-css]]
 
-#css
-#typography
+[[css]]
+[[typography]]

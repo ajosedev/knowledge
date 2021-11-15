@@ -9,4 +9,4 @@ ls # runs ls -al
 \ls # runs ls
 ```
 
-#shell
+[[shell]]

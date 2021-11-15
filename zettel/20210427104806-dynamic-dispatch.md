@@ -4,5 +4,5 @@ When a language has dynamic dispatch, it means we can't be 100% sure which funct
 
 Lower level languages use static dispatch instead.
 
-#concepts
-#js
+[[concepts]]
+[[js]]

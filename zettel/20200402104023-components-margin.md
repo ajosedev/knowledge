@@ -12,9 +12,9 @@ Padding is fine as it affects inner, margin is not as it affects outer.
 
 https://mxstbr.com/thoughts/margin
 
-[[20200314214239-layout-components]] 
+[[20200314214239-layout-components]]
 [[20210519122422-first-class-space]]
 
-#components
-#css
-#layout
+[[components]]
+[[css]]
+[[layout]]

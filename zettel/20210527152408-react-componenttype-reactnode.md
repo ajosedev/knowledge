@@ -18,5 +18,5 @@ return <button>{icon}</button>
 return <button><IconComponent /></button>
 ```
 
-#react
-#ts
+[[react]]
+[[ts]]

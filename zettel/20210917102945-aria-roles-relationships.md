@@ -16,6 +16,6 @@ Possible solutions:
 - Modify the DOM tree
 - Use `role="presentation"` or `role="none"`
 
-#a11y
+[[a11y]]
 
 https://sarahmhigley.com/writing/roles-and-relationships/

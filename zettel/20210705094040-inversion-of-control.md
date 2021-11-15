@@ -12,4 +12,4 @@ https://kentcdodds.com/blog/inversion-of-control
 
 [[20210816103245-state-reducer-pattern]]
 
-#concepts
+[[concepts]]

@@ -26,4 +26,4 @@ I believe most of these shortcuts are powered by Ivy/Counsel
 
 [[20201223155402-rg-filetype]]
 
-#emacs
+[[emacs]]

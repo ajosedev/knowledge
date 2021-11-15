@@ -21,5 +21,5 @@ This requires all values of the Keys to be present in the Record
 
 https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeystype
 
-#js
-#ts
+[[js]]
+[[ts]]

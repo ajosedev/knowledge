@@ -7,4 +7,4 @@ Default parameters can:
 	const printUserDetails(first, last, full = combineStrings(first, last), firstLetter = first[0]) => {};
 ```
 
-#js
+[[js]]

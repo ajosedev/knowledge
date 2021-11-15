@@ -6,6 +6,6 @@ Some examples include `Canvas`, `CanvasText`, `Field`, `Highlight`, and more.
 
 Support as of right now is a little spotty, so these aren't really ready for prime time.
 
-https://drafts.csswg.org/css-color/#css-system-colors
+https://drafts.csswg.org/css-color/[[css]]-system-colors
 
-#css
+[[css]]

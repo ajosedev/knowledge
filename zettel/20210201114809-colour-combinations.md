@@ -7,5 +7,5 @@ Complementary - Across the colour spectrum
 Analogous - Next to each other on the colour spectrum
 Triadic - Three colours equally spread across the colour spectrum
 
-#colour
-#design
+[[colour]]
+[[design]]

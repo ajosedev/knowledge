@@ -7,5 +7,5 @@ Using `.*` in regex matches anything except line breaks
 
 This search won't show components with props over multiple lines, but it's decent.
 
-#emacs
-#shell
+[[emacs]]
+[[shell]]

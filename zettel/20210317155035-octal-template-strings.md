@@ -11,4 +11,4 @@ will not work. Instead, to use a unicode escape, it should be prefixed with `\u`
 
 More info here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#ES2016_behavior
 
-#js
+[[js]]

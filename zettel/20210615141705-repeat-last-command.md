@@ -10,4 +10,4 @@
 # Outputs sudo rm -rf *
 ```
 
-#shell
+[[shell]]

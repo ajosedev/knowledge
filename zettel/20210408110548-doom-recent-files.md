@@ -4,4 +4,4 @@
 
 `SPC p r` - shows recent files in current project
 
-#emacs
+[[emacs]]

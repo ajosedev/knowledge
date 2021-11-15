@@ -16,5 +16,5 @@ Some examples are:
 https://medium.com/merrickchristensen/headless-user-interface-components-565b0c0f2e18
 https://github.com/jxom/awesome-react-headless-components
 
-#components
-#react
+[[components]]
+[[react]]

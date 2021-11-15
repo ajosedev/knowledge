@@ -32,5 +32,5 @@ const goodbyeConst: { // error!
 // type '{ (name: number): number; (name: string): string; }'.
 ```
 
-#js
-#ts
+[[js]]
+[[ts]]

@@ -16,5 +16,5 @@ https://www.typescriptlang.org/docs/handbook/utility-types.html
 
 [[20210510155346-typescript-record]]
 
-#js
-#ts
+[[js]]
+[[ts]]

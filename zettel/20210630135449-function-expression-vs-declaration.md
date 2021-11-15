@@ -27,4 +27,4 @@ button.addEventListener('click', function(event) {
 })
 ```
 
-#js
+[[js]]

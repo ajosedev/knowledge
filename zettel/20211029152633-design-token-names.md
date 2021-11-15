@@ -5,5 +5,5 @@ The naming scheme for your design tokens is important, this is what people will 
 Some examples:
 Asana uses `sentiment-usage-prominence-interaction`, e.g. `warning-text-default-hover`
 
-#design
-#designsystem
+[[design]]
+[[design]]system

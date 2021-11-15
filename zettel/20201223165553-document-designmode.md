@@ -4,4 +4,4 @@ Makes the entire document editable, similar to \`contentEditable\` but on every 
   
 [https://developer.mozilla.org/en-US/docs/Web/API/Document/designMode](https://developer.mozilla.org/en-US/docs/Web/API/Document/designMode)
 
-#js
+[[js]]

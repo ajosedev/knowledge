@@ -35,6 +35,6 @@ For longer pages, add navigation helpers (e.g. scrolling table of contents)
 
 https://medium.com/eightshapes-llc/documenting-components-9fe59b80c015
 
-#components
-#design
-#designsystem
+[[components]]
+[[design]]
+[[design]]system

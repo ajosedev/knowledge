@@ -11,6 +11,6 @@ This mindset is a lot closer to the `gap` property of CSS, and avoids having to 
 [[20200314214239-layout-components]]
 [[20200402104023-components-margin]]
 
-#components
-#css
-#layout
+[[components]]
+[[css]]
+[[layout]]

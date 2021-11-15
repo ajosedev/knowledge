@@ -4,4 +4,4 @@ When pair programming, it's important to avoid getting sidetracked. You're using
 
 Solo programming allows yu to go down rabbit holes on your own time, so wait until then for any deep dives.
 
-#engineering
+[[engineering]]

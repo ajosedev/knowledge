@@ -18,4 +18,4 @@ if (foo.bar) {
 foo.bar?.()
 ```
 
-#js
+[[js]]

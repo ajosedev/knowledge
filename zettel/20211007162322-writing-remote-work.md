@@ -1,6 +1,7 @@
 # Writing matters in remote work
 
 Writing saves time.
+
 > “Five people in a room for an hour isn’t a one hour meeting, it’s a five hour meeting.”
 
 Writing is asynchronous, and non-disruptive. People can chime in on their own time.
@@ -12,4 +13,4 @@ Writing invites other perspectives, it forces you think clearly about what you a
 
 https://www.timcasasola.com/blog/writing
 
-#writing
+[[writing]]

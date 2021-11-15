@@ -12,4 +12,4 @@ If the progress bar is describing a particular region of a page, use `aria-descr
 
 `aria-valuetext` can be used instead of `aria-valuenow` for a better text representation.
 
-#a11y
+[[a11y]]
