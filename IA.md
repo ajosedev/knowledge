@@ -15,3 +15,4 @@ Use literature notes for podcasts, videos, articles, etc. and then later action 
 Add the title, author, and url to help categorise them.
 When done, move them to a separate 'archive' folder
 
+Don't create a structure top-down, create the content and then create the structure for your content (bottom up)

@@ -1,7 +1,5 @@
 # Topic - designsystem
 
-#topic-page 
-
 Tokens:
 [[20210927144324-design-tokens]]
 [[20211029152633-design-token-names]]
@@ -16,3 +14,5 @@ Boundaries:
 
 Centralisation:
 [[20211115112330-design-system-centralisation]]
+
+#topic-page
