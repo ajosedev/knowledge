@@ -19,6 +19,8 @@ To produce quality guidelines, you'll need content architecture, writing convent
 Consider categories such as: use when, visual style, behaviour, editorial, accessibility, dos/donts
 Pictures are good, but words are easier to compose and update. Consider the tradeoff
 
+[[20211108131544-documenting-components-design-systems]]
+
 #components
 #design
 #designsystem
