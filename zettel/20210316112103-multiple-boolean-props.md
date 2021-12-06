@@ -40,4 +40,5 @@ A better solution is to use a single prop that accepts an enum - this makes it e
 ```
 
 [[react]]
+[[reactapi]]
 [[smells]]

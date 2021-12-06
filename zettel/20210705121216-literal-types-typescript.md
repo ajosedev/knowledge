@@ -9,4 +9,6 @@ type alignment = 'left' | 'middle' | 'right'
 type fib = 1 | 2 | 3 | 5 | 8
 ```
 
+[[20210816125035-template-literal-types-ts]]
+
 [[ts]]

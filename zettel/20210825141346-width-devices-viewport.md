@@ -20,4 +20,4 @@ https://web.dev/responsive-web-design-basics/
 https://www.mydevice.io/
 
 [[css]]
-[[responsive-design]]
+[[responsivedesign]]

@@ -11,4 +11,4 @@ However this probably can be extended too far and get confusing, do you need sep
 [[20211029152633-design-token-names]]
 
 [[design]]
-[[design]]system
+[[designsystem]]

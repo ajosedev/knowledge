@@ -12,4 +12,6 @@ return (
 
 Note: `material-ui` does this for some of their components.
 
+[[components]]
 [[react]]
+[[reactapi]]

@@ -28,4 +28,7 @@ People may not have context, but they should still be able to understand what yo
 
 Fewer commas. More periods.
 
+[[career]]
+[[communication]]
+[[engineering]]
 [[writing]]

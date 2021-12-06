@@ -17,4 +17,4 @@ This works excellently for components which often have encapsulated requirements
 ```
 
 [[css]]
-[[responsive-design]]
+[[responsivedesign]]

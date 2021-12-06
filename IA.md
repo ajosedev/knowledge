@@ -1,5 +1,3 @@
-Review current IA
-
 - Use `[[tags]]` over `#tags`
 - Create topic pages rather than tags
 - Use tags for status, rather than topics. e.g. `#topic-page`, `#new`
@@ -16,3 +14,8 @@ Add the title, author, and url to help categorise them.
 When done, move them to a separate 'archive' folder
 
 Don't create a structure top-down, create the content and then create the structure for your content (bottom up)
+
+---
+
+- Review current topic pages, e.g. engineering, concepts, etc.
+- Flesh out current topic pages

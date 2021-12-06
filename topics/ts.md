@@ -1,5 +1,5 @@
 # Topic - ts
 
-Parent: [[programming]]
+Parent: [[languages]]
 
 #topic-page 

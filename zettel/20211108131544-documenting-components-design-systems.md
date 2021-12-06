@@ -37,4 +37,4 @@ https://medium.com/eightshapes-llc/documenting-components-9fe59b80c015
 
 [[components]]
 [[design]]
-[[design]]system
+[[designsystem]]

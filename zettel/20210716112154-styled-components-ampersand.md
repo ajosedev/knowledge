@@ -63,3 +63,4 @@ https://github.com/styled-components/styled-components/issues/3244#issuecomment-
 
 [[css]]
 [[cssinjs]]
+[[styledcomponents]]

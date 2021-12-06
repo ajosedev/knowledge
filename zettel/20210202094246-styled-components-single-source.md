@@ -54,3 +54,4 @@ https://www.joshwcomeau.com/css/styled-components/#single-source-of-styles
 
 [[css]]
 [[cssinjs]]
+[[styledcomponents]]

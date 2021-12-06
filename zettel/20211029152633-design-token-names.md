@@ -6,4 +6,4 @@ Some examples:
 Asana uses `sentiment-usage-prominence-interaction`, e.g. `warning-text-default-hover`
 
 [[design]]
-[[design]]system
+[[designsystem]]

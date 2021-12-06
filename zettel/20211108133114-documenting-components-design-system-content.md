@@ -23,4 +23,4 @@ Pictures are good, but words are easier to compose and update. Consider the trad
 
 [[components]]
 [[design]]
-[[design]]system
+[[designsystem]]

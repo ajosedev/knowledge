@@ -10,3 +10,4 @@ Still optimise for the main path, but allow users to create different things, if
 
 [[components]]
 [[react]]
+[[reactapi]]

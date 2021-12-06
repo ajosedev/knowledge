@@ -1,6 +1,6 @@
 # Topic - css
 
-Parent: [[programming]]
+Parent: [[languages]]
 
 Related:
 [[design]]

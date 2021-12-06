@@ -9,4 +9,4 @@ It's easy to add, but much harder to remove or deprecate. Stand your ground.
 Reimagining Atlassian Design System- Jennie Yip (Schema 2021)
 https://www.youtube.com/watch?v=_pfyLVXTVSQ
 
-[[design]]system
+[[designsystem]]

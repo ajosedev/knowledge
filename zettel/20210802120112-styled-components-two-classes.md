@@ -8,3 +8,4 @@ https://styled-components.com/docs/faqs#why-do-my-dom-nodes-have-two-classes
 
 [[css]]
 [[cssinjs]]
+[[styledcomponents]]
