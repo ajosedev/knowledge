@@ -11,6 +11,8 @@ Pass mark is 720/100
 
 ---
 
+## Fundamentals
+
 AWS Global Infrastructure
 24 **regions** - locations, 77 **availability zones** ('AZ') - data center/server location
 An AZ may be several data centers, but if in close proximity they are still a single AZ
@@ -57,6 +59,8 @@ There's a whitepaper on this, read after the course but before the exam
 [[20211122103805-aws-well-architected-framework]]
 
 ---
+
+## IAM
 
 **IAM** - Identity Access Management
 Allows you to manage users and their level of access to the AWS console
@@ -106,6 +110,8 @@ Inline policies are applied to one user or one group. Often used to apply permis
 In policies, an explicit 'deny' will always override any allow. By default, all permissions are implicitly denied until you explicitly grant those permissions.
 
 ---
+
+## S3
 
 What is S3?
 Object storage, scalable, and simple
@@ -186,7 +192,7 @@ A legal hold prevents an object version from being overwritten or deleted, simil
 
 Glacier Vault Lock allows you to easily deploy and enforce complicance controls in Glacier, such as the WORM model.
 
-[[20211122040610-aws-s3-object-lock]] TODO
+[[20211122040610-aws-s3-object-lock]]
 
 ---
 
@@ -208,6 +214,114 @@ SSE-KMS has its own limits.
 
 Multipart uploads are recommended for files over 100mb, and required for files over 5gb. Essentially parallel uploads.
 The same exists for downloads, split them up and then if there's a failure it's only for a specific byte range.
+
+---
+
+S3 Replication
+
+A way of replicating objects from one bucket to another. Needs versioning on both the source/destination buckets.
+
+Objects in an existing bucket are not replicated automatically. Additionally, delete markers are not replicated by default.
+
+[[20211206011713-aws-s3-replication]]
+
+---
+
+## EC2
+
+EC2 Overview - Elastic Compute Cloud
+
+Secure, resizable compute capacity in the cloud. Like a VM but hosted in AWS. Designed to make web-scale cloud computing easier for developers.
+Managed by you, you have complete control. Grow and shrink as you need.
+Pay only what you use.
+
+Complete game changer when it was introduced, as you no longer had to manage on-prem hardware that needed to future plan for scaling.
+
+Pricing tiers:
+On-demand - pay by the hour/second. Flexible, useful for short-term and testing the water.
+
+Reserved - reserved capacity for 1-3 years, with a big discount. Good for predictable usage where you can afford to pay up front. Can scale your reserved instances on a schedule. Operate at a regional level.
+
+Spot - purchase unused capacity at a discount, prices fluctuate with supply and demand. You dictate the price and gain spot instances when that instances at the price is available. Good for apps with flexible start/end times, and those with an urgent need for large amount of additional computing capacity.
+
+Dedicated - a physical ec2 server for your use, the most expensive. Helpful for regulatory compliance, licensing compliance. Can be purchased on-demand (hourly), or reserved (more savings).
+
+AWS pricing calculator helpful for saving the most money.
+
+[[20211206023810-aws-ec2-basics]]
+
+---
+
+An AMI (amazon managed instance) is an image of the entire virtual machine, including one or more EBS snapshots, launch permissions, and a mapping that specifies volumes to attach. When launching an EC2 instance, you must select an AMI to choose its configuration.
+
+It is possible to create your own AMI using an existing AMI as a base.
+
+[[20211206023827-aws-ec2-ami]]
+
+---
+
+AWS command line
+
+Can also use 'EC2 instance connect'.
+Useful when SSHing into EC2 instances. Can ssh using the IP, with `-i <key.pem>` for the permission key files. The `aws` command line is pre-installed on EC2 instances.
+
+Use IAM public/secret access keys in combination with `aws <service> configure` to verify yourself. Then can use `aws` commands to manage files etc, such as `aws s3 ls`.
+
+Remember [[20210415100848-principle-of-least-privilege]] and to use groups.
+
+
+TODO
+
+---
+
+IAM roles
+
+An identity you can create in IAM that has specific permissions. It's an AWS identity that is intended to be assumable by anyone (or anything) who needs it, rather than assigning it to a specific person.
+
+Roles are temporary, when you assume a role it provides you with temporary credentials for your session.
+
+Policies control a role's permission, and when a policy attached to a role is updated it will take immediate effect.
+
+Roles are the preferred option from a security perspective. They allow you to avoid hard-coding your credentials (access key IDs/secret access keys).
+
+[[20211206015943-aws-iam-roles]]
+
+---
+
+EC2 Security groups
+
+Security groups are virtual firewalls for your EC2 instance.
+By default, everything is blocked. Allowing `0.0.0.0/0` lets everything in. In a production environment you wouldn't open up all ports as it opens up public SSH, RDP, etc.
+
+Changes to security groups take effect immediately.
+
+You can have any number of EC2 instances within a security group, and multiple security groups can be attached to EC2 instances.
+
+All inbound traffic is blocked by default, and all outbound traffic is allowed.
+
+[[20211206024031-aws-ec2-security-groups]]
+
+EC2 bootstrap scripts
+
+This is a script that runs when the instance first runs. This obviously adds boot time, but is useful for automating installation of applications.
+
+You can add a bootstrap script when launching an EC2 instance.
+
+[[20211206145935-aws-ec2-bootstrap-scripts]]
+
+---
+
+EC2 metadata
+
+Simply data about your EC2 instance - IP addresses, hostname, security groups, etc. User data is simply bootstrap scripts.
+
+To retrieve metadata, you can use `curl` on a EC2 IP. Since bootstrap scripts run are just bash scripts, you can also use these to retrieve metadata.
+
+---
+
+Networking with EC2
+
+
 
 ---
 

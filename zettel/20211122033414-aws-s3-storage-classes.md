@@ -16,3 +16,4 @@ There's also **S3 Intelligent-Tiering**, which uses ML to automatically move you
 These storage classes can be used in conjunction with [[20211122034529-aws-s3-lifecycle-management]].
 
 [[aws]]
+[[awss3]]
