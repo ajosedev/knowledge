@@ -321,8 +321,75 @@ To retrieve metadata, you can use `curl` on a EC2 IP. Since bootstrap scripts ru
 
 Networking with EC2
 
+Three different virtual networking cards
+
+**ENI (Elastic Network Interface)** - basic, day-to day
+Private & public IPv4 Address
+Helpful to create a separate management network, or logging network, etc.
+Low-budget, high-availability solution
+Can use multiple ENIs for each network.
+
+**EN (Enhanced Networking)** - single root I/O virtualisation for high perf
+10Gbps - 100Gbps
+Higher bandwidth, higher packets per second
+Can be used with ENA (newer, preferred) or VF (older)
+
+**EFA (Elastic Fabric Adapter)** - high performance computing and ML applications
+Lower and more consistent latency than TCP
+Can use OS-bypass, which makes it faster by bypassing the OS kernel and lowering latency.
+
+[[20211206170231-aws-ec2-networking]]
+
+---
+
+EC2 Placement groups
+
+Three different types:
+
+**Cluster Placement Groups**
+Grouping of instances within a single AZ [[20211122101816-aws-global-infrastructure]]
+Low network latency, high network throughput.
+Only works for certain types of instances, and recommended to have homogenous instances within the group.
+
+**Spread Placement Groups**
+Instances that are each placed on distinct underlying hardware.
+Recommended for application that have a small number of *individual* critical instances that should be kept separate from each other.
+You can't merge placement groups, but you can move an existing instance into a placement group.
+
+**Partition Placement Groups**
+Each partition placement group has its own set of racks. Each rack has its own network and power source.
+Allows you to isolate the impact of hardware failure.
+Used for *multiple* instances.
+
+[[20211206170459-aws-ec2-placement-groups]]
+
+---
+
+Spot instances
+
+Allow you to take unused EC2 capacity. Up to 90% discount.
+Useful for stateless, fault-tolerant, or flexible applications. Some examples: big data, CI/CD, test workloads, high-performance computing. Bad for databases, critical jobs, and persistent workloads.
+
+Hourly spot price varies depending on capacity and region. If the spot price goes above your maximum spot price, you have 2 minutes to stop or terminate your instances.
+
+You may also use a **spot block** to stop your spot instances from being terminated even if the spot price is above your maximum. The length is for 1-6 hours.
+
+If needing to cancel a spot instance under a persistent spot request, you need to cancel the request first to avoid a constant loop.
+
+A **spot fleet** is a collection of spot instances and (optionally) on-demand instances. Spot fleets will stop launching instances once you reach your price threshold or capacity desire.
+
+You can have different launch pools for things like EC2 instance type, AZ, etc. 
+
+[[20211206170859-aws-ec2-spot-instances]]
+
+---
+
+## EBS & EFS
+
 
 
 ---
 
 [[aws]]
+[[awsec2]]
+[[awss3]]

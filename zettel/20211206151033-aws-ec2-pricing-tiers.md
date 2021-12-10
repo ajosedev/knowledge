@@ -14,6 +14,7 @@ Operate at a regional level.
 Purchase unused capacity at a discount, prices fluctuate with supply and demand.
 You dictate the price and gain spot instances when that instances at the price is available.
 Good for apps with flexible start/end times, and those with an urgent need for large amount of additional computing capacity.
+[[20211206170859-aws-ec2-spot-instances]]
 
 **Dedicated**
 A physical ec2 server for your use, the most expensive option.
