@@ -1,0 +1,10 @@
+{
+  "attachmentFolderPath": "attachments",
+  "vimMode": true,
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "zettel",
+  "promptDelete": false,
+  "legacyEditor": false,
+  "livePreview": true
+}
