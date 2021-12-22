@@ -386,6 +386,255 @@ You can have different launch pools for things like EC2 instance type, AZ, etc.
 
 ## EBS & EFS
 
+EBS = Elastic Block Storage
+
+Storage volumes you can attach to your EC2 instances. Basically a virtual hard disk: useful for file systems, databases, OS, data, etc.
+
+Designs for mission critical data. Highly available, and scalable.
+
+Different types of EBS volumes:
+	General Purpose SSD (gp2) - a balance of price and performance. Good for boot volumes or development/test apps that are not latency sensitive
+	General Purpose SSD (gp3) - high performance at a low cost: mysql, virtual desktops, etc.
+	Provisioned IOPS SSD (io1) - high performance and most expensive. Use if you need more than 16000 IOPS: large databases and latency sensitive workloads
+	Provisioned IOPS SSD (io2) - A straight upgrade to io1
+	Throughput Otimised HDD (st1) - Low-cost HDD volume, cannot be a boot volume
+	Cold HDD (sc1) - Lowest cost option, good for colder data
+	
+[[20211220025610-aws-ebs]]
+	
+---
+
+IOPS vs throughput
+
+IOPS:
+- **Number of read and write operations per second**
+- Important metric for quick transactions, low-latency apps, transactional workloads
+
+Throughput:
+- **Measures the number of bits read or written per second (MB/s)**
+- Important metric for large datasets, complex queries
+
+Think of throughput when thinking of big data and ETL
+
+[[20211220025739-iops-vs-throughput]]
+	
+---
+
+Volumes are virtual hard disk instances. Need a minimum of 1 volume per EC2 instance, this is called the *root device volume*.
+
+EBS volumes will always be in the same AZ as EC2, this has obvious benefits such as latency.
+
+You can resize the volumes on the size, i.e. the instance does not to be stopped. However you will need to extend the filesystem in the OS so the OS can see the resized volume.
+
+You can also switch volume types on the fly.
+
+Volumes exist on EBS, snapshots exist on S3.
+
+[[20211220025859-aws-ebs-volumes]]
+
+---
+
+Snapshots exist on S3 and act as a point in time copy of the virtual disk/volume. They are incremental, so they only track the data that has been changed since the last snapshot. Thus, the first snapshot will be the longest/biggest.
+
+Snapshots only capture data written to your EBS volume, which may exclude cached data (e.g. in RAM or in the application). Best practice for consistency is to stop the instance and take a snap.
+
+If you take a snapshot of an encrypted EBS volume, the snapshot will be encrypted automatically.
+
+You can share snapshots, but only in the region in which they were created. To share to other regions, you will need to copy (i.e. not share) the snapshot to that region first.
+
+[[20211220030108-aws-ec2-snapshots]]
+
+---
+
+EBS encryption
+
+Uses AES-256 through AWS Key Management Service (AWS KMS) custom master keys (CMK).
+
+When encrypting, data at rest and in flight is encrypted. Future snapshots and volumes created from the snapshot are also then encrypted.
+
+Has a minimal impact of latency.
+
+Copying an unencrypted snapshot allows encryption.
+
+To encrypt and unencrypted volume:
+1. Create a snapshot
+2. Create a copy of the snapshot and select the encrypt option
+3. Create an [[20211206023827-aws-ec2-ami|AMI]] from the encrypted snapshot
+4. Use that AMI to launch new encrypted instances
+
+[[20211220030243-aws-ebs-encryption]]
+
+---
+
+EC2 Hibernation
+
+If we stop an EC2 instance, the data is kept on the disk (with EBS) and will remain on the disk until the EC2 instance is re-started. If the instance is terminated, by default the root device volume will also be terminated.
+
+When you hibernate an EC2 instance, hibernation saves the contents from RAM to EBS. When you start your instance out of hibernation, the root volume is restored to its previous state and the RAM is restored.
+
+Hibernation makes the instance boot much faster as RAM is preserved. This skips the OS, bootstrap, and applications startup from taking as much time.
+
+There are certain conditions that need to be met for hibernation, such as a MAX ram size, instance family, total time, etc.
+
+[[20211220030328-aws-ec2-hibernation]]
+
+---
+
+EFS overview
+
+EFS = Elastic File System
+
+Managed NFS (network file system) that can be mounted on **many** EC2 instances, even across AZs.
+Highlighy available and scalable, but it is expensive.
+
+Useful for CMS, web servers, etc. Linux only AMIs, and uses NFSv4.
+
+Supports encryption at rest using KMS.
+
+Scales automatically, pay for the storage you use.
+
+Really high performance, and can be controlled: general purpose or max I/O.
+
+Has different storage tiers, including lifecycle management support. Pick between standard and infrequently accessed (IA).
+
+[[20211220030433-aws-efs]]
+
+---
+
+FSx for Windows
+
+Pretty much EFS (TODO LINK) for Windows - built on Windows server to you can easily move Windows-based applications.
+
+This means it's a managed Windows Server using Windows Server Message Block (SMB). Supports AD users, security policies, etc.
+
+There's also FSx for Lustre. A managed file system useful for high intensity workloads, like ML, AI, HPC, etc. It can also store data directly on S3.
+
+[[20211220030623-aws-fsx]]
+
+---
+
+Amazon Machine Images (AMIs)
+
+TODO - update old doc?
+
+Provides the info required to launch an instance - it acts as a 'template'. You must specify an AMI when you launch an instance.
+
+5 things you can base your AMI on:
+- Region
+- OS
+- Architecture (32/64)
+- Launch permissions
+- Root device volume
+
+AMIs are backed by either EBS or Instance store.
+
+Instance store volumes are sometimes called ephemeral storage. They cannot be stopped, and if they underlying host fails, you will lose your data. If you delete hte instance, you will store the instance store volume.
+
+EBS volumes can be stopped. By default they will be deleted on instance termination, but can be kept.
+
+Both types can be rebooted.
+
+[[20211206023827-aws-ec2-ami]]
+
+---
+
+AWS Backup
+
+Allows you to consolidate your backups across multiple AWS services: EC2, EBS, EFS, etc. It can include other technologies, such as database storage like DynamoDB.
+
+It gives you centralised control across all AWS services, in multiple AWS accounts across the entire AWS organisation.
+
+Benefits:
+- Central management
+- Automation
+- Improved compliance
+
+[[20211220030914-aws-backup]]
+
+---
+
+## Databases
+
+Relational Database Service (RDS)
+
+Different relational database engines available, including Amazon's own Aurora.
+
+RDS is optionally multi-AZ, which is only used for disaster recovery. Faults on the primary mean the secondary automatically becomes the primary. Note that this doesn't increase performance, it's for disaster recovery only. Performance can be increased with read replicas (TODO - link).
+
+AWS handles the replication for you, so any writes happen on both.
+
+Automated backups are possible
+
+RDS are generally used for online transaction processing (OLTP). not online analytical processing (OLAP)
+OLTP - processes data from transactions in real time. Large numbers of small transactions
+OLAP - complex queries to analyse historical data. Large amounts of data.
+
+---
+
+Read Replicas
+
+These are used to increase (read) performance with RDS. Read replicas are a read-only copy of your primary database. That way, your queries don't add any extra load to your primary DB.
+
+Read replicas *can* be in a different AZ or region, but it's not required.
+
+Each read replica has its own DNS endpoint.
+
+Replicas can be promoted to their own database, however this breaks the replication.
+
+Automated backups must be enabled to deploy a read replica.
+
+---
+
+Amazon Aurora
+
+Amazon's own RDS engine. MySQL and PostgreSQL compatible.
+
+5x better performance than MySQL and 3x better than PostgreSQL, for a much lower price point.
+
+Start with 10gb, scales in 10gb increments up to 128tb. Compute resources can scale massively too.
+
+2 copies of your data are contained in each AZ, with a nimum of 3 AZs (for a total of 6 copeis).
+
+3 different types of replicas available
+- 15 read replicas with Aurora
+- 5 read replicas with Aurora MySQL
+- 5 read replicas with Aruror PostgreSQL
+
+Automated backups are always enabled.
+You can also take snapshots, which can be shared with AWS accounts.
+
+Aurora Serverless also exists, that automatically starts up, shuts down, and scales up/down depending on your application's needs. Good for infrequent or unpredictable workloads.
+
+---
+
+DynamoDB
+
+Amazon's own NoSQL database.
+
+Fully managed, and supports both document and key/value data models.
+
+Stored on SSD  storage, spread across 3 geoegraphically distinc data centers.
+
+Eventually consistent reads (default), with ability to opt-in to strongly consistent reads. The former means that consistency across all copies of data is usually reached within a second (best read performance), the latter returns a result that refelects all writes prior to the read.
+
+DynamoDB Accelerator (DAX)
+	Fully managed highly availble in-memory cache
+	10x performance improvement
+	Reduces request time from millisecond to microseconds
+	Can act as a middleware cache, so you don't have to manage hitting a cache vs dynamoDB.
+	
+On-demand capacity
+	Pay-per-request pricing
+	Balance cost and performance
+	Pay more per request than with provisioned capacity
+	
+Security
+	Encryption at rest using KMS
+
+---
+
+When do we use DynamoDB transactions?
+
 
 
 ---
