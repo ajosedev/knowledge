@@ -24,6 +24,8 @@ When searching (is this `ivy`?):
 
 I believe most of these shortcuts are powered by Ivy/Counsel
 
+`C-o` when highlighting a file in the minibuffer shows additional options?
+
 [[20201223155402-rg-filetype]]
 
 [[emacs]]

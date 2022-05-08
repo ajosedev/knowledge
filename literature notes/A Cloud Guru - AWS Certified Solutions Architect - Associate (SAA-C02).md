@@ -557,7 +557,7 @@ Benefits:
 
 Relational Database Service (RDS)
 
-Different relational database engines available, including Amazon's own Aurora.
+Different relational database engines available (e.g. MySQL, PostgreSQL, SQL Server, etc), including Amazon's own Aurora.
 
 RDS is optionally multi-AZ, which is only used for disaster recovery. Faults on the primary mean the secondary automatically becomes the primary. Note that this doesn't increase performance, it's for disaster recovery only. Performance can be increased with read replicas (TODO - link).
 
@@ -565,9 +565,11 @@ AWS handles the replication for you, so any writes happen on both.
 
 Automated backups are possible
 
-RDS are generally used for online transaction processing (OLTP). not online analytical processing (OLAP)
+RDS are generally used for online transaction processing (OLTP), not online analytical processing (OLAP)
 OLTP - processes data from transactions in real time. Large numbers of small transactions
 OLAP - complex queries to analyse historical data. Large amounts of data.
+
+[[20220131032106-aws-rds]]
 
 ---
 
@@ -582,6 +584,8 @@ Each read replica has its own DNS endpoint.
 Replicas can be promoted to their own database, however this breaks the replication.
 
 Automated backups must be enabled to deploy a read replica.
+
+[[20220131032436-aws-rds-read-replicas]]
 
 ---
 
@@ -598,12 +602,14 @@ Start with 10gb, scales in 10gb increments up to 128tb. Compute resources can sc
 3 different types of replicas available
 - 15 read replicas with Aurora
 - 5 read replicas with Aurora MySQL
-- 5 read replicas with Aruror PostgreSQL
+- 5 read replicas with Aurora PostgreSQL
 
 Automated backups are always enabled.
 You can also take snapshots, which can be shared with AWS accounts.
 
-Aurora Serverless also exists, that automatically starts up, shuts down, and scales up/down depending on your application's needs. Good for infrequent or unpredictable workloads.
+*Aurora Serverless* also exists, that automatically starts up, shuts down, and scales up/down depending on your application's needs. Good for infrequent or unpredictable workloads.
+
+[[20220131032535-aws-aurora]]
 
 ---
 
@@ -613,9 +619,9 @@ Amazon's own NoSQL database.
 
 Fully managed, and supports both document and key/value data models.
 
-Stored on SSD  storage, spread across 3 geoegraphically distinc data centers.
+Stored on SSD storage, spread across 3 geoegraphically distinct data centers.
 
-Eventually consistent reads (default), with ability to opt-in to strongly consistent reads. The former means that consistency across all copies of data is usually reached within a second (best read performance), the latter returns a result that refelects all writes prior to the read.
+Eventually consistent reads (default), with ability to opt-in to strongly consistent reads. The former means that consistency across all copies of data is usually reached within a second (best read performance), the latter returns a result that reflects all writes prior to the read.
 
 DynamoDB Accelerator (DAX)
 	Fully managed highly availble in-memory cache
@@ -631,14 +637,634 @@ On-demand capacity
 Security
 	Encryption at rest using KMS
 
+[[20220131032739-aws-dynamodb]]
+
 ---
 
 When do we use DynamoDB transactions?
 
+Taps into ACID (Atomic, Consistnet, Isolated, Durable)
+DynamoDB transactions provide ACID across 1 or more tables within a single AWS account and region.
+
+Transactions are 'all or nothing', either everything works or nothing does.
+Use cases: financial transactions, fulfilling orders, etc.
+
+3 options for reads: eventual consistency, strong consistency, and transactional
+2 options for writes: standard and transactional
+
+[[20220131033235-aws-dynamodb-transactions]]
+
+---
+
+Saving your data with DynamoDB Backups
+
+On-demand backup and restore
+Full backups at any time, with zero impact on performance/availability
+
+Point-in-Time Recovery (PITR)
+Protects against accidental writes or deletes
+Incremental backups
+Not enabled by default
+
+---
+
+Taking Your Data Global with DynamoDB Streams and Global Tables
+
+*Streams* are time-ordered sequences of item-level changes in a table.
+Streams contain data about inserts, updates, and deletes.
+Stored for 24 hours.
+
+*Global tables* are managed multi-master, multi-region replication.
+Based on DynamoDB streams, this is great for globally distributed applications. Good for multi-region redundancy or high availability.
+
+[[20220131033407-aws-dynamodb-streams]]
+
+---
+
+## Virtual Private Cloud (VPC) Networking
+
+VPC Overview
+
+Think of a VPC as a virtual data center in the cloud.
+It's a logically isolated part of AWS Cloud where you can define your own network.
+Complete control of virtual network, including your own IP address range, subnets, route tables, and network gateways.
+
+It's a fully customisable network. Typically you have a 3tier network:
+- Web - public-facing subnet
+- Application - private subnet. Can only speak to web tier and database tier
+- Database - private subnet. Can only speak to application tier
+
+When you create a VPC, you need to choose a IP range (best practice: 10.0.0.0/x)
+These IP ranges should change per subnet to avoid clashing.
+
+1 subnet is always in 1 AZ
+
+The basic flow from the internet is:
+Internet Gateway -> Router -> Route Table -> Network ACL -> Subnet -> Security Group
+
+![[VPC Example.png]]
+
+[[20220131041418-aws-vpc]]
+
+---
+
+Demo: Provisioning a VPC - Part 1
+
+Recommendation: Be able to create a VPC from memory before the exam.
+
+Creating a VPC creates a route table and access control list (ACL) automatically.
+It does not create any subnets automically.
+
+Think of a subnet as a virtual firewall(?)
+A public subnet is internet accessible, a private subnet is not.
+
+Possible naming convention for subnets: `<CIDR Range> - <AZ>`
+
+AWS reserves some IP addresses, 10.0.0.0-3, and 10.0.0.255
+
+---
+
+Demo: Provisioning a VPC - Part 2
+
+A setting exists to auto assign IP addresses for a subnet. Useful for public subnets, this means that any EC2 instances that's put into said subnet will automatically get assigned a IP address.
+
+Only one internet gateway per VPC
+
+Every time you create a subnet it is automatically associated with the main route table. Because of this it's best practice to have a separate route table for any routes out to the internet, just in case something leaks.
+
+---
+
+Using NAT Gateways for Internet Access
+
+Network address translation (NAT) can be used to enable instances in a private subnet to connect to the internet or other AWS services while preventing the internet from initiating a connection with those instances.
+
+You provision the NAT Gateway in the public subnet (and thus the same AZ), allowing instances in the private subnet to access the internet (but only outwards).
+
+NAT Gateways are redundant within the single AZ, not associated with security groups, and are automatically assigned an IP address.
+
+You also have to alter your route table to route requests through the NAT Gateway.
+
+Note that NAT Gateways have a maximum amount of bandwidth.
+
+[[20220131041645-aws-nat-gateways]]
+
+---
+
+Protecting Your Resources with Security Groups
+
+Security Groups are your last line of defense in a VPC. They are essentially virtual firewalls with everything blocked by default.
+
+When troubleshooting internet connectivity issues, in order check:
+1. Route tables
+2. Network ACLs
+3. Security groups
+
+Security groups are stateful - if you send a request from your instance, the response traffic for that request is allowed to flow in regardless of inbound security group rules.
+
+Responses to allowed inbound traffic are allowed to flow out, regardless of outbound rules.
+
+Network ACLs are stateless. (TODO - link)
+
+[[20220131041750-aws-vpc-security-groups]]
+
+---
+
+Controlling Subnet Traffic with Network ACLs
+
+Network ACLs are your first line of defense.
+
+VPCs automatically comes with a default network ACL, which allows all outbound and inbound traffic by default.
+Custom network ACLs will deny all traffic by default.
+
+Each subnet must be associated with a network ACL, whether that by the default or a custom ACL.
+One ACL can have many subnets, but one subnet can only have one ACL.
+
+You can block IP addresses with network ACLs, not security groups.
+
+Network ACLs have separate inbound and outbound rules, with each rule allowing or denying traffic.
+
+Each rule has its own number, corresponding to its evaluation priority (lowest numbers first).
+Best practice is to use increments of 100.
+
+Unlike security groups, ACLs are stateless. Responses to allowed inbound traffic are subject to the rules of outbound traffic (and vice versa).
+
+[[20220131041827-aws-vpc-network-acls]]
+
+---
+
+Private Communication using VPC Endpoints
+
+A VPC endpoint enables you to privately connect your VPC to supported AWS services without requiring an internet gateway, NAT device, etc. This communication doesn't leave the Amazon network, so instances don't need a public IP address.
+
+Endpoints are virtual devices.
+They are horizontally scaled, redundant, and highly available VPC components that allow communicaiton between instances in your VPC and services without imposing availability risks or bandwidth constraints on your network traffic.
+
+There are two different types of endpoints:
+- Interface endpoints - an elastic network interface with a private IP address. Large amount of AWS service support
+- Gateway endpoints - similar to NAT gateways, a virtual device you provision. Supports S3 and DynamoDB
+
+[[20220131041919-aws-vpc-endpoints]]
+
+---
+
+Building Solutions across VPCs with Peering
+
+Sometimes you may need to have several VPCs for different environments, and it may be necessary to connect these VPCs to each other.
+
+VPC Peering allows you to connect 1 VPC to another via a direct network route using private IP addresses. These instances behave as if they were on the same private network.
+You can also peer VPCs with other AWS accounts, and across regions.
+Peering is in a hub-and-spoke configuration, and there's no transitive peering (i.e. peering A to C through B).
+
+It's also possible to open your services in a VPC to another VPC by simply allowing access through the internet. TODO - privatelink link
+
+Remember to check for overlapping CIDR ranges
+
+[[20220131042020-aws-vpc-peering]]
+
+---
+
+Network Privacy with AWS PrivateLink
+
+To open our applications up to other VPCs we can open it up to the internet:
+- Everything in the public subnet becomes public
+- A lot more to manage
+
+Or use VPC peering:
+- Create and manage many different peering relationships
+- The whole network will be accessible, not good if multiple applications in the VPC.
+
+PrivateLink is the best way to expose a serive VPC to many many customer VPCs.
+It doesn't require VPC peering, no route tables, NAT gateways, etc.
+It does require a Network Load Balancer on the service VPC and an Elastic Network Interface (ENI) on the customer VPC.
+
+[[20220131042104-aws-vpc-privatelink]]
+
+---
+
+Securing Your Network with VPN CloudHub
+
+If you have multiple sites, each with its own VPN connection, you can use AWS VPN CloudHub to connect those sites together.
+
+Works on a hub-and-spoke model
+Low cost and easy to manage
+Operates over the public internet, but is encrypted
+
+---
+
+Connecting On-Premises with Direct Connect
+
+AWS Direct Connect is a cloud service solution that makes it easy to establish a dedicated network connection from your premises to AWS.
+
+In many cases, you can reduce your network costs, increase bandwidth throughput, and improve the network experience compared to internet-based connections.
+
+Two different types of Direct Connect Connection
+Dedicated Connection - A physical ethernet connection associated with a single customer
+Hosted Connection - A physical ethernet connection through a AWS Direct Connect Partner, such as an ISP.
+
+VPNs allow private communication but it still traverses the public internet. While secure, it can be painfully slow.
+
+[[20220131042202-aws-direct-connect]]
+
+---
+
+Simplifying Networks with Transit Gateway
+
+AWS Transit Gateway connects VPCs and on-premises networks through a central hub. This simplifies your network and puts an end to complex peering relationships. It acts as a cloud router - each new connection is only made once.
+
+Rather than having to use VPC Peering which is difficult to scale, we can connect everything to the Transit Gateway using a hub-and-spoke model.
+
+It works on a regional basis but you can have it across multiple regions and multiple AWS accounts using RAM (Resource Access Manager).
+
+[[20220131042235-aws-vpc-transit-gateway]]
+
+---
+
+## Route 53
+
+Route 53 Overview
+
+DNS converts human-friendly domain names into an IP address.
+We're running out of IPv4, _have_ to move to IPv6 soon.
+
+SOA record - State of Authority, where your DNS starts
+NS - name server records, where is the DNS info stored
+
+Lookup google.com -> look at .com TLD for NS records -> NS records return a SOA
+
+Some other DNS record types:
+A record - translates domain into an IP address
+TTL - time to live, length of the DNS record cache
+CNAME - canonical name, used to resolve one domain name to another
+Alias records - exists within AWS, map resource records to load balances, S3, etc. Similar to a CNAME
+
+CNAME cant be used for naked domain names (zone apex record), Alias records can.
+Given the choice, always choose an alias record over a CNAME.
+
+---
+
+Simple Routing Policy
+
+Only one record with multiple IP addresses. If you specify multiple values in a record, Route 53 returns all values to the user in a random order.
+
+Weighted Routing Policy
+
+Allows you to split your traffic based on different weights assigned. e.g. set 10% of traffic to go to  `us-east-1`.
+
+Once you've created a health check, you can set it on an individual record sets. If a record set fails a health check, that record will be removed from Route 53 until it passes.
+
+Failover Routing Policy
+
+Used when you want to create an active/passive set up. For example, having a primary site on one region and a secondary site in another.
+
+Geolocation Routing Policy
+
+Chooses where your traffic will be sent based on the geographic location of your users. Useful for things like localisation, regulatory requirements, etc. Not as useful as 'latency' for performance.
+
+Latency Routing Policy
+
+Routes traffic based on the lowest network latency for your end user. To use latency-based routing, you create a latency resource record set for the EC2 (or ELB) resource in each region that hosts your website, which Route 53 uses.
+
+---
+
+Using a Geoproximity Routing Policy
+
+Route 53 Traffic Flow
+You can build a routing system that uses a combination of: geographic location, latency, and availability, to route traffic.
+
+Geoproximity Routing is Traffic Flow ony, and lets you route traffic to your resources based on the geographic location of your users. Optionally this can be a weigthed value, using a bias.
+
+---
+
+Using a Multivalue Answer Routing Policy
+
+Configure Route 53 to return multiple values in response to DNS queries. This differents for other records, as it lets you check the health of each resource as well.
+This is similar to simple roting, however it allows you to put health checks on each record set.
+
+---
+
+## ELB
+
+ELB Overview
+
+ELB - Elastic Load Balancer
+Automatically distributes incoming application traffic across multiple targets. Can be done across multiple AZs.
+
+Three different types of load balancers:
+Application Load Balancer - Intelligent Load Balancer. Best suited for HTTP and HTTPS traffic. Operate at Layer 7 and are application-aware
+Network Load Balancer - Performance Load Balancer. Operates at Layer 4, and are capable of handling millions of requests per second with low latency
+Classic Load Balancer - Classic/Test/Dev Load Balancer. Used for HTTP/HTTPS applications and can use layer 7-specific features.
+
+All load balancers can be configured with health checks. Failing health checks are `OutOfService`, successful are `InService`. Load balancers route only to the healthy instances.
+
+---
+
+Application Load Balancers
+
+Application Layer - 7th layer of the OSI (Open Ssstems Interconnection) model. After the LB receives a request, it evaluates the listener rules in priority order. Can be used only on HTTP/HTTPs.
+
+A **listener** checks for connection requests from clients, using the protocol and port you configure. You define **rules** that determine how the load balance routes requests to its registered targets.
+Each rule has a priority, one or more actions, and one or more conditions.
+
+Each **target group** routes requests to one or more registered targets, such as EC2 instances.
+
+Path based routing allows you to load balance to a different target group depending on the path using 'path patterns'. For example, any URL with `images/` will load balance to different servers in a different AZ.
+
+To use HTTPS, you must deploy at least one SSL/TLS certificate on your load balancer.
+
+---
+
+Extreme Performance with Network Load Balancers
+
+Functions at Layer 4, and can handle millions of requests per second.
+Attempts to open a TCP connection ti the selected target on the port specified in the listener configuration.
+
+A listener checks for connection requests from clients. On a NLB, the listener forwards the request to the target group. There are no rules, unlike with ALBs.
+
+Each target group requests to one or more registered targets, such as EC2 instances.
+
+Most useful when extereme performance is required, helps maintain low latency.
+
+---
+
+Using Classic Load Balancers
+
+The legacy load balancers. Used for HTTP/HTTPS applications, and can use Layer 7 specific features, such as `X-Forwarded`.
+
+When traffic is sent from a load balancer, the server access logs contain the IP address of the proxy or load balancer only. To see the original IP address of the client, `X-Forwarded-For` is used.
+
+Responds with a 504 if your application stops working.
+
+---
+
+Getting 'Stuck' with Sticky Sessions
+
+Classic Load Balancers route each request independently to the registered EC@ instance with the smalles load.
+
+Sticky sessions allow you to bind a user's session to a specific EC2 instance. It 'sticks' a user to an instance.
+
+This can cause issues with scaling, such as when you remove a EC2 instance a user is tied to from a pool. To solve this, disable sticky sessions.
+
+Sticky sessions also exist on ALBs, but the traffic will be ent at the target group level.
+
+---
+
+Leaving the Load Balancer with Deregistration Delay
+
+aka 'Connection Draining' on Classic Load Balancers
+
+Deregistration Delay allows Load Balancers to keep existing connections open if the EC2 instances are de-registered or become unhealthy. This delay can be disabled.
+
+This enables the load balancer to complete in-flight requests made to instances that are de-registering or unhealthy.
+
+---
+
+## Monitoring
+
+TODO
+
+---
+
+## High Availability and Scaling
+
+Horizontal vs Vertical Scaling Overview
+
+Vertical scaling is somewhat the 'older style'. Horizontal scaling is usually what we want now.
+
+Vertical scaling is like building a taller skyscraper (EC2 instance). If it's not large enough you make it repeatedly taller, but that only works to a point before it gets too tall to increase. It does have a place, a `t2.micro` will never be a great prod database.
+Horizontal scaling is having a town. We can keep adding new houses (EC2 instances) as much as we want.
+
+Horizontal scaling increases our high availability, as we're building redundancy (assuming multi-AZ).
+
+The 3 W's of Scaling
+1. What do we scale?
+2. Where do we scale?
+3. When do we scale?
+
+Best practice when scaling is to get ahead of the workload. Favour being predictive rather than reactive.
+Also try to bake AMIs when possible, to reduce start up times.
+
+---
+
+What are Launch Templates and Launch Configurations?
+
+A **launch template** specifies all the needed settings that go into building out an EC2 instance. It is a collection of settings you can configure to avoid click ops.
+
+A launch template is a better version of a launch configuration. They support versioning, are used for more than autoscaling, are more granular, and are recommended by AWS.
+
+Included in a launch template is:
+- AMI
+- EC2 instance size
+- Security groups
+- (Potentially) networking information - best practice is to dictate this in auto scaling groups to avoid conflicts(?)
+- (Potentially) user data
+
+---
+
+Scaling EC2 Instances with Auto Scaling
+
+An Auto Scaling group contains a collection of EC2 instances that are treated as a collective group for purposes of scaling and management. It's vital for creating a highly available application, especially when put across multiple AZs, and utilising load balancers.
+
+Auto scaling steps:
+- Define your launch template (TODO link) to use
+- Pick your networking space and purchasing options. Can use mutli AZ for high availability
+- ELB configuration. The auto scaling group will then be put behind this. The Auto Scaling group can be set to respect the load balancer health checks. Otherwise, standard EC2 health checks are used.
+- Scaling policies. Minimum, maximum, and desired capacity
+- Notifications (through SNS)
+
+Note that 'desired capacity' means desired 'at this very second', meaning it's constantly changing.
+
+You can use spot instances in auto scaling to reduce costs.
+
+Note that Auto Scaling Groups are for EC2 only. Other services have other scaling means.
+
+---
+
+Diving Deeper into Auto Scaling Policies
+
+EC2 instances take time to come up, they have a warmup period before a healthcheck starts, to avoid an endless loop of reconstruction.
+However, taking them down is pretty instant.
+
+There's also a cooldown that pauses Auto Scaling for a set amount of time.
+
+All of these strategies aim to avoid thrashing - try to scale up quickly and scale down slowly.
+
+Different types of scaling:
+- Reactive scaling - measure once load happens and determine if you need more resources
+- Scheduled scaling - if you have a predictiable workload
+- Predictive scaling - ML algorithims to determine when you need to scale
+
+There's merit to having an Auto Scaling policy with a maximum of 1. If you have a legacy app that can only have a single running version, this scaling policy ensures it stays up in if it ever goes down. This is a steady state group.
+
+---
+
+Scaling Relational Databases
+
+Four types of scaling for a RBDMS
+- Vertical scaling
+- Scaling storage - can only scale up
+- Read replicas - helpful for read-heavy workloads
+- Aurora serverless
+
+In terms of an AWS test, usually refactoring and changing to DynamoDB is a viable scaling choice.
+
+---
+
+Scaling Non-Relational Databases
+
+AWS does all the heavy lifting to make scaling with DynamoDB easy.
+Two models: provisioned and on-demand
+
+Provisioned is for a generally predictable workload. Just set an upper and lower scaling bound. Cheaper than on-demand.
+On-demand is better for a sporadic workload. Costs money per read and write, with AWS performing the scaling automatically.
+
+---
+
+## Decoupling workflows
+
+TODO
+
+---
+
+##  Big Data
+
+TODO
+
+---
+
+## Serverless Architecture
+
+Serverless Overview
+
+Over time we're rapidly progressed how we run servers:
+- Physical data centers - managing hardware
+- Virtualisation - focusing on running multiple computers inside of hardware
+- The cloud - managing only virtual compute
+- Serverless - focusing on code, leaving compute behind
+
+Benefits of serverless:
+- Ease of use. Only have to manage bringing our code
+- Event based. Compute resources can be brought online in response to an event happening
+- Billing model. Pay as you go, down to the length of the runtime
+
+Two major services in AWS: Lambda and Fargate (TODO - link)
+
+---
+
+Computing with Lambda
+
+Lambda is a serverless compute service that lets you run code without provisioning or managing the underlying servers. A function cannot run longer than 15mins.
+
+They work off a trigger, that actually alerts your function to start. There's many many ways of triggering a lambda. This flexibility from triggers and actions lets you do anything with Lambda, even 'add features' to AWS.
+
+You'll need to pick an available runtime (code environment) or bring your own.
+
+If your Lambda function needs to make an WAS API call, you'll need to handle permissions by attaching a role.
+
+Lambdas can run a 'networking ether', where you don't specify. It's possible to define the VPC, subnet, and security group if needed.
+
+You can define the amount of available memory which controls both CPU and RAM. Pick the least amount of resources you need, as you pay for both memory and time running.
 
 
 ---
 
+Container Overview
+
+TODO - separate this out from AWS? 'Container basics'
+
+A container is a standard unit of software that packages up code and all its dependencies. This is useful so the application runs quickly and reliably from one computing environment to another.
+
+Very helpful for ensuring dev/prod parity.
+
+Unlike a virtual machine, a container doesn't have a guest OS per VM.
+
+Terminology:
+Dockerfile - A list of instructions used to build an image
+Image - Immutable file that contains code, libraries, dependencies, and config files needed to run an application
+Registry - Stores imags for distribution
+Container - A running copy of the image that has been created
+
+---
+
+Running Containers in EKS and ECS
+
+Elastic Container Service (ECS) is a proprietary tool that helps manage containers at scale.
+Containers are appropriate registered with load balancers as they come online.
+Containers can have individual roles attached to them.
+
+Kubernetes is the open source version of this, which can be used on-premises and in the cloud. AWS also has a version is called Elastic Kubernetes Services (EKS).
+
+ECS is easy to set up and use. It's the simpler option, with the downside of being proprietary and thus not possible to use on-prem.
+EKS is an AWS-managers version of Kubernetes. Best used when you're not all in on AWS.
+
+ECS relies on a **task definition**. Effectively, it's all of the settings you need for a container to properly run.
+
+Remember that both of these tools create EC2 instances per your task definition for you and the containers are placed inside of these. If you don't want to manage EC2 instances, consider Fargate.
+
+---
+
+Removing Servers with Fargate
+
+Fargate is a serverless compute engine for containers that works with both ECS and EKS. It avoids having to use EC2 instances for the former two tools. It require use of ECS or EKS, so it's sort of a functionality of those services rather than its own.
+
+When using Fargate, you must define the memory and CPU that each task receives. Similar to Lambda, the cost is based on time running and resources used.
+
+EC2 vs Fargate
+EC2
+- Cheaper
+- You are responsible for the underlying OS
+- Long-running containers
+- Multiple containers share the same host
+
+Fargate
+- No OS access
+- Pay based on resources allocated and time ran
+- Short-running tasks
+- Isolated environments
+
+Lambda vs Fargate
+
+Lambda
+- Great for unpredicatable or inconsistent workloads
+- Perfect for applications that can be expressed as a single function
+
+Fargate
+- Great for consistent workloads
+- Allows Docker use throughout the organisation
+- Greater level of controls by developers
+
+
+---
+
+Amazon EventBridge (formerly CloudWatch Events)
+
+EventBridge is a serverless event bus. It allows you to pass events from a source to an endpoint.
+Essentially, it's the glue that holds your serverless application together.
+
+To create a rule:
+1. Define a pattern. Do you want the rule to be invoked based on an event happening? Or do you want it to be scheduled?
+2. Select event bus. Is this going to be an AWS-based event?
+3. Select your target. What happens when this event kicks off?
+4. Tag. Tag everything
+
+---
+
+## Security
+
+TODO
+
+---
+
+## Automation
+
+Why do we Automate?
+
+
+
+---
+
+
 [[aws]]
 [[awsec2]]
 [[awss3]]
+[[awsdb]]
+[[awsnetworking]]

@@ -8,6 +8,12 @@ By introducing an additional abstraction layer above your tints/shades, e.g. `te
 
 However this probably can be extended too far and get confusing, do you need separate tokens for menu-bg, card-bg, etc? Don't go overboard.
 
+Interesting to note that this is a low-level layer of abstraction. Sometimes abstracting at this level is not the best solution. Instead of making a new token, you may want to abstract higher. For example: a different component API, or a component, or a template that abstracts the idea behind tokens entirely. Given a token for 'Heading':
+- could have a token for 'Page Heading'
+- could be a component, e.g. PageHeading
+- could be part of a Page component
+- could not exist entirely
+
 [[20211029152633-design-token-names]]
 
 [[design]]

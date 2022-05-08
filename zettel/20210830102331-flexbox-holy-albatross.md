@@ -32,4 +32,6 @@ https://heydonworks.com/article/the-flexbox-holy-albatross/
 https://heydonworks.com/article/the-flexbox-holy-albatross-reincarnated/
 
 [[css]]
+[[intrinsiclayout]]
 [[layout]]
+[[responsivedesign]]

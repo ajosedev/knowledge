@@ -42,6 +42,9 @@ Coming soon, gives stats/graphs/views on how everything is consuming one another
 
 [[20210927141042-module-federation]]
 
+[[architecture]]
 [[browsers]]
-[[js]]
+[[microfrontends]]
+[[microservices]]
+[[monoliths]]
 [[web]]

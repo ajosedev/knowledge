@@ -3,7 +3,7 @@ Not sure what this is yet, but some thoughts on component design
 TODO
 
 ## Object props vs compound components
-Object props (and list props) refers to something like `items`, which is an array of items each with their own properties that get rendered by the parent in some way
+Object props (and list props, sometimes called 'config props') refers to something like `items`, which is an array of items each with their own properties that get rendered by the parent in some way
 Compount components are similar to the select/option HTML elements
 
 tl;dr - object props are more consistent, type safe and thus restrictive too. Compound components are more flexible but offer more chance for misuse.

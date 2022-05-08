@@ -18,9 +18,15 @@ Don't create a structure top-down, create the content and then create the struct
 ---
 
 - Review current topic pages, e.g. engineering, concepts, etc.
+	- Is 'principles' good to introduce? How does this intersect with 'laws' or 'concepts'
+	- [[architecture]] seems like a good topic
 - Flesh out current topic 
 - Consider removing zettel prefix
 	- Would be better for creating pages link-first
 	- What does it add?
 - Review if using `[[tags]]` is better than `#tags`
 	- Might help if you have good topic pages?
+- Introduce some new helper tags
+	- #breakdown 
+	- #todo?
+	- #retag

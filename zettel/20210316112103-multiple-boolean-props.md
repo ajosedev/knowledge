@@ -1,7 +1,7 @@
 # Multiple boolean props in a React component
 
 Having multiple boolean props or state is probably a code smell.
-If you have variants of a component, e.g. `danger`, `warning`, etc. as multiple props it can lead to some impossible states. Additionally, it makes it harder to type, and easier to fail as it's harder to understand that they are a logical grouping where only one should be active at a time.
+If you have variants of a component, e.g. `danger`, `warning`, etc. as multiple props it can lead to some [[20220125105432-impossible-states|impossible states]]. Additionally, it makes it harder to type, and easier to fail as it's harder to understand that they are a logical grouping where only one should be active at a time.
 
 ```javascript
 function CommonButton({

@@ -6,5 +6,6 @@
   "newFileFolderPath": "zettel",
   "promptDelete": false,
   "legacyEditor": false,
-  "livePreview": true
+  "livePreview": true,
+  "spellcheck": true
 }

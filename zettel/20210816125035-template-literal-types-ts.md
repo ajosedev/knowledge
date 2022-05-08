@@ -18,4 +18,6 @@ There's also some included helper types for string manipulation:
 
 https://www.typescriptlang.org/docs/handbook/2/template-literal-types.html
 
+For a more concrete use case, see [[20220124091907-tempalte-literal-types-ts-example]]
+
 [[ts]]

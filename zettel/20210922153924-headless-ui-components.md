@@ -6,7 +6,7 @@ These are UI-less components that separate the logic and behaviour of a componen
 
 In React, these are commonly exposed as a hook which returns props to spread on your own components. Alternatively, they can be exported as unstyled components which accept styling through various means.
 
-A common strategy to ensure that props are being passed appropriately is to pass a `ref` to an underlying element which the headless component can spy on.
+A common strategy to ensure that props are being passed appropriately is to pass a `ref` to an underlying element which the headless component can spy on. This allows you to only apply the props needed also, e.g. `useButton` doesn't need to add `tabIndex` once it looks at the `ref` node and sees that it's a `<button>` element.
 
 Some examples are:
 - ReachUI
