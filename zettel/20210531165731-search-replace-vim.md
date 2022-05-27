@@ -14,5 +14,7 @@ Then, use `:s` as normal, appending it to the current range, e.g:
 :'<,'>s/red/green/g
 ```
 
+[[20220520101538-smart-find-replace-emacs]]
+
 [[emacs]]
 [[vim]]

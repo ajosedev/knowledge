@@ -18,8 +18,8 @@ When searching (is this `ivy`?):
 - using `C-RET` opens a result in a new window
 - using `C-c C-o` opens search results in a new buffer `ivy-occur`
 - using `C-c C-e` opens search results in a new writeable buffer
-- using `M-p` shows previous search query
-- using `M-n` shows next search query
+- using `M-p`  or `PgUp` shows previous search query
+- using `M-n`  or `PgDn` shows next search query
 
 
 I believe most of these shortcuts are powered by Ivy/Counsel

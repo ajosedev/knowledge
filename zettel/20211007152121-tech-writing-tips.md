@@ -83,6 +83,23 @@ Once you've found the subject and the verb, put them together. So far, you've go
 
 Who did the teacher instruct? The children receive the action (instructing) in this sentence, making "the children" the [object](https://examples.yourdictionary.com/direct-object-examples.html). Put the object right after the verb where it belongs: "**The teacher instructed the children.**" Now you have a sentence in active voice!
 
+---
+
+For clear writing, answer these questions
+
+1. What Am I Really Trying To Say
+
+2. Why Should People Care 
+
+3. What Is The Most Important Point
+
+4. What Is The Easiest Way To Understand The Most Important Point
+
+5. How Do I Want The Reader To Feel
+
+6. What Should The Reader Do Next
+
+https://twitter.com/shreyas/status/1285460711808700418
 
 [[career]]
 [[communication]]

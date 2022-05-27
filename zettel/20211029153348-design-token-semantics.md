@@ -1,5 +1,7 @@
 # Design token semantics
 
+aka: 'Contextual design tokens'
+
 Thought: should design tokens aim to be semantic whenever possible? If so, how far is too far?
 
 If your design tokens are named after tints/shades, such as `grey100`, it's easy to change the underlying hex value to perform a wide sweeping change. However, if a single token is used used for more than one consistent use, such as `grey300` representing both disabled text and a menu background colour, it's impossible to change one without changing the other.
@@ -18,3 +20,4 @@ Interesting to note that this is a low-level layer of abstraction. Sometimes abs
 
 [[design]]
 [[designsystem]]
+[[designtokens]]

@@ -1,6 +1,7 @@
 # Default exports in JS
 
 In general, aim for using named exports over default exports in Javascript.
+
 Named exports:
 - Support autocomplete/auto-import better
 - Work better with Typescript
@@ -10,3 +11,4 @@ Named exports:
 - Cleaner dynamic imports
 
 [[js]]
+[[ts]]

@@ -3,7 +3,7 @@
 - Import code from other builds at runtime
 - Share vendor code dynamically at runtime
 - Allows microfrontends to work like a monolith
-- Improve DX without comprimising UX
+- Improve DX without compromising UX
 - Works in any JS environment
 
 ## Share scope
