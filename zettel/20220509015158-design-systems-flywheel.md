@@ -1,5 +1,7 @@
 # Design systems flywheel
+#breakdown 
 The Flywheel Effect - Small wins accumulate over time, creating momentum that keeps your business growing. Also known as the virtuous loop or virtuous cycle.
+A system where one desirable event leads to another in a continuous cycle of reinforcement.
 
 Looking at your design system as a business, this can be applied as a method for growing your design system.
 ![[Design system flywheel.png]]

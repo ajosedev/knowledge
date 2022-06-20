@@ -180,6 +180,12 @@ https://stackoverflow.com/questions/58885485/why-does-typescript-have-both-void-
 
 ---
 
+typeof undefined vs typeof 'undefined'
+
+https://stackoverflow.com/questions/4725603/variable-undefined-vs-typeof-variable-undefined
+
+---
+
 Innersource
 
 Like open source, for proprietary software
@@ -504,6 +510,8 @@ Salesforce creates a fourth 'cyclical model' https://medium.com/salesforce-ux/th
 
 JS prototypes/prototype inheritence
 
+Also JS classes and how they differ
+
 https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes
 
 ---
@@ -521,3 +529,17 @@ If using `rg -pS`, try passing `--no-heading`?
 ---
 
 React reconciliation
+
+---
+
+Pragmatic Programmer notes [[Pragmatic Progammer]]
+Especially on estimation
+
+---
+
+Service workers, SPAs, MPAs, PWAs, and more
+
+---
+
+border-radius takes 8 values
+https://9elements.com/blog/css-border-radius/

@@ -4,6 +4,10 @@
 Author: A Cloud Guru
 
 https://learn.acloud.guru/course/certified-solutions-architect-associate/dashboard
+https://d1.awsstatic.com/training-and-certification/docs-sa-assoc/AWS-Certified-Solutions-Architect-Associate_Exam-Guide.pdf
+https://d1.awsstatic.com/training-and-certification/docs-sa-assoc/AWS-Certified-Solutions-Architect-Associate_Sample-Questions.pdf
+https://explore.skillbuilder.aws/learn/course/internal/view/elearning/11348/exam-prep-aws-certified-solutions-architect-associate-get-certified
+
 
 **22/11/21**
 
