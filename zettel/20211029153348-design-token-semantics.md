@@ -17,6 +17,7 @@ Interesting to note that this is a low-level layer of abstraction. Sometimes abs
 - could not exist entirely
 
 [[20211029152633-design-token-names]]
+[[20220523102023-design-tokens-as-intents]]
 
 [[design]]
 [[designsystem]]

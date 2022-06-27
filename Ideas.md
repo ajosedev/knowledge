@@ -281,11 +281,67 @@ intrinsic/extrinsic web design
 
 how does this interact with designer columns
 
+how does this interact with 'declarative design'?
+
+https://adactio.com/journal/18982
+
+> Be the browser’s mentor, not its micromanager.
+
+>We say CSS is “declarative”, but the more and more I write breakpoints to accommodate all the different ways a design can change across the viewport spectrum, the more I feel like I’m writing imperative code. **At what quantity does a set of declarative rules begin to look like imperative instructions?**
+
+>They all focus on creating the right _inputs_ rather than trying to control every possible _output_. Leave the final calculations for those outputs to the browser—that’s what computers are good at.
+
+---
+
+Declarative vs Imperative design systems
+
+Following on from the ideas of 'declarative design' or the methodology used by intrinsic/extrinsic design (TODO - links), is the idea of 'declarative design systems'.
+
+>If these buttons were in an imperative design system, then the output would be the important part. The design system would supply the code needed to make those buttons exactly. If you need a different button, it would have to be added to the design system as a variation.
+
+>But in a declarative design system, the output isn’t as important as the underlying ruleset. In this case, there are rules to create the components. Rules that create a coloured button with states when a single colour is given. Think of programmatic lightening/darkening rather than a custom tint/shade for your colour palette.
+
+>If you’re approaching a design system with an imperative mindset then “correct” means “exact.” With this approach, precision is seen as valuable: precise spacing, precise numbers, precise pixels.
+
+>But if you’re approaching a design system with a declarative mindset, then “correct” means “resilient.” With this approach, flexibility is seen as valuable: flexible spacing, flexible ranges, flexible outputs.
+
+>These are two fundamentally different design approaches and yet the results of both would be described as a design system.
+
+https://adactio.com/journal/19131
+
 ---
 
 `as const` / const assertions
 
 https://stackoverflow.com/questions/66993264/what-does-the-as-const-mean-in-typescript-and-what-is-its-use-case
+
+Useful for creating an object and narrowing the types. e.g.
+```ts
+type Space =
+    | '1bu'
+    | '1.5bu';
+
+function DoSomethingWithSpace(space: Space) {
+    return;
+}
+
+const semantic = {
+    cardPadding: '1.5bu',
+} as const;
+```
+
+Without the `as const`, the return type of `semantic` is
+```ts
+const newSemanticObject: {
+    cardPadding: string;
+}
+```
+
+To get the return type to be `Space`, `Record<string, Space>` can be used, but this makes the key type a generic string rather than `cardPadding`. This in turn causes issues with `noPropertyAccessFromIndexSignature`.
+
+Using `as const`, we get a narrow type for the value, which means it falls within the `Space` type.
+
+However, you do lose the typechecking when creating the object that `Record` offers.
 
 [[ts]]
 
@@ -366,6 +422,9 @@ Different hues have different perception of brightness
 
 Where did I read this? - Refactoring UI maybe?
 Is this why people prefer HSL?
+
+How does Google's HCT work with this? https://material.io/blog/science-of-color-design
+
 
 ---
 
@@ -543,3 +602,76 @@ Service workers, SPAs, MPAs, PWAs, and more
 
 border-radius takes 8 values
 https://9elements.com/blog/css-border-radius/
+
+---
+
+depcruise
+
+https://github.com/sverweij/dependency-cruiser
+
+needs typescript installed at the same spot dependency-cruiser is installed
+
+e.g.
+```
+depcruise --ts-pre-compilation-deps \
+--ts-config "tsconfig.base.json" \
+--exclude "^node_modules" \
+--collapse "^libs" \
+--progress \
+--output-type dot \
+apps/spa/src/pages/browse-projects/JobListingsPage \
+| dot -T svg > dependencygraph.svg
+
+```
+
+Need the typescript flags sometimes too
+
+Different filtering options: doNotFollow, includeOnly, focus, exclude, collapse, maxDepth
+https://github.com/sverweij/dependency-cruiser/blob/develop/doc/options-reference.md#filters
+
+--progress flag is helpful
+
+if `dot` is wanted, `brew install graphviz`
+
+---
+
+donut scope
+
+link to from [[20211115082404-css-not-selector]]
+
+---
+
+barrel files
+
+https://github.com/basarat/typescript-book/blob/master/docs/tips/barrel.md
+related to [[20210726162517-default-exports-js]]
+
+---
+
+xargs
+
+how does `git ls-files --deleted | xargs git add` work?
+
+---
+
+adding only deleted files in git
+
+`git ls-files -d | xargs git add`
+
+Can pick a path with `git ls-files -d -- lib/foo | xargs git add`
+
+For modified files use `-m` instead of `-d`
+
+---
+
+pragmatic vs dogmatic vs ??
+
+---
+
+users are good at finding problems but bad at offering solutions
+
+>If I’d asked customers what they wanted, they would have said “a faster horse”.
+>- Henry Ford
+
+---
+

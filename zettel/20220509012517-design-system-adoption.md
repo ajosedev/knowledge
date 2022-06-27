@@ -9,5 +9,6 @@ Different teams can be more closely aligned with the design system. It may be wo
 
 Orient release cadence and workflows based on relevant customer distinctions.
 
+[[adoption]]
 [[designsystem]]
 [[product]]

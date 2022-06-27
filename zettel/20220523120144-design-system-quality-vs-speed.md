@@ -13,5 +13,6 @@ The tradeoff often depends on how mature your design system is. A focus on quali
 https://amyhupe.co.uk/articles/design-systems-quality-over-speed/
 https://superfriendly.com/design-systems/articles/measuring-speed-with-design-systems
 
+[[adoption]]
 [[designsystem]]
 [[product]]
