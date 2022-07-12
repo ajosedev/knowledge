@@ -1,6 +1,8 @@
 
 Not sure what this is yet, but some thoughts on component design
-TODO
+
+#todo 
+#thoughts
 
 ## Object props vs compound components
 Object props (and list props, sometimes called 'config props') refers to something like `items`, which is an array of items each with their own properties that get rendered by the parent in some way

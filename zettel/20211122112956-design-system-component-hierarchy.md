@@ -1,7 +1,7 @@
 # Components, recipes, and snowflakes in a design system
 
 Some vocabulary on different 'levels' of components to helps avoid cluttering the design system:
-- Snowflakes: one-off components that are used sparingly, often for a particular page
+- Snowflakes: one-off components that are used sparingly, often for a particular page [[20220704125509-design-systems-snowflakes]]
 - Recipes: reusable components (usually an organism (TODO - link)) often scoped to a product. A specific composition of a design system component
 - Design system component: your base components - button, table, select, etc.
 

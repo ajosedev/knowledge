@@ -15,6 +15,10 @@ Exam at the end, featuring single value multiple choice (1/4) and multiple value
 Pass mark is 720/100
 65 questions, 130 minutes
 
+**28/06/22**
+Note that soon a new version (SAA-C03) of the exam will be available - August 30, 2022.
+https://aws.amazon.com/certification/coming-soon/
+
 ---
 
 ## Fundamentals

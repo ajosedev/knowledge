@@ -1,5 +1,7 @@
 # Better engineers bring business value
 
+#thoughts 
+
 Some half-thoughts on senior engineers.
 
 As your seniority grows, you go from completing tasks, to providing business value.

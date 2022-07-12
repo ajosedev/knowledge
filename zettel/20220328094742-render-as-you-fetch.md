@@ -3,7 +3,7 @@
 React Suspense is aiming to shift some paradigms in React. There's two main non-suspense render patterns involving fetches.
 
 **Fetch-on-render**
-Start fetching after the component has been rendered on screen. Often using a `useEffect` hook. This leads to waterfall-ing issues as fetches are often dependent on other fetches.
+Start fetching after the component has been rendered on screen. Often using a `useEffect` hook. This leads to waterfall-ing issues as fetches are often dependent on other fetches. Additionally effects don't run on the server, which means that a user has to wait for JS to load before the fetch even starts.
 
 **Fetch-then-render**
 This essentially groups fetches into a higher component to avoid waterfalling. Before the individual component is rendered, a different component can fetch all the data required for the page. However this blocks renders - we can't render anything until we have _all_ data.

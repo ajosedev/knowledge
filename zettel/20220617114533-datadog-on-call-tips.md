@@ -8,6 +8,8 @@ This will often show you the 'interesting' traces, and what they're trying to re
 
 In Datadog's APM, there's an `operation` dropdown at the top left for a service. This can often change the data shown greatly.
 
+Datadog graphs aren't always perfect. They can misreport what you're looking at due to a bad setup. Worth validating crucial ones with more raw graphs, such as through ECS.
+
 #datadog
 #oncall
 #ops

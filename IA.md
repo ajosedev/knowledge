@@ -18,7 +18,10 @@ Don't create a structure top-down, create the content and then create the struct
 ---
 
 - Review current topic pages, e.g. engineering, concepts, etc.
-	- Is 'principles' good to introduce? How does this intersect with 'laws' or 'concepts'
+	- Is 'principles' good to introduce? How does this intersect with 'laws' or 'concepts', or even 'engineering'
+		- I think principles is really 'design principles', so this would include laws too.
+		- Concepts are for other random bits of knowledge, e.g. feature flags
+		- Not sure what a 'pattern' is still
 	- [[architecture]] seems like a good topic
 - Flesh out current topic 
 - Consider removing zettel prefix

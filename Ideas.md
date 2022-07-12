@@ -51,6 +51,15 @@ https://kentcdodds.com/blog/usememo-and-usecallback
 Primer on microfrontends
   https://increment.com/frontend/micro-frontends-in-context/
 
+Microfrontends help with ownership, and in turn help with scale.
+Feature teams can be responsible for their own microfrontend and piece them together at the end.
+
+Each team has less of an impact on other teams, for better DX. Often better build times too.
+
+Siloed changes help increase maintainability too.
+
+[[20220628012817-microfrontends]]
+
 ---
 
 Splitting microfrontends horizontally vs vertically
@@ -147,7 +156,12 @@ Due to flycheck (+ eslint?)
 `flycheck-perform-deferred-syntax-check` seems to take a while on first load
 If disabling flycheck globally, opening files is quick
 
-flycheck-verify-mode
+```lisp
+;; fix flycheck init load times due to flycheck-perform-deferred-syntax-check
+;; this in turn runs `eslint --print-config` which can be slow
+(with-eval-after-load 'flycheck
+  (advice-add 'flycheck-eslint-config-exists-p :override (lambda() t)))
+```
 
 ---
 
@@ -167,10 +181,7 @@ Cleaner code
 Don't have to pass 'undefined' or 'null' for arguments you don't care about
 Position ceases to matter
 
-TODO - i think this is a principle?
-
 [[concepts]]
-[[principles]]
 
 ---
 
@@ -178,19 +189,6 @@ Void vs undefined in Typescript
 
 https://stackoverflow.com/questions/58885485/why-does-typescript-have-both-void-and-undefined
 
----
-
-typeof undefined vs typeof 'undefined'
-
-https://stackoverflow.com/questions/4725603/variable-undefined-vs-typeof-variable-undefined
-
----
-
-Innersource
-
-Like open source, for proprietary software
-
-https://resources.github.com/innersource/fundamentals/
 
 ---
 
@@ -373,12 +371,6 @@ reakit offers render props, `as` prop, and a hook API
 
 ---
 
-Type-Only Imports and Export
-
-[[ts]]
-
----
-
 concurrent react
 
 [[react]]
@@ -397,140 +389,31 @@ e.g. width: fit-content
 
 ---
 
-semantic tokens make sense as you add more dependencies
-
-e.g. card padding token helps, as you need to position the close button based on that padding through CSS. Or add and remove the padding for various DOM reasons
-
----
-
-pragmatic programmer notes
-make new literature doc
-tracer bullet vs prototypes
-
----
-
 React SSR
 
 ---
 
-Notes from Every Layout
+Notes from Every Layout & Pragmatic Programmer
 
 ---
 
 Explainer on how colours are not perceived by humans 1:1
 Different hues have different perception of brightness
+	Is this 'luminance'?
+	Not lightness.
 
 Where did I read this? - Refactoring UI maybe?
 Is this why people prefer HSL?
 
 How does Google's HCT work with this? https://material.io/blog/science-of-color-design
 
-
----
-
-[[20220509122858-known-unknowns]]
-
----
-
-Cookies
-
----
-
-Cookies vs localstorage vs sessionstorage, etc
-
----
-
-Planning poker
-
----
-
-https://wpt.fyi
-
----
-
-https://www.bain.com/insights/rapid-tool-to-clarify-decision-accountability/
-
 ---
 
 useEffect
 
 TODO - general primer on useEffect?
-TODO - break down this deps + cleanup reminder into a separate doc
-
-"React performs the cleanup when the component unmounts. However, as we learned earlier, effects run for every render and not just once. This is why React _also_ cleans up effects from the previous render before running the effects next time"
-
-Thus, when using a useEffect with a dependency array:
-The cleanup function is called **whenever the dependencies change**, and when the component is unmounted.
-
-```
-useEffect(() => {
-  function handleStatusChange(status) {
-    setIsOnline(status.isOnline);
-  }
-
-  ChatAPI.subscribeToFriendStatus(props.friend.id, handleStatusChange);
-  return () => {
-    ChatAPI.unsubscribeFromFriendStatus(props.friend.id, handleStatusChange);
-  };
-}, [props.friend.id]); // Only re-subscribe if props.friend.id changes
-```
 
 [[react]]
-
----
-
-setState
-
-https://reactjs.org/docs/hooks-reference.html#functional-updates
-
->If the new state is computed using the previous state, you can pass a function to `setState`. The function will receive the previous value, and return an updated value.
-
-```jsx
-setCount(count => count + 1);
-```
-
-TODO - new doc
-Remember that if your state value is an object, the setState hook doesn't merge objects. You have to do that manually
-
-```jsx
-const [state, setState] = useState({});
-setState(prevState => {
-  // Object.assign would also work
-  return {...prevState, ...updatedValues};
-});
-```
-
-[[react]]
-
----
-
-Contributing to a design system
-
-TODO
-
-Hot take: The need/request is more important than the artefact of what people contribute to the design system.
-It's important to capture the needs across teams, figure out what the solution is, and then create that, rather than focusing on a specific team's need.
-
-For this reason, it makes sense to harvest snowflakes periodically so you can get a broader scope on the needs and identify trends. [[20211122112956-design-system-component-hierarchy]]
-
-[[20211115112656-rule-of-three]]
-
-[[designsystem]]
-
----
-
-TODO - snowflakes deep dive
-Link with doc above
-
-Makes sense for components to exist that fulfil needs but can't initially, or won't ever be abstracted into a generic component included in a design system.
-
-One idea is to put these components in specific places so they can be periodically audited. That way if trends emerge, these can be harvested and genericised.
-
-Ideally over time the amount of 'one offs' or 'snowflakes' lowers, as the design system offers more solutions for these.
-
-https://bradfrost.com/blog/post/where-to-put-one-off-components/
-
-[[designsystem]]
 
 ---
 
@@ -543,12 +426,6 @@ Reflection
 Design system happiness
 
 https://zeroheight.com/blog/what-makes-a-happy-design-system-team/
-
----
-
-NPM overrides
-
-https://docs.npmjs.com/cli/v8/configuring-npm/package-json#overrides
 
 ---
 
@@ -575,18 +452,6 @@ https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototy
 
 ---
 
-ripgrep multiple words
-
-rg foo | rg bar
-
-`-p` seems to break headings
-
-passing `--color always --line-number` seems to produce the desired result
-
-If using `rg -pS`, try passing `--no-heading`?
-
----
-
 React reconciliation
 
 ---
@@ -597,11 +462,6 @@ Especially on estimation
 ---
 
 Service workers, SPAs, MPAs, PWAs, and more
-
----
-
-border-radius takes 8 values
-https://9elements.com/blog/css-border-radius/
 
 ---
 
@@ -635,32 +495,10 @@ if `dot` is wanted, `brew install graphviz`
 
 ---
 
-donut scope
-
-link to from [[20211115082404-css-not-selector]]
-
----
-
 barrel files
 
 https://github.com/basarat/typescript-book/blob/master/docs/tips/barrel.md
 related to [[20210726162517-default-exports-js]]
-
----
-
-xargs
-
-how does `git ls-files --deleted | xargs git add` work?
-
----
-
-adding only deleted files in git
-
-`git ls-files -d | xargs git add`
-
-Can pick a path with `git ls-files -d -- lib/foo | xargs git add`
-
-For modified files use `-m` instead of `-d`
 
 ---
 
@@ -674,4 +512,192 @@ users are good at finding problems but bad at offering solutions
 >- Henry Ford
 
 ---
+
+CSS precedence basics
+
+Answer the question: if two classes of the same specificity are applied to an element, which takes precedence?
+	Answer: the styles declared later in the stylesheet
+
+---
+
+CDK, CloudFormation, Fargate, Lambda, etc.
+
+Maybe first start on just CloudFormation + CDK?
+
+Link Cloudformation article from [[20220627112853-infrastructure-as-code]]
+
+---
+
+Handling breaking changes in Microservices
+Also relies to Module federation?
+
+---
+
+>It is tempting to build abstractions so developers have to do less and build more. However, this can easily end up causing frustrations with developers if not done right.
+
+>In summary, the web is uneven across at least three dimensions: Level of abstraction, API design and availability/behavior across browsers. It’s all really lumpy.
+
+>The Web Platform exposes many API surfaces of different sizes and with different levels of abstraction.
+
+>Of course, there are still gaps and shortcomings in the platform, and those are often addressed through libraries or frameworks, which I will group under the term “abstractions”.
+
+>**I get frustrated whenever I have knowledge (specifically Web Platform knowledge) to solve a problem, but the abstraction prevents me from using my knowledge.**
+
+>This made me realize something counter-intuitive: While the uneven shape of the Web Platform may seem like a major source of friction, it’s likely that the developer has already learned and mastered it. If developers are _forced_ to use an abstraction instead of their pre-existing skills, it might not feel like a net positive for them.
+
+>Abstractions are usually designed for a set of specific use-cases. The problems, however, start when a developer wants to do something that the abstraction did not anticipate.
+
+>When the abstraction proves to be insufficient or overbearing, it is often necessary to _pierce_ the abstraction and work under the hood. In some cases that means just not using the abstraction. However, as frameworks often put themselves at the core of any architecture, it can be hard to opt out. After all, the developer’s code is written for the framework and can’t run without it. To address this, frameworks sometimes provide intentional holes in their abstraction, little “escape hatches”, that allow the developer to access the underlying platform primitive. For example, React has the [`ref` property](https://reactjs.org/docs/refs-and-the-dom.html) to get ahold of a component’s corresponding DOM element, exposing the underlying platform primitive
+
+>Escape hatches are, in my opinion, an absolute necessity in any library or framework. It is near impossible to anticipate every possible use case, and providing escape hatches allows developers to work around a restriction and keep moving rather than getting stuck.
+
+>The downside of escape hatches, especially in frameworks, is that developers often drop _all_ the way down to the platform. This can pose a challenge for the developer, as they now have to re-do the work the framework did for them previously: Working their way up from a potentially low-level platform primitive to the abstraction level of the framework. The bigger the gap between framework and platform, the more work that entails for the developer.
+
+>In the end, providing escape hatches is both necessary to not restrict developers, but is also not ideal as they can be quite costly for developers to use.
+
+>If developers already have a skill but are forced to spend time learning a new way _to do the same thing_, frustration happens. Doubly so if there is no tangible benefit of doing it “the new way”, apart from maybe idiomaticism or purity.
+
+>In my opinion, it is especially important to reuse \[web platform\] patterns in tutorials or “Getting Started” guides. These resources are used by newcomers, and nothing is more discouraging than to be greeted with a wall of new concepts and idioms that have to be understood and internalized just to take the first steps
+
+>I’d summarize all of this as follows: **Frustration happens when the developer is _unable_ to use their existing skills or feels _disproportionally punished_ for doing it their way instead of your way.**
+
+>To phrase it another way: Abstractions that take work off of developers are valuable! Of course, they are. The problems only occur when a developer feels chained to the abstractions in a situation where they’d rather do something differently. The important part is to not _force_ patterns onto them.
+
+>If the abstraction leans into platform patterns, or even exposes the underlying platform primitives, resources like StackOverflow can be used by a developer to get unstuck. If the abstraction is watertight or introduces new patterns, a new corpus of blog posts and other indexable media needs to land on the web so developers can get help
+
+>There is a way to support developers that have to resort to escape hatches, which will also improve the architecture of the abstraction overall: Build multiple abstractions that are built on top of one another. Like a ladder, or maybe like a parking lot. Each layer adds utility and convenience. Inevitably, by the nature of tradeoffs, it also adds opinions and constraints. Depending on what the developer knows and requires in any given situation, they can choose which layer provides the appropriate level of convenience and abstraction. They can drop down a layer (or two, or three...) on a case-by-case basis.
+>The lower layers should not aim to abstract away the platform. Instead they should embrace the primitives provided by the platform and follow the patterns & idioms established by the platform, as developers already learned them.
+>An example of this would be for a Design System. Instead of building just a React layer, have three layers for those that don't use React. Pure CSS, Web Components, and then React as a thin wrapper on top.
+
+>At the core of the mental model is to think about what the target developer audience is for any given abstraction, and what skills these developers are likely to bring to the table. The abstraction should rely on these skills to minimize cognitive friction by reusing concepts, and stagger the introductions of new concepts in the onboarding flow (i.e. tutorials, “Getting Started” docs, ...). Every abstraction should ideally be optional (opt-in or opt-out) and come with escape hatches. If possible, it should also expose the abstractions below the top layer, so developers are in control and can help themselves.
+
+#breakdown - separate doc on escape hatches?
+
+https://surma.dev/things/cost-of-convenience/
+
+[[20220627121829-web-platform-adoption]]
+
+---
+
+Libraries vs frameworks
+
+>The distinction between “library” and “framework” has always been a matter of debate. I will not pretend that I can settle that debate, but for the context of this blog post, I’ll use Martin Fowler’s mental model.
+
+>Libraries and a frameworks can be distinguished by looking at the _Inversion of Control_. When I use a library, I slot the library into my code and call into the library in the appropriate places. A framework, on the other hand, makes itself the center of the universe and offers slots _for me to slot into_. It’s the Hollywood principle: You don’t call the framework, the framework calls you.
+
+>This inversion of control is not inherently bad. After all, the framework was designed to be in this place and probably provides some pretty sophisticated machinery to make code easier to write, run more efficiently or utilizes other peripheral better.
+
+#todo - hollywood principle
+https://principles.dev/p/hollywood-principle/
+
+---
+
+Pit of success
+
+https://blog.codinghorror.com/falling-into-the-pit-of-success/
+
+---
+
+String literal union vs enums
+
+[[ts]]
+
+---
+
+type 'string' is not assignable to type (where type is a string literal union)
+
+What's the fix?
+
+If const, link to const zettel
+
+[[ts]]
+
+---
+
+Design systems enable change
+
+https://superfriendly.com/design-systems/articles/design-systems-prepare-you-for-change/
+
+---
+
+Easier to revise and iterate than change
+
+Okay to get a first pass for a DS component out
+
+Drives adoption, lets you understand use cases
+
+Can get more use cases and harvest later [[20220704124529-design-system-harvesting]]
+
+```
+Sometimes we just need to agree on something to move things forward by making a provisional decision, as trying to solve all things up front might feel like trying to boil the ocean. Conversation can be facilitated in the direction (e.g. designing a card):
+
+    There is no alignment on X, so let’s not have opinions or try to solve X now,
+    We need to agree on X, even if we don’t have a best answer (and be open about it).
+
+-   Prepending “provisional” to the decision disarms and empowers the team and helps us agree on enough so that we can move forward (with the data we have) and revisit in a couple of weeks after we get new information.
+
+-   A leak in quality is multiplied in a design system.
+
+-   Teams react better when there is a clear expectation. Be explicit about the decision (“this is our best guess”), sometimes we need to put things live and we don’t know the answers.
+```
+
+[[designsystem]]
+
+---
+
+SOLID
+Look for zettels already referencing these
+
+[[principles]]
+
+---
+
+Searching git with `git log -S<search>`
+
+Find a reference to a string, even if it was previously deleted.
+
+`-p` shows the diff too
+`-i` make its case insensitive
+
+Called the 'pickaxe' option
+
+https://git-scm.com/docs/git-log#Documentation/git-log.txt---pickaxe-all
+
+Using `-G` over `-S` will show the result, even if the number of occurrences of the search term exists is unchanged from the commit. This is helpful to show when a line is moved, for example. `-G` also accepts a regex.
+
+
+Is there a better command for this?
+
+[[git]]
+
+---
+
+Scratchy thoughts:
+#thoughts
+Are Jest manual mocks bad? https://jestjs.io/docs/manual-mocks
+
+Allow you to globally mock things. It works with a file located at the import path within a `__mocks__` folder.
+Node modules are mocked automatically, otherwise a `jest.mock(./moduleName)` should be required.
+However working with aliases, this gets a little confusing.
+
+Good points: Keeps things DRY
+Bad points: 'Magic' happens away from the code, hard to know if something relies on a dependency, hard to find as you're looking for a filepath not code
+
+If something needs a mock, shouldn't it mock it itself?
+Having it in a global `test-setup.ts` file or similar doesn't really solve this problem either
+
+Is the problem explicitness? Can keep the code DRY somewhere, but then if it's explicitly imported, it's fine. Explicit dependencies are good. Magic ones are not.
+
+Feels similar to SASS having a disconnect between class names and where those classes are added to the page/source. Imports help track things and keep it maintainable
+#todo - separate doc on that? CSS modules kind of solves this problem, regardless of its goals on scope.
+
+#todo - what kind of doc is this overall?
+
+is this a [[smells]]? This surely maps to something someone's written about
+
+Is is this?
+https://principles.dev/p/explicit-dependencies-principle/
+
+---
+
 

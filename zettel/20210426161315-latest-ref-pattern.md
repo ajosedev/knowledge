@@ -1,5 +1,8 @@
 # Latest ref pattern in React
 
+#todo 
+#breakdown 
+
 This pattern allows you to keep a value constantly up to date, without triggering re-renders. Rather than just using the value directly, placing it inside of a `useRef` means that the ref won't trigger the dependency array of a `useEffect`.
 
 TODO - I think this is the wrong takeaway.
