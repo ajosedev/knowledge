@@ -1,14 +1,3 @@
-Node modules
-
-- Should be transpiled when publishing them
-	- i.e. have .js and .d.ts
-- Webpack will not transpile them by default
-	- And should not, since that's a waste most of the time
-- If a node_module is written in typescript, you have to explicitly transpile it
-	- Usually omitting it from skipping node_modules with special regex
-
----
-
 node modules in production and devdeps vs deps
 
 - using a bundler further confuses this
@@ -35,16 +24,18 @@ something on React contexts on how to best make them
 - they re-render on object.is evaluation
 - therefore put state somewhere that checks it better so it doesn't get re-created on each one
 - reducer better as it's safe/doesn't cause rerenders? (link to relevant zettel)
-- 'context module' pattern? (another  zettel?)
 
 See what Epic React has here
 
 https://kentcdodds.com/blog/how-to-use-react-context-effectively
+https://beta.reactjs.org/apis/usecontext
 
----
 
-don't preoptimise useMemo/useCallback
-https://kentcdodds.com/blog/usememo-and-usecallback
+
+Context Module Functions (Epic React)
+https://github.com/kentcdodds/advanced-react-patterns/blob/main/src/exercise/01.md
+[[react]]
+[[reactapi]]
 
 ---
 
@@ -86,13 +77,6 @@ https://github.com/kentcdodds/advanced-react-patterns/blob/main/src/exercise/06.
 
 ---
 
-Context Module Functions (Epic React)
-https://github.com/kentcdodds/advanced-react-patterns/blob/main/src/exercise/01.md
-[[react]]
-[[reactapi]]
-
----
-
 b2b, b2c, c2c, etc
 [[business]]
 
@@ -109,86 +93,10 @@ https://martinfowler.com/bliki/DomainDrivenDesign.html
 
 ---
 
-However you need to also break out of the design system
-1.  Consistency becomes **monotony** and we lack variety and intent in our solutions.
-2.  **Speed is overrated** and the momentum hinders teams from building outside the bounds of the system.
-3.  Designers and developers become **imprisoned** within the system boundaries.
-"If your user needs a solution that is very specific and unique, you can’t let the system hold you back.
-
-"The system defines solutions" -> "Solutions define the system"
-
-01
-
-Remember that form follows function
-
-
-You’ll want to have a strong, rational case when you start sharing those ideas with your team.
-
-02
-
-Don’t create silos
-
-
-Designers who are generalists tend to be more successful when breaking the system. When you’re thinking about all aspects of the experience — UX, copy, motion, visuals — you have more control over making it all work together to deliver magical moments. 
-
-03
-
-Acknowledge the machine
-
-
-Bring technology into every step of the process (whether you are a designer who knows how to code or you simply understand the importance of bringing engineers from day one) —that way you have better chances of landing on signature moments that are feasible, viable, and accessible.
-
-Break out of your design system
-https://breakyourdesignsystem.com/
-
----
-
 design system contributions
 
 Some ideas for encouraging contributions
 https://medium.com/wayfair-design/contributing-to-our-design-system-at-wayfair-46fb5593e207
-
----
-
-Debugging why emacs hangs typescript
-
-Due to flycheck (+ eslint?)
-`flycheck-perform-deferred-syntax-check` seems to take a while on first load
-If disabling flycheck globally, opening files is quick
-
-```lisp
-;; fix flycheck init load times due to flycheck-perform-deferred-syntax-check
-;; this in turn runs `eslint --print-config` which can be slow
-(with-eval-after-load 'flycheck
-  (advice-add 'flycheck-eslint-config-exists-p :override (lambda() t)))
-```
-
----
-
-Writing wrappers around external libraries to enable change in the future
-
-Keep consumers agnostic
-
-https://levelup.gitconnected.com/why-you-should-often-wrap-your-dependencies-5fced2999616
-https://www.google.com/search?q=wrap+third+party+dependencies+npm+pattern&client=firefox-b-d&ei=uvZMYoK-AuaPseMPg5GmuAs&ved=0ahUKEwiCg4H-rf72AhXmR2wGHYOICbcQ4dUDCA0&uact=5&oq=wrap+third+party+dependencies+npm+pattern&gs_lcp=Cgdnd3Mtd2l6EAMyBAghEBU6BwgAEEcQsAM6BQgAEJECOgQILhBDOgsILhCABBCxAxCDAToLCAAQgAQQsQMQgwE6DgguEIAEELEDEMcBEKMCOhEILhCABBCxAxCDARDHARCjAjoRCC4QgAQQsQMQgwEQxwEQ0QM6BAgAEEM6CgguELEDENQCEEM6BwguELEDEEM6BwgAELEDEEM6CwgAELEDEIMBEJECOggIABDJAxCRAjoLCC4QxwEQrwEQkQI6CAgAEIAEELEDOgUIABCABDoHCAAQgAQQCjoGCAAQFhAeOggIABAWEAoQHjoJCAAQyQMQFhAeOgoIABANEAUQChAeOggIABANEAUQHjoICAAQgAQQyQM6CAguEIAEENQCOgsILhCABBDHARCvAToICAAQCBANEB46BAgAEA06BggAEA0QHjoHCCEQChCgAToFCCEQoAE6CAghEBYQHRAeSgQIQRgASgQIRhgAUOEpWPxjYN9kaAlwAXgAgAHdAYgB0kOSAQYwLjUwLjOYAQCgAQHIAQjAAQE&sclient=gws-wiz
-
-[[etc]]
-
----
-
-Using objects as oppose to multiple parameters
-Cleaner code
-Don't have to pass 'undefined' or 'null' for arguments you don't care about
-Position ceases to matter
-
-[[concepts]]
-
----
-
-Void vs undefined in Typescript
-
-https://stackoverflow.com/questions/58885485/why-does-typescript-have-both-void-and-undefined
-
 
 ---
 
@@ -206,11 +114,6 @@ pre-mortem and post-mortem
 
 [[engineering]]
 [[product]]
-
----
-
-auto layout in Figma doesn't have the concept of wrapping
-as of 20 Apr 2022
 
 ---
 
@@ -309,46 +212,12 @@ https://adactio.com/journal/19131
 
 ---
 
-`as const` / const assertions
-
-https://stackoverflow.com/questions/66993264/what-does-the-as-const-mean-in-typescript-and-what-is-its-use-case
-
-Useful for creating an object and narrowing the types. e.g.
-```ts
-type Space =
-    | '1bu'
-    | '1.5bu';
-
-function DoSomethingWithSpace(space: Space) {
-    return;
-}
-
-const semantic = {
-    cardPadding: '1.5bu',
-} as const;
-```
-
-Without the `as const`, the return type of `semantic` is
-```ts
-const newSemanticObject: {
-    cardPadding: string;
-}
-```
-
-To get the return type to be `Space`, `Record<string, Space>` can be used, but this makes the key type a generic string rather than `cardPadding`. This in turn causes issues with `noPropertyAccessFromIndexSignature`.
-
-Using `as const`, we get a narrow type for the value, which means it falls within the `Space` type.
-
-However, you do lose the typechecking when creating the object that `Record` offers.
-
-[[ts]]
-
----
-
 inline elements + line boxes
 already existing page on this? [[20210806121648-line-boxes-css]]
 
 https://stackoverflow.com/questions/28363186/inline-elements-and-line-height
+
+https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model#the_box_model_and_inline_boxes
 
 ---
 
@@ -393,7 +262,8 @@ React SSR
 
 ---
 
-Notes from Every Layout & Pragmatic Programmer
+Notes from Every Layout
+[[Every Layout]]
 
 ---
 
@@ -420,12 +290,6 @@ TODO - general primer on useEffect?
 Reflection
 
 [[concepts]]
-
----
-
-Design system happiness
-
-https://zeroheight.com/blog/what-makes-a-happy-design-system-team/
 
 ---
 
@@ -465,43 +329,6 @@ Service workers, SPAs, MPAs, PWAs, and more
 
 ---
 
-depcruise
-
-https://github.com/sverweij/dependency-cruiser
-
-needs typescript installed at the same spot dependency-cruiser is installed
-
-e.g.
-```
-depcruise --ts-pre-compilation-deps \
---ts-config "tsconfig.base.json" \
---exclude "^node_modules" \
---collapse "^libs" \
---progress \
---output-type dot \
-apps/spa/src/pages/browse-projects/JobListingsPage \
-| dot -T svg > dependencygraph.svg
-
-```
-
-Need the typescript flags sometimes too
-
-Different filtering options: doNotFollow, includeOnly, focus, exclude, collapse, maxDepth
-https://github.com/sverweij/dependency-cruiser/blob/develop/doc/options-reference.md#filters
-
---progress flag is helpful
-
-if `dot` is wanted, `brew install graphviz`
-
----
-
-barrel files
-
-https://github.com/basarat/typescript-book/blob/master/docs/tips/barrel.md
-related to [[20210726162517-default-exports-js]]
-
----
-
 pragmatic vs dogmatic vs ??
 
 ---
@@ -510,6 +337,12 @@ users are good at finding problems but bad at offering solutions
 
 >If I’d asked customers what they wanted, they would have said “a faster horse”.
 >- Henry Ford
+
+Don't just take a users solution at face value. Instead figure out the root problem is and figure out a solution for that. The user often doesn't have the context or scope that the creator does.
+
+Don't just ask customers what they want.
+
+Is this a [[research]] topic?
 
 ---
 
@@ -533,72 +366,9 @@ Also relies to Module federation?
 
 ---
 
->It is tempting to build abstractions so developers have to do less and build more. However, this can easily end up causing frustrations with developers if not done right.
-
->In summary, the web is uneven across at least three dimensions: Level of abstraction, API design and availability/behavior across browsers. It’s all really lumpy.
-
->The Web Platform exposes many API surfaces of different sizes and with different levels of abstraction.
-
->Of course, there are still gaps and shortcomings in the platform, and those are often addressed through libraries or frameworks, which I will group under the term “abstractions”.
-
->**I get frustrated whenever I have knowledge (specifically Web Platform knowledge) to solve a problem, but the abstraction prevents me from using my knowledge.**
-
->This made me realize something counter-intuitive: While the uneven shape of the Web Platform may seem like a major source of friction, it’s likely that the developer has already learned and mastered it. If developers are _forced_ to use an abstraction instead of their pre-existing skills, it might not feel like a net positive for them.
-
->Abstractions are usually designed for a set of specific use-cases. The problems, however, start when a developer wants to do something that the abstraction did not anticipate.
-
->When the abstraction proves to be insufficient or overbearing, it is often necessary to _pierce_ the abstraction and work under the hood. In some cases that means just not using the abstraction. However, as frameworks often put themselves at the core of any architecture, it can be hard to opt out. After all, the developer’s code is written for the framework and can’t run without it. To address this, frameworks sometimes provide intentional holes in their abstraction, little “escape hatches”, that allow the developer to access the underlying platform primitive. For example, React has the [`ref` property](https://reactjs.org/docs/refs-and-the-dom.html) to get ahold of a component’s corresponding DOM element, exposing the underlying platform primitive
-
->Escape hatches are, in my opinion, an absolute necessity in any library or framework. It is near impossible to anticipate every possible use case, and providing escape hatches allows developers to work around a restriction and keep moving rather than getting stuck.
-
->The downside of escape hatches, especially in frameworks, is that developers often drop _all_ the way down to the platform. This can pose a challenge for the developer, as they now have to re-do the work the framework did for them previously: Working their way up from a potentially low-level platform primitive to the abstraction level of the framework. The bigger the gap between framework and platform, the more work that entails for the developer.
-
->In the end, providing escape hatches is both necessary to not restrict developers, but is also not ideal as they can be quite costly for developers to use.
-
->If developers already have a skill but are forced to spend time learning a new way _to do the same thing_, frustration happens. Doubly so if there is no tangible benefit of doing it “the new way”, apart from maybe idiomaticism or purity.
-
->In my opinion, it is especially important to reuse \[web platform\] patterns in tutorials or “Getting Started” guides. These resources are used by newcomers, and nothing is more discouraging than to be greeted with a wall of new concepts and idioms that have to be understood and internalized just to take the first steps
-
->I’d summarize all of this as follows: **Frustration happens when the developer is _unable_ to use their existing skills or feels _disproportionally punished_ for doing it their way instead of your way.**
-
->To phrase it another way: Abstractions that take work off of developers are valuable! Of course, they are. The problems only occur when a developer feels chained to the abstractions in a situation where they’d rather do something differently. The important part is to not _force_ patterns onto them.
-
->If the abstraction leans into platform patterns, or even exposes the underlying platform primitives, resources like StackOverflow can be used by a developer to get unstuck. If the abstraction is watertight or introduces new patterns, a new corpus of blog posts and other indexable media needs to land on the web so developers can get help
-
->There is a way to support developers that have to resort to escape hatches, which will also improve the architecture of the abstraction overall: Build multiple abstractions that are built on top of one another. Like a ladder, or maybe like a parking lot. Each layer adds utility and convenience. Inevitably, by the nature of tradeoffs, it also adds opinions and constraints. Depending on what the developer knows and requires in any given situation, they can choose which layer provides the appropriate level of convenience and abstraction. They can drop down a layer (or two, or three...) on a case-by-case basis.
->The lower layers should not aim to abstract away the platform. Instead they should embrace the primitives provided by the platform and follow the patterns & idioms established by the platform, as developers already learned them.
->An example of this would be for a Design System. Instead of building just a React layer, have three layers for those that don't use React. Pure CSS, Web Components, and then React as a thin wrapper on top.
-
->At the core of the mental model is to think about what the target developer audience is for any given abstraction, and what skills these developers are likely to bring to the table. The abstraction should rely on these skills to minimize cognitive friction by reusing concepts, and stagger the introductions of new concepts in the onboarding flow (i.e. tutorials, “Getting Started” docs, ...). Every abstraction should ideally be optional (opt-in or opt-out) and come with escape hatches. If possible, it should also expose the abstractions below the top layer, so developers are in control and can help themselves.
-
-#breakdown - separate doc on escape hatches?
-
-https://surma.dev/things/cost-of-convenience/
-
-[[20220627121829-web-platform-adoption]]
-
----
-
-Libraries vs frameworks
-
->The distinction between “library” and “framework” has always been a matter of debate. I will not pretend that I can settle that debate, but for the context of this blog post, I’ll use Martin Fowler’s mental model.
-
->Libraries and a frameworks can be distinguished by looking at the _Inversion of Control_. When I use a library, I slot the library into my code and call into the library in the appropriate places. A framework, on the other hand, makes itself the center of the universe and offers slots _for me to slot into_. It’s the Hollywood principle: You don’t call the framework, the framework calls you.
-
->This inversion of control is not inherently bad. After all, the framework was designed to be in this place and probably provides some pretty sophisticated machinery to make code easier to write, run more efficiently or utilizes other peripheral better.
-
-#todo - hollywood principle
-https://principles.dev/p/hollywood-principle/
-
----
-
-Pit of success
-
-https://blog.codinghorror.com/falling-into-the-pit-of-success/
-
----
-
 String literal union vs enums
+
+Old doc on this: https://medium.com/@katbusch/typescript-enums-explained-e5f9a101afc9
 
 [[ts]]
 
@@ -614,90 +384,68 @@ If const, link to const zettel
 
 ---
 
-Design systems enable change
-
-https://superfriendly.com/design-systems/articles/design-systems-prepare-you-for-change/
-
----
-
-Easier to revise and iterate than change
-
-Okay to get a first pass for a DS component out
-
-Drives adoption, lets you understand use cases
-
-Can get more use cases and harvest later [[20220704124529-design-system-harvesting]]
-
-```
-Sometimes we just need to agree on something to move things forward by making a provisional decision, as trying to solve all things up front might feel like trying to boil the ocean. Conversation can be facilitated in the direction (e.g. designing a card):
-
-    There is no alignment on X, so let’s not have opinions or try to solve X now,
-    We need to agree on X, even if we don’t have a best answer (and be open about it).
-
--   Prepending “provisional” to the decision disarms and empowers the team and helps us agree on enough so that we can move forward (with the data we have) and revisit in a couple of weeks after we get new information.
-
--   A leak in quality is multiplied in a design system.
-
--   Teams react better when there is a clear expectation. Be explicit about the decision (“this is our best guess”), sometimes we need to put things live and we don’t know the answers.
-```
-
-[[designsystem]]
-
----
-
 SOLID
-Look for zettels already referencing these
+Look for zettels already referencing these (e.g. 'SOLID', 'Single responsibility', etc)
 
 [[principles]]
 
 ---
 
-Searching git with `git log -S<search>`
+Design system component philosophies
 
-Find a reference to a string, even if it was previously deleted.
+See how this lines up with existing articles. Search the [[designsystem]] tag and see what I can link out to?
 
-`-p` shows the diff too
-`-i` make its case insensitive
+https://www.gabe.pizza/notes-on-component-libraries/
+```
+1.  **It should be easy to take a design and translate it into UI code.** Props should map intuitively to design system documentation in Figma or otherwise. Components should look correct without applying overrides.
+2.  **A component should, for the most part, act as an opaque box to a parent consuming it.** It should not leak details about its internals or allow injecting arbitrary code/styles. Data goes in; markup comes out.
+3.  **The Obvious Thing, The Easy Thing, and The Right Thing should overlap most of the time.** A developer under time pressure is _usually_ going to reach for the easiest solution. Ideally, the easiest solution is the obvious one. And the obvious should be [what I wanted the developer to do in the first place](https://www.youtube.com/watch?v=SxdOUGdseq4).
+4.  **Doing The Wrong Thing should be at least uncomfortable, at worst impossible.** Allow for escape hatches when necessary, but make them feel bad. The developer should think, “I should open an issue so that I don’t have to do this again.”
+```
 
-Called the 'pickaxe' option
+Are there more guidelines? e.g. cost of convenience/flexibility?
 
-https://git-scm.com/docs/git-log#Documentation/git-log.txt---pickaxe-all
-
-Using `-G` over `-S` will show the result, even if the number of occurrences of the search term exists is unchanged from the commit. This is helpful to show when a line is moved, for example. `-G` also accepts a regex.
-
-
-Is there a better command for this?
-
-[[git]]
-
----
-
-Scratchy thoughts:
-#thoughts
-Are Jest manual mocks bad? https://jestjs.io/docs/manual-mocks
-
-Allow you to globally mock things. It works with a file located at the import path within a `__mocks__` folder.
-Node modules are mocked automatically, otherwise a `jest.mock(./moduleName)` should be required.
-However working with aliases, this gets a little confusing.
-
-Good points: Keeps things DRY
-Bad points: 'Magic' happens away from the code, hard to know if something relies on a dependency, hard to find as you're looking for a filepath not code
-
-If something needs a mock, shouldn't it mock it itself?
-Having it in a global `test-setup.ts` file or similar doesn't really solve this problem either
-
-Is the problem explicitness? Can keep the code DRY somewhere, but then if it's explicitly imported, it's fine. Explicit dependencies are good. Magic ones are not.
-
-Feels similar to SASS having a disconnect between class names and where those classes are added to the page/source. Imports help track things and keep it maintainable
-#todo - separate doc on that? CSS modules kind of solves this problem, regardless of its goals on scope.
-
-#todo - what kind of doc is this overall?
-
-is this a [[smells]]? This surely maps to something someone's written about
-
-Is is this?
-https://principles.dev/p/explicit-dependencies-principle/
+[[20210908155508-flexibility-components]]
+[[20220621083440-design-system-flexibility]]
+[[20220801011940-pit-of-success]]
 
 ---
 
+Compound components (aka subcomponents) in a design system
+https://medium.com/eightshapes-llc/subcomponents-753ce9f6600a
 
+Subcomponents are often prefixed with a similar name, e.g. Menu and MenuItem. Can still get these benefits from more general composition, e.g. using an Image in Card, rather than needing a custom CardImage. However, specific subcomponents are useful too. They allow you to act as a facade, locking down props to avoid footguns.
+#todo - separate article on 'facades' for design system components
+
+Similar to [[20210412143336-compound-components]] but their advantages in a DS.
+Mainly composition. More flexible, allow you to create the ''uncommon" designs that you still need to support. e.g. not the happy path.
+Reduce dependency on the DS team too, as you don't have to monitor this, add new props, etc.
+Similar to [[20210908151101-component-design]]
+This is probably part of a new tag like [[designsystemapi]]. See what I can move/add to from [[reactapi]]. Maybe a more generic [[componentapi]]?
+
+Subcomponents can act as a facade, locking down props as needed. e.g. CardImage extends Image, but removes footguns that you might get when putting an Image straight into a Card.
+This adds a bit more merit to an explicit subcomponent rather than just general composition.
+
+Pros:
+- Composition
+- Makes achieving the uncommon possible
+- Avoids giving infinite props to a component, which makes them brittle
+- Gives more power to the consumer
+- Avoids having to build things from scratch when the DS doesn't fulfil the need
+- Still keeps things DRY at the end of the day
+
+Most cons are less cons, and more tradeoffs
+
+Cons:
+- Risks inconsistency, but realistically you're not going to solve everything. Let consumers do what they want, just make it better
+- Requires more implementer work, but also this is the tradeoff you get for customisation
+- Create debt, but probably less than going full custom
+- Might be hard to re-create in Figma.
+
+---
+
+Projects can be dropped at any time
+
+Business goals change etc
+
+Plan around it

@@ -1,7 +1,5 @@
 # API flexibility in components
 
-TODO
-
 Flexibility is not always a good thing.
 
 Flexibility allows for more footguns that need to be handled

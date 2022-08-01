@@ -19,6 +19,8 @@ https://webpack.js.org/concepts/module-federation/
 Single-spa was a framework(?) or library(?) in this space. Module federation is mostly an alternative to using single-spa, but can be used in conjunction.
 https://single-spa.js.org/docs/recommended-setup/#overview
 
+Module federation != microfrontend architecture [[20220706121531-module-federation-microfrontends-misconception]]
+
 [[architecture]]
 [[browsers]]
 [[microfrontends]]

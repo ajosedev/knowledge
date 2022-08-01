@@ -1,6 +1,7 @@
 - Use `[[tags]]` over `#tags`
 - Create topic pages rather than tags
-- Use tags for status, rather than topics. e.g. `#topic-page`, `#new`
+- Use tags for status, rather than topics
+	- #todo, #breakdown, #new, #topic-page
 - Don't have to create pages for topics until they start to house a fair bit of content (shown in graph)
 - Can then create a separate hierarchy of topic pages, e.g. interests -> programming -> javascript
 - Topic pages can be fleshed out or just empty, they'll still be links on the graph even if a page doesn't exist
@@ -23,13 +24,16 @@ Don't create a structure top-down, create the content and then create the struct
 		- Concepts are for other random bits of knowledge, e.g. feature flags
 		- Not sure what a 'pattern' is still
 	- [[architecture]] seems like a good topic
-- Flesh out current topic 
-- Consider removing zettel prefix
+	- What is [[components]] for? [[reactapi]] too. Maybe need a [[componentapi]]? [[designsystemapi]]?
+	- Make a list of all current topics and see what the hierarchy should be. See what's missing.
+	- [[etc]] is similar to [[20200307101703-easy-to-change]]
+- Create more topic pages that have categories and such
+- Consider removing zettel (date) prefix
 	- Would be better for creating pages link-first
 	- What does it add?
 - Review if using `[[tags]]` is better than `#tags`
 	- Might help if you have good topic pages?
 - Introduce some new helper tags
 	- #breakdown 
-	- #todo?
+	- #todo
 	- #retag

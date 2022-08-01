@@ -19,6 +19,7 @@ Interesting to note that this is a low-level layer of abstraction. Sometimes abs
 [[20211029152633-design-token-names]]
 [[20220523102023-design-tokens-as-intents]]
 [[20220704013140-semantic-design-tokens-dependencies]]
+[[20200307101703-easy-to-change]]
 
 [[design]]
 [[designsystem]]

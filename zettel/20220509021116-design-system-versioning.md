@@ -15,7 +15,7 @@ Breaking changes for one component only affect that particular component. This d
 
 As for particular version bumps, remember a major version is purely a breaking change. It's not a marketing ploy or a change that necessarily requires large amounts of effort.
 
-When deprecating a component(s), consider current use. Also consider codemods/etc to make the job of migration easier. Teams should have a process for deprecating things, and a timeline of when you're going to do it.
+When deprecating a component(s), consider current use. Also consider [[codemods]]/etc to make the job of migration easier. Teams should have a process for deprecating things, and a timeline of when you're going to do it.
 
 Design documentation should be kept up to date as the components change. Use a similar versioning system here too.
 

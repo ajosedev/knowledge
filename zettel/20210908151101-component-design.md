@@ -15,7 +15,7 @@ tl;dr - object props are more consistent, type safe and thus restrictive too. Co
 - Harder to pass props to children elements
     - These props may not necessarily be the item API, but something like `tabIndex` or `aria-label`
     - Everything needs to be added to the API
-- Might be more simple, but does it scale as well?
+- Might be more simple, but does it scale as well? Can eventually become brittle.
     - e.g. if an item can take 20 props, that API starts to become a mess
 - Less DOM flexibility
     - Although a render prop can help with that, e.g. renderItem that provides props to spread (using prop getters)
@@ -23,6 +23,7 @@ tl;dr - object props are more consistent, type safe and thus restrictive too. Co
 - Can be strongly typed with TS
 
 ### With compound components
+[[20210412143336-compound-components]]
 - More flexible, way more control about how the component is rendered / DOM flexibility
     - Can even provide your own 'smaller' props by hooking into the context or whatever else you need to, rather than the provided component
 - How do you restrict the API to not allow footguns?

@@ -13,7 +13,11 @@ If needing to cancel a spot instance under a persistent spot request, you need t
 
 A **spot fleet** is a collection of spot instances and (optionally) on-demand instances. Spot fleets will stop launching instances once you reach your price threshold or capacity desire.
 
-You can have different launch pools for things like EC2 instance type, AZ, etc. 
+You can have different launch pools for things like EC2 instance type, AZ, etc.
+
+You can estimate how likely you are to get a spot instance with the 'Spot placement score'. From there you can pick your compute requirements or a particular instance type.
+
+To increase your likeliness of getting a spot instance, select more than a single instance type. You can select multiple instance types that are similar to each other.
 
 [[aws]]
 [[awsec2]]
