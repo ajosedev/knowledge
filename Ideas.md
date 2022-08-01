@@ -39,37 +39,6 @@ https://github.com/kentcdodds/advanced-react-patterns/blob/main/src/exercise/01.
 
 ---
 
-Primer on microfrontends
-  https://increment.com/frontend/micro-frontends-in-context/
-
-Microfrontends help with ownership, and in turn help with scale.
-Feature teams can be responsible for their own microfrontend and piece them together at the end.
-
-Each team has less of an impact on other teams, for better DX. Often better build times too.
-
-Siloed changes help increase maintainability too.
-
-[[20220628012817-microfrontends]]
-
----
-
-Splitting microfrontends horizontally vs vertically
-Horizontal: one view into multiple parts which may or may not be owned by the same team
-Vertical: each business domain to a team. Helps teams become domain experts
-
-Generally best to model microfrontends around a business domain
-
-  https://increment.com/frontend/micro-frontends-in-context/
-
----
-Microfrontend composition
-
-![](https://images.ctfassets.net/3njn2qm7rrbs/1iIsrWJqun33INDnvRtBuo/43c58e7189c794f1f4ad4e57873ba807/composition-2000-62f5a766.jpeg?w=1000)
-
-  https://increment.com/frontend/micro-frontends-in-context/
-
----
-
 Control props (Epic React)
 https://github.com/kentcdodds/advanced-react-patterns/blob/main/src/exercise/06.md
 [[react]]
@@ -301,13 +270,6 @@ Mitch general advice:
 
 ---
 
-Team models for scaling a design system
-
-https://medium.com/eightshapes-llc/team-models-for-scaling-a-design-system-2cf9d03be6a0
-Salesforce creates a fourth 'cyclical model' https://medium.com/salesforce-ux/the-salesforce-team-model-for-scaling-a-design-system-d89c2a2d404b
-
----
-
 JS prototypes/prototype inheritence
 
 Also JS classes and how they differ
@@ -343,13 +305,6 @@ Don't just take a users solution at face value. Instead figure out the root prob
 Don't just ask customers what they want.
 
 Is this a [[research]] topic?
-
----
-
-CSS precedence basics
-
-Answer the question: if two classes of the same specificity are applied to an element, which takes precedence?
-	Answer: the styles declared later in the stylesheet
 
 ---
 
@@ -408,39 +363,6 @@ Are there more guidelines? e.g. cost of convenience/flexibility?
 [[20210908155508-flexibility-components]]
 [[20220621083440-design-system-flexibility]]
 [[20220801011940-pit-of-success]]
-
----
-
-Compound components (aka subcomponents) in a design system
-https://medium.com/eightshapes-llc/subcomponents-753ce9f6600a
-
-Subcomponents are often prefixed with a similar name, e.g. Menu and MenuItem. Can still get these benefits from more general composition, e.g. using an Image in Card, rather than needing a custom CardImage. However, specific subcomponents are useful too. They allow you to act as a facade, locking down props to avoid footguns.
-#todo - separate article on 'facades' for design system components
-
-Similar to [[20210412143336-compound-components]] but their advantages in a DS.
-Mainly composition. More flexible, allow you to create the ''uncommon" designs that you still need to support. e.g. not the happy path.
-Reduce dependency on the DS team too, as you don't have to monitor this, add new props, etc.
-Similar to [[20210908151101-component-design]]
-This is probably part of a new tag like [[designsystemapi]]. See what I can move/add to from [[reactapi]]. Maybe a more generic [[componentapi]]?
-
-Subcomponents can act as a facade, locking down props as needed. e.g. CardImage extends Image, but removes footguns that you might get when putting an Image straight into a Card.
-This adds a bit more merit to an explicit subcomponent rather than just general composition.
-
-Pros:
-- Composition
-- Makes achieving the uncommon possible
-- Avoids giving infinite props to a component, which makes them brittle
-- Gives more power to the consumer
-- Avoids having to build things from scratch when the DS doesn't fulfil the need
-- Still keeps things DRY at the end of the day
-
-Most cons are less cons, and more tradeoffs
-
-Cons:
-- Risks inconsistency, but realistically you're not going to solve everything. Let consumers do what they want, just make it better
-- Requires more implementer work, but also this is the tradeoff you get for customisation
-- Create debt, but probably less than going full custom
-- Might be hard to re-create in Figma.
 
 ---
 
