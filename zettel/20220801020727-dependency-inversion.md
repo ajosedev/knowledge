@@ -4,5 +4,6 @@
 
 https://principles.dev/p/dependency-inversion-principle/
 
-[[concepts]]
+[[20200704154244-dependency-injection]]
+
 [[principles]]

@@ -6,5 +6,4 @@ https://principles.dev/p/hollywood-principle/
 
 [[20210705094040-inversion-of-control]]
 
-[[concepts]]
 [[principles]]

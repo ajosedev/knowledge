@@ -2,7 +2,7 @@
 
 'Subcomponents' isn't a new idea, and effectively is [[20210412143336-compound-components]].
 
-> **Subcomponent**: an independently composible UI component with a well-defined API intended for use only within a specific parent component or context.
+> **Subcomponent**: an independently composable UI component with a well-defined API intended for use only within a specific parent component or context.
 
 They aim to offer composition and flexibility. They make the 'uncommon' designs possible, the designs not on the happy path. The user needs a bit more work to get there, but they can still be within the design system rather than bespoke.
 

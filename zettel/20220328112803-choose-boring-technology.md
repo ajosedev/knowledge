@@ -17,3 +17,4 @@ Remember that new technology additions often have company-wide effects. In turn,
 https://mcfunley.com/choose-boring-technology
 
 [[concepts]]
+[[principles]]

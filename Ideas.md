@@ -39,13 +39,6 @@ https://github.com/kentcdodds/advanced-react-patterns/blob/main/src/exercise/01.
 
 ---
 
-Control props (Epic React)
-https://github.com/kentcdodds/advanced-react-patterns/blob/main/src/exercise/06.md
-[[react]]
-[[reactapi]]
-
----
-
 b2b, b2c, c2c, etc
 [[business]]
 
@@ -138,9 +131,9 @@ e.g. don't use media breakpoints
 - "Content should be dictating the layout and layout should adjust to the available space. This means that smaller components of the page need to respond to the size of their closer ancestors. Changing the layout of buttons in a card isn’t because the page size is small, it’s because the card size is small."
 - resizeObserver helps here
 
-
-
 https://gridless.design/for-developers
+
+#todo - watch Jen Simmons' videos on these https://labs.jensimmons.com/
 
 [[intrinsiclayout]]
 [[responsivedesign]]
@@ -197,21 +190,20 @@ https://stackoverflow.com/questions/48117071/element-with-display-inline-flex-ha
 
 ---
 
-layout algorithms
-
-https://www.joshwcomeau.com/css/understanding-layout-algorithms/
-
-[[css]]
-
----
-
-reakit offers render props, `as` prop, and a hook API
-
----
-
 concurrent react
 
+https://reactjs.org/blog/2022/03/29/react-v18.html
+
 [[react]]
+
+---
+
+react 18 transitions
+urgent vs non-urgent updates
+`useTransition`?
+how does `useDeferredValue` work with this
+
+https://reactjs.org/blog/2022/03/29/react-v18.html
 
 ---
 
@@ -228,6 +220,8 @@ e.g. width: fit-content
 ---
 
 React SSR
+
+How does is interact with 'server components'?
 
 ---
 
@@ -270,7 +264,7 @@ Mitch general advice:
 
 ---
 
-JS prototypes/prototype inheritence
+JS prototypes/prototype inheritance
 
 Also JS classes and how they differ
 
@@ -390,3 +384,19 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_
 
 ---
 
+12 factor apps
+
+---
+
+12 fractured apps
+https://medium.com/@kelseyhightower/12-fractured-apps-1080c73d481c
+
+Don't reach for tools like Ansible or Puppet immediately. They are often a band-aid solution that mask you not following a 12 factor app. Instead, most things can be solved by good old fashioned programming. Don't require a config file, retry the database until it's up, etc.
+
+Don't add additional complexity when you can fix the root cause. Don't rely on a 'happy path' for your application to successfully startup.
+
+>Remember, ship artifacts not build environments.
+
+>Don’t get me wrong, using an entrypoint script is ok for applications you don’t have control over, but when you rely on custom entrypoint scripts for applications you write, you add another layer of complexity to the deployment process for no good reason.
+
+>Everything in this post is about improving the deployment process for your applications, specifically those running in a Docker container, but these ideas should apply almost anywhere. On the surface it may seem like a good idea to push application bootstrapping tasks to custom wrapper scripts, but I urge you to reconsider. Deal with application bootstrapping tasks as close to the application as possible and avoid pushing this burden onto your users, which in the future could very well be you.

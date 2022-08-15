@@ -9,6 +9,6 @@ BABEL_SHOW_CONFIG_FOR=./src/myComponent.jsx npm start
 
 https://babeljs.io/docs/en/configuration#print-effective-configs
 
+[[babel]]
 [[js]]
-[[tools]]
 [[webpack]]

@@ -6,7 +6,7 @@ Typescript 3.8 introduced type-only imports and exports.
 
 This can be helpful for edge-case problems, such as when `isolatedModules` is enabled and you are re-exporting types. Most of the time this provides no benefit.
 
-However in the future, tools might become better at optimising performance and reliability around type definition analysis.
+However in the future, tools might become better at optimising [[performance]] and reliability around type definition analysis.
 
 ```ts
 import type { SomeThing } from "./some-module.js";

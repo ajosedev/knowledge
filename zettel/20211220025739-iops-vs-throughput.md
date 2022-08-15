@@ -1,6 +1,6 @@
 # IOPS vs Throughput
 
-Both of these are performance measurements for storage devices, and each are important depending on your use case.
+Both of these are [[performance]] measurements for storage devices, and each are important depending on your use case.
 
 IOPS (I/O operations per second):
 - **Number of read and write operations per second**
@@ -9,3 +9,6 @@ IOPS (I/O operations per second):
 Throughput:
 - **Measures the number of bits read or written per second (MB/s)**
 - Important metric for large datasets, complex queries
+
+[[infrastructure]]
+[[ops]]

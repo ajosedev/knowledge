@@ -24,4 +24,5 @@ The aim is to start rendering immediately after starting the network request. Th
 After this it goes into the Suspense loop. [[20220328095745-react-suspense-loop]]
 
 [[react]]
+[[reacthooks]]
 [[reactsuspense]]

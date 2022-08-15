@@ -1,15 +1,10 @@
 # Topic - css
 
-Parent: [[languages]]
-
 Related:
 [[design]]
-[[designsystem]]
 [[layout]]
+[[responsivedesign]]
 [[typography]]
-
-Children:
-[[cssgrid]]
-[[cssinjs]]
+[[web]]
 
 #topic-page 

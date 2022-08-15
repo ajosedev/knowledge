@@ -12,4 +12,3 @@ Wrappers allow for a better API, or one more suited to what you need. However yo
 'Wrapper' here doesn't refer to the design pattern. 'Facade', 'adapter', or anything else that sits as an abstraction between your code and the dependency is acceptable. The exact design pattern depends on your needs and the dependency.
 
 [[concepts]]
-[[etc]]

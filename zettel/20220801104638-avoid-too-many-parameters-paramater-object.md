@@ -15,5 +15,5 @@ By moving away from this smell, you:
 - Keep things [[20200307105301-dry]] and [[20200307101703-easy-to-change]]
 - Makes it easier to pass some, but not all of the parameters as position can matter in some languages.
 
-[[concepts]]
+[[principles]]
 [[smells]]

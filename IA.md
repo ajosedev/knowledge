@@ -1,6 +1,13 @@
+# How I use Obsidian
+
+Keep things generic, i.e. no ties to a specific workplace. I may publish these in the future, and it's better to err on private over public
+
+Obsidian (this vault) is used for Software Engineering. Notion is used for project-management or things tied to my day-to-day.
+
+Topic pages:
 - Use `[[tags]]` over `#tags`
 - Create topic pages rather than tags
-- Use tags for status, rather than topics
+- Use tags for status, rather than topics. This helps the local graph function and allows you to create better 'topic pages'.
 	- #todo, #breakdown, #new, #topic-page
 - Don't have to create pages for topics until they start to house a fair bit of content (shown in graph)
 - Can then create a separate hierarchy of topic pages, e.g. interests -> programming -> javascript
@@ -14,29 +21,36 @@ Use literature notes for podcasts, videos, articles, etc. and then later action 
 Add the title, author, and url to help categorise them.
 When done, move them to a separate 'archive' folder
 
-Don't create a structure top-down, create the content and then create the structure for your content (bottom up)
+Don't create a structure top-down, create the content and then create the structure for your content (bottom up). Figure out what works for me.
+
+Consistently re-review topics, links, etc. Linking things as you go is the best way of connecting knowledge for the future.
+
+Remember that note taking is a tool to help learn. Don't have to make a note on everything. Nor do the notes have to be perfect.
 
 ---
 
-- Review current topic pages, e.g. engineering, concepts, etc.
-	- Is 'principles' good to introduce? How does this intersect with 'laws' or 'concepts', or even 'engineering'
-		- I think principles is really 'design principles', so this would include laws too.
-		- Concepts are for other random bits of knowledge, e.g. feature flags
-		- Not sure what a 'pattern' is still
+- Review current topic pages
+	- What is [[concepts]] for? Feels a bit like a misc bucket. Maybe try to move stuff to a better topic?
 	- [[architecture]] seems like a good topic
-	- What is [[components]] for? [[reactapi]] too. Maybe need a [[componentapi]]? [[designsystemapi]]?
+	- What is [[components]] for? [[reactapi]] too. Maybe need a [[componentapi]]? [[designsystemapi]]? [[api]]?
+		- ReactAPI should be for react-only APIs. Hooks, etc.
 	- Make a list of all current topics and see what the hierarchy should be. See what's missing.
-	- [[etc]] is similar to [[20200307101703-easy-to-change]]
+	- [[web]] vs [[browsers]]
+	- something like [[deployment]] or [[hosting]] for things like Vercel, AWS, etc.
+		- Whats the overarching theme here?
+		- Kind of similar to [[architecture]], but not exactly. How does it intersect with [[ops]] or [[infrastructure]]
+	- [[infrastructure]] vs [[ops]] vs [[architecture]]
+	- what is [[engineering]] for? Feels a little catch-all
+	- do I need something like [[areas]] which is a higher level than both [[engineering]] and [[product]]
 - Create more topic pages that have categories and such
 - Consider removing zettel (date) prefix
 	- Would be better for creating pages link-first
+	- Would also help 'unlinked mentions' as it has to match the title
+		- Should make better/simpler titles to encourage this?
+	- Could also change the titles to not be dash separated?
 	- What does it add?
-- Review if using `[[tags]]` is better than `#tags`
-	- Might help if you have good topic pages?
+	- How can I get it back if I remove it?
 - Go through the graph and try to create more links between things
 - Try to make more inline links
 - Start to use the backlink view
-- Introduce some new helper tags
-	- #breakdown 
-	- #todo
-	- #retag
+- Let notes sit in an 'Ideas' bucket for a while. Can weed out the bad ideas that I don't really need to write down

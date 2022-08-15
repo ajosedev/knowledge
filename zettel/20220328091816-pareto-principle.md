@@ -12,5 +12,4 @@ Some examples are:
 - Fixing 20% of the most reported bugs fixes 80% of all errors
 - 80% of execution time is over 20% of the code
 
-[[engineering]]
-[[laws]]
+[[principles]]

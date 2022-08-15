@@ -1,5 +1,7 @@
 # Topic - js
 
-Parent: [[languages]]
+Related:
+[[ts]]
+[[web]]
 
 #topic-page 

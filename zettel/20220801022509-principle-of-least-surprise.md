@@ -1,4 +1,3 @@
 #todo 
 
-[[concepts]]
 [[principles]]

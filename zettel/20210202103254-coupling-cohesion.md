@@ -6,3 +6,4 @@ TODO
 [[20200307101703-easy-to-change]]
 
 [[concepts]]
+[[principles]]

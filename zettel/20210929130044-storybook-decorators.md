@@ -20,3 +20,5 @@ export default {
 ```
 
 https://storybook.js.org/docs/react/writing-stories/decorators
+
+[[storybook]]

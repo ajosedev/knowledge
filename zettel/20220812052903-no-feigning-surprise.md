@@ -10,6 +10,8 @@ The key is to not act surprised, even if you are actually surprised.
 
 https://jvns.ca/blog/2017/04/27/no-feigning-surprise/
 
-#todo - better tags
 [[career]]
+[[communication]]
+[[concepts]]
 [[engineering]]
+[[management]]

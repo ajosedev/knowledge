@@ -29,5 +29,4 @@ https://github.com/sverweij/dependency-cruiser
 
 [[js]]
 [[shell]]
-[[tools]]
 [[ts]]

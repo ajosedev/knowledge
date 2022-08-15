@@ -1,6 +1,6 @@
 # Design system snowflakes
 
-Snowflakes are one-off components that are used sparingly, often for a single page. These often break out of your design system (TODO - link).
+Snowflakes are one-off components that are used sparingly, often for a single page. These often break out of your design system [[20220801105616-break-out-design-system]]
 
 These components are vital for your overall design system health. It makes sense for components to exist that fulfil needs but can't initially, or won't ever be abstracted into a generic component included in a design system.
 

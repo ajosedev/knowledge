@@ -1,5 +1,6 @@
 # Topic - ts
 
-Parent: [[languages]]
+Related:
+[[js]]
 
 #topic-page 

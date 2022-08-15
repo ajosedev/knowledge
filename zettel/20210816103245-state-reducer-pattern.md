@@ -1,6 +1,6 @@
 # The State Reducer Pattern using React hooks
 
-TODO
+#todo
 
 https://kentcdodds.com/blog/the-state-reducer-pattern-with-react-hooks
 
@@ -8,3 +8,4 @@ https://kentcdodds.com/blog/the-state-reducer-pattern-with-react-hooks
 
 [[react]]
 [[reactapi]]
+[[reacthooks]]

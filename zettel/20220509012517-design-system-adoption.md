@@ -1,4 +1,5 @@
 # Design system adoption/releases
+
 Due to other priorities, design system adopters often only engage with a system when there are large updates. Or, if there's an update that is particularly useful for that adopter.
 
 > “We have clients building against specific timelines. They can’t — and don’t want to — constantly pull down UI updates.” — Nate Baldwin, Adobe Spectrum

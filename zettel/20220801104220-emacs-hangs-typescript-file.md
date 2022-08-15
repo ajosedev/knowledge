@@ -11,5 +11,4 @@ By disabling the initial flycheck on load, it stops this blocking behaviour.
   (advice-add 'flycheck-eslint-config-exists-p :override (lambda() t)))
 ```
 
-[[doomemacs]]
 [[emacs]]

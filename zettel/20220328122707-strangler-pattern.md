@@ -6,7 +6,7 @@ The major advantage to this strategy is risk minimisation. The newer services ca
 
 In addition, the upfront time investment is smaller. Newer services can come online iteratively, allowing for constant value adds.
 
-There's a risk of introducing [[20220328112501-lava-layers|lava layers]] if the strangle stops at varous stages.
+There's a risk of introducing [[20220328112501-lava-layers|lava layers]] if the strangle stops at various stages.
 
 ---
 The most important reason to consider a strangler fig application over a cut-over rewrite is reduced risk. A strangler fig can give value steadily and the frequent releases allow you to monitor its progress more carefully. Many people still don't consider a strangler fig since they think it will cost more - I'm not convinced about that. Since you can use shorter release cycles with a strangler fig you can avoid a lot of the unnecessary features that cut over rewrites often generate.
@@ -16,8 +16,9 @@ There's another important idea here - when designing a new application you shoul
 One of the ongoing challenges in architecture design and implementation is transformation risk. Any change to an existing system can result in unanticipated hazards. The Strangler pattern provides increment transformation to a system and reduces larger systemic risk to smaller, discrete episodes of change. Taking small risks to achieve a goal is always better than taking a large one. Small failures are easier to remedy than large ones, hence the essential benefit of the Strangler pattern.
 
 [[architecture]]
+[[concepts]]
 [[microservices]]
+[[migrations]]
 [[monoliths]]
-[[patterns]]
 [[product]]
 [[refactoring]]

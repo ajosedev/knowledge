@@ -6,3 +6,4 @@ https://addyosmani.com/blog/software-engineering-soft-parts/
 
 ---
 
+#todo

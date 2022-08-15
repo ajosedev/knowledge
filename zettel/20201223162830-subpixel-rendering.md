@@ -9,4 +9,3 @@ The fix is to add a tiny rotation, which makes the animation smooth. Although, t
 [[animations]]
 [[browsers]]
 [[css]]
-[[rendering]]

@@ -2,7 +2,7 @@
 
 #todo - rework this doc
 
-Keeping things closer to the web platform helps users adopt features, [[designsystem|design systems]], products, etc.
+Keeping things closer to the [[web]] platform helps users adopt features, [[designsystem|design systems]], products, etc.
 
 It's easier for new people to come in and learn your system if they don't have to re-learn core web tenets. This is less visible at a small scale, especially if engineers have always done it similarly at your company. However, new engineers will inevitably come in and find it more confusing.
 

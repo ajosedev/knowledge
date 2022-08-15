@@ -1,5 +1,7 @@
 # AWS Certified Solutions Architect - Associate (SAA-C02)
-#todo 
+
+#todo - see which of these actually need to be individual documents? At the moment there's a lot of clutter. e.g. do I really need to know how many zones there are in my day-to-day, or is that just for an exam?
+Try to consolidate the already broken down files into a smaller amount. Going forward, consider what I need to break out. Some of the broken out files may be better worded, so don't just delete blindly. Consider consolidating multiple files into one, e.g. an entire doc on EC2
 
 Author: A Cloud Guru
 
