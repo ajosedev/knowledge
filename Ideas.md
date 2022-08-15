@@ -62,16 +62,6 @@ https://medium.com/wayfair-design/contributing-to-our-design-system-at-wayfair-4
 
 ---
 
-Layout modes in CSS
-
-Think about what layout mode you're applying properties for CSS to start to make more sense. e.g. `z-index` isn't applicable in a flex layout. `width` behaves differently in a flex layout vs flow layout.
-
-https://www.joshwcomeau.com/css/understanding-layout-algorithms/
-
-[[css]]
-
----
-
 pre-mortem and post-mortem
 
 [[engineering]]
@@ -225,11 +215,6 @@ How does is interact with 'server components'?
 
 ---
 
-Notes from Every Layout
-[[Every Layout]]
-
----
-
 Explainer on how colours are not perceived by humans 1:1
 Different hues have different perception of brightness
 	Is this 'luminance'?
@@ -239,14 +224,6 @@ Where did I read this? - Refactoring UI maybe?
 Is this why people prefer HSL?
 
 How does Google's HCT work with this? https://material.io/blog/science-of-color-design
-
----
-
-useEffect
-
-TODO - general primer on useEffect?
-
-[[react]]
 
 ---
 
@@ -400,3 +377,19 @@ Don't add additional complexity when you can fix the root cause. Don't rely on a
 >Don’t get me wrong, using an entrypoint script is ok for applications you don’t have control over, but when you rely on custom entrypoint scripts for applications you write, you add another layer of complexity to the deployment process for no good reason.
 
 >Everything in this post is about improving the deployment process for your applications, specifically those running in a Docker container, but these ideas should apply almost anywhere. On the surface it may seem like a good idea to push application bootstrapping tasks to custom wrapper scripts, but I urge you to reconsider. Deal with application bootstrapping tasks as close to the application as possible and avoid pushing this burden onto your users, which in the future could very well be you.
+
+[[docker]]
+[[infrastructure]]
+[[ops]]
+
+---
+
+Visual regression tests for UI components
+
+Often a better way of testing than unit testing.
+
+Still a bit hard to test states and interactivity, due to them just being snapshots of a render. States usually require interactivity which is harder, and gets more into a [[cypress]] realm than a [[jest]] realm.
+
+[[components]]
+[[designsystem]]
+[[testing]]

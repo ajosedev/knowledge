@@ -25,5 +25,4 @@ Module federation != microfrontend architecture [[20220706121531-module-federati
 [[browsers]]
 [[microfrontends]]
 [[microservices]]
-[[monoliths]]
 [[web]]

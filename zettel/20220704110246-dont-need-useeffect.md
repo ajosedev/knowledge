@@ -12,4 +12,7 @@ It's easy to reach for a `useEffect` to help with your code, but it's often the 
 
 https://beta.reactjs.org/learn/you-might-not-need-an-effect
 
+[[20220815044638-useeffect]]
+
 [[react]]
+[[reacthooks]]

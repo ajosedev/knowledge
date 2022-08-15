@@ -2,7 +2,7 @@
 
 - Import code from other builds at runtime
 - Share vendor code dynamically at runtime
-- Allows microfrontends to work like a monolith
+- Allows microfrontends to work like a [[monoliths]]
 - Improve DX without compromising UX
 - Works in any JS environment
 
@@ -82,5 +82,4 @@ Coming soon, gives stats/graphs/views on how everything is consuming one another
 [[browsers]]
 [[microfrontends]]
 [[microservices]]
-[[monoliths]]
 [[web]]

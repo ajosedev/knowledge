@@ -27,3 +27,4 @@ Note the `[]` for the deps array.
 keywords: autofocus
 
 [[react]]
+[[reacthooks]]

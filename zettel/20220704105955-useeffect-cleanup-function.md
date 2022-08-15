@@ -19,5 +19,7 @@ useEffect(() => {
 }, [props.friend.id]); // Only re-subscribe if props.friend.id changes
 ```
 
+[[20220815044638-useeffect]]
 
 [[react]]
+[[reacthooks]]
