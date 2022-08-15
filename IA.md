@@ -33,6 +33,9 @@ Don't create a structure top-down, create the content and then create the struct
 	- What does it add?
 - Review if using `[[tags]]` is better than `#tags`
 	- Might help if you have good topic pages?
+- Go through the graph and try to create more links between things
+- Try to make more inline links
+- Start to use the backlink view
 - Introduce some new helper tags
 	- #breakdown 
 	- #todo

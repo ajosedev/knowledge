@@ -310,14 +310,14 @@ Is this a [[research]] topic?
 
 CDK, CloudFormation, Fargate, Lambda, etc.
 
-Maybe first start on just CloudFormation + CDK?
+Maybe first start on just CloudFormation vs CDK?
 
 Link Cloudformation article from [[20220627112853-infrastructure-as-code]]
 
 ---
 
 Handling breaking changes in Microservices
-Also relies to Module federation?
+Also relates to Module federation?
 
 ---
 
@@ -336,13 +336,6 @@ What's the fix?
 If const, link to const zettel
 
 [[ts]]
-
----
-
-SOLID
-Look for zettels already referencing these (e.g. 'SOLID', 'Single responsibility', etc)
-
-[[principles]]
 
 ---
 
@@ -371,3 +364,29 @@ Projects can be dropped at any time
 Business goals change etc
 
 Plan around it
+
+---
+
+imperative vs declarative React
+React is declarative, but when does it switch to imperative?
+Are all custom hooks imperative, but the call site still uses them declaratively?
+React says useEffect is:
+> Think of effects as an escape hatch from React’s purely functional world into the imperative world
+
+>Conceptually, React components have always been closer to functions. Hooks embrace functions, but without sacrificing the practical spirit of React. Hooks provide access to imperative escape hatches and don’t require you to learn complex functional or reactive programming techniques.
+
+---
+
+Disabilities vs impairments. can be temporary, e.g. a broken arm.
+Permanent vs temporary vs situational impairments
+
+---
+
+Margin collapse
+How it works with display: table
+Capsize:
+>The negative margins are applied to pseudo elements to guard against [margin collapse](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing). Combining the use of pseudo elements and padding on the parent container prevents the margins from being collapsed into the parent element. The collapsing is most visible when text is used directly inside a container that has a background colour applied.
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
+
+---
+

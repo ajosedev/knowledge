@@ -4,7 +4,7 @@ aka Parameter Object
 
 Over time, functions can grow in complexity and the amount of parameters they have. *Clean Code* suggests that the ideal amount of parameters for a function is 0, with 3 to be avoided.
 
-Too many parameters could also be a sign that you're not following the Single Responsibility Principle.
+Too many parameters could also be a sign that you're not following the Single Responsibility Principle [[20220801053049-solid]].
 
 Some solutions:
 - Parameter Object. Replace duplicated parameters with a single object.
