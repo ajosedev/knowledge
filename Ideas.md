@@ -253,12 +253,12 @@ React reconciliation
 
 ---
 
-Pragmatic Programmer notes [[Pragmatic Progammer]]
-Especially on estimation
-
----
-
 Service workers, SPAs, MPAs, PWAs, and more
+
+[[architecture]]
+[[browsers]]
+[[infrastructure]]
+[[web]]
 
 ---
 
