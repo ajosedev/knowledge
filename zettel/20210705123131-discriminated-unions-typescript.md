@@ -22,6 +22,6 @@ type Shape = Circle | Square;
 
 When using a type guard style check on the _discriminant_ property (e.g. `kind`), Typescript will narrow the object into that type.
 
-[[20210705102809-narrowing]]
+[[20210705102809-ts-narrowing]]
 
 [[ts]]

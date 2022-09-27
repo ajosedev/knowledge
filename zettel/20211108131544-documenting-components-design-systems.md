@@ -28,7 +28,7 @@ Blending the two disciplines together is definitely possible, and it can be solv
 - Stacked content, on one page
 - Tabs
 - Toggle between design/code
-- 
+
 For longer pages, add navigation helpers (e.g. scrolling table of contents)
 
 [[20211108133114-documenting-components-design-system-content]]
@@ -38,3 +38,4 @@ https://medium.com/eightshapes-llc/documenting-components-9fe59b80c015
 [[components]]
 [[design]]
 [[designsystem]]
+[[documentation]]

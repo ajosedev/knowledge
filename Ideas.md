@@ -1,19 +1,3 @@
-node modules in production and devdeps vs deps
-
-- using a bundler further confuses this
-	- I think once you have webpack and make a bundle, your dependencies should already be handled so you no longer need them?
-- frontend is different to server side
-- why does nextjs install it on the server?
-	- SSR?
-- devdeps vs deps may be an outdated concept
-- what about a depdendency like 'react' or 'express'?
-
-https://www.reddit.com/r/node/comments/b5eicg/do_i_still_need_node_modules_folder_after_running/
-https://jsramblings.com/do-dependencies-devdependencies-matter-when-using-webpack/
-https://github.com/webpack/webpack/issues/520
-
----
-
 Test in production
 https://increment.com/testing/i-test-in-production/
 Canaries, feature flags, multi-tenancy(?)
@@ -41,11 +25,13 @@ https://github.com/kentcdodds/advanced-react-patterns/blob/main/src/exercise/01.
 
 b2b, b2c, c2c, etc
 [[business]]
+[[product]]
 
 ---
 
 saas, paas, iaas
 [[business]]
+[[product]]
 
 ---
 
@@ -180,11 +166,14 @@ https://stackoverflow.com/questions/48117071/element-with-display-inline-flex-ha
 
 ---
 
-concurrent react
+non-replaced inline elements
 
-https://reactjs.org/blog/2022/03/29/react-v18.html
+---
 
-[[react]]
+React automatic batching
+
+https://reactjs.org/blog/2022/03/29/react-v18.html#new-feature-automatic-batching
+https://github.com/reactwg/react-18/discussions/21
 
 ---
 
@@ -193,7 +182,32 @@ urgent vs non-urgent updates
 `useTransition`?
 how does `useDeferredValue` work with this
 
+Is this part of [[20220912123929-concurrent-react]]?
+
 https://reactjs.org/blog/2022/03/29/react-v18.html
+
+---
+
+
+Placeholder: [[20220912120502-react-ssr]]
+
+React SSR
+How does it work?
+	How does it usually work?
+What is hydration?
+
+Pitfalls: e.g. don't use `window` or `document`
+
+Why use it?
+
+How does is interact with 'server components'? (separate doc?)
+
+[[deployment]]
+[[infrastructure]]
+[[node]]
+[[react]]
+[[ssr]]
+[[webpack]]
 
 ---
 
@@ -209,12 +223,6 @@ e.g. width: fit-content
 
 ---
 
-React SSR
-
-How does is interact with 'server components'?
-
----
-
 Explainer on how colours are not perceived by humans 1:1
 Different hues have different perception of brightness
 	Is this 'luminance'?
@@ -227,29 +235,11 @@ How does Google's HCT work with this? https://material.io/blog/science-of-color-
 
 ---
 
-Reflection
-
-[[concepts]]
-
----
-
-Mitch general advice:
-
--   Don’t always say ‘no’. Rephrase it as ‘what can we do better?’ Think about next steps, re-frame it as an additional/different thing to do to achieve similar goals.
--   Positive spins! Don’t just shut ideas down
-- Think of it as problem solving
-
----
-
 JS prototypes/prototype inheritance
 
 Also JS classes and how they differ
 
 https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes
-
----
-
-React reconciliation
 
 ---
 
@@ -277,36 +267,21 @@ Don't just ask customers what they want.
 
 Is this a [[research]] topic?
 
+Alternatively 'customers don't know what they want'
+
+[[customers]]
+[[product]]
+
 ---
 
-CDK, CloudFormation, Fargate, Lambda, etc.
+Fargate, Lambda, etc. any other 'serverless' things
 
-Maybe first start on just CloudFormation vs CDK?
-
-Link Cloudformation article from [[20220627112853-infrastructure-as-code]]
+Also a doc on 'serverless'
 
 ---
 
 Handling breaking changes in Microservices
 Also relates to Module federation?
-
----
-
-String literal union vs enums
-
-Old doc on this: https://medium.com/@katbusch/typescript-enums-explained-e5f9a101afc9
-
-[[ts]]
-
----
-
-type 'string' is not assignable to type (where type is a string literal union)
-
-What's the fix?
-
-If const, link to const zettel
-
-[[ts]]
 
 ---
 
@@ -324,32 +299,14 @@ https://www.gabe.pizza/notes-on-component-libraries/
 
 Are there more guidelines? e.g. cost of convenience/flexibility?
 
+#todo - mine the article for more things
+
+"Components should usually take up all horizontal space given"
+"Components should probably not position themselves." [[20200402104023-components-margin]] [[20210519122422-first-class-space]]
+
 [[20210908155508-flexibility-components]]
 [[20220621083440-design-system-flexibility]]
 [[20220801011940-pit-of-success]]
-
----
-
-Projects can be dropped at any time
-
-Business goals change etc
-
-Plan around it
-
----
-
-imperative vs declarative React
-React is declarative, but when does it switch to imperative?
-Are all custom hooks imperative, but the call site still uses them declaratively?
-React says useEffect is:
-> Think of effects as an escape hatch from React’s purely functional world into the imperative world
-
->Conceptually, React components have always been closer to functions. Hooks embrace functions, but without sacrificing the practical spirit of React. Hooks provide access to imperative escape hatches and don’t require you to learn complex functional or reactive programming techniques.
-
----
-
-Disabilities vs impairments. can be temporary, e.g. a broken arm.
-Permanent vs temporary vs situational impairments
 
 ---
 
@@ -361,35 +318,26 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_
 
 ---
 
-12 factor apps
+'Dont break the API' and how it applies to design systems and design tokens
+
+Go has an idea of new versions never break old code
+
+[[20210927144324-design-tokens]] help enable change [[20211029153348-semantic-design-tokens]]
+	If you don't change the API, token changes are quick and easy
+	If you do, you still need to find replace
+	Ergo, make sure you abstract layers to an appropriate level [[20220819043510-design-tokens-abstraction-layers]]
+
+Is it necessary to break the API sometimes?
 
 ---
 
-12 fractured apps
-https://medium.com/@kelseyhightower/12-fractured-apps-1080c73d481c
+styling props
+https://jxnblk.com/blog/two-steps-forward/
+https://www.christopherbiscardi.com/post/styles-and-naming
 
-Don't reach for tools like Ansible or Puppet immediately. They are often a band-aid solution that mask you not following a 12 factor app. Instead, most things can be solved by good old fashioned programming. Don't require a config file, retry the database until it's up, etc.
+https://mrmrs.cc/writing/scalable-css/
+https://jxnblk.com/blog/patterns-for-style-composition-in-react/
+https://johno.com/guessable/
 
-Don't add additional complexity when you can fix the root cause. Don't rely on a 'happy path' for your application to successfully startup.
-
->Remember, ship artifacts not build environments.
-
->Don’t get me wrong, using an entrypoint script is ok for applications you don’t have control over, but when you rely on custom entrypoint scripts for applications you write, you add another layer of complexity to the deployment process for no good reason.
-
->Everything in this post is about improving the deployment process for your applications, specifically those running in a Docker container, but these ideas should apply almost anywhere. On the surface it may seem like a good idea to push application bootstrapping tasks to custom wrapper scripts, but I urge you to reconsider. Deal with application bootstrapping tasks as close to the application as possible and avoid pushing this burden onto your users, which in the future could very well be you.
-
-[[docker]]
-[[infrastructure]]
-[[ops]]
-
----
-
-Visual regression tests for UI components
-
-Often a better way of testing than unit testing.
-
-Still a bit hard to test states and interactivity, due to them just being snapshots of a render. States usually require interactivity which is harder, and gets more into a [[cypress]] realm than a [[jest]] realm.
-
-[[components]]
-[[designsystem]]
-[[testing]]
+How this is different to something like Tailwind
+What advantages it has over writing plain CSS?

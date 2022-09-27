@@ -3,6 +3,7 @@
 Capturing them here because I keep forgetting them.
 
 `-I` - No filenames (`--no-filename`).
+`-l` - Only filenames
 `-N` - No line numbers.
 
 `-C <num>` - Context. Show lines before and after match.

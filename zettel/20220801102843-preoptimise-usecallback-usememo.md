@@ -4,6 +4,8 @@ Both `useMemo` and `useCallback` add their own overhead. If your original functi
 
 Don't blindly optimise, measure the performance before and after with something like the React profiler, `console.time`, etc.
 
+[[20210224103907-react-before-memo]]
+
 [[performance]]
 [[react]]
 [[reacthooks]]

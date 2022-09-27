@@ -10,6 +10,6 @@ function f1(x: unknown) {
 }
 ```
 
-[[20210705102809-narrowing]]
+[[20210705102809-ts-narrowing]]
 
 [[ts]]

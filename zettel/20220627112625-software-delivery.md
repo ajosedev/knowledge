@@ -14,5 +14,6 @@ This time used to be months, but now can be down to minutes. Some key contributo
 https://martinfowler.com/delivery.html
 
 [[concepts]]
+[[customers]]
 [[engineering]]
 [[product]]

@@ -1,8 +1,10 @@
 # The Flexbox Holy Albatross
 
-The problem to solve here is having a single row of horizontal elements switch to a single column of vertical elements, without any one element wrapping individually. This also should be done without media queries, or using JS.
+Going from X boxes in a row, to a single column at a specified width. The width is based on the size of the element, not the size of the screen.
 
-The following CSS snippet switches the row to be stacked vertically when the container's width is lower than the first value in the `--modifier` value (`40rem`).
+![[Holy albatross.png]]
+
+The following CSS snippet switches the row to be stacked vertically when the container's width is lower than the first value in the `--modifier` value (`40rem`). Note that `margin` can be replaced with `gap`, if possible.
 
 ```css
 .container {
@@ -30,6 +32,8 @@ Because `flex-grow` is proportional, it's possible to make certain items larger 
 
 https://heydonworks.com/article/the-flexbox-holy-albatross/
 https://heydonworks.com/article/the-flexbox-holy-albatross-reincarnated/
+
+Every layout calls this the 'Switcher' layout.
 
 [[css]]
 [[intrinsiclayout]]

@@ -8,5 +8,6 @@ That all being said, the primary audience for your _documentation_ may be differ
 
 [[communication]]
 [[designsystem]]
+[[documentation]]
 [[figma]]
 [[product]]

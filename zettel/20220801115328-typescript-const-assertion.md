@@ -1,6 +1,6 @@
-# Typescript 'as const'
+# Typescript const assertion
 
-`as const` can be useful for creating an object and narrowing the types based on the object. e.g.
+Const assertions (`as const`) can be useful for creating an object and narrowing the types based on the object. e.g.
 ```ts
 type Space =
     | '1bu'

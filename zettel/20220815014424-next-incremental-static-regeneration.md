@@ -9,6 +9,7 @@ This isn't a polling feature either, instead you can trigger a page to rebuild(?
 [[20220815104442-event-driven-architecture]]
 
 [[architecture]]
+[[buildtooling]]
 [[deployment]]
 [[hosting]]
 [[nextjs]]

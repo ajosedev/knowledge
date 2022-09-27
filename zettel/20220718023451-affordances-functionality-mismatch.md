@@ -6,6 +6,7 @@ Given a button group that's coded like a radio group. Sighted users that expect 
 
 > Be consistent: Use familiar conventions and apply them consistently.
 
+https://tink.uk/perceived-affordances-and-the-functionality-mismatch/
 https://inclusivedesignprinciples.org/#be-consistent
 
 [[a11y]]
