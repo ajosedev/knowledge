@@ -1,9 +1,5 @@
 # Knowledge
 
-Some more in-depth knowledge that I want to keep for the future.
+An [Obsidian](https://obsidian.md/) vault focusing on Software Engineering.
 
-Hoping this slowly builds into a library of information to call upon.
-
----
-
-See [TIL](https://ajose.dev/til) for shorter knowledge snippets.
+*Most* content is written by me, often summarising notes from other articles, videos, etc.
