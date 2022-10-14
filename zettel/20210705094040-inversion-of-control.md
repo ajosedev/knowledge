@@ -13,4 +13,5 @@ https://martinfowler.com/bliki/InversionOfControl.html
 
 [[20210816103245-state-reducer-pattern]]
 
+[[abstraction]]
 [[principles]]

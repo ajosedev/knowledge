@@ -20,4 +20,3 @@ You can estimate how likely you are to get a spot instance with the 'Spot placem
 To increase your likeliness of getting a spot instance, select more than a single instance type. You can select multiple instance types that are similar to each other.
 
 [[aws]]
-[[awsec2]]

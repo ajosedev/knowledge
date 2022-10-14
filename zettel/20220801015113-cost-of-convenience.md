@@ -48,4 +48,5 @@ https://surma.dev/things/cost-of-convenience/
 [[20210705094040-inversion-of-control]]
 [[20220627121829-web-platform-adoption]]
 
+[[abstraction]]
 [[concepts]]

@@ -9,4 +9,6 @@ rg -IN import | rg -IN library-name | sort | uniq -c | sort -n
 
 `grep -v` might also be helpful here to exclude words
 
+[[20220720101907-ripgrep-common-args]]
+
 [[shell]]

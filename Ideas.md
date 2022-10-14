@@ -170,24 +170,6 @@ non-replaced inline elements
 
 ---
 
-React automatic batching
-
-https://reactjs.org/blog/2022/03/29/react-v18.html#new-feature-automatic-batching
-https://github.com/reactwg/react-18/discussions/21
-
----
-
-react 18 transitions
-urgent vs non-urgent updates
-`useTransition`?
-how does `useDeferredValue` work with this
-
-Is this part of [[20220912123929-concurrent-react]]?
-
-https://reactjs.org/blog/2022/03/29/react-v18.html
-
----
-
 
 Placeholder: [[20220912120502-react-ssr]]
 
@@ -274,9 +256,38 @@ Alternatively 'customers don't know what they want'
 
 ---
 
-Fargate, Lambda, etc. any other 'serverless' things
+What is serverless?
 
-Also a doc on 'serverless'
+>Serverless computing (or serverless for short), is an execution model where the cloud provider (AWS, Azure, or Google Cloud) is responsible for executing a piece of code by dynamically allocating the resources. And only charging for the amount of resources used to run the code. The code is typically run inside stateless containers that can be triggered by a variety of events including http requests, database events, queuing services, monitoring alerts, file uploads, scheduled events (cron jobs), etc. The code that is sent to the cloud provider for execution is usually in the form of a function.
+
+>The biggest change that we are faced with while transitioning to a serverless world is that our application needs to be architectured in the form of functions. You might be used to deploying your application as a single Rails or Express monolith app. But in the serverless world you are typically required to adopt a more microservice based architecture
+
+>Your functions are typically run inside secure (almost) stateless containers. This means that you won’t be able to run code in your application server that executes long after an event has completed or uses a prior execution context to serve a request. You have to effectively assume that your function is invoked in a new container every single time.
+
+[[architecture]]
+[[deployment]]
+[[microservices]]
+
+---
+
+Why serverless?
+
+>It is important to address why it is worth learning how to create serverless apps. There are a few reasons why serverless apps are favored over traditional server hosted apps:
+
+```
+1.  Low maintenance
+2.  Low cost
+3.  Easy to scale
+```
+
+
+> The biggest benefit by far is that you only need to worry about your code and nothing else. The low maintenance is a result of not having any servers to manage. You don’t need to actively ensure that your server is running properly, or that you have the right security updates on it. You deal with your own application code and nothing else.
+
+> The main reason it’s cheaper to run serverless applications is that you are effectively only paying per request. So when your application is not being used, you are not being charged for it.
+
+---
+
+Fargate, Lambda, etc. any other 'serverless' things
 
 ---
 
@@ -341,3 +352,31 @@ https://johno.com/guessable/
 
 How this is different to something like Tailwind
 What advantages it has over writing plain CSS?
+
+---
+
+better understanding of async/await
+e.g. does async block the code execution of the entire async function?
+
+---
+
+https://github.com/frehner/modern-guide-to-packaging-js-library
+
+---
+
+How to start a design system
+https://medium.com/@NateBaldwin/dummys-guide-to-building-a-design-system-ada311c80d0b
+#todo - get more links and make a synthesised document. Nathan Curtis probably has something here too
+
+---
+
+[[nx]] learnings
+- more apps and libs are good
+- nx mental model, 80/20 approach, moving things is okay, etc
+	- general structure
+- nx affected is strong
+- different types of libs
+	- nesting feature libs in domain libs
+- tagging
+- why a monorepo (also [[architecture]])
+- microfrontends are individual apps?

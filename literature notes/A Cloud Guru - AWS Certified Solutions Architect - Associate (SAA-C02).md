@@ -1,8 +1,5 @@
 # AWS Certified Solutions Architect - Associate (SAA-C02)
 
-#todo - see which of these actually need to be individual documents? At the moment there's a lot of clutter. e.g. do I really need to know how many zones there are in my day-to-day, or is that just for an exam?
-Try to consolidate the already broken down files into a smaller amount. Going forward, consider what I need to break out. Some of the broken out files may be better worded, so don't just delete blindly. Consider consolidating multiple files into one, e.g. an entire doc on EC2
-
 Author: A Cloud Guru
 
 https://learn.acloud.guru/course/certified-solutions-architect-associate/dashboard
@@ -59,6 +56,8 @@ Some different sections:
 ---
 
 Well architected framework
+A framework to help build secure, high-performing, resilleint and efficient infrastructure for their applications.
+
 5 pillars:
 Operational excellence - running and monitoring systems to deliver business value
 Security - protecting information and systems
@@ -66,9 +65,7 @@ Reliability - performs intended function corerctly and consistently
 Performance efficiency - using computing resources efficiently
 Cost optimisation - avoiding unnecessary costs
 
-There's a whitepaper on this, read after the course but before the exam
-
-[[20211122103805-aws-well-architected-framework]]
+https://aws.amazon.com/architecture/well-architected
 
 ---
 
@@ -168,15 +165,15 @@ S3 storage classes
 Always 11 9's durability, and availability ranges from 99.5-99.99%.
 Generally you can pay less to store data you access less frequently. Retrieval fee applies for any non-standard tiers.
 
-Standard: 99.99% availability. Designed for frequent access. Suitable for most workloads. Highest cost. Data stored redundantly across different AZs
-Standard-Infrequent Access: Rapid access, good for long term infrequently accessed critical data. 99.9% availability.
-One zone-Infrequent access: Data stored redundantly within a single AZ. Costs less than  Standard-IA. Great for long-lived, infrequently access, non-critical data. 99.5% availability
+**Standard**: Designed for most workloads - frequent access. 99.99% availability
+**Standard-Infrequent Access**: Rapid access, good for long term infrequently accessed critical data.
+**One Zone-Infrequent Access**: Long-term, infrequently accessed, non-critical data. Data is stored redundantly within a single AZ.
 
-Glacier is cheap storage, used for very infrequently access data - pay for access. Think archiving. 99.99% availability.
-Glacier: long-term data archiving, retrieval times 1min - 12hrs
-Glacier deep archive: rarely access data, with a default retrieval time of 12hrs
+Glacier is cheap storage, used for very infrequently accessed data - pay for access. Think archiving.
+**Glacier**: Long-term data archiving, with retrieval times 1min - 12hrs
+**Glacier Deep Archive**: Long-term data archiving that's rarely accessed, with retrieval time of minimum 12hrs
 
-[[20211122033414-aws-s3-storage-classes]]
+There's also **S3 Intelligent-Tiering**, which uses ML to automatically move your data to the most cost-effective tier based on how frequently you access each object. Adds a per-month cost based on the amount of objects you have.
 
 ---
 
@@ -187,24 +184,21 @@ Monthly fee.
 ---
 
 Lifecycle management automates moving objects between different storage tiers for cost effectiveness.
-Can be used with versioning.
-Lifecycle rules have scopes - can apply to different objects using filters, or apply to all objects in the bucket.
+e.g. after not being accessed in Standard in 30 days, move to Standard-IA.
 
-[[20211122034529-aws-s3-lifecycle-management]]
+It can also be combined with versioning to help manage those versions. e.g. only transition previous versions of objects.
 
 ---
 
-You can use S3 Object Lock to store object using a write once, read many (WORM) model. It can help prevent objects from being deleted or modified for a fixed/indefinite amount of time (its retention period). Useful for regulatory requirements.
+You can use S3 Object Lock to store object using a 'write once, read many' (WORM) model. It can help prevent objects from being deleted or modified for a fixed/indefinite amount of time (its retention period). Useful for regulatory requirements.
 
-In governance mode, users can't overwrite or delete an object version or alter its lock settings unless they have special permissions.
+In **governance mode**, users can't overwrite or delete an object version or alter its lock settings unless they have special permissions.
 
-In compliance mode, a protected object can't be overwritten or deleted by any user, including the root user.
+In **compliance mode**, a protected object can't be overwritten or deleted by any user, including the root user.
 
-A legal hold prevents an object version from being overwritten or deleted, similar to a retention period. However it's indefinite until it is removed.
+A *legal hold* prevents an object version from being overwritten or deleted, similar to a retention period. However it's indefinite until it is removed.
 
 Glacier Vault Lock allows you to easily deploy and enforce complicance controls in Glacier, such as the WORM model.
-
-[[20211122040610-aws-s3-object-lock]]
 
 ---
 
@@ -217,7 +211,7 @@ Enforcing server-side encryption
 - Console: click ops
 - Bucket policy: can enforce encryption with a bucket policy
 `x-amz-server-side-encryption` request header used, with a value depending on which SSE you're using
-You can create a bucket policy that denise any S3 PUT request that doesn't include that parameter in the request header.
+You can create a bucket policy that denies any S3 PUT request that doesn't include that parameter in the request header.
 
 ---
 
@@ -234,8 +228,6 @@ S3 Replication
 A way of replicating objects from one bucket to another. Needs versioning on both the source/destination buckets.
 
 Objects in an existing bucket are not replicated automatically. Additionally, delete markers are not replicated by default.
-
-[[20211206011713-aws-s3-replication]]
 
 ---
 
@@ -280,9 +272,6 @@ Useful when SSHing into EC2 instances. Can ssh using the IP, with `-i <key.pem>`
 Use IAM public/secret access keys in combination with `aws <service> configure` to verify yourself. Then can use `aws` commands to manage files etc, such as `aws s3 ls`.
 
 Remember [[20210415100848-principle-of-least-privilege]] and to use groups.
-
-
-TODO
 
 ---
 
@@ -333,24 +322,24 @@ To retrieve metadata, you can use `curl` on a EC2 IP. Since bootstrap scripts ru
 
 Networking with EC2
 
-Three different virtual networking cards
+There are three different virtual networking cards that can be attached to EC2 instances.
 
-**ENI (Elastic Network Interface)** - basic, day-to day
-Private & public IPv4 Address
-Helpful to create a separate management network, or logging network, etc.
-Low-budget, high-availability solution
-Can use multiple ENIs for each network.
+**ENI (Elastic Network Interface)** - basic, day-to day.
 
-**EN (Enhanced Networking)** - single root I/O virtualisation for high perf
+Private & public IPv4 Address, and more.
+Helpful to create a separate management network, or logging network, etc. Can use separate ENIs for each network.
+Low-budget, high-availability solution.
+
+**EN (Enhanced Networking)** - single root I/O virtualisation for high performance.
+
+Higher bandwidth, higher packets per second.
 10Gbps - 100Gbps
-Higher bandwidth, higher packets per second
-Can be used with ENA (newer, preferred) or VF (older)
+Can be used with ENA (newer, preferred) or VF (older).
 
-**EFA (Elastic Fabric Adapter)** - high performance computing and ML applications
-Lower and more consistent latency than TCP
-Can use OS-bypass, which makes it faster by bypassing the OS kernel and lowering latency.
+**EFA (Elastic Fabric Adapter)** - high performance computing and ML applications.
 
-[[20211206170231-aws-ec2-networking]]
+Lower and more consistent latency than TCP.
+Can use *OS-bypass*, which offers increased speed and lower latency by bypassing the OS kernel.
 
 ---
 
@@ -372,8 +361,6 @@ You can't merge placement groups, but you can move an existing instance into a p
 Each partition placement group has its own set of racks. Each rack has its own network and power source.
 Allows you to isolate the impact of hardware failure.
 Used for *multiple* instances.
-
-[[20211206170459-aws-ec2-placement-groups]]
 
 ---
 
@@ -442,8 +429,6 @@ You can also switch volume types on the fly.
 
 Volumes exist on EBS, snapshots exist on S3.
 
-[[20211220025859-aws-ebs-volumes]]
-
 ---
 
 Snapshots exist on S3 and act as a point in time copy of the virtual disk/volume. They are incremental, so they only track the data that has been changed since the last snapshot. Thus, the first snapshot will be the longest/biggest.
@@ -453,8 +438,6 @@ Snapshots only capture data written to your EBS volume, which may exclude cached
 If you take a snapshot of an encrypted EBS volume, the snapshot will be encrypted automatically.
 
 You can share snapshots, but only in the region in which they were created. To share to other regions, you will need to copy (i.e. not share) the snapshot to that region first.
-
-[[20211220030108-aws-ec2-snapshots]]
 
 ---
 
@@ -474,8 +457,6 @@ To encrypt and unencrypted volume:
 3. Create an [[20211206023827-aws-ec2-ami|AMI]] from the encrypted snapshot
 4. Use that AMI to launch new encrypted instances
 
-[[20211220030243-aws-ebs-encryption]]
-
 ---
 
 EC2 Hibernation
@@ -487,8 +468,6 @@ When you hibernate an EC2 instance, hibernation saves the contents from RAM to E
 Hibernation makes the instance boot much faster as RAM is preserved. This skips the OS, bootstrap, and applications startup from taking as much time.
 
 There are certain conditions that need to be met for hibernation, such as a MAX ram size, instance family, total time, etc.
-
-[[20211220030328-aws-ec2-hibernation]]
 
 ---
 
@@ -515,7 +494,7 @@ Has different storage tiers, including lifecycle management support. Pick betwee
 
 FSx for Windows
 
-Pretty much EFS (TODO LINK) for Windows - built on Windows server to you can easily move Windows-based applications.
+Pretty much EFS [[20211220030433-aws-efs]] for Windows - built on Windows server to you can easily move Windows-based applications.
 
 This means it's a managed Windows Server using Windows Server Message Block (SMB). Supports AD users, security policies, etc.
 
@@ -526,8 +505,6 @@ There's also FSx for Lustre. A managed file system useful for high intensity wor
 ---
 
 Amazon Machine Images (AMIs)
-
-TODO - update old doc?
 
 Provides the info required to launch an instance - it acts as a 'template'. You must specify an AMI when you launch an instance.
 
@@ -571,7 +548,7 @@ Relational Database Service (RDS)
 
 Different relational database engines available (e.g. MySQL, PostgreSQL, SQL Server, etc), including Amazon's own Aurora.
 
-RDS is optionally multi-AZ, which is only used for disaster recovery. Faults on the primary mean the secondary automatically becomes the primary. Note that this doesn't increase performance, it's for disaster recovery only. Performance can be increased with read replicas (TODO - link).
+RDS is optionally multi-AZ, which is only used for disaster recovery. Faults on the primary mean the secondary automatically becomes the primary. Note that this doesn't increase performance, it's for disaster recovery only. Performance can be increased with read replicas [[20220131032436-aws-rds-read-replicas]].
 
 AWS handles the replication for you, so any writes happen on both.
 
@@ -689,8 +666,6 @@ Stored for 24 hours.
 *Global tables* are managed multi-master, multi-region replication.
 Based on DynamoDB streams, this is great for globally distributed applications. Good for multi-region redundancy or high availability.
 
-[[20220131033407-aws-dynamodb-streams]]
-
 ---
 
 ## Virtual Private Cloud (VPC) Networking
@@ -725,7 +700,7 @@ Demo: Provisioning a VPC - Part 1
 Recommendation: Be able to create a VPC from memory before the exam.
 
 Creating a VPC creates a route table and access control list (ACL) automatically.
-It does not create any subnets automically.
+It does not create any subnets automatically.
 
 Think of a subnet as a virtual firewall(?)
 A public subnet is internet accessible, a private subnet is not.
@@ -775,7 +750,7 @@ Security groups are stateful - if you send a request from your instance, the res
 
 Responses to allowed inbound traffic are allowed to flow out, regardless of outbound rules.
 
-Network ACLs are stateless. (TODO - link)
+Network ACLs are stateless. [[20220131041827-aws-vpc-network-acls]]
 
 [[20220131041750-aws-vpc-security-groups]]
 
@@ -827,7 +802,7 @@ VPC Peering allows you to connect 1 VPC to another via a direct network route us
 You can also peer VPCs with other AWS accounts, and across regions.
 Peering is in a hub-and-spoke configuration, and there's no transitive peering (i.e. peering A to C through B).
 
-It's also possible to open your services in a VPC to another VPC by simply allowing access through the internet. TODO - privatelink link
+It's also possible to open your services in a VPC to another VPC by simply allowing access through the internet.
 
 Remember to check for overlapping CIDR ranges
 
@@ -875,8 +850,6 @@ Hosted Connection - A physical ethernet connection through a AWS Direct Connect 
 
 VPNs allow private communication but it still traverses the public internet. While secure, it can be painfully slow.
 
-[[20220131042202-aws-direct-connect]]
-
 ---
 
 Simplifying Networks with Transit Gateway
@@ -887,9 +860,8 @@ Rather than having to use VPC Peering which is difficult to scale, we can connec
 
 It works on a regional basis but you can have it across multiple regions and multiple AWS accounts using RAM (Resource Access Manager).
 
-[[20220131042235-aws-vpc-transit-gateway]]
-
 ---
+#todo - need to make individual notes starting here
 
 ## Route 53
 
@@ -1264,7 +1236,7 @@ To create a rule:
 
 TODO
 
----
+- [ ] ---
 
 ## Automation
 
@@ -1276,7 +1248,3 @@ Why do we Automate?
 
 
 [[aws]]
-[[awsec2]]
-[[awss3]]
-[[awsdb]]
-[[awsnetworking]]

@@ -24,6 +24,7 @@ With React.Context, the parent component will render its children inside of a pr
 </Context.Provider>
 ```
 
+[[componentapi]]
 [[components]]
 [[react]]
 [[reactapi]]

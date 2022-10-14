@@ -9,6 +9,7 @@ A single component using something like [[20211203043448-responsive-props]] coul
 
 [[20200314214239-layout-components]]
 
+[[componentapi]]
 [[components]]
 [[designsystem]]
 [[space]]
