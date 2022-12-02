@@ -2,7 +2,7 @@
 
 React Suspense is aiming to shift some paradigms in React. There's two main non-suspense render patterns involving fetches.
 
-**Fetch-on-render**
+**Fetch-on-render** (aka fetch as you render, or 'render-fetch waterfalls')
 Start fetching after the component has been rendered on screen. Often using a `useEffect` hook. This leads to waterfall-ing issues as fetches are often dependent on other fetches. Additionally effects don't run on the server, which means that a user has to wait for JS to load before the fetch even starts.
 
 **Fetch-then-render**
@@ -23,6 +23,10 @@ The aim is to start rendering immediately after starting the network request. Th
 
 After this it goes into the Suspense loop. [[20220328095745-react-suspense-loop]]
 
+[[architecture]]
+[[infrastructure]]
+[[networking]]
 [[react]]
 [[reacthooks]]
 [[reactsuspense]]
+[[rendering]]

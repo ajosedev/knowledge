@@ -6,6 +6,8 @@ Capturing them here because I keep forgetting them.
 `-l` - Only filenames
 `-N` - No line numbers.
 
+`-M` - max columns
+
 `-C <num>` - Context. Show lines before and after match.
 `-A <num>` - After context. Show lines after match.
 `-B <num>` - Before context. Show lines before match.

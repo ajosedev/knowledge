@@ -14,8 +14,6 @@ See what Epic React has here
 https://kentcdodds.com/blog/how-to-use-react-context-effectively
 https://beta.reactjs.org/apis/usecontext
 
-
-
 Context Module Functions (Epic React)
 https://github.com/kentcdodds/advanced-react-patterns/blob/main/src/exercise/01.md
 [[react]]
@@ -171,7 +169,7 @@ non-replaced inline elements
 ---
 
 
-Placeholder: [[20220912120502-react-ssr]]
+Placeholder: [[20220912120502-server-side-rendering]]
 
 React SSR
 How does it work?
@@ -188,7 +186,6 @@ How does is interact with 'server components'? (separate doc?)
 [[infrastructure]]
 [[node]]
 [[react]]
-[[ssr]]
 [[webpack]]
 
 ---
@@ -211,7 +208,10 @@ Different hues have different perception of brightness
 	Not lightness.
 
 Where did I read this? - Refactoring UI maybe?
-Is this why people prefer HSL?
+Is this why people prefer HSL? Apparently HSL is actually bad
+
+https://stripe.com/blog/accessible-color-systems
+https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl
 
 How does Google's HCT work with this? https://material.io/blog/science-of-color-design
 
@@ -225,7 +225,7 @@ https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototy
 
 ---
 
-Service workers, SPAs, MPAs, PWAs, and more
+Service workers, PWAs, and more
 
 [[architecture]]
 [[browsers]]
@@ -256,43 +256,7 @@ Alternatively 'customers don't know what they want'
 
 ---
 
-What is serverless?
-
->Serverless computing (or serverless for short), is an execution model where the cloud provider (AWS, Azure, or Google Cloud) is responsible for executing a piece of code by dynamically allocating the resources. And only charging for the amount of resources used to run the code. The code is typically run inside stateless containers that can be triggered by a variety of events including http requests, database events, queuing services, monitoring alerts, file uploads, scheduled events (cron jobs), etc. The code that is sent to the cloud provider for execution is usually in the form of a function.
-
->The biggest change that we are faced with while transitioning to a serverless world is that our application needs to be architectured in the form of functions. You might be used to deploying your application as a single Rails or Express monolith app. But in the serverless world you are typically required to adopt a more microservice based architecture
-
->Your functions are typically run inside secure (almost) stateless containers. This means that you won’t be able to run code in your application server that executes long after an event has completed or uses a prior execution context to serve a request. You have to effectively assume that your function is invoked in a new container every single time.
-
-[[architecture]]
-[[deployment]]
-[[microservices]]
-
----
-
-Why serverless?
-
->It is important to address why it is worth learning how to create serverless apps. There are a few reasons why serverless apps are favored over traditional server hosted apps:
-
-```
-1.  Low maintenance
-2.  Low cost
-3.  Easy to scale
-```
-
-
-> The biggest benefit by far is that you only need to worry about your code and nothing else. The low maintenance is a result of not having any servers to manage. You don’t need to actively ensure that your server is running properly, or that you have the right security updates on it. You deal with your own application code and nothing else.
-
-> The main reason it’s cheaper to run serverless applications is that you are effectively only paying per request. So when your application is not being used, you are not being charged for it.
-
----
-
 Fargate, Lambda, etc. any other 'serverless' things
-
----
-
-Handling breaking changes in Microservices
-Also relates to Module federation?
 
 ---
 
@@ -362,6 +326,9 @@ e.g. does async block the code execution of the entire async function?
 
 https://github.com/frehner/modern-guide-to-packaging-js-library
 
+Different module types: CJS, AMD, UMD, ESM
+https://dev.to/iggredible/what-the-heck-are-cjs-amd-umd-and-esm-ikm
+
 ---
 
 How to start a design system
@@ -370,13 +337,185 @@ https://medium.com/@NateBaldwin/dummys-guide-to-building-a-design-system-ada311c
 
 ---
 
-[[nx]] learnings
-- more apps and libs are good
-- nx mental model, 80/20 approach, moving things is okay, etc
-	- general structure
-- nx affected is strong
-- different types of libs
-	- nesting feature libs in domain libs
-- tagging
-- why a monorepo (also [[architecture]])
-- microfrontends are individual apps?
+why a monorepo (also [[architecture]])
+atomic changes
+
+--- 
+
+How does Remix utilise [[20221107042513-edge-computing]]
+
+What about next?
+
+[[architecture]]
+[[deployment]]
+[[networking]]
+[[rendering]]
+
+---
+
+bundlers, compilers, loaders, etc.
+Vite, esbuild, webpack, typescript, rollup, parcel, Turbopack, babel, swc
+
+[[buildtooling]]
+
+---
+
+separating typescript from babel
+https://iamturns.com/typescript-babel/
+
+[[buildtooling]]
+
+---
+
+Don't test implementation details
+e.g. with testing-library, don't test internal props/state
+Test what the user can see
+The idea behind the 'test user'
+>The more your tests resemble the way your software is used, the more confidence they can give you.
+
+Testing pyramid - write more integration than unit
+Test based on what you want to know breaks?
+
+TDD (separate doc)
+
+My comment on a PR:
+```
+I agree. It's been a hot minute since I've written E2E tests from scratch, but I'll just dump some E2E best practice thoughts for discussion. I also don't want to de-rail this PR so consider this all entirely non-blocking 🙏 
+
+My fear with using DOM selectors, e.g. `cy.get([data-testid=*]).find('h1')` is that it's brittle to any page updates. For example, if there's a fourth list item added, or a heading level is changed, or an image is removed, the integration tests will break. That could be a desired result, I'm not sure. On the flipside, the other strategy would be to just test that the key data is there. Check the price is there, check the button works, check the radio items are clickable and they all have a relevant heading. The tradeoff is it's less all-encompassing.
+
+I know it's not the gold standard Cypress recommends in it's [best practices](https://docs.cypress.io/guides/references/best-practices#Selecting-Elements), but I'm a fan of the `testing-library` methodology of testing what the user sees. Which means it's less `data` attributes, and more `findByRole`s.
+
+This currently seems to be relying on the DOM structure a lot, which could easily change as components get updated. Rather than relying on copy or `cy.get([data-testid=*]).find(*)` the middle ground is adding a testid to the most relevant elements. e.g. the price, button, radio items, etc. as mentioned earlier. Things that the user must see for the flow to work.
+
+As an anecdotal data point, as someone that doesn't know what this page is rendering, I don't really know what these tests are testing either.
+```
+
+https://kentcdodds.com/blog/write-tests
+https://twitter.com/kentcdodds/status/977018512689455106?lang=en
+https://kentcdodds.com/blog/testing-implementation-details
+https://twitter.com/dan_abramov/status/1065663012541992963
+https://www.tedinski.com/2018/11/27/contradictory-tdd.html
+
+[[testing]]
+
+---
+
+To read:
+https://www.tedinski.com/2018/02/06/system-boundaries.html
+https://www.tedinski.com/2019/04/02/solid-critique.html
+
+
+---
+
+Server Driven UI (SDUI)
+Airbnb's 'Ghost Platform'
+
+Essentially this is a Headless CMS? [[20221107050300-headless-cms]]
+What makes it different?
+	That it's focused on creating all types of User Interfaces, rather than just similar content, e.g. blog posts?
+	Is it just the next evolution of it? Pushes it harder?
+	e.g. it really pushes the idea of structured content that can be laid out as you want. Effectively a CMS for your entire web app?
+	Lets you control the layout as well as the content
+	The API provides both the data AND the layout. You're not just requesting FAQ data, you're also being told there's an FAQ section?
+Also supports actions which is cool
+Fuflils a cool niche of being able to keep UI consistent across all outputs, including mobile apps without needing to ship an app update
+
+Seems very similar to what I did at Genero with 'Advanced Custom Fields' in Wordpress.
+Or the `slices` side project https://github.com/ajosedev/slices. Converting JSON layouts into the full page, rather than having more rigid templates.
+
+Lets you shift around the order a lot more and build more dynamic pages.
+
+Platform independent
+
+https://medium.com/airbnb-engineering/a-deep-dive-into-airbnbs-server-driven-ui-system-842244c5f5
+https://prismic.io/
+
+---
+
+Prioritising based on workarounds and escape hatches
+If you have a workaround, you an lower the priority of things
+When it comes to a design system, it makes sense to build that really lower base
+	Easy enough to build a simple tag or card if you don't have one
+	Much harder to build a popover
+
+Is this effectively cost of delay in disguise? (new doc)
+
+---
+
+Prefer server side redirects
+https://gist.github.com/mjackson/b5748add2795ce7448a366ae8f8ae3bb
+https://kentcdodds.com/blog/stop-using-client-side-route-redirects
+and Google
+
+---
+
+Remix primer
+
+https://remix.run/docs/en/v1/pages/philosophy?
+
+---
+
+Data flow in Remix
+https://remix.run/blog/remix-data-flow
+
+and Data fetching in Remix
+https://remix.run/docs/en/v1/guides/data-loading
+
+Link to [[20220328094742-render-as-you-fetch]] and [[20221123025646-react-data-fetching]]
+
+---
+
+Vite primer
+https://vitejs.dev/guide/
+
+---
+
+[[20221110041808-react-server-components]]
+https://remix.run/blog/react-server-components
+
+---
+
+font inspector
+https://opentype.js.org/font-inspector.html
+
+---
+
+Loading fonts in a browser
+https://fonts.google.com/knowledge/using_type/using_web_fonts
+
+If you don't load a particular font, the browser can still create a fake version of it
+Ideally the typeface itself is loaded
+https://www.smashingmagazine.com/2012/07/avoiding-faux-weights-styles-google-web-fonts/
+
+--- 
+
+Jamstack
+https://jamstack.wtf/
+- What is it?
+- What does it do?
+- Pros/cons?
+- What tools fit in?
+- What's the line between dynamic and static? How do lambdas etc fit in
+	- https://www.smashingmagazine.com/2019/12/dynamic-async-functionality-jamsstack-websites/
+	- #todo - add this to [[20221128053251-static-rendering-dynamic]]
+
+[[20221128051011-static-rendering]]
+[[20221128053251-static-rendering-dynamic]]
+
+[[architecture]]
+[[deployment]]
+[[infrastructure]]
+
+---
+
+What is qwik?
+
+How does it relate to transitional apps
+
+---
+
+What is svelte?
+Mention sveltekit
+
+https://dev.to/swyx/svelte-for-sites-react-for-apps-2o8h

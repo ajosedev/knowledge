@@ -1,4 +1,4 @@
-# React.ComponentType<T> accepts generics
+# `React.ComponentType<T>` accepts generics
 
 This allows you to set props on components that are passed as props. Otherwise, Typescript will complain that `color` is not an allowed prop on the `icon` prop.
 Note that it's not possible to `extend` `React.ComponentType` with an interface to achieve this.

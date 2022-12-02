@@ -12,9 +12,11 @@ Tier 3: Component-specific variables, e.g. `button-font-family`, `button-border-
 
 Each tier maps to the tier above it. The first two are considered the 'theme layer', and the third tier is consumed by the DS component library.
 
-Tier 3 declarations shouldn't often change, meaning there's not much work updating the components even if they're used by multiple brands. The work, cstomisation, and separation. comes through changing the tokens in higher tiers.
+Tier 3 declarations shouldn't often change, meaning there's not much work updating the components even if they're used by multiple brands. The work, customisation, and separation. comes through changing the tokens in higher tiers.
 
 Note that 3 tiers may not be necessary. Each tier adds more maintenance and can slow you down. Consider adding them over time to avoid slowing down the speed of which you can build new components.
+
+Additionally, this third tier can have a lot of nuance. Something like [Adobe Spectrum](https://medium.com/@NateBaldwin/component-level-design-tokens-are-they-worth-it-d1ae4c6b19d4) used fine-grained tokens - `spectrum-button-m-warning-quiet-overbackground-textonly-focus-ring-animation-duration`. You could pull this back as many steps as appropriate, e.g. `primary-action-background-color` still provides value and granularity, and can be used across multiple components.
 
 This can be used for more than a multi-brand design system:
 - Sub-brands
@@ -27,6 +29,8 @@ This can be used for more than a multi-brand design system:
 
 https://bradfrost.com/blog/post/creating-themeable-design-systems/
 https://bradfrost.com/blog/post/the-many-faces-of-themeable-design-systems/
+
+[[20221025093009-multi-brand-design-systems]]
 
 [[designsystem]]
 [[designtokens]]

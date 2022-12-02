@@ -37,12 +37,18 @@ Remember that note taking is a tool to help learn. Don't have to make a note on 
 		- Maybe more things should be componentapi, not reactapi?
 	- Make a list of all current topics and see what the hierarchy should be. See what's missing.
 	- [[web]] vs [[browsers]]
-	- something like [[deployment]] or [[hosting]] for things like Vercel, AWS, etc.
+		- What is [[web]] for?
+	- something like [[deployment]] for things like Vercel, AWS, etc.
 		- Whats the overarching theme here?
 		- Kind of similar to [[architecture]], but not exactly. How does it intersect with [[ops]] or [[infrastructure]]
-	- [[infrastructure]] vs [[ops]] vs [[architecture]]
+	- [[infrastructure]] vs [[ops]] vs [[architecture]] vs [[deployment]]
 	- what is [[engineering]] for? Feels a little catch-all
 	- do I need something like [[areas]] which is a higher level than both [[engineering]] and [[product]]
+	- introduce [[devops]]?
+	- introduce topics for common tools? e.g. babel, webpack
+	- an umbrella for web frameworks? tools? e.g. astro vs nextjs vs remix vs react vs svelte
+		- All the web stuff
+	- What is [[buildtooling]] for?
 - Create more topic pages that have categories and such
 - Consider removing zettel (date) prefix
 	- Would be better for creating pages link-first
@@ -53,5 +59,4 @@ Remember that note taking is a tool to help learn. Don't have to make a note on 
 	- How can I get it back if I remove it?
 - Go through the graph and try to create more links between things
 - Try to make more inline links
-- Start to use the backlink view
 - Let notes sit in an 'Ideas' bucket for a while. Can weed out the bad ideas that I don't really need to write down

@@ -9,5 +9,6 @@ Keep that in mind when working on and planning projects. Make sure the project *
 Keep documentation up to date. Keep estimates accurate. Plan iteratively, so you're still providing business value. See what you can release that's still useful.
 
 [[career]]
+[[leading]]
 [[management]]
 [[product]]

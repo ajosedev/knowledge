@@ -1,0 +1,162 @@
+{
+  "main": {
+    "id": "7ceab885674510e5",
+    "type": "split",
+    "children": [
+      {
+        "id": "d2a414648513354f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f27469f128982092",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "30652af1ad54312c",
+    "type": "split",
+    "children": [
+      {
+        "id": "ac5e6981e491e507",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "81588eb68ed6a615",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "abc91cc20b8658f1",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "#todo",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 298
+  },
+  "right": {
+    "id": "82a460272cf303b7",
+    "type": "split",
+    "children": [
+      {
+        "id": "68d6be08d9e3aa5f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "059d1d254d3bae7c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "6c24562e8071ae6d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "fc63b9edbdd4a51b",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 2.2139956920783823,
+                  "close": false
+                }
+              }
+            }
+          },
+          {
+            "id": "aa80211680909473",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 302.5
+  },
+  "active": "f27469f128982092",
+  "lastOpenFiles": [
+    "topics/engineering.md",
+    "topics/web.md",
+    "zettel/20200307104931-orthogonality.md",
+    "zettel/20210202103254-coupling-cohesion.md",
+    "zettel/20210908151101-component-design.md",
+    "zettel/20210916180937-breaking-new-components.md",
+    "zettel/20220627121829-web-platform-adoption.md",
+    "zettel/20220801015113-cost-of-convenience.md",
+    "zettel/20220822122735-why-react-re-renders.md",
+    "zettel/20220912113924-dead-code-elimination.md"
+  ]
+}

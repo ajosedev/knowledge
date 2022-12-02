@@ -2,6 +2,8 @@
 
 Related:
 [[aws]]
+[[microfrontends]]
+[[microservices]]
 [[infrastructure]]
 [[ops]]
 

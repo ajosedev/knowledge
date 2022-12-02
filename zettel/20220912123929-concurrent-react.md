@@ -13,5 +13,6 @@ New features in React such as Suspense, transitions, and streaming server render
 https://reactjs.org/blog/2022/03/29/react-v18.html
 
 [[20220912122714-react-rendering-phases]]
+[[20221130102846-progressive-hydration]]
 
 [[react]]

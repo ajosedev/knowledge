@@ -14,3 +14,4 @@ It has a few guiding principles that are generally applicable to writing codemod
 [[ast]]
 [[codemods]]
 [[js]]
+[[migrations]]

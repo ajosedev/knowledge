@@ -9,6 +9,7 @@ Designers and engineers aligned towards a singular goal enables you to create a 
 >Consistent output comes from organizations that are culturally consistent—aligned on values and principles
 
 [[20210908155508-flexibility-components]]
+[[20221202114400-design-system-consistency]]
 
 [[components]]
 [[designsystem]]

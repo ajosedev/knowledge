@@ -6,6 +6,12 @@
 - Improve DX without compromising UX
 - Works in any JS environment
 
+## Terminology
+Host: A webpack build that is initialised first during a page load. Not dependent on anything special, so it can change from page to page
+Remote: Another Webpack build, where part of it is being consumed by a 'host'
+Bidirectional host: Can act as either a 'host' or 'remote'
+Omnidirectional hosts: Acts as both a 'host' and 'remote' at once
+
 ## Deployment
 Federated modules are deployed like assets, not like servers. Since they are static JS files, they can be served through something like S3.
 
@@ -21,12 +27,6 @@ Multiple share scopes can exist to allow for different versions of a shared depe
 
 ## Config
 Module federation relies on an exported config ('container plugin'?) from each app. Simplified, this config specifies things such as: name, filename, exposed modules, and shared deps. These file paths/names/exports are then used in standard import statements.
-
-## Terminology
-Host: A webpack build that is initialised first during a page load. Not dependent on anything special, so it can change from page to page
-Remote: Another Webpack build, where part of it is being consumed by a 'host'
-Bidirectional host: Can act as either a 'host' or 'remote'
-Omnidirectional hosts: Acts as both a 'host' and 'remote' at once
 
 ## Sample code
 Host config:

@@ -1,6 +1,6 @@
-# SASS and explicit dependencies
+# CSS and explicit dependencies
 
-SASS can often have a disconnect between where styles are defined, and where these styles (e.g. classes) are used. This isn't unique to SASS either, it can exist in regular CSS.
+CSS can often have a disconnect between where styles are defined, and where these styles (e.g. classes) are used. This isn't unique to CSS either, it can exist in SASS also.
 
 This can lead to problems down the road. If you have a component referencing a class that's defined elsewhere but doesn't import that stylesheet directly, how do you know where it's defined? These tenuous links can make maintenance much harder.
 

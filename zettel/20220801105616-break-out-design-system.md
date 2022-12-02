@@ -17,6 +17,7 @@ When breaking the design system:
 https://breakyourdesignsystem.com/
 
 [[20220621083440-design-system-flexibility]]
+[[20221202114400-design-system-consistency]]
 
 [[designsystem]]
 [[designsystemapi]]
