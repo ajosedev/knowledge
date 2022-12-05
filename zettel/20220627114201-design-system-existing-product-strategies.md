@@ -14,6 +14,8 @@ Swap all components for newer components gradually. Hard for big breakthroughs a
 As your customer uses the product, you add more value and slowly expand over time.
 Akin to a scoped version of a 'big bang', you redesign by a section, not by a component. Helps you test things end-to-end in a controlled environment. Over time, your scope expands until you're consistently changing sections of the existing product.
 
+[[20220627114201-design-system-existing-product-strategies]]
+
 [[adoption]]
 [[designsystem]]
 [[product]]

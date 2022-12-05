@@ -2,7 +2,7 @@
 
 Compound components are a pattern that's similar to the `select` and `option` pattern in HTML. This pattern helps create a more flexible and expressive API, that allows for far more variations than a standard pattern. Think of a Modal component that requires props to style the close button, or style the heading, etc.
 
-Another positive about compound components, is that you can create a component that exposes a simpler API (think a particular variant) from a basis of flexible compound components - this doesn't work the other way around. It's easier to make the underlying componentry flexible and then expose a subset, its much harder to do it the other way around (too many props, prop drilling, etc.)
+Another positive about compound components, is that you can create a component that exposes a simpler API (think a particular variant) from a basis of flexible compound components - this doesn't work the other way around. It's easier to make the underlying componentry flexible and then expose a subset, its much harder to do it the other way around (too many props, prop drilling, etc.) [[20221128012645-generic-components-reuse]]
 
 Two main methods of sharing state between related components:
 - React.cloneElement
@@ -24,7 +24,10 @@ With React.Context, the parent component will render its children inside of a pr
 </Context.Provider>
 ```
 
+To show that components are tied together, they usually share a namespace. e.g. `Menu` and `MenuButton`, or `Menu.Button`.
+
 [[componentapi]]
 [[components]]
+[[designpatterns]]
 [[react]]
 [[reactapi]]

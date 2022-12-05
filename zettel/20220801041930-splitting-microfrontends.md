@@ -10,5 +10,7 @@ Each microfrontend may or may not be owned by the same team. It's generally best
 
 ![[Microfrontend splitting.png]]
 
+[[20220801042414-microfrontend-composition]]
+
 [[architecture]]
 [[microfrontends]]

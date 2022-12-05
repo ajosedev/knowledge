@@ -32,3 +32,5 @@ https://epicreact.dev/how-react-uses-closures-to-avoid-bugs/
 TODO - what is a closure?
 https://whatthefork.is/closure
 https://javascript.info/closure
+
+[[designpatterns]]

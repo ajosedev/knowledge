@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "d2a414648513354f",
+        "id": "946c81555a61bec6",
         "type": "tabs",
         "children": [
           {
-            "id": "f27469f128982092",
+            "id": "e2376de1938b045e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "zettel/20221202123047-edge-side-includes.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -44,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "#todo",
+                "query": "genero",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -74,6 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "zettel/20221202123047-edge-side-includes.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -90,6 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "zettel/20221202123047-edge-side-includes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -101,6 +107,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "zettel/20221202123047-edge-side-includes.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -146,17 +153,17 @@
     "direction": "horizontal",
     "width": 302.5
   },
-  "active": "f27469f128982092",
+  "active": "e2376de1938b045e",
   "lastOpenFiles": [
-    "topics/engineering.md",
-    "topics/web.md",
-    "zettel/20200307104931-orthogonality.md",
-    "zettel/20210202103254-coupling-cohesion.md",
-    "zettel/20210908151101-component-design.md",
-    "zettel/20210916180937-breaking-new-components.md",
-    "zettel/20220627121829-web-platform-adoption.md",
-    "zettel/20220801015113-cost-of-convenience.md",
-    "zettel/20220822122735-why-react-re-renders.md",
-    "zettel/20220912113924-dead-code-elimination.md"
+    "Ideas.md",
+    "zettel/20220509123803-vertical-horizontal-layout-component.md",
+    "zettel/20220328091433-conways-law.md",
+    "zettel/20220801042414-microfrontend-composition.md",
+    "zettel/20221202123047-edge-side-includes.md",
+    "zettel/20221202011240-existing-code.md",
+    "zettel/20221205115314-command-pattern.md",
+    "zettel/20221205114850-prototype-pattern.md",
+    "zettel/20210412143336-compound-components.md",
+    "zettel/20221128012645-generic-components-reuse.md"
   ]
 }

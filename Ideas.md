@@ -4,15 +4,19 @@ Canaries, feature flags, multi-tenancy(?)
 
 ---
 
-something on React contexts on how to best make them
+something on React contexts on how to best make them (and a brief introduction of what they are)
 - they re-render on object.is evaluation
 - therefore put state somewhere that checks it better so it doesn't get re-created on each one
 - reducer better as it's safe/doesn't cause rerenders? (link to relevant zettel)
+- any consumers re-render on context value change
+- best to create contexts with the smallest amount of data possible?
+- RFC to only re-render if the value used by the consumer changes?
 
 See what Epic React has here
 
 https://kentcdodds.com/blog/how-to-use-react-context-effectively
 https://beta.reactjs.org/apis/usecontext
+https://www.patterns.dev/posts/provider-pattern/
 
 Context Module Functions (Epic React)
 https://github.com/kentcdodds/advanced-react-patterns/blob/main/src/exercise/01.md
@@ -219,6 +223,7 @@ How does Google's HCT work with this? https://material.io/blog/science-of-color-
 
 JS prototypes/prototype inheritance
 
+Prototype chain
 Also JS classes and how they differ
 
 https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes
@@ -257,6 +262,8 @@ Alternatively 'customers don't know what they want'
 ---
 
 Fargate, Lambda, etc. any other 'serverless' things
+How does Cloudflare Workers fit in?
+[[serverless]]
 
 ---
 
@@ -421,7 +428,7 @@ What makes it different?
 Also supports actions which is cool
 Fuflils a cool niche of being able to keep UI consistent across all outputs, including mobile apps without needing to ship an app update
 
-Seems very similar to what I did at Genero with 'Advanced Custom Fields' in Wordpress.
+Seems very similar to what I did with 'Advanced Custom Fields' in Wordpress.
 Or the `slices` side project https://github.com/ajosedev/slices. Converting JSON layouts into the full page, rather than having more rigid templates.
 
 Lets you shift around the order a lot more and build more dynamic pages.
@@ -519,3 +526,24 @@ What is svelte?
 Mention sveltekit
 
 https://dev.to/swyx/svelte-for-sites-react-for-apps-2o8h
+
+---
+
+Composition over inheritence
+Perhaps two separate docs on composition, and inheritence?
+
+---
+
+Separation of concerns
+
+---
+
+Indirection
+
+---
+
+Descendant vs child selectors. Basically:
+Child = immediate descendent
+Descendant = child at any level
+
+Think of better definitions

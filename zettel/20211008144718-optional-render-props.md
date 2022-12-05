@@ -12,6 +12,8 @@ return (
 
 Note: `material-ui` does this for some of their components.
 
+[[20221205104221-render-props-pattern]]
+
 [[components]]
 [[react]]
 [[reactapi]]

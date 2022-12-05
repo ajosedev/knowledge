@@ -21,7 +21,9 @@ I personally refer to this process as 'harvesting'. Look to harvest components r
 
 [[20220704125509-design-systems-snowflakes]] also fall into a similar category. Once a snowflake becomes common, it makes sense to adopt it into your design system.
 
+[[20220627114201-design-system-existing-product-strategies]]
 [[20211115112656-rule-of-three]]
 
+[[adoption]]
 [[designsystem]]
 [[product]]

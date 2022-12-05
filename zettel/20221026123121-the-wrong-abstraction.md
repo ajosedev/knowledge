@@ -15,7 +15,7 @@ Before adding conditional logic to an abstracted piece of code, try working back
 3.  Delete the bits that aren't needed for this particular caller.
 Often, you'll find that each caller is actually quite unique, despite them trying to use the same abstraction. If that's the case, you probably already had the wrong abstraction.
 
-Just because existing code is already there, doesn't mean it's correct, nor the best it could be.
+Just because existing code is already there, doesn't mean it's correct, nor the best it could be. [[20221202011240-existing-code]]
 
 Keywords: 'Premature abstraction'
 
@@ -28,3 +28,4 @@ programmingisterrible.com/post/139222674273/write-code-that-is-easy-to-delete-no
 [[abstraction]]
 [[concepts]]
 [[engineering]]
+[[refactoring]]

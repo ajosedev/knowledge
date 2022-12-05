@@ -20,5 +20,4 @@ One of the ongoing challenges in architecture design and implementation is trans
 [[microservices]]
 [[migrations]]
 [[monoliths]]
-[[product]]
 [[refactoring]]
