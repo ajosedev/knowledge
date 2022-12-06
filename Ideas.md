@@ -547,3 +547,8 @@ Child = immediate descendent
 Descendant = child at any level
 
 Think of better definitions
+
+---
+
+Web metrics: TTFB, FCP, TTI, etc.
+Find existing references and link them
