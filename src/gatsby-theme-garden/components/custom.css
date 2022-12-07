@@ -5,3 +5,7 @@ body.dark-mode {
 pre {
     margin-bottom: 1rem;
 }
+
+p > code {
+    color: deepskyblue;
+}
