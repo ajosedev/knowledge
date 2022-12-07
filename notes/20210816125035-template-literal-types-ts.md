@@ -11,10 +11,10 @@ type Alignment = `${VerticalAlignment}-${HorizontalAlignment}`
 ```
 
 There's also some included helper types for string manipulation:
-- Uppercase<StringType>
-- Lowercase<StringType>
-- Capitalize<StringType>
-- Uncapitalize<StringType>
+- `Uppercase<StringType>`
+- `Lowercase<StringType>`
+- `Capitalize<StringType>`
+- `Uncapitalize<StringType>`
 
 https://www.typescriptlang.org/docs/handbook/2/template-literal-types.html
 
