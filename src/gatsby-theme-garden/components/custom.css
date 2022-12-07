@@ -2,3 +2,6 @@ body.dark-mode {
     --link: hotpink;
 }
 
+pre {
+    margin-bottom: 1rem;
+}
