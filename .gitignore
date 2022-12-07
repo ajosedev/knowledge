@@ -1,4 +1,7 @@
+.cache
 .DS_Store
 node_modules
 notes/.obsidian/cache.json
 notes/.obsidian/workspace.json
+public
+yarn-error.log
