@@ -49,6 +49,7 @@ Remember that note taking is a tool to help learn. Don't have to make a note on 
 	- an umbrella for web frameworks? tools? e.g. astro vs nextjs vs remix vs react vs svelte
 		- All the web stuff
 	- What is [[buildtooling]] for?
+	- Change [[ts]] and [[js]] to the full word, to make inline linking easier
 - Create more topic pages that have categories and such
 - Consider removing zettel (date) prefix
 	- Would be better for creating pages link-first

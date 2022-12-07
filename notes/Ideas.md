@@ -335,6 +335,7 @@ https://github.com/frehner/modern-guide-to-packaging-js-library
 
 Different module types: CJS, AMD, UMD, ESM
 https://dev.to/iggredible/what-the-heck-are-cjs-amd-umd-and-esm-ikm
+Does ECMAScript fit in here?
 
 ---
 
@@ -360,8 +361,9 @@ What about next?
 
 ---
 
-bundlers, compilers, loaders, etc.
+bundlers, compilers, loaders, transpilers, etc.
 Vite, esbuild, webpack, typescript, rollup, parcel, Turbopack, babel, swc
+Concept pages for what each thing is, e.g. what is a transpiler? How is it different from a compiler? Which of these tools is a transpiler?
 
 [[buildtooling]]
 
