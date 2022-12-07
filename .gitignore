@@ -1,4 +1,4 @@
-.ztr-directory
 .DS_Store
-.obsidian/cache
-.obsidian/workspace
+node_modules
+notes/.obsidian/cache.json
+notes/.obsidian/workspace.json
