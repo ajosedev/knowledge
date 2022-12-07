@@ -15,7 +15,6 @@ Disclaimer: Not all thoughts in this are my own. *Most* content is written by me
 
 ### Website
 - Add 404 page
-- Code highlighting
 - Fix images
 - More customisation
 - Roll a custom implementation/new theme
