@@ -14,7 +14,6 @@ Disclaimer: Not all thoughts in this are my own. *Most* content is written by me
 ## TODO
 
 ### Website
-- Add 404 page
 - Fix images
 - More customisation
 - Roll a custom implementation/new theme
