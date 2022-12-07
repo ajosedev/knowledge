@@ -2,20 +2,17 @@
 
 An [Obsidian](https://obsidian.md/) vault focusing on Software Engineering.
 
-Hosted at: 
-
-Disclaimer: Not all thoughts in this are my own. *Most* content is written by me, often summarising notes from other articles, videos, etc. Where appropriate I've tried to add links to the source.
+Hosted at: [garden.ajose.dev](https://garden.ajose.dev)
 
 ## Deployment
 
-- Built with X
-- Deployed on
+Built with Gatsby using [gatsby-digital-garden](https://github.com/mathieudutour/gatsby-digital-garden).
+
+Deployed with Vercel.
 
 ## TODO
 
 ### Website
-- Add 404 page
-- Code highlighting
 - Fix images
 - More customisation
 - Roll a custom implementation/new theme
