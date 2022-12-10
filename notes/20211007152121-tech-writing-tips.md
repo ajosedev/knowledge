@@ -1,9 +1,6 @@
 # Tech writing tips
 
-TODO - over time, can break this out into individual posts
 #breakdown
-
----
 
 Explain things directly
 Don't add fluff words that aren't necessary (easy, simple, just, etc)

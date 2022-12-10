@@ -1,4 +1,5 @@
 # Choose boring technology
+
 Simply put, boring technologies have well understood capabilities and failures. They have less unknown unknowns.
 
 Note that 'boring' does not equal 'bad'. Technology can be both, but we're aiming for tried and tested technology that have stood the test of time. Think PHP, MySQL, Memcached, Cron, etc.
