@@ -1,4 +1,4 @@
-# Codeshift for JS codemods
+# CodeshiftCommunity for JS codemods
 
 https://www.codeshiftcommunity.com/
 

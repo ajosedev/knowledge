@@ -4,8 +4,6 @@
 https://12factor.net/
 Search: 12factor, 12 factor
 
-#breakdown 
-
 ```
 In the modern era, software is commonly delivered as a service: called _web apps_, or _software-as-a-service_. The twelve-factor app is a methodology for building software-as-a-service apps that:
 

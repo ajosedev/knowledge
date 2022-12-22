@@ -1,4 +1,4 @@
-# Search and Replace in Vim
+# Search and Replace in Vim's visual block mode
 
 When in visual block mode, search and replace can still be used to replace text only within that range.
 
@@ -16,5 +16,4 @@ Then, use `:s` as normal, appending it to the current range, e.g:
 
 [[20220520101538-smart-find-replace-emacs]]
 
-[[emacs]]
 [[vim]]

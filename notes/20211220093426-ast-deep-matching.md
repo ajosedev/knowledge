@@ -1,6 +1,6 @@
 # Deep matching nodes in AST
 
-When working with AST walkers, most have functionality of executing separately on entering and leaving a node. This means once the walker enters a node, it will fully explore everything nested in it before it leaves taht node.
+When working with AST walkers, most have functionality of executing separately on entering and leaving a node. This means once the walker enters a node, it will fully explore everything nested in it before it leaves that node.
 For example, given the following DOM:
 ```html
 <node1>

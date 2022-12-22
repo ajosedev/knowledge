@@ -62,3 +62,4 @@ Remember that note taking is a tool to help learn. Don't have to make a note on 
 - Try to make more inline links
 - Let notes sit in an 'Ideas' bucket for a while. Can weed out the bad ideas that I don't really need to write down
 - Add frontmatter https://help.obsidian.md/Advanced+topics/YAML+front+matter
+- Should topic pages also be the introduction? e.g. should [[monoliths]] be combined with [[20221107045937-monoliths]]? same with [[codemods]] & [[20221221020009-codemods]]

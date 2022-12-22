@@ -14,7 +14,7 @@ Advantages:
 - Thus routing can appear faster
 
 Disadvantages:
-- Bundle size would usually grow slowly over time, which increases the First Contentful Paint (FCP) and Time to Interactive (TTI) of the page
+- Bundle size would usually grow slowly over time, which increases the [[20221219125527-web-metrics#First Contentful Paint (FCP)|FCP]] and [[20221219125527-web-metrics#Time to Interactive (TTI)|TTI]] of the page
 - CSR doesn't often get crawled correctly, leading to poor SEO
 - Performance is usually subpar compared to other techniques
 - Data fetching usually involves render-fetch waterfalls [[20220328094742-render-as-you-fetch]]

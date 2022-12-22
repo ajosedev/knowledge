@@ -69,7 +69,6 @@ Shared vocabulary. Make your team more aware of these by name. It's much easier 
 Culture change. Org-wide change doesn't come from surface level treatment. Ideally these are surfaced and visible by managers and leaders.
 
 #breakdown 
-#todo 
 
 [[customers]]
 [[product]]

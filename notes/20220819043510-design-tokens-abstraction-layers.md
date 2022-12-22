@@ -20,7 +20,7 @@ There's value here. If you think all form components might change their border c
 
 However there's also a maintenance overhead. This may be overkill and slow down the system as it's being created.
 
-As always, find the balance.a
+As always, find the balance.
 
 [[20220822094537-themeable-design-systems]]
 
