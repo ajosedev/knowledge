@@ -42,6 +42,8 @@ Remember that note taking is a tool to help learn. Don't have to make a note on 
 		- Whats the overarching theme here?
 		- Kind of similar to [[architecture]], but not exactly. How does it intersect with [[ops]] or [[infrastructure]]
 	- [[infrastructure]] vs [[ops]] vs [[architecture]] vs [[deployment]]
+		- should [[deplyment]] be narrower in scope?
+		- What about [[rendering]]?
 	- what is [[engineering]] for? Feels a little catch-all
 	- do I need something like [[areas]] which is a higher level than both [[engineering]] and [[product]]
 	- introduce [[devops]]?

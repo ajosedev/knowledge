@@ -4,11 +4,13 @@
 
 >There’s a subtle reason that programmers always want to throw away the code and start over. The reason is that they think the old code is a mess. And here is the interesting observation: _they are probably wrong._ The reason that they think the old code is a mess is because of a cardinal, fundamental law of programming:
 
-> It’s harder to read code than to write it.
+>It’s harder to read code than to write it.
 
 >This is why code reuse is so hard. This is why everybody on your team has a different function they like to use for splitting strings into arrays of strings. They write their own function because it’s easier and more fun than figuring out how the old function works.
 
 >The idea that new code is better than old is patently absurd. Old code has been _used_. It has been _tested_. _Lots_ of bugs have been found, and they’ve been _fixed_. There’s nothing wrong with it.
+
+[[20221202011240-existing-code]]
 
 >It’s important to remember that when you start from scratch there is **absolutely no reason** to believe that you are going to do a better job than you did the first time. First of all, you probably don’t even have the same programming team that worked on version one, so you don’t actually have “more experience”. You’re just going to make most of the old mistakes again, and introduce some new problems that weren’t in the original version.
 
@@ -18,9 +20,10 @@ Large scale refactors are often incremental too. They allow you to stop and ship
 
 https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/
 
+keywords: rewrite
+
 [[20220328112803-choose-boring-technology]]
 
 [[architecture]]
 [[concepts]]
 [[refactoring]]
-[[principles]]

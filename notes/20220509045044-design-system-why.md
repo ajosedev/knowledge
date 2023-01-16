@@ -12,4 +12,6 @@ Last point is often the biggest one, as it compounds.
 
 Designers don't have to sweat the small stuff, so they can spend more time creating value and solving difficult and sometimes more innovative problems. Allows you to stay focused and not have to context switch.
 
+This also works in large scale companies where there are many designers, but they are distributed across the company. The design system gives a common language to share which helps make a coherent and cohesive experience.
+
 [[designsystem]]

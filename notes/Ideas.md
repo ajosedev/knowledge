@@ -165,7 +165,12 @@ Where did I read this? - Refactoring UI maybe?
 Is this why people prefer HSL? Apparently HSL is actually bad
 
 https://stripe.com/blog/accessible-color-systems
+
+#breakdown - oklch
 https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl
+what is p3 vs srgb
+how can you convert between HEX and OKLCH - is it because they are in the same colour space?
+HEX can't use P3?
 
 How does Google's HCT work with this? https://material.io/blog/science-of-color-design
 
@@ -238,14 +243,6 @@ Are there more guidelines? e.g. cost of convenience/flexibility?
 
 ---
 
-Margin collapse
-How it works with display: table
-Capsize:
->The negative margins are applied to pseudo elements to guard against [margin collapse](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing). Combining the use of pseudo elements and padding on the parent container prevents the margins from being collapsed into the parent element. The collapsing is most visible when text is used directly inside a container that has a background colour applied.
-https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
-
----
-
 'Dont break the API' and how it applies to design systems and design tokens
 
 Go has an idea of new versions never break old code
@@ -287,6 +284,8 @@ e.g. what does 'exports' do in a library's package.json?
 Different module types: CJS, AMD, UMD, ESM
 https://dev.to/iggredible/what-the-heck-are-cjs-amd-umd-and-esm-ikm
 Does ECMAScript fit in here?
+
+How does this tie into unpkg using UMD? [[20230116113451-unpkg]]
 
 ---
 
@@ -332,31 +331,6 @@ https://www.tedinski.com/2019/04/02/solid-critique.html
 
 ---
 
-Server Driven UI (SDUI)
-Airbnb's 'Ghost Platform'
-
-Essentially this is a Headless CMS? [[20221107050300-headless-cms]]
-What makes it different?
-	That it's focused on creating all types of User Interfaces, rather than just similar content, e.g. blog posts?
-	Is it just the next evolution of it? Pushes it harder?
-	e.g. it really pushes the idea of structured content that can be laid out as you want. Effectively a CMS for your entire web app?
-	Lets you control the layout as well as the content
-	The API provides both the data AND the layout. You're not just requesting FAQ data, you're also being told there's an FAQ section?
-Also supports actions which is cool
-Fuflils a cool niche of being able to keep UI consistent across all outputs, including mobile apps without needing to ship an app update
-
-Seems very similar to what I did with 'Advanced Custom Fields' in Wordpress.
-Or the `slices` side project https://github.com/ajosedev/slices. Converting JSON layouts into the full page, rather than having more rigid templates.
-
-Lets you shift around the order a lot more and build more dynamic pages.
-
-Platform independent
-
-https://medium.com/airbnb-engineering/a-deep-dive-into-airbnbs-server-driven-ui-system-842244c5f5
-https://prismic.io/
-
----
-
 Prioritising based on workarounds and escape hatches
 If you have a workaround, you an lower the priority of things
 When it comes to a design system, it makes sense to build that really lower base
@@ -364,6 +338,8 @@ When it comes to a design system, it makes sense to build that really lower base
 	Much harder to build a popover
 
 Is this effectively cost of delay in disguise? (new doc)
+
+https://twitter.com/diegohaz/status/1551476114027069441
 
 ---
 
@@ -400,15 +376,11 @@ https://remix.run/blog/react-server-components
 
 ---
 
-font inspector
-https://opentype.js.org/font-inspector.html
-
----
-
 Loading fonts in a browser
 https://fonts.google.com/knowledge/using_type/using_web_fonts
 
 If you don't load a particular font, the browser can still create a fake version of it
+This goes for faux bold and faux italics
 Ideally the typeface itself is loaded
 https://www.smashingmagazine.com/2012/07/avoiding-faux-weights-styles-google-web-fonts/
 
@@ -479,3 +451,23 @@ https://www.tedinski.com/2018/11/27/contradictory-tdd.html
 https://kentcdodds.com/blog/write-tests
 
 [[20221219011420-testing-implementation-details]]
+
+---
+
+Avoiding mutation in JS
+What mutation is, why you should avoid it, and how to do it
+Passing by reference vs value (new doc?)
+Namely the difference between examples like these:
+```js
+const newArray = array;
+// vs
+const newArray = [...array];
+```
+
+---
+
+http://blogs.newardassociates.com/blog/2023/you-want-modules-not-microservices.html
+
+---
+
+How do browsers handle fractional pixels?

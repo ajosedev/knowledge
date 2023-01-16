@@ -2,7 +2,6 @@
 
 Related:
 [[deployment]]
-[[hosting]]
 [[infrastructure]]
 [[ops]]
 

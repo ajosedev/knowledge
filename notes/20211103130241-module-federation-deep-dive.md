@@ -1,11 +1,5 @@
 # Module federation deep dive
 
-- Import code from other builds at runtime
-- Share vendor code dynamically at runtime
-- Allows microfrontends to work like a [[monoliths]]
-- Improve DX without compromising UX
-- Works in any JS environment
-
 ## Terminology
 Host: A webpack build that is initialised first during a page load. Not dependent on anything special, so it can change from page to page
 Remote: Another Webpack build, where part of it is being consumed by a 'host'
@@ -72,14 +66,10 @@ Some examples of where to draw some lines:
 - Authentication modules
 - Analytics
 
-## Federation dashboard
-
-Coming soon, gives stats/graphs/views on how everything is consuming one another, as well as shared dependencies, etc.
-
 [[20210927141042-module-federation]]
 
 [[architecture]]
-[[browsers]]
 [[microfrontends]]
 [[microservices]]
+[[rendering]]
 [[web]]

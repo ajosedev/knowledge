@@ -7,5 +7,7 @@ There are three ways to compose a micro-frontends architecture. The decision sh
 
 ![[Microfrontend composition.png]]
 
+[[20220801041930-splitting-microfrontends]]
+
 [[architecture]]
 [[microfrontends]]

@@ -4,7 +4,7 @@ aka: 'Contextual design tokens'
 
 If your design tokens are named after tints/shades, such as `grey100`, it's easy to change the underlying hex value to perform a wide sweeping change. However, if a single token is used used for more than one consistent use, such as `grey300` representing both disabled text and a menu background colour, it's impossible to change one without changing the other.
 
-By introducing an additional abstraction layer above your tints/shades, e.g. `text--disabled` maps to `grey300`, it's possible to change one use without changing the other. Note that the amount of layers matter here: [[20220819043510-design-tokens-abstraction-layers]]
+By introducing an additional abstraction layer above your tints/shades, e.g. `text--disabled` maps to `grey300`, it's possible to change one use without changing the other. It's really about identifying the things that [[20200307101703-easy-to-change|change together]]. If a colour used in two places is supposed to be kept in sync, consider if there should be a shared token. Note that the amount of layers matter here: [[20220819043510-design-tokens-abstraction-layers]]
 
 However this probably can be extended too far and get confusing, do you need separate tokens for menu-bg, card-bg, etc? Don't go overboard.
 

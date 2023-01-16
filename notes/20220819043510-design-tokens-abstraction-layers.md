@@ -1,6 +1,6 @@
 # Design tokens and layers of abstractions
 
-The number of abstraction layers can correlate to the ease of chance with design tokens.
+The number of abstraction layers can correlate to the [[20200307101703-easy-to-change|ease of change]] with design tokens.
 
 As mentioned in [[20211029153348-semantic-design-tokens]], adding abstraction layers lets you change levels without impacting others. However, it's important to note that the number of layers impacts the kind of changes you can make.
 

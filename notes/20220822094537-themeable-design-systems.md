@@ -12,7 +12,7 @@ Tier 3: Component-specific variables, e.g. `button-font-family`, `button-border-
 
 Each tier maps to the tier above it. The first two are considered the 'theme layer', and the third tier is consumed by the DS component library.
 
-Tier 3 declarations shouldn't often change, meaning there's not much work updating the components even if they're used by multiple brands. The work, customisation, and separation. comes through changing the tokens in higher tiers.
+Tier 3 declarations shouldn't often change, meaning there's not much work updating the components even if they're used by multiple brands. The work, customisation, and separation. comes through changing the tokens in higher tiers. [[20220819043510-design-tokens-abstraction-layers]]
 
 Note that 3 tiers may not be necessary. Each tier adds more maintenance and can slow you down. Consider adding them over time to avoid slowing down the speed of which you can build new components.
 
@@ -33,4 +33,5 @@ https://bradfrost.com/blog/post/the-many-faces-of-themeable-design-systems/
 [[20221025093009-multi-brand-design-systems]]
 
 [[designsystem]]
+[[designsystembranding]]
 [[designtokens]]
