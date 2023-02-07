@@ -2,7 +2,7 @@
 
 Module federation is not the same thing as a [[microfrontends]] architecture. The former is a 'code transport layer', and the latter is an 'architectural style'.
 
-A microfrontend architecture helps fix organisational problems. It enables independent deployments, ownership boundaries, domain driven design, etc. It's [[microservices]], but for your frontend only.
+A microfrontend architecture helps fix organisational problems. It enables independent deployments, ownership boundaries, [[20230130013734-domain-driven-design]], etc. It's [[microservices]], but for your frontend only.
 
 Microfrontends are not encapsulated 100%. There's a cost of having microfrontends with different languages, frameworks, etc. It's hard for them to be totally language agnostic.
 

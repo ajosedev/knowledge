@@ -30,7 +30,7 @@ Remember that note taking is a tool to help learn. Don't have to make a note on 
 ---
 
 - Review current topic pages
-	- What is [[concepts]] for? Feels a bit like a misc bucket. Maybe try to move stuff to a better topic?
+	- What is [[concepts]] for? Feels a bit like a misc bucket. Maybe try to move stuff to a better topic? How does it interact with [[principles]]
 	- [[architecture]] seems like a good topic
 	- What is [[components]] for? [[reactapi]] too. Maybe need a [[componentapi]]? [[designsystemapi]]? [[api]]?
 		- ReactAPI should be for react-only APIs. Hooks, etc.

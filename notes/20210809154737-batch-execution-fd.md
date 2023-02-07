@@ -9,6 +9,14 @@ fd * -x mv {} prefix-{}
 
 `fd` also has `-X`, which launches the external command _once_ with all search results as arguments.
 
+Some other helpful commands are to run a function on every folder:
+```sh
+// {.} returns the directories without any path
+fd -d 1 -x <cmd>{.}
+```
+
+Similar things can be accomplished with [[20220704022340-xargs]]
+
 https://github.com/sharkdp/fd#command-execution
 
 [[shell]]

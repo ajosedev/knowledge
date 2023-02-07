@@ -17,6 +17,8 @@ Avoid creating a 'test user'. A test user sits in between the end user and the d
 
 This is the mantra pushed by libraries like `testing-library`.
 
+[[20230130021729-write-mostly-integration-tests]]
+
 https://twitter.com/kentcdodds/status/977018512689455106?lang=en
 https://kentcdodds.com/blog/testing-implementation-details
 https://twitter.com/dan_abramov/status/1065663012541992963

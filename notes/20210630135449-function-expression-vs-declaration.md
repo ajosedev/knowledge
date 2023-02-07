@@ -27,4 +27,6 @@ button.addEventListener('click', function(event) {
 })
 ```
 
+[[20230203023145-statement-vs-declaration]]
+
 [[js]]

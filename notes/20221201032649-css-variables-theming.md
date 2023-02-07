@@ -39,5 +39,6 @@ const PrimaryText = styled.div({
 })
 ```
 
+[[api]]
 [[css]]
 [[cssinjs]]

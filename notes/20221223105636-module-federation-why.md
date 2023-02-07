@@ -24,6 +24,7 @@ App shell that avoids page reloads.
 	- with MF you just update and deploy the module, and then all the things using it are automatically updated without also needing to deploy
 		- this is actually a little closer to a MFE solution than a MF solution, but MF reduces some friction with it
 - Can shift towards ownership at a component-level. Since it can be easily shared, a team could own a component. Make it as smart as possible and encapsulate everything it needs. Then the component could be mounted anywhere and just work.
+	- At the very least, ownership doesn't have to be an entire page [[20220801041930-splitting-microfrontends]]
 - SPA-like experience with independent development and deploys
 	- Microsites/most MFE architectures didn't have this as most things were separate 'apps' with completely different entries
 

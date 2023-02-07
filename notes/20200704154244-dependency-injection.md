@@ -4,5 +4,7 @@ Dependency Injection (DI) is a simple concept with a fancy term - give objects i
 
 This helps with maintaining the [[20221010033955-single-responsibility-principle]], testing as things can be stubbed more easily, maintainability in case the dependency needs to be changed, and in general lowers coupling.
 
+https://www.jamesshore.com/v2/blog/2006/dependency-injection-demystified
+
 [[concepts]]
 [[principles]]

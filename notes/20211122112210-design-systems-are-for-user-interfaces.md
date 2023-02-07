@@ -8,7 +8,7 @@ Design systems should handle everything related to common interface patterns tha
 
 e.g. content guidelines *for user interfaces*.
 
-It shoulnd't necessarily define or own those standards, but instead maintain a relationship between those standards. This also helps in ownership and maintainence, a design system team probably aren't creating brand guidelines, so it doesn't make sense for them to own or maintain it.
+It shouldn't necessarily define or own those standards, but instead maintain a relationship between those standards. This also helps in ownership and maintainence, a design system team probably aren't creating brand guidelines, so it doesn't make sense for them to own or maintain it.
 
 > A design system is the official story of how an organization designs and builds digital **interfaces** (not products).
 

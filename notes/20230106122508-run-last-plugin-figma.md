@@ -1,8 +1,7 @@
-#todo 
+# Running the last plugin in Figma
 
-CMD + Option + P
+`CMD + Option + P` re-runs the last plugin in [[figma]].
 
-Run's the last plugin
-Useful for plugin development
+This can be useful for plugin development, as it will run the newest version built.
 
 [[figma]]

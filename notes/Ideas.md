@@ -26,24 +26,6 @@ https://github.com/kentcdodds/advanced-react-patterns/blob/main/src/exercise/01.
 
 ---
 
-b2b, b2c, c2c, etc
-[[product]]
-
----
-
-domain driven design
-[[architecture]]
-https://martinfowler.com/bliki/DomainDrivenDesign.html
-
----
-
-design system contributions
-
-Some ideas for encouraging contributions
-https://medium.com/wayfair-design/contributing-to-our-design-system-at-wayfair-46fb5593e207
-
----
-
 pre-mortem and post-mortem
 
 [[engineering]]
@@ -106,6 +88,7 @@ e.g. don't use media breakpoints
 https://gridless.design/for-developers
 
 #todo - watch Jen Simmons' videos on these https://labs.jensimmons.com/
+#todo - https://www.youtube.com/watch?v=5uhIiI9Ld5M
 
 [[intrinsiclayout]]
 [[responsivedesign]]
@@ -194,24 +177,6 @@ Service workers, PWAs, and more
 
 ---
 
-users are good at finding problems but bad at offering solutions
-
->If I’d asked customers what they wanted, they would have said “a faster horse”.
->- Henry Ford
-
-Don't just take a users solution at face value. Instead figure out the root problem is and figure out a solution for that. The user often doesn't have the context or scope that the creator does.
-
-Don't just ask customers what they want.
-
-Is this a [[research]] topic?
-
-Alternatively 'customers don't know what they want'
-
-[[customers]]
-[[product]]
-
----
-
 Fargate, Lambda, etc. any other 'serverless' things
 How does Cloudflare Workers fit in?
 [[serverless]]
@@ -258,19 +223,6 @@ Link to from [[20221219040857-why-monorepo]]
 
 ---
 
-styling props
-https://jxnblk.com/blog/two-steps-forward/
-https://www.christopherbiscardi.com/post/styles-and-naming
-
-https://mrmrs.cc/writing/scalable-css/
-https://jxnblk.com/blog/patterns-for-style-composition-in-react/
-https://johno.com/guessable/
-
-How this is different to something like Tailwind
-What advantages it has over writing plain CSS?
-
----
-
 better understanding of async/await
 e.g. does async block the code execution of the entire async function?
 
@@ -289,15 +241,27 @@ How does this tie into unpkg using UMD? [[20230116113451-unpkg]]
 
 ---
 
-node_modules in production
+How does JS execution work when importing modules
+Is it different depending on the module import type? e.g. ESM vs CJS
+If I have a function or variable declaration in a separate module, does that get execute on import before the next import?
+	I think it's executed in place
+Are they only executed once?
+Are they executed synchronously?
+	Apparently different for ES2020 and async modules?
+
+https://javascript.info/modules-intro
+https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/
+https://exploringjs.com/es6/ch_modules.html#sec_modules-in-browsers
 
 ---
 
-How to start a design system
-https://medium.com/@NateBaldwin/dummys-guide-to-building-a-design-system-ada311c80d0b
-#todo - get more links and make a synthesised document. Nathan Curtis probably has something here too
+scopes in javascript
 
---- 
+---
+
+node_modules in production
+
+---
 
 How does Remix utilise [[20221107042513-edge-computing]]
 
@@ -311,7 +275,7 @@ What about next?
 ---
 
 bundlers, compilers, loaders, transpilers, etc.
-Vite, esbuild, webpack, typescript, rollup, parcel, Turbopack, babel, swc
+Vite, esbuild, webpack, typescript, rollup, parcel, Turbopack, babel, swc, bun, deno
 Concept pages for what each thing is, e.g. what is a transpiler? How is it different from a compiler? Which of these tools is a transpiler?
 
 [[buildtooling]]
@@ -328,18 +292,6 @@ https://iamturns.com/typescript-babel/
 To read:
 https://www.tedinski.com/2018/02/06/system-boundaries.html
 https://www.tedinski.com/2019/04/02/solid-critique.html
-
----
-
-Prioritising based on workarounds and escape hatches
-If you have a workaround, you an lower the priority of things
-When it comes to a design system, it makes sense to build that really lower base
-	Easy enough to build a simple tag or card if you don't have one
-	Much harder to build a popover
-
-Is this effectively cost of delay in disguise? (new doc)
-
-https://twitter.com/diegohaz/status/1551476114027069441
 
 ---
 
@@ -373,16 +325,6 @@ https://vitejs.dev/guide/
 
 [[20221110041808-react-server-components]]
 https://remix.run/blog/react-server-components
-
----
-
-Loading fonts in a browser
-https://fonts.google.com/knowledge/using_type/using_web_fonts
-
-If you don't load a particular font, the browser can still create a fake version of it
-This goes for faux bold and faux italics
-Ideally the typeface itself is loaded
-https://www.smashingmagazine.com/2012/07/avoiding-faux-weights-styles-google-web-fonts/
 
 --- 
 
@@ -418,16 +360,24 @@ https://dev.to/swyx/svelte-for-sites-react-for-apps-2o8h
 
 ---
 
-Composition over inheritance
-Perhaps two separate docs on composition, and inheritance?
+Composition over inheritance - why?
+Perhaps two separate docs on composition, and inheritance? And then a final linking doc
 
----
+From pragprog:
+```
+Inheritance tax
 
-Separation of concerns
+Don't use inheritance.
+Inheritance is coupling. The child class is coupled to the parent, its parent, and so on.
+Code that uses the child is also coupled to this parent tree too.
 
----
+There are better alternatives: interfaces and protocols, delegation, mixins and traits
 
-block axis vs inline axis, around flex/grid
+[[20210202103254-coupling-cohesion]]
+```
+
+Link to from [[Pragmatic Progammer]]
+Link to from [[20230126095251-utility-first-css]]
 
 ---
 
@@ -464,6 +414,8 @@ const newArray = array;
 const newArray = [...array];
 ```
 
+structuredClone https://www.builder.io/blog/structured-clone
+
 ---
 
 http://blogs.newardassociates.com/blog/2023/you-want-modules-not-microservices.html
@@ -471,3 +423,55 @@ http://blogs.newardassociates.com/blog/2023/you-want-modules-not-microservices.h
 ---
 
 How do browsers handle fractional pixels?
+
+---
+
+To read: https://jxnblk.com/blog/design-graph/
+
+---
+
+TS: modules vs namespaces
+
+Pretty sure modules is the accepted way to go now
+
+Is this the same question as explicitly importing types vs adding them globally using type declaration files?
+
+How does this tie into [[20221216123530-ts-declaration-files]]
+
+--
+
+Related to modules vs namespaces:
+
+How does [[nx]] deal with declaration files across different libraries
+Works within a single folder, but doesn't work across folders:
+
+https://stackoverflow.com/questions/69976396/nrwl-nx-library-typescript-ambient-declaration-files
+
+I think this is because it doesn't automatically add the typings from other apps/libs. You can explicitly add it with `files`, `types`, etc.
+
+--
+
+TS: modules vs scripts
+https://stackoverflow.com/questions/42233987/how-to-configure-custom-global-interfaces-d-ts-files-for-typescript
+>In TypeScript, just as in ECMAScript 2015, any file containing a top-level `import` or `export` is considered a module. Conversely, a file without any top-level `import` or `export` declarations is treated as a script whose contents are available in the global scope (and therefore to modules as well).
+
+--
+
+Related: should you use globally available typings in your own code? Or is it preferred to import and export things explicitly
+https://www.typescriptlang.org/docs/handbook/namespaces-and-modules.html
+>Just like all global namespace pollution, it can be hard to identify component dependencies, especially in a large application.
+Add to [[20221216123530-ts-declaration-files]]
+
+Kind of similar to: [[20220801022400-explicit-dependencies-principle]]
+
+---
+
+Big O Notation
+
+---
+
+To read: https://gustafnk.github.io/microservice-websites/
+
+---
+
+OWASP 10
