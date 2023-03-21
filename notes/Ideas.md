@@ -395,15 +395,6 @@ flexbox primer
 
 ---
 
-"Write tests. Not too many. Mostly integration"
-
-https://www.tedinski.com/2018/11/27/contradictory-tdd.html
-https://kentcdodds.com/blog/write-tests
-
-[[20221219011420-testing-implementation-details]]
-
----
-
 Avoiding mutation in JS
 What mutation is, why you should avoid it, and how to do it
 Passing by reference vs value (new doc?)
@@ -413,6 +404,11 @@ const newArray = array;
 // vs
 const newArray = [...array];
 ```
+
+How does this work with objects vs arrays?
+How does this work in functions when passing objects/arrays?
+	Maybe a separate doc on pass by sharing (or whatever it's called) in JS
+	And in general pass by value vs reference
 
 structuredClone https://www.builder.io/blog/structured-clone
 
@@ -475,3 +471,20 @@ To read: https://gustafnk.github.io/microservice-websites/
 ---
 
 OWASP 10
+
+---
+
+How do NPM package locks work?
+When will it actually update the version in the package-lock
+	I think it's only if the package-lock version doesn't satisfy the new package.json version
+npm ci vs npm i
+npm shrinkwrap?
+	I think this was the old tech: https://www.reddit.com/r/javascript/comments/6dgnnq/npm_v500_released_save_by_default_lockfile_better/di3mjuk/
+
+---
+
+Thinking in GraphQL
+Vaguely, GraphQL vs REST
+https://relay.dev/docs/principles-and-architecture/thinking-in-graphql/
+
+	Note that GraphQL doesn't solve the waterfall problem unless used correctly.

@@ -14,4 +14,7 @@ Designers don't have to sweat the small stuff, so they can spend more time creat
 
 This also works in large scale companies where there are many designers, but they are distributed across the company. The design system gives a common language to share which helps make a coherent and cohesive experience.
 
+>When the design system is boring, it frees designers and developers to do the new stuff, to solve new problems. **The design system carries the burden of the boring, so that designers and developers don’t have to.**
+>https://bigmedium.com/ideas/boring-design-systems.html
+
 [[designsystem]]

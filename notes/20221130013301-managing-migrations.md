@@ -8,6 +8,7 @@ Performance degradation. Shipping multiple ways of doing the same thing often ha
 Decreased velocity. Transitional states linger, and code gets harder to update and harder to remove. The migration can slow down other things.
 
 ## Techniques, best practices, solutions
+Agree on the priority before starting. Helps get buy-in and gets everyone on the same page.
 Distinct phases. Breaking the work down helps track progress and maintain momentum.
 Buy in before starting. Most migrations are more than a one person job. Get buy in from other devs, teams, etc. so you don't suffer from a long tail. [[20220808095135-tech-migrations-spotify]]
 Static code analysis. Find patterns in bulk and be able to change them through things like [[codemods]].
@@ -15,6 +16,7 @@ Lean on automation. Both for changing code and informing people of changes. Thin
 Documentation. Keep everyone up to date.
 
 https://frontendmastery.com/posts/frontend-migration-guide/#frontend-library-and-tool-migration-strategies
+https://newsletter.pragmaticengineer.com/p/real-world-engineering-challenges
 
 [[migrations]]
 [[refactoring]]

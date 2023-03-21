@@ -14,6 +14,8 @@ Objects might make more sense for several reasons:
 - Easier to understand when values wanted is less than the total amount of breakpoints
 - Easier to add new breakpoints
 
+The implementation can be augmented in several ways in an effort to keep the code DRY. e.g. rather than using an object as a lookup table to design tokens, use a callback so that complex CSS declarations can be made.
+
 [[components]]
 [[css]]
 [[designsystem]]
