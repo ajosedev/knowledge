@@ -13,14 +13,7 @@ Deployed with Vercel.
 ## TODO
 
 ### Website
+
 - Fix images
 - More customisation
 - Roll a custom implementation/new theme
-
-### IA
-- Remove Zettel prefix
-  - Rename pages to readable names, to better support unlinked mentions
-- Create more topic pages
-- Identify places for more inline links
-- Add YAML frontmatter, including aliases
-- Clean up 'Ideas' notes
