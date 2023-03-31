@@ -4,7 +4,7 @@ Exact terminology for design systems is a bit tricky. Although I could explain h
 
 Here's a best attempt at some definitions.
 
-- Design System - a system made up of smaller systems. Including components, UI kits, standards, best practices, and patterns that are used to design and build digital interfaces.
+- Design System - a system made up of smaller systems. Including components, UI kits, standards, best practices, and patterns that are used to design and build digital interfaces. It reflects (is?) the visual language for the organisation.
 	- Design systems are systems of systems, but not all systems are part of the design system
 	- Think of it as the 'umbrella', which everything else is contained under.
 	- [[20211122112210-design-systems-are-for-user-interfaces]]

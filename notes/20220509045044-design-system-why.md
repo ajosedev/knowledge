@@ -2,9 +2,9 @@
 
 Some rough notes on benefits of design systems
 
-1.  They help with **consistency**, so there are fewer unique solutions for similar problems.
-2.  They make design and development **faster**.
-3.  They **free** designers and developers to focus on bigger, more specific, and unique problems.
+1. They help with **consistency**, so there are fewer unique solutions for similar problems.
+2. They make design and development **faster**.
+3. They **free** designers and developers to focus on bigger, more specific, and unique problems.
 4. Creates a **unified language** across disciplines
 5. Can serve as an **education tool**
 

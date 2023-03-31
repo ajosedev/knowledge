@@ -10,8 +10,11 @@ something on React contexts on how to best make them (and a brief introduction o
 - reducer better as it's safe/doesn't cause rerenders? (link to relevant zettel)
 
 - any consumers re-render on context value change
+	-  is this true regardless of having a provider component that houses the state?
 - best to create contexts with the smallest amount of data possible?
 - RFC to only re-render if the value used by the consumer changes?
+
+- how does creating a provider component help?
 
 See what Epic React has here
 
@@ -488,3 +491,40 @@ Vaguely, GraphQL vs REST
 https://relay.dev/docs/principles-and-architecture/thinking-in-graphql/
 
 	Note that GraphQL doesn't solve the waterfall problem unless used correctly.
+
+---
+
+Eslint warnings vs errors
+In general, warnings are a cop-out?
+If something doesn't break the build, it won't get fixed
+
+So as a general rule, if you care about something, make it break the build
+
+There's small amounts of nuance here - some things are an anti-pattern to break the build, e.g. deprecations.
+	Since they are tied to a migration strategy across multiple builds, you need the build to work still
+
+[[engineering]]
+[[eslint]]
+
+---
+
+Deprecation
+
+How to best manage it
+Do you have to eventually delete the thing? Does deprecation = eventual removal?
+	When can you know it's safe to do so? Different circumstances depending on how your code is used
+What's the benefit to removing deprecated things? What's the benefit of keeping it around?
+	What if it gets in the way of other improvements?
+
+Why don't browsers ever delete something that's deprecated?
+	Because they can't ever know if it's still in use
+	IF you do know if something's in use, THEN you can probably remove it
+		Usually not an ability you have
+
+"Don't break the API"
+
+If you do remove it, it's a breaking change (even if already deprecated) [[20220509012212-semantic-versioning]]
+
+https://softwareengineering.stackexchange.com/questions/381763/how-long-to-wait-before-deleting-a-deprecated-method
+
+[[concepts]]
