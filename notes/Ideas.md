@@ -160,6 +160,8 @@ HEX can't use P3?
 
 How does Google's HCT work with this? https://material.io/blog/science-of-color-design
 
+[[20230508124011-oklch]]
+
 ---
 
 JS prototypes/prototype inheritance
@@ -236,14 +238,6 @@ e.g. what does 'exports' do in a library's package.json?
 
 ---
 
-Different module types: CJS, AMD, UMD, ESM
-https://dev.to/iggredible/what-the-heck-are-cjs-amd-umd-and-esm-ikm
-Does ECMAScript fit in here?
-
-How does this tie into unpkg using UMD? [[20230116113451-unpkg]]
-
----
-
 How does JS execution work when importing modules
 Is it different depending on the module import type? e.g. ESM vs CJS
 If I have a function or variable declaration in a separate module, does that get execute on import before the next import?
@@ -264,6 +258,8 @@ scopes in javascript
 
 node_modules in production
 
+related to [[20230411040305-node-dependencies]]?
+
 ---
 
 How does Remix utilise [[20221107042513-edge-computing]]
@@ -280,6 +276,16 @@ What about next?
 bundlers, compilers, loaders, transpilers, etc.
 Vite, esbuild, webpack, typescript, rollup, parcel, Turbopack, babel, swc, bun, deno
 Concept pages for what each thing is, e.g. what is a transpiler? How is it different from a compiler? Which of these tools is a transpiler?
+
+[[buildtooling]]
+
+---
+
+Different module types: CJS, AMD, UMD, ESM
+https://dev.to/iggredible/what-the-heck-are-cjs-amd-umd-and-esm-ikm
+Does ECMAScript fit in here?
+
+How does this tie into unpkg using UMD? [[20230116113451-unpkg]]
 
 [[buildtooling]]
 
@@ -506,6 +512,8 @@ There's small amounts of nuance here - some things are an anti-pattern to break 
 [[engineering]]
 [[eslint]]
 
+#thoughts 
+
 ---
 
 Deprecation
@@ -528,3 +536,39 @@ If you do remove it, it's a breaking change (even if already deprecated) [[20220
 https://softwareengineering.stackexchange.com/questions/381763/how-long-to-wait-before-deleting-a-deprecated-method
 
 [[concepts]]
+
+---
+
+Dependency hell and the diamond dependency problem
+
+https://en.wikipedia.org/wiki/Dependency_hell
+
+---
+
+Font smoothing
+
+Not just a positive thing. It being framed as a 'fix' might be disingenuine.
+
+Default is to use sub pixels, which can sometimes make a font look 'bolder'
+Font smoothing is essentially aliasing
+The 'smooth' settings force it to use whole pixels only in a subtractive manner, which make a font look 'thinner'
+
+A11y concerns - mostly around being thinner and having contrast issues
+
+https://szafranek.net/blog/2009/02/22/font-smoothing-explained/
+https://usabilitypost.com/2012/11/05/stop-fixing-font-smoothing/
+
+Does it make sense to do this with a media query based on `dpi`/`resolution`?
+https://github.com/sindresorhus/modern-normalize/issues/19
+
+Some interesting stuff on monitors:
+https://tonsky.me/blog/monitors/
+
+---
+
+Working agreements, and how they help teams
+
+Help people make decisions on a shared ruleset/guidelines.
+
+[[engineering]]
+[[product]]

@@ -6,8 +6,12 @@ Systems are often explained with a core, and potential components to bring in fr
 
 Design systems are not unlike regular code. Code is first created in a co-located position. When it needs to be shared, its moved up to a more accessible position. Often time this process is repeated, with the code abstracting to more generic functionality that's applicable across a wide range of usage. A design system can mirror this process through tiers, enabling consistency at different scopes.
 
+Failing to do this can mean the design system becomes a bottleneck. It aims to support everything for everyone, and effectively you've just offloaded all UI component work to a single team which is not sustainable.
+
 Remember, design systems are [[20211122111728-design-system-multiple-systems|systems of systems.]]
 
 Don't limit yourself to code either, share libraries in your UI tooling too, like Figma. https://medium.com/eightshapes-llc/figma-shared-libraries-d2dfbf9d1b8d
+
+[[20220808103811-spotify-encore]]
 
 [[designsystem]]

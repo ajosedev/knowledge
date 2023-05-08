@@ -48,6 +48,8 @@ Value the reader's time more than your own. This saves time overall too [[202112
 
 Ask for feedback before publishing your writing. Another pair of eyes always helps. When facilitating feedback, ask people directed questions.
 
+Try to avoid using 'this' or 'us', when you can be more explicit.
+
 ---
 
 For clear writing, answer these questions

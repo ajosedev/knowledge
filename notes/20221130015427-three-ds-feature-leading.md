@@ -44,6 +44,5 @@ Present ideas to others, and reach a consensus among all stakeholders. Remember 
 [[career]]
 [[communication]]
 [[engineering]]
-[[leading]]
 [[management]]
 [[product]]

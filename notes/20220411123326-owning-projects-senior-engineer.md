@@ -9,10 +9,13 @@ Similarly, it's your job to solve problems, not fulfil pre-set requirements. If 
 
 Just because you're responsible for this project doesn't mean you have to micromanage everything though. Don't do it alone, and don't sweat the small details - you don't have to build every component.
 
+>When designing systems and writing code, focus on what you're trying to achieve. Not just the current task at hand.
+
 **Own the outcome, not the work.**
+
+https://swizec.com/blog/own-the-outcome-not-the-work/
 
 [[career]]
 [[engineering]]
-[[leading]]
 [[management]]
 [[product]]

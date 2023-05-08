@@ -21,21 +21,8 @@ type I3 = Person[AliveOrName];
 // type I3 = string | boolean
 ```
 
-It's also possible to use `number` to get the type of an array's elements:
-```typescript
-const MyArray = [
-  { name: "Alice", age: 15 },
-  { name: "Bob", age: 23 },
-  { name: "Eve", age: 38 },
-];
-
-type Person = typeof MyArray[number];    
-// type Person = {
-//    name: string;
-//    age: number;
-// }
-```
-
 [[20210331123636-mapped-types]]
+
+https://www.typescriptlang.org/docs/handbook/2/indexed-access-types.html
 
 [[ts]]

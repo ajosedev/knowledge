@@ -1,6 +1,6 @@
 # Passing a React Element vs Component as a prop
 
-When passing React components around, passing an Element can be nicer than passing a Component. This is what react-router opted to do in v6.
+When passing React components around, passing an Element can be nicer than passing a Component. This is what react-router opted to do in v6, along with React Suspense.
 
 ```jsx
 // React Component

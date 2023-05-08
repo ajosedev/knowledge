@@ -1,12 +1,11 @@
 # Refactoring UI
 
-A list of notes from the book 'Refactoring UI'. Lots of this information is in its own documents as well.
+Author: Adam Wathan, Steve Schoger
+Read: 2020?
 
-TODO - break out into own docs
+#breakdown
 
----
-
-Design in grey scale first. Helps you focus on achieving good spacing, contrast, and sizing, rather than relying on colour. Then colour fan be added later to improve it further
+Design in grey scale first. Helps you focus on achieving good spacing, contrast, and sizing, rather than relying on colour. Then colour can be added later to improve it further
 
 Don't design what you can't build yet. Don't include features that are somewhere on the roadmap
 
@@ -18,9 +17,9 @@ Emphasising (and deemphasising) is very important. It helps things feel "designe
 
 Labels should generally be used as a last resort (not for forms or for tabular/definition content). Information is usual contextually relevant and obvious, an 'Email' label is usually unnecessary. Better solutions are to remove them, use them as part of the copy, or deemphasise them.
 
-Visual heirarchy != Document heirarchy. H1 in code can be small visually, and sometimes an H1 shouldn't be the focus
+Visual hierarchy != Document hierarchy. H1 in code can be small visually, and sometimes an H1 shouldn't be the focus
 
-Button heirarchy is important. Make primary action obvious and then each successive action less obvious. Destructive actions can usually be as simple as looking like a link
+Button hierarchy is important. Make primary action obvious and then each successive action less obvious. Destructive actions can usually be as simple as looking like a link
 
 Always start with way more whitespace than you think you need, then remove it. This usually results in a nicer, less cramped design.
 
@@ -42,7 +41,7 @@ A good colour scheme is more than five colours. You need greys ranging from near
 
 Greys don't have to be grey. There can be warm greys, cool greys, etc.
 
-Flipping white text on a dark coloured background to dark coloured text on a light coloured background can fix contrast/accessiblity issues
+Flipping white text on a dark coloured background to dark coloured text on a light coloured background can fix contrast/accessibility issues
 
 Never use colour as the only means of communication, it's not accessible. Use it to support other means.
 

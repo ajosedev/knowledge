@@ -6,6 +6,8 @@ These are useful for describing libraries that are not written in [[ts]], e.g. [
 
 Declaration files are usually bundled with packages, as they are built into `.js` files, with a separate `d.ts` file. Otherwise, `@types` packages from `DefinitelyTyped` are useful. These are community created packages that describe popular libraries.
 
+If the types don't exist at all, [[20221215045252-ts-ambient]] can be used to create types for the third party library.
+
 TypeScript automatically finds type definitions under `node_modules/@types`. Meaning if the library is set up correctly, the consumer doesn't have to do anything special. This is controlled by the `typeRoots` option in TSConfig.
 There's also the `types` option, which does similar. `typeRoots` is for folders, `types` is for exact types.
 

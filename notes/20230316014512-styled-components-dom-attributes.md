@@ -1,10 +1,5 @@
 # Styled Components and mixing props
 
-#todo - go through this doc and clean up the examples
-e.g. don't need `color` and `aria-hidden` as they're doing the same thing
-e.g. `foo` should actually be used as a styling prop (remember to keep it as a boolean)
-e.g. `bar` is not necessary on every example, but it's helpful to show that non-boolean attributes don't cause the error.
-
 A long-winded answer to solving the following error:
 ```
 Warning: Received `true` for non-boolean attribute `gray`. If this is expected, cast the value to a string.
@@ -141,7 +136,7 @@ The first component (the one that spreads props):
 - Passes valid attributes `color`, `xHeight`, and `aria-hidden` to the DOM
 - Passes invalid attributes (`bar`) to the DOM
 	- Note that this doesn't throw an error, only because it's a non-boolean attribute
-- Throws the aforementioned non-boolean attribute error for `foo`
+- Throws the aforementioned non-boolean attribute error for `active`
 The other component:
 - Does not pass any attributes to the DOM, valid or invalid
 - Throws no errors
@@ -182,9 +177,9 @@ As we're using `defaultValidatorFn`, this is actually doing two things:
 - Stops `color` from being passed down to `BaseComponentSpread`
 - Prevents props that aren't valid attributes from being passed down to `BaseComponentSpread`.
 
-However, this can cause issues. Now both `foo` and `bar` aren't being passed to lower level components as they aren't valid HTML attributes. Thus each component in the tree must only block the styling-only components, and no more. To do this, we shouldn't use `defaultValidatorFn`.
+However, this can cause issues. Now `bar` isn't being passed to lower level components as they aren't valid HTML attributes. Thus each component in the tree must only block the styling-only components, and no more. To do this, we shouldn't use `defaultValidatorFn`.
 
-Note that keeping the styles encapsulated to the component is important. We don't want to add unnecessary [[20210202103254-coupling-cohesion|coupling]] by omitting props (e.g. `foo`) only on the lowest level component. `BaseComponentSpread` may have no knowledge of `foo`, and thus shouldn't be responsible for removing it from the DOM.
+Note that keeping the styles encapsulated to the component is important. We don't want to add unnecessary [[20210202103254-coupling-cohesion|coupling]] by omitting props (e.g. `bar`) only on the lowest level component. `BaseComponentSpread` may have no knowledge of `bar`, and thus shouldn't be responsible for removing it from the DOM.
 
 In theory the lowest level component could use `defaultValidatorFn` in combination with spreading props to prevent unnecessary DOM additions and errors. However, the lowest level component isn't always a Styled Components component, nor is it able to remove the spread of props. Then we're a bit stuck.
 
