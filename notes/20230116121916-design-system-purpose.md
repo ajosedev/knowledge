@@ -28,5 +28,7 @@ Scenarios also tie into variations. Create variations for needs. They should hav
 
 This is part of what makes design systems so hard - the interconnections and purpose mean that any component addition, update, etc. is tied to similar components in the area (interconnections), and the goal this component is trying to solve for the user (purpose).
 
+https://www.smashingmagazine.com/2023/05/design-patterns-collaborate-design-system/
+
 [[designsystem]]
 [[designsystembranding]]

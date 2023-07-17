@@ -5,5 +5,6 @@ Most of the benefits of [[20221128051011-static-rendering]], but with an allowan
 The initial static render will render a skeleton or placeholder for the dynamic data. Then after the page load, the browser makes another request to the server to fetch the data. Finally, this is populated on the client.
 
 [[architecture]]
+[[deployment]]
 [[infrastructure]]
 [[rendering]]

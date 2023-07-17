@@ -15,5 +15,6 @@ Incremental Static Regeneration (ISR) is very similar, which allows generating u
 [[20221107042513-edge-computing]]
 
 [[architecture]]
+[[deployment]]
 [[infrastructure]]
 [[rendering]]

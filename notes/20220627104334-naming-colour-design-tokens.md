@@ -7,8 +7,6 @@ Broadly there's three naming conventions:
 
 Rather than considering these as separate paths, consider these as layers of abstractions. Ideally engineers are using contextual colours, while designers are using at least semantic colours in their day-to-day.
 
-[[20220819043510-design-tokens-abstraction-layers]]
-
 Consider [[20211029153348-semantic-design-tokens]] and [[20220523102023-design-tokens-as-intents]] when thinking about the maintenance of these colours.
 
 [[colour]]

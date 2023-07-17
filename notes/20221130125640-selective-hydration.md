@@ -11,6 +11,7 @@ React 18 added Selective Hydration. When combined with [[20221130103902-streamin
 Large components are wrapped in Suspense, so the tree generation isn't blocked. Before the large component has even been sent to the server, the rest of the app is already hydrated. Then once it's ready, it can stream the small amount of HTML and JS required to replace any fallback components.
 
 [[architecture]]
+[[deployment]]
 [[infrastructure]]
 [[react]]
 [[reactsuspense]]

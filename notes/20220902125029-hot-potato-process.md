@@ -11,6 +11,7 @@ The best way to use the process is to sit together. Whether that be physically, 
 ![[Hot potato process.png]]
 
 https://v4.danmall.com/articles/hot-potato-process/
+https://spotify.design/article/collaboration-secrets-design-x-engineering
 
 [[design]]
 [[engineering]]

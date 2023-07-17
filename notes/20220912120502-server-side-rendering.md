@@ -25,5 +25,6 @@ Using [[20221021122456-isomorphic-js]] frameworks, you can use things like React
 [[20221110041808-react-server-components]] are almost a follow up to SSR. Rather than generation on the server and hydrating on the client, they actually render on the server.
 
 [[architecture]]
+[[deployment]]
 [[infrastructure]]
 [[rendering]]

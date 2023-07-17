@@ -22,5 +22,6 @@ Disadvantages:
 There are techniques to improve [[performance]], such as [[20220912112727-lazy-loading]], [[20220911060950-code-splitting]], etc.
 
 [[architecture]]
+[[deployment]]
 [[infrastructure]]
 [[rendering]]

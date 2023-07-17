@@ -48,7 +48,7 @@ Consider if you're tokenising for a component, element, or component group (e.g 
 
 When doing so, make sure to not globalise prematurely [[20211115112656-rule-of-three]]. Create component-level tokens within a component, and then extract higher if needed.
 
-Having tokens for individual objects helps enable localised change [[20220819043510-design-tokens-abstraction-layers]]
+Having tokens for individual objects helps enable localised change [[20211029153348-semantic-design-tokens]]
 
 ## Namespaces
 Namespaces may not be necessary.

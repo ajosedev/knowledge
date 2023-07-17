@@ -42,7 +42,7 @@ Remember that note taking is a tool to help learn. Don't have to make a note on 
 		- Whats the overarching theme here?
 		- Kind of similar to [[architecture]], but not exactly. How does it intersect with [[ops]] or [[infrastructure]]
 	- [[infrastructure]] vs [[ops]] vs [[architecture]] vs [[deployment]]
-		- should [[deplyment]] be narrower in scope?
+		- should [[deployment]] be narrower in scope?
 		- What about [[rendering]]?
 	- what is [[engineering]] for? Feels a little catch-all
 	- do I need something like [[areas]] which is a higher level than both [[engineering]] and [[product]]
@@ -52,6 +52,7 @@ Remember that note taking is a tool to help learn. Don't have to make a note on 
 		- All the web stuff
 	- What is [[buildtooling]] for?
 	- Change [[ts]] and [[js]] to the full word, to make inline linking easier
+	- What should be a topic page vs a main page? e.g. [[20210927141042-module-federation]] could be replaced by `[[modulefederation]]`.
 - Create more topic pages that have categories and such
 - Consider removing zettel (date) prefix
 	- Would be better for creating pages link-first

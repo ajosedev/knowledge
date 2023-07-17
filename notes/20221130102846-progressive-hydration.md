@@ -11,5 +11,6 @@ This hydration process can be slow, depending on the application size. An altern
 This lowers the amount of Javascript required (and requested) in order to make the page interactive. This technique promotes (and somewhat relies on) [[20220911060950-code-splitting]]. The developer needs to identify what parts are the most important and need to be interactive the quickest.
 
 [[architecture]]
+[[deployment]]
 [[infrastructure]]
 [[rendering]]

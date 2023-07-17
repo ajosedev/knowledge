@@ -8,6 +8,8 @@ To better identify trends, snowflakes can be tracked or exist in a specific plac
 
 Ideally over time the amount of 'one offs' or 'snowflakes' lowers, as the design system offers more solutions for these.
 
+Snowflakes can also be a useful tool for identifying missing pieces. Although not every snowflake is a missing piece of the design system, it's purpose and the hole it's trying to fill should be documented. This helps figure out what is missing, and what is out of scope. https://bradfrost.com/blog/link/design-systems-why-snowflakes-are-counterintuitively-integral/
+
 https://bradfrost.com/blog/post/where-to-put-one-off-components/
 
 [[designsystem]]

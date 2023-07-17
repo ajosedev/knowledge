@@ -10,5 +10,7 @@ Note that token changes _can_ be breaking. Consider a text colour change that no
 
 [[20220509021116-design-system-versioning]]
 
+https://designtokens.substack.com/p/versioning-design-tokens
+
 [[designsystem]]
 [[designtokens]]

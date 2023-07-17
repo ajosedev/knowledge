@@ -23,5 +23,6 @@ Disadvantages:
 You can augment SSG with client-side APIs to better handle dynamic content [[20221128053251-static-rendering-dynamic]]
 
 [[architecture]]
+[[deployment]]
 [[infrastructure]]
 [[rendering]]

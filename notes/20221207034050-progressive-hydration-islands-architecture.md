@@ -13,4 +13,5 @@
 - Islands architecture has a static layer and Islands layer
 
 [[architecture]]
+[[deployment]]
 [[rendering]]

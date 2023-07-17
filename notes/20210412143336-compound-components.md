@@ -26,6 +26,8 @@ With React.Context, the parent component will render its children inside of a pr
 
 To show that components are tied together, they usually share a namespace. e.g. `Menu` and `MenuButton`, or `Menu.Button`.
 
+https://jjenzz.com/compound-components
+
 [[componentapi]]
 [[components]]
 [[designpatterns]]

@@ -2,7 +2,7 @@
 
 [[nx]] favours what is sometimes called a 'single version policy'. As [[monorepo]] often contain multiple applications, using a single version of all third party dependencies aims to reduce inconsistency between them.
 
-Without a SVP, if you have multiple versions of React (or any other major dependency), how do you ensure two React libraries work together?
+Without a SVP, if you have multiple versions of React (or any other major dependency), how do you ensure two libraries that use React work together?
 
 Inspired by Google, the goal here is to increase maintainability. There are several major advantages:
 - Older apps get security patches 'for free'
@@ -20,3 +20,6 @@ NX aims to offer both styles by distinguishing between Package-Based Repos and I
 
 https://opensource.google/documentation/reference/thirdparty/oneversion
 https://nx.dev/concepts/integrated-vs-package-based#integrated-repos-vs.-package-based-repos
+https://nx.dev/more-concepts/dependency-management
+
+[[dependencies]]

@@ -22,4 +22,8 @@ Capturing them here because I keep forgetting them.
 
 `-F` - Treat the search pattern as a literal string, not a regular expression.
 
+`--sort-files` - Sorts the file order
+
+`-w` - Require that all matches of the pattern be surrounded by word boundaries
+
 [[shell]]

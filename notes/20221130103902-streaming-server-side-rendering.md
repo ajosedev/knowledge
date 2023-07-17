@@ -9,5 +9,6 @@ You can also [[20221130103211-hydration|hydrate]] the received DOM nodes as you 
 Both streaming and [[20221130102846-progressive-hydration]] can bridge the gap between a pure SSR and [[20221128042243-client-side-rendering|CSR]] experience.
 
 [[architecture]]
+[[deployment]]
 [[infrastructure]]
 [[rendering]]

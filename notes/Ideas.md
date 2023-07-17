@@ -220,7 +220,7 @@ Go has an idea of new versions never break old code
 [[20210927144324-design-tokens]] help enable change [[20211029153348-semantic-design-tokens]]
 	If you don't change the API, token changes are quick and easy
 	If you do, you still need to find replace
-	Ergo, make sure you abstract layers to an appropriate level [[20220819043510-design-tokens-abstraction-layers]]
+	Ergo, make sure you abstract layers to an appropriate level [[20211029153348-semantic-design-tokens]]
 
 Is it necessary to break the API sometimes?
 
@@ -252,6 +252,20 @@ https://exploringjs.com/es6/ch_modules.html#sec_modules-in-browsers
 
 ---
 
+Different module types: CJS, AMD, UMD, ESM
+https://dev.to/iggredible/what-the-heck-are-cjs-amd-umd-and-esm-ikm
+Does ECMAScript fit in here?
+
+How does this tie into unpkg using UMD? [[20230116113451-unpkg]]
+
+What does Deno do?
+
+What about Pure ESM packages? https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c
+
+[[buildtooling]]
+
+---
+
 scopes in javascript
 
 ---
@@ -276,16 +290,6 @@ What about next?
 bundlers, compilers, loaders, transpilers, etc.
 Vite, esbuild, webpack, typescript, rollup, parcel, Turbopack, babel, swc, bun, deno
 Concept pages for what each thing is, e.g. what is a transpiler? How is it different from a compiler? Which of these tools is a transpiler?
-
-[[buildtooling]]
-
----
-
-Different module types: CJS, AMD, UMD, ESM
-https://dev.to/iggredible/what-the-heck-are-cjs-amd-umd-and-esm-ikm
-Does ECMAScript fit in here?
-
-How does this tie into unpkg using UMD? [[20230116113451-unpkg]]
 
 [[buildtooling]]
 
@@ -572,3 +576,11 @@ Help people make decisions on a shared ruleset/guidelines.
 
 [[engineering]]
 [[product]]
+
+---
+
+DevEx/DX/Developer Experience
+
+#todo - https://queue.acm.org/detail.cfm?id=3595878
+More than just tools
+Flow State, Feedback Loops, Cognitive Load
