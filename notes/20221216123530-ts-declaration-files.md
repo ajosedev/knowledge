@@ -4,7 +4,10 @@
 
 These are useful for describing libraries that are not written in [[ts]], e.g. [[js]]-only libraries.
 
-Declaration files are usually bundled with packages, as they are built into `.js` files, with a separate `d.ts` file. Otherwise, `@types` packages from `DefinitelyTyped` are useful. These are community created packages that describe popular libraries.
+If you're working within a Typescript project, you probably shouldn't be using them. If you need to separate types, keep them in a `.ts` file, not a `.d.ts` file for a myriad of reasons. Namely, they can't contain runtime functionality, and put everything in the global scope. They are not modules.
+https://www.youtube.com/watch?v=zu-EgnbmcLY
+
+Declaration files are usually bundled with packages. Packages are built into `.js` files, with a separate co-located `d.ts` file. Otherwise, `@types` packages from `DefinitelyTyped` are useful. These are community created packages that describe popular libraries.
 
 If the types don't exist at all, [[20221215045252-ts-ambient]] can be used to create types for the third party library.
 

@@ -11,7 +11,7 @@ It has a few guiding principles that are generally applicable to writing codemod
 
 [[20211130062748-ast]]
 
-[[ast]]
 [[codemods]]
 [[js]]
 [[migrations]]
+[[staticcodeanalysis]]

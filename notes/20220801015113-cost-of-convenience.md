@@ -43,10 +43,13 @@ aka 'The cost of flexibility'
 
 #breakdown - separate doc on escape hatches?
 
+Keywords: 'use the platform', 'native', 'magic'
+
 https://surma.dev/things/cost-of-convenience/
 
 [[20210705094040-inversion-of-control]]
 [[20220627121829-web-platform-adoption]]
+[[20220801022509-principle-of-least-surprise]]
 
 [[abstraction]]
 [[concepts]]

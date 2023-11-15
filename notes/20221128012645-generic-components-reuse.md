@@ -9,8 +9,10 @@ Building generic, smaller components allows teams to take only the parts they ne
 Remember it's easier to fix no abstraction than the wrong abstraction [[20221026123121-the-wrong-abstraction]].
 
 [[20221128011841-components-single-responsibility]]
+[[20220704124529-design-system-harvesting]]
 
 https://frontendmastery.com/posts/building-future-facing-frontend-architectures/
+https://kyleshevlin.com/quit-your-yapping
 
 [[api]]
 [[components]]

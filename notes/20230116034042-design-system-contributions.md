@@ -7,11 +7,13 @@ Keep in mind there are different scales of contribution. A bug fix is a smaller 
 
 Anecdotally the smaller scale updates are much easier to facilitate. They don't require as much context nor systems thinking. That translates to less time in design, less time in engineering, and less hand-holding.
 
-Remember to define what a 'contribution' is too. There's a fine line between contributiosn and participation. That being said, don't forget to celebrate the latter. Although it may not be exactly your definition of contribution, having other members offer ideas, use cases, problems, etc all helps inform a better design system
+Remember to define what a 'contribution' is too. There's a fine line between contributions and participation (or collaboration). That being said, don't forget to celebrate the latter. Although it may not be exactly your definition of contribution, having other members offer ideas, use cases, problems, etc all helps inform a better design system.
 
 https://uxdesign.cc/design-systems-why-contribution-models-are-tricky-to-get-right-1c4d13f72b5c
 https://medium.com/wayfair-design/contributing-to-our-design-system-at-wayfair-46fb5593e207
 https://medium.com/eightshapes-llc/defining-design-system-contributions-eb48e00e8898
+
+[[20231003043826-design-system-contributions-steward]]
 
 [[adoption]]
 [[designsystem]]

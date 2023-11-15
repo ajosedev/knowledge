@@ -19,6 +19,7 @@ By default, all components are impure.
 https://www.joshwcomeau.com/react/why-react-re-renders/
 
 #todo - what does context do? do all children of a provider re-render, or just consumers?
+#todo - what's the trick with children and hosting them up https://kentcdodds.com/blog/optimize-react-re-renders
 
 [[performance]]
 [[react]]

@@ -22,5 +22,5 @@ We can leverage this to help us deep match nodes under conditions of the node ab
 
 https://kurthutten.com/blog/deep-ast-matching/
 
-[[ast]]
 [[codemods]]
+[[staticcodeanalysis]]

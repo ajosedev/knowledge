@@ -1,6 +1,6 @@
 # The Hot Potato process
 
-A big misconception between designers and developers is that 'handoff' is a one-time, one-direction event. A designer hand off their files to a developer, and the processis complete.
+A big misconception between designers and developers is that 'handoff' is a one-time, one-direction event. A designer hand off their files to a developer, and the process is complete.
 
 This isn't the reality. Questions arise at later times, timelines shift, resources change, certain things aren't feasible, etc.
 

@@ -14,6 +14,8 @@ Usually there's around three layers:
 2. The initial intent of the colour, `border-color`
 3. The component usage of the colour, `input-border`
 
+https://foundation.mozilla.org/en/docs/design/websites/design-tokens/
+
 Note that tier 3 may not need to exist. Once again, it's about linking things that change together. A 'merged' tier 2 and 3 that offers different intents for different palette colours also can make sense, e.g. `border-color`, and `border-color--bold`, where components use the intent they need. This still keeps components in sync as needed without having to have a separate `border-color` for each component. Instead it's closer to having a `border-color` token for each **type** of component.
 
 A third tier makes a lot more sense for a [[20220822094537-themeable-design-systems]]. Or alternatively, if you want your users to be able to change their values without having to [[20220704125509-design-systems-snowflakes|snowflake]] things or look at the implementation details

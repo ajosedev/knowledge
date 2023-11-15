@@ -26,4 +26,6 @@ Capturing them here because I keep forgetting them.
 
 `-w` - Require that all matches of the pattern be surrounded by word boundaries
 
+`-e` - Useful to search for patterns starting with a dash https://github.com/BurntSushi/ripgrep/issues/624#issuecomment-334875115
+
 [[shell]]

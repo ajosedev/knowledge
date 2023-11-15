@@ -2,7 +2,7 @@
 
 Constructable stylesheets allow you to imperatively create styles and apply them to an explicit DOM tree.
 
-Unlike the traditional method of creating a `style` element with `document.createElement('style')`, this approach reduces bloat and avoids the flash of unstyled content.
+Unlike the traditional method of creating a `style` element with `document.createElement('style')`, this approach reduces bloat and avoids the flash of unstyled content (FOUC).
 
 Using constructable stylesheets makes it possible to define and prepare shared CSS styles and then apply those styles to multiple Shadow Roots or the Document easily and without duplication. Once applied, the stylesheet can be updated, which in turn is updated on all its consumers.
 

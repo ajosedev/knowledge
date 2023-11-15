@@ -19,11 +19,16 @@ I personally refer to this process as 'harvesting'. Look to harvest components r
 3. Feature teams re-adopt the abstracted component
 4. New teams use the abstracted component
 
-[[20220704125509-design-systems-snowflakes]] also fall into a similar category. Once a snowflake becomes common, it makes sense to adopt it into your design system.
+It's important to wait until multiple variations of these components exist. You don't want to create the [[20221026123121-the-wrong-abstraction]]. [[20220704125636-design-system-requests-identify-needs]] mentions this, as different teams may create subtly different components that then need to be centralised [[20211115112656-rule-of-three]]
+[[20230731120128-design-system-deviation]]
+
+[[20220704125509-design-systems-snowflakes]] also fall into a similar category. Once a snowflake becomes common, it makes sense to adopt it into your design system. Recipes as mentioned in [[20211122112956-design-system-component-hierarchy]] can become a great incubation layer to identify what's needed.
 
 [[20220627114201-design-system-existing-product-strategies]]
-[[20211115112656-rule-of-three]]
 
 [[adoption]]
-[[designsystem]]
+[[architecture]]
+[[components]]
+[[designsystaem]]
+[[designsystemapi]]
 [[product]]

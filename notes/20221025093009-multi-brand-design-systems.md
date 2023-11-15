@@ -20,6 +20,7 @@ https://uxdesign.cc/challenges-of-multi-brand-design-systems-42d7e7b1d18c
 https://www.youtube.com/watch?v=u1mi0VJOuZ8
 
 [[20220822094537-themeable-design-systems]]
+[[202310041150420-design-system-themes-brands-modes]]
 
 [[designsystem]]
 [[designsystembranding]]

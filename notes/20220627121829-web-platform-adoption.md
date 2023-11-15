@@ -1,18 +1,23 @@
 # Keeping things closer to the web platform
 
-#todo - rework this doc
+Or as some say: 'use the platform'.
 
 Keeping things closer to the [[web]] platform helps users adopt features, [[designsystem|design systems]], products, etc.
 
 It's easier for new people to come in and learn your system if they don't have to re-learn core web tenets. This is less visible at a small scale, especially if engineers have always done it similarly at your company. However, new engineers will inevitably come in and find it more confusing.
 
-As an example, using something like CSS custom properties over SASS mixins. Users can rely on existing knowledge of how they work, and how to break out of them if required.
+It also means that you don't have to offer custom documentation for these things either. If your fancy tool just builds on top of a basic Javascript API, you can link to MDN - you don't have to write your own docs.
+
+As an individual, knowing tools that 'use the platform' (i.e. not heavy [[abstraction]]) doesn't require you to re-learn things as technology changes. The skills you have learned are a lot more transferrable. This is also true for things that are a little too 'magic': [[20220801022509-principle-of-least-surprise]]
+
+NextJS is a very powerful tool that offers a lot of DX wins, but you have to learn how to use [[nextjs]], not [[js]] As another example, using something like CSS custom properties over SASS mixins. Users can rely on existing knowledge of how they work, and how to break out of them if required.
 
 It's easier to clearly communicate concepts when they relate to something already known.
 
 https://twitter.com/alexpage_/status/1537824372601147392
 
 [[adoption]]
+[[api]]
 [[concepts]]
 [[engineering]]
 [[product]]

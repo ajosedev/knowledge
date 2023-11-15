@@ -9,6 +9,8 @@ Patch - Bug fixes that are backwards-compatible
 
 A breaking change does not necessarily mean a new feature.
 
+A quick gotcha: a verion number can't have a leading zero. This is especially important for packages that use date-marked versions. `2023.06.10` is invalid, `2023.6.10` is valid.
+
 [[concepts]]
 [[dependencies]]
 [[npm]]

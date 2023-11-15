@@ -10,6 +10,8 @@ The key takeaway: don't let people work on more than one thing at a time.
 
 https://www.joelonsoftware.com/2001/02/12/human-task-switches-considered-harmful/
 
+Keywords: multitasking, multi-tasking
+
 [[career]]
 [[engineering]]
 [[management]]

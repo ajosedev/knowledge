@@ -36,6 +36,7 @@ Usually describes interactivity
 
 ### Scale
 Different scales are used for different things. Consider t-shirt sizes, proportions, etc.
+	Interesting post on t-shirt sizes here: 
 
 ### Mode
 Usually for things like `light` and `dark`.

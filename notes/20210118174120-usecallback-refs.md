@@ -1,6 +1,31 @@
 # Refs with useCallback
 
-Refs accept a callback, which means they can be used well with `useCallback`. This has a couple advantages.
+#todo - separate doc on useRef and callback refs in general. Then this becomes a 'why to use useCallback with callback ref doc'?
+https://julesblom.com/writing/ref-callback-use-cases
+why usecallback? https://julesblom.com/writing/ref-callback-use-cases#ref-callback-caveat
+https://elfi-y.medium.com/react-callback-refs-a-4bd2da317269
+#todo - how to share a ref?
+```js
+  const combineRefs = el => {
+    internalRef.current = el
+
+    if (typeof externalRef === 'function') {
+      externalRef(el)
+    } else {
+      externalRef.current = el
+    }
+  }
+```
+Keep in mind the caveat around inline functions below
+
+More complicated versions exist to handle using `.current`, multiple refs, Typescript, etc. It starts to get a little confusing and that's why NPM packages exist for it.
+
+---
+
+Caveat
+>If the `ref` callback is defined as an inline function, it will get called twice during updates, first with `null` and then again with the DOM element. This is because a new instance of the function is created with each render, so React needs to clear the old ref and set up the new one. You can avoid this by defining the `ref` callback as a bound method on the class, but note that it shouldn’t matter in most cases.
+
+Refs accept a callback ('callback ref'), which means they can be used well with `useCallback`. This has a couple advantages.
 
 As `useEffect` can't accept a `ref.current` in its dependencies array due to React not re-rendering when a `ref` value changes. This means the standard snippet for focusing an element will only work if that element exists when the component is mounted.
 ```js
@@ -25,6 +50,8 @@ This will be called with the element that the ref is attached to once it exists,
 Note the `[]` for the deps array.
 
 keywords: autofocus
+
+https://tkdodo.eu/blog/avoiding-use-effect-with-callback-refs
 
 [[react]]
 [[reacthooks]]

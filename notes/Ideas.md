@@ -124,6 +124,10 @@ Declarative vs Imperative design systems
 
 Following on from the ideas of 'declarative design' or the methodology used by intrinsic/extrinsic design (TODO - links), is the idea of 'declarative design systems'.
 
+>Personally, I think the word “system” is the important part of a design system. But all too often design systems are really _collections_ rather than systems: a collection of pre-generated components rather than a _system_ for generating components.
+
+>The declarative approach is less controlling: “here are pre-defined rules and guidelines to help you make components.” But this lack of precision comes at a cost. The people using the design system need to have the mindset—and the ability—to create the components they need from the systematic rules they’ve been provided.
+
 >If these buttons were in an imperative design system, then the output would be the important part. The design system would supply the code needed to make those buttons exactly. If you need a different button, it would have to be added to the design system as a variation.
 
 >But in a declarative design system, the output isn’t as important as the underlying ruleset. In this case, there are rules to create the components. Rules that create a coloured button with states when a single colour is given. Think of programmatic lightening/darkening rather than a custom tint/shade for your colour palette.
@@ -131,6 +135,8 @@ Following on from the ideas of 'declarative design' or the methodology used by i
 >If you’re approaching a design system with an imperative mindset then “correct” means “exact.” With this approach, precision is seen as valuable: precise spacing, precise numbers, precise pixels.
 
 >But if you’re approaching a design system with a declarative mindset, then “correct” means “resilient.” With this approach, flexibility is seen as valuable: flexible spacing, flexible ranges, flexible outputs.
+
+>The systematic approach is at the heart of declarative design; setting up the rules and ratios in advance but leaving the detail of the final implementation to the browser at runtime.
 
 >These are two fundamentally different design approaches and yet the results of both would be described as a design system.
 
@@ -188,31 +194,6 @@ How does Cloudflare Workers fit in?
 
 ---
 
-Design system component philosophies
-
-See how this lines up with existing articles. Search the [[designsystem]] tag and see what I can link out to?
-
-https://www.gabe.pizza/notes-on-component-libraries/
-```
-1.  **It should be easy to take a design and translate it into UI code.** Props should map intuitively to design system documentation in Figma or otherwise. Components should look correct without applying overrides.
-2.  **A component should, for the most part, act as an opaque box to a parent consuming it.** It should not leak details about its internals or allow injecting arbitrary code/styles. Data goes in; markup comes out.
-3.  **The Obvious Thing, The Easy Thing, and The Right Thing should overlap most of the time.** A developer under time pressure is _usually_ going to reach for the easiest solution. Ideally, the easiest solution is the obvious one. And the obvious should be [what I wanted the developer to do in the first place](https://www.youtube.com/watch?v=SxdOUGdseq4).
-4.  **Doing The Wrong Thing should be at least uncomfortable, at worst impossible.** Allow for escape hatches when necessary, but make them feel bad. The developer should think, “I should open an issue so that I don’t have to do this again.”
-```
-
-Are there more guidelines? e.g. cost of convenience/flexibility?
-
-#todo - mine the article for more things
-
-"Components should usually take up all horizontal space given"
-"Components should probably not position themselves." [[20200402104023-components-margin]] [[20210519122422-first-class-space]]
-
-[[20210908155508-flexibility-components]]
-[[20220621083440-design-system-flexibility]]
-[[20220801011940-pit-of-success]]
-
----
-
 'Dont break the API' and how it applies to design systems and design tokens
 
 Go has an idea of new versions never break old code
@@ -231,12 +212,14 @@ Link to from [[20221219040857-why-monorepo]]
 better understanding of async/await
 e.g. does async block the code execution of the entire async function?
 
+[[20230829020537-await-foreach]]
+
 ---
 
 https://github.com/frehner/modern-guide-to-packaging-js-library
 e.g. what does 'exports' do in a library's package.json?
 
----
+and:
 
 How does JS execution work when importing modules
 Is it different depending on the module import type? e.g. ESM vs CJS
@@ -245,12 +228,31 @@ If I have a function or variable declaration in a separate module, does that get
 Are they only executed once?
 Are they executed synchronously?
 	Apparently different for ES2020 and async modules?
+Does ESM always result in a singleton?
+Does modules do anythign weird in same cases, e.g. React context?
 
 https://javascript.info/modules-intro
 https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/
 https://exploringjs.com/es6/ch_modules.html#sec_modules-in-browsers
+https://blog.isquaredsoftware.com/2023/08/esm-modernization-lessons/
+https://blog.logrocket.com/transpile-es-modules-with-webpack-node-js/
+https://bun.sh/blog/commonjs-is-not-going-away
 
----
+and:
+
+How to fix React context when importing from NPM modules?
+
+Possible ideas:
+1. re-export from a single file
+2. single entry point, rather than [[20220911060950-code-splitting]]
+3. using `externals`
+4. imports in `esm` vs `cjs`
+
+[[buildtooling]]
+[[npm]]
+[[webpack]]
+
+and:
 
 Different module types: CJS, AMD, UMD, ESM
 https://dev.to/iggredible/what-the-heck-are-cjs-amd-umd-and-esm-ikm
@@ -389,7 +391,7 @@ There are better alternatives: interfaces and protocols, delegation, mixins and 
 [[20210202103254-coupling-cohesion]]
 ```
 
-Link to from [[Pragmatic Progammer]]
+Link to from [[Andy Hunt & Dave Thomas - Pragmatic Progammer]]
 Link to from [[20230126095251-utility-first-css]]
 
 ---
@@ -399,7 +401,10 @@ esp difference between -items and -content
 >The justify-content and align-content properties align the grid.
 >The justify-self, justify-items, align-self and align-items properties align the grid items.
 
+Note: https://www.rawkblog.com/2018/03/css-grid-understanding-grid-gap-and-fr-vs-auto-units/
+
 subgrid: https://ishadeed.com/article/learn-css-subgrid/
+[[cssgrid]]
 
 ---
 
@@ -422,6 +427,8 @@ How does this work with objects vs arrays?
 How does this work in functions when passing objects/arrays?
 	Maybe a separate doc on pass by sharing (or whatever it's called) in JS
 	And in general pass by value vs reference
+Primitive values vs non-primtive values https://daveceddia.com/javascript-references/
+Pure vs impure
 
 structuredClone https://www.builder.io/blog/structured-clone
 
@@ -574,6 +581,9 @@ Working agreements, and how they help teams
 
 Help people make decisions on a shared ruleset/guidelines.
 
+Work as good reminders - should be involved in rituals in some way
+
+[[career]]
 [[engineering]]
 [[product]]
 
@@ -584,3 +594,25 @@ DevEx/DX/Developer Experience
 #todo - https://queue.acm.org/detail.cfm?id=3595878
 More than just tools
 Flow State, Feedback Loops, Cognitive Load
+
+---
+
+https://lawsofux.com/
+
+---
+
+Synthetic vs real user monitoring
+https://developer.mozilla.org/en-US/docs/Web/Performance/Rum-vs-Synthetic
+
+[[monitoring]]
+[[performance]]
+
+---
+
+Browser render cycle
+layout, paint, composite
+Layout thrashing, etc
+
+---
+
+https://bradfrost.com/blog/post/the-design-system-ecosystem/

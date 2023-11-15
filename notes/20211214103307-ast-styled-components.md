@@ -24,6 +24,6 @@ if (node.type == 'TemplateLiteral') {
 [[20211130062748-ast]]
 [[20210618135410-ui-auditing]]
 
-[[ast]]
 [[cssinjs]]
 [[designsystem]]
+[[staticcodeanalysis]]

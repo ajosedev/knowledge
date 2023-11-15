@@ -3,9 +3,9 @@
 *These are actually notes from another author's notes.*
 
 Strategy is designing a way to deal with a challenge. It consists of three parts:
-1. A diagnosis - what is the challenge? Define it.
-2. A guiding policy - the overall approach to overcome obstacles in your diagnosis. This directs and constrains actions.
-3. A set of coherent actions - how are you going to carry out the guiding policy?
+1. A diagnosis - what is the challenge? Define it. Ideally, try to keep it simple. Often uses a metaphor, analogy, or existing accepted framework
+2. A guiding policy (guiding principle) - the overall approach to overcome obstacles in your diagnosis. This directs and constrains actions. Think of it as guardrails.
+3. A set of coherent actions - how are you going to carry out the guiding policy? These need to be coherent.
 
 Good strategy is:
 - simple and obvious
@@ -30,3 +30,4 @@ https://jlzych.com/2018/06/27/notes-from-good-strategy-bad-strategy/
 
 [[engineering]]
 [[product]]
+[[rootcauseanalysis]]

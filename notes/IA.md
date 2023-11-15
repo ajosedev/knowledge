@@ -44,6 +44,7 @@ Remember that note taking is a tool to help learn. Don't have to make a note on 
 	- [[infrastructure]] vs [[ops]] vs [[architecture]] vs [[deployment]]
 		- should [[deployment]] be narrower in scope?
 		- What about [[rendering]]?
+			- Is this for rendering on a page? Closer to [[performance]]?
 	- what is [[engineering]] for? Feels a little catch-all
 	- do I need something like [[areas]] which is a higher level than both [[engineering]] and [[product]]
 	- introduce [[devops]]?

@@ -14,6 +14,7 @@ https://mxstbr.com/thoughts/margin
 
 [[20200314214239-layout-components]]
 [[20210519122422-first-class-space]]
+[[20220720010623-reusable-components-and-widths]]]]
 
 [[componentapi]]
 [[components]]

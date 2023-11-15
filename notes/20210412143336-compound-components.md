@@ -28,6 +28,8 @@ To show that components are tied together, they usually share a namespace. e.g. 
 
 https://jjenzz.com/compound-components
 
+There's also uncontrolled compound components as explained here: https://jjenzz.com/avoid-global-state-colocate/
+
 [[componentapi]]
 [[components]]
 [[designpatterns]]

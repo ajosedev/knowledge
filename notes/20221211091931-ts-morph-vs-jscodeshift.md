@@ -18,9 +18,8 @@ Both seem to be lacking documentation - best way is to learn as you go.
 
 In theory if `ts-morph` can do Typescript and jscodeshift can not, it makes sense to dedicate time to the former. However, the larger seems to have a larger community and more examples to pull from.
 
-The knowledge is _somewhat_ transferable. At the end of the day, you're doing [[ast]] manipulation. There's a certain barrier to learning all the nodes, their properties, etc. Both libraries have slightly different functions/wrappers/helpers though.
+The knowledge is _somewhat_ transferable. At the end of the day, you're doing [[staticcodeanalysis]] manipulation. There's a certain barrier to learning all the nodes, their properties, etc. Both libraries have slightly different functions/wrappers/helpers though.
 
-[[ast]]
 [[codemods]]
 [[migrations]]
 [[ts]]

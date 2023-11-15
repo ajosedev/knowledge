@@ -1,4 +1,11 @@
-# Pragmatic programmer
+# Andy Hunt & Dave Thomas - Pragmatic programmer
+
+Author: Kim Scott
+Read: 2022
+
+#todo - not sure I added all my Kindle notes
+
+---
 
 [[20200307101703-easy-to-change]]
 [[20200307104600-final-decisions]]
