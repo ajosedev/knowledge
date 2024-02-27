@@ -34,7 +34,8 @@ Remember that note taking is a tool to help learn. Don't have to make a note on 
 	- [[architecture]] seems like a good topic
 	- What is [[components]] for? [[reactapi]] too. Maybe need a [[componentapi]]? [[designsystemapi]]? [[api]]?
 		- ReactAPI should be for react-only APIs. Hooks, etc.
-		- Maybe more things should be componentapi, not reactapi?
+		- Maybe scrap designsystemapi in favour of componentapi
+		- Need to audit all existing use
 	- Make a list of all current topics and see what the hierarchy should be. See what's missing.
 	- [[web]] vs [[browsers]]
 		- What is [[web]] for?

@@ -13,7 +13,9 @@ This works really well at allowing you to slow down and only bring in versatile,
 
 https://shinytoyrobots.substack.com/p/the-hub-and-spoke-design-system-model
 
-Keywords: expansion packs
+Keywords: expansion packs, design system ecosystem
+
+[[20220704011551-tiered-design-systems]]
 
 [[architecture]]
 [[components]]

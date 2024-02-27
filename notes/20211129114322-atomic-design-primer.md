@@ -8,6 +8,8 @@
 **Templates** - Mostly groups of organisms stitched together to form reusable/unopinionated pages.
 **Pages** - Specific instances of templates, the end product.
 
+[[20220620042011-against-atomic-design]]
+
 [[atomicdesign]]
 [[design]]
 [[designsystem]]

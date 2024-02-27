@@ -35,8 +35,8 @@ Adding properties to your variants make them more specific, but less flexible. C
 Usually describes interactivity
 
 ### Scale
-Different scales are used for different things. Consider t-shirt sizes, proportions, etc.
-	Interesting post on t-shirt sizes here: 
+Different scales are used for different things. Consider t-shirt sizes (S, M, etc), proportions (1x, 2x, etc.), numeric (100, 200, etc.), etc.
+	[[20230803125044-t-shirt-size-scale]]
 
 ### Mode
 Usually for things like `light` and `dark`.

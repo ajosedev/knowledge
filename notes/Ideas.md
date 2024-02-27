@@ -532,6 +532,7 @@ Deprecation
 How to best manage it
 Do you have to eventually delete the thing? Does deprecation = eventual removal?
 	When can you know it's safe to do so? Different circumstances depending on how your code is used
+	Deprecation vs removal 
 What's the benefit to removing deprecated things? What's the benefit of keeping it around?
 	What if it gets in the way of other improvements?
 
@@ -578,10 +579,13 @@ https://tonsky.me/blog/monitors/
 ---
 
 Working agreements, and how they help teams
+also known as 'team agreements'
 
 Help people make decisions on a shared ruleset/guidelines.
 
 Work as good reminders - should be involved in rituals in some way
+
+https://www.atlassian.com/blog/teamwork/team-agreements-examples-and-purpose
 
 [[career]]
 [[engineering]]
@@ -615,4 +619,30 @@ Layout thrashing, etc
 
 ---
 
-https://bradfrost.com/blog/post/the-design-system-ecosystem/
+Assumptions in async remote work
+
+They are way more dangerous
+
+Making assumptions can often lead to misunderstandings, mistakes, problems, etc.
+Can say something and wake up the next day and it's gone in a completely different direction
+Because you're async, you can't course correct.
+The cause can be many reasons, but assumptions are a big one.
+
+Clarity is the goal
+Be explicit about what you're saying
+Be as clear as possible
+Note any assumptions you've missed
+Better to over-communicate than under-communicate
+
+Feedback loops are longer, so you need to be clearer
+
+[[communication]]
+[[writing]]
+
+---
+
+Signals, and how they're used in UI frameworks.  
+How does this compare to React? I think it's mostly around listening vs aggressively re rendering the entire tree?  
+What about explicit depencnies?  
+Are these the same as observables?  
+https://svelte.dev/blog/runes

@@ -6,6 +6,8 @@ It seems like the main negatives is that t-shirt sizes aren't predictable. Their
 
 Using a predictable scale, e.g. 1x, 2x, 3x, etc. can be typed just the same, but offers more meaning in case the scale needs to be adjusted in the future.
 
+Another negative is fitting something retrospectively in the middle of the scale. What if you need something above small but below medium? Numeric scales are a bit better for this, you can introduce a 050, or a 1.5x if needed.
+
 [[20211029152633-design-token-names]]
 
 [[designtokens]]

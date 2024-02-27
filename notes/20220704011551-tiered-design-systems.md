@@ -12,6 +12,13 @@ Remember, design systems are [[20211122111728-design-system-multiple-systems|sys
 
 Don't limit yourself to code either, share libraries in your UI tooling too, like Figma. https://medium.com/eightshapes-llc/figma-shared-libraries-d2dfbf9d1b8d
 
+Keywords: 'Expansion pack', 'Subsystems'
+
+https://bigmedium.com/ideas/design-system-ecosystem.html#recipelayeroptional
+https://medium.com/eightshapes-llc/design-system-tiers-2c827b67eae1
+https://shinytoyrobots.substack.com/p/the-hub-and-spoke-design-system-model
+
 [[20220808103811-spotify-encore]]
+[[20231103105137-design-system-recipe-layer]]
 
 [[designsystem]]

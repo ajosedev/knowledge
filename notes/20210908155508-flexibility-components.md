@@ -12,4 +12,10 @@ Makes your components usable everywhere
 Your component fits all of the use cases well
 However flexibility of how you use the component is not necessarily the same as flexibility in what the component looks like/renders
 
+Spotify refers to the two ends of the scale as 'customisation' (very flexible) and 'configuration' (less flexible).
+https://engineering.atspotify.com/2021/04/customization-vs-configuration-in-evolving-design-systems/
+
+[[componentapi]]
 [[components]]
+[[designsystem]]
+[[designsystemapi]]

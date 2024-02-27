@@ -29,6 +29,6 @@ It's important to wait until multiple variations of these components exist. You 
 [[adoption]]
 [[architecture]]
 [[components]]
-[[designsystaem]]
+[[designsystem]]
 [[designsystemapi]]
 [[product]]

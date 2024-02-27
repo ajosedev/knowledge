@@ -1,6 +1,6 @@
 # Allowing for re-use through good component design
 
-Monolithic components that do everything have many problems. For that reason and more, it's often better to create more generic components that do a single thing well. Think of a bottom-up approach, rather than top-down.
+Monolithic components that do everything have many problems. For that reason and more, it's often better to create more generic components (or 'versatile') that do a single thing well. Think of a bottom-up approach, rather than top-down.
 
 The main problem with these components is that they're hard to re-use. Often a team needs the component with a slight variation. When a component is responsible for handling everything, it's difficult to add this extra variation. Either the component grows and become more monolithic, or the component needs to be duplicated with a separate version. Both options are suboptimal.
 

@@ -10,5 +10,7 @@ Since the end result of passing conflicting options depends on the implementatio
 
 For a more concrete example see [[20210316112103-multiple-boolean-props]]
 
+[[20231219102038-combinatorial-explosion]]
+
 [[concepts]]
 [[smells]]
