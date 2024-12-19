@@ -2,7 +2,7 @@
 
 ```bash
 git checkout yourBranch
-git reset $(git merge-base master $(git rev-parse --abbrev-ref HEAD))
+git reset $(git merge-base main $(git rev-parse --abbrev-ref HEAD))
 git add -A
 git commit -m "one commit on yourBranch"
 ```

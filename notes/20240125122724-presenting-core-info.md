@@ -1,6 +1,8 @@
 #thoughts 
 #todo
 
+Some thoughts on [[communication]] and presenting ideas and thoughts to others
+
 - when presenting information, present it as abstracted as you can while still getting the point across
 - 'hide the implementation'
 - progressively disclose information as needed
@@ -14,4 +16,3 @@
 - this might just be my mental model, not everyone's
 	- but in theory helps focus people on the thing you want, not the minutuae/unrelated stuff
 - ultimately you should still tailor for your audience
-- [[20210916180937-breaking-new-components]]

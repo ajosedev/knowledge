@@ -8,6 +8,6 @@ Using a predictable scale, e.g. 1x, 2x, 3x, etc. can be typed just the same, but
 
 Another negative is fitting something retrospectively in the middle of the scale. What if you need something above small but below medium? Numeric scales are a bit better for this, you can introduce a 050, or a 1.5x if needed.
 
-[[20211029152633-design-token-names]]
+[[20211029152633-design-token-naming]]
 
 [[designtokens]]

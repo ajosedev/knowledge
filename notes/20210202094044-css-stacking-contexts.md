@@ -38,8 +38,10 @@ Within a stacking context, only children in that element are compared with other
 
 Stacking contexts can be made in many ways, using `opacity`, `mix-blend-mode`, `z-index`, `transform`, and many more.
 
-`isolation: isolate` is another way of creating a stacking context, but importantly that's the _only_ thing it does. This is helpful for creating a new context without relying on a 'side effect', and can help components encapsulated. The `z-index` won't bleed outside of the component, it's concelead from the rest of the app and therefore doesn't clash with any other set `z-index` values in the app.
+`isolation: isolate` is another way of creating a stacking context, but importantly that's the _only_ thing it does. This is helpful for creating a new context without relying on a 'side effect', and can help components encapsulated. The `z-index` won't bleed outside of the component, it's concealed from the rest of the app and therefore doesn't clash with any other set `z-index` values in the app.
 
+https://www.joshwcomeau.com/css/stacking-contexts/
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context
 https://developer.mozilla.org/en-US/docs/Web/CSS/z-index
 https://developer.mozilla.org/en-US/docs/Web/CSS/isolation
 

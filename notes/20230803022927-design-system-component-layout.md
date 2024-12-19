@@ -22,3 +22,6 @@ Are there more guidelines? e.g. cost of convenience/flexibility?
 [[20210908155508-flexibility-components]]
 [[20220621083440-design-system-flexibility]]
 [[20220801011940-pit-of-success]]
+
+[[components]]
+[[componentapi]]

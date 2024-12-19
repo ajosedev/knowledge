@@ -2,7 +2,7 @@
 
 Tokens:
 [[20210927144324-design-tokens]]
-[[20211029152633-design-token-names]]
+[[20211029152633-design-token-naming]]
 [[20211029153348-semantic-design-tokens]]
 
 Documentation:

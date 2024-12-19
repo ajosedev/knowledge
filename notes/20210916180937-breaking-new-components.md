@@ -6,6 +6,8 @@ Try to build something different, to know you can still build the 20% of use cas
 
 Still optimise for the main path, but allow users to create different things, if they need to. This should help your component v1 be better, rather than having to inevitably implement new variants, props, etc to satisfy one-off needs.
 
+This can help decide on crucial API decisions, related to [[20210908155508-flexibility-components]]
+
 [[componentapi]]
 [[components]]
 [[react]]

@@ -2,6 +2,8 @@
 
 The naming scheme for your design tokens is important, this is what people will be using to communicate, guide, and write in both design tools and code. Try to keep it concise while still conveying meaning.
 
+Overall, this work is also **hard**. The order matters here too. Having groupings (e.g. concept) before type (e.g. colour) creates a different outcome. If the group is after the type, it allows for the groupings to change based on the type. This doesn't work the opposite way.
+
 Also known as a 'token hierarchy'
 
 ![[design-token-naming.png]]

@@ -1,5 +1,7 @@
 # API flexibility in components
 
+*This page also acts as a hub for various large-scale component API decisions*
+
 Flexibility is not always a good thing.
 
 Flexibility allows for more footguns that need to be handled

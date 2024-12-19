@@ -7,5 +7,6 @@
 
 https://medium.com/eightshapes-llc/team-models-for-scaling-a-design-system-2cf9d03be6a0
 https://medium.com/salesforce-ux/the-salesforce-team-model-for-scaling-a-design-system-d89c2a2d404b
+https://medium.com/@nathanacurtis/the-fallacy-of-federated-design-systems-23b9a9a05542
 
 [[designsystem]]

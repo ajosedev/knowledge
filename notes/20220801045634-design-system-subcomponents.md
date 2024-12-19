@@ -1,10 +1,10 @@
 # Subcomponents in a design system
 
-'Subcomponents' isn't a new idea, and effectively is [[20210412143336-compound-components]].
+'Subcomponents' isn't a new idea, and effectively is [[20210412143336-compound-components]]. However, this is a common term in the design system space, and crucially don't often need to share state.
 
 > **Subcomponent**: an independently composable UI component with a well-defined API intended for use only within a specific parent component or context.
 
-They aim to offer composition and flexibility. They make the 'uncommon' designs possible, the designs not on the happy path. The user needs a bit more work to get there, but they can still be within the design system rather than bespoke.
+They are a pattern that aims to offer composition and flexibility. They make the 'uncommon' designs possible, the designs not on the happy path. The user needs a bit more work to get there, but they can still be within the design system rather than bespoke.
 
 Subcomponents can act as a facade, locking down props as needed. For example a `CardImage` component can exist just to restrict the props of the more generic `Image` component. This can help remove footguns, improve the ergonomics, etc.
 
@@ -27,7 +27,8 @@ Cons:
 
 https://medium.com/eightshapes-llc/subcomponents-753ce9f6600a
 
-[[20210908151101-component-design]]
+[[20210908151101-object-props-vs-compound-components]]
+[[20241121114816-props-vs-subcomponents]]
 [[20220801105616-break-out-design-system]]
 
 [[components]]

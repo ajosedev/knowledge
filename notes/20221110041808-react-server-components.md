@@ -1,5 +1,7 @@
 # React Server Components
 
+#todo https://www.youtube.com/watch?v=36uY-c0E_EQ & https://www.joshwcomeau.com/react/server-components/
+
 >Server Components compliment SSR, rendering to an intermediate abstraction without needing to add to the JavaScript bundle
 
 React Server Components (RSC) are still experimental. They are component that fetch data and render content on the server. Client Components still exist and render on the client, which are necessary for some things. Client Components can render with [[20220912120502-server-side-rendering]], but that does not make them a Server Component.

@@ -17,6 +17,7 @@ Keywords: 'Expansion pack', 'Subsystems'
 https://bigmedium.com/ideas/design-system-ecosystem.html#recipelayeroptional
 https://medium.com/eightshapes-llc/design-system-tiers-2c827b67eae1
 https://shinytoyrobots.substack.com/p/the-hub-and-spoke-design-system-model
+https://bigmedium.com/ideas/the-art-of-design-system-recipes.html
 
 [[20220808103811-spotify-encore]]
 [[20231103105137-design-system-recipe-layer]]

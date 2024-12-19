@@ -11,5 +11,4 @@ A change that could take months or years now is a change that takes mere weeks. 
 https://superfriendly.com/design-systems/articles/design-systems-prepare-you-for-change/
 
 [[designsystem]]
-[[designsystembranding]]
 [[refactoring]]

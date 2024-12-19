@@ -7,6 +7,7 @@ By capturing needs across teams, a design system team can identify the best solu
 For this reason, it makes sense to harvest snowflakes periodically so you can get a broader scope on the needs and identify trends.
 
 [[20220704124529-design-system-harvesting]]
+[[20240603014848-design-systems-needs-and-bloat]]
 
 [[designsystem]]
 

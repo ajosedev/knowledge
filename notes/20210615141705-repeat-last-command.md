@@ -10,4 +10,6 @@
 # Outputs sudo rm -rf *
 ```
 
+[[20210225130028-pbcopy]]
+
 [[shell]]

@@ -19,3 +19,8 @@ In [[react]],
 https://blog.isquaredsoftware.com/2020/05/blogged-answers-a-mostly-complete-guide-to-react-rendering-behavior/#component-types-and-reconciliation
 
 https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-unstable-nested-components.md
+
+Keyword: 'component inside component'
+
+[[antipattern]]
+[[smells]]

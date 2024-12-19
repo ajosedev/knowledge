@@ -15,6 +15,8 @@ The dynamic viewport uses the `d` prefix and is aptly named. It adjusts itself d
 
 Of course there's also the [[20210524133704-css-logical-properties]] implementations for these units too, such as `vi`, `dvi`, and `svb`.
 
+These help solve the 'Safari 100vh' bug, where the address bar overlaps content making it unusable. A solution for that should be to use dvh.
+
 [[browsers]]
 [[css]]
 [[responsivedesign]]

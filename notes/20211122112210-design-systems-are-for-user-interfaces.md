@@ -13,6 +13,8 @@ It shouldn't necessarily define or own those standards, but instead maintain a r
 
 > A design system is the official story of how an organization designs and builds digital **interfaces** (not products).
 
+Content is anecdotally the trickiest one to frame, as most of it is always tied into UI. e.g. a page always contains large amounts of copy.
+
 https://bradfrost.com/blog/post/design-systems-are-for-user-interfaces/
 
 [[designsystem]]

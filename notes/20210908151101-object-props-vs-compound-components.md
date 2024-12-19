@@ -1,14 +1,12 @@
 
-Not sure what this is yet, but some thoughts on component design
+# Object props vs compound components
 
-#todo 
-#thoughts
-
-## Object props vs compound components
 Object props (and list props, sometimes called 'config props') refers to something like `items`, which is an array of items each with their own properties that get rendered by the parent in some way
-Compount components are similar to the select/option HTML elements
+Compound components (or 'subcomponents') are similar to the select/option HTML elements
 
 tl;dr - object props are more consistent, type safe and thus restrictive too. Compound components are more flexible but offer more chance for misuse.
+
+[[20241121114816-props-vs-subcomponents]]
 
 ### With object props
 - Easier to build
@@ -19,7 +17,8 @@ tl;dr - object props are more consistent, type safe and thus restrictive too. Co
     - e.g. if an item can take 20 props, that API starts to become a mess
 - Less DOM flexibility
     - Although a render prop can help with that, e.g. renderItem that provides props to spread (using prop getters)
-- Locked down: harder to misuse, but also hard to reuse (tradeoffs)
+- Harder to misuse, but potentially harder to reuse
+- Increased consistency
 - Can be strongly typed with TS
 
 ### With compound components
@@ -35,6 +34,7 @@ tl;dr - object props are more consistent, type safe and thus restrictive too. Co
 - Can be made with cloneElement or context (more flexible)
 - Better composition
 - Potential for misuse
+- More variance in the output (i.e. lack of consistency)
 - Can't be strongly typed
 - Potentially better for more complicated components when an array/object data structure becomes too bloated
 
@@ -45,11 +45,13 @@ tl;dr - object props are more consistent, type safe and thus restrictive too. Co
 
 [[20210922153924-headless-ui-components]]
 [[20210908155508-flexibility-components]]
+[[20241121114816-props-vs-subcomponents]]
 
 https://twitter.com/brad_frost/status/1090733766950223878
 https://twitter.com/housecor/status/1405512541846052871
 
 [[components]]
+[[designpatterns]]
 [[react]]
 [[reactapi]]
 [[reacthooks]]

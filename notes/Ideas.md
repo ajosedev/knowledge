@@ -93,6 +93,8 @@ https://gridless.design/for-developers
 #todo - watch Jen Simmons' videos on these https://labs.jensimmons.com/
 #todo - https://www.youtube.com/watch?v=5uhIiI9Ld5M
 
+[[20211115081243-container-queries]]
+
 [[intrinsiclayout]]
 [[responsivedesign]]
 
@@ -230,6 +232,8 @@ Are they executed synchronously?
 	Apparently different for ES2020 and async modules?
 Does ESM always result in a singleton?
 Does modules do anythign weird in same cases, e.g. React context?
+What about if an exported object references another export, does it go down the tree?
+	What if that second level of object is generated, when does that code get executed? e.g. file1 imports file2 object, file2 object spreads the object from file3. file3's object is optionally generated through something, e.g. `export const Object.keys(...`
 
 https://javascript.info/modules-intro
 https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/
@@ -261,10 +265,28 @@ Does ECMAScript fit in here?
 How does this tie into unpkg using UMD? [[20230116113451-unpkg]]
 
 What does Deno do?
+What does SWC or SWC-Node do?
 
 What about Pure ESM packages? https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c
+How to fix ESM related errors
+How does Typescript factor into all of this? e.g. can't use mjs. TS uses ESM syntax, but converts to CJS?
+esModuleInterop
+How this interacts with package.json settings, such as `main`, `module`, and `exports`
+`type: module` and what it does
+
+https://github.com/johnloy/esm-commonjs-interop-manual
+https://redfin.engineering/node-modules-at-war-why-commonjs-and-es-modules-cant-get-along-9617135eeca1
+https://adamcoster.com/blog/commonjs-and-esm-importexport-compatibility-examples
 
 [[buildtooling]]
+[[js]]
+
+Publint https://publint.dev/
+
+What are `externals` generally speaking?
+> The `externals` configuration option provides a way of excluding dependencies from the output bundles. Instead, the created bundle relies on that dependency to be present in the consumer's (any end-user application) environment. This feature is typically most useful to **library developers**, however there are a variety of applications for it.
+
+Usually peer deps are marked as external?
 
 ---
 
@@ -438,7 +460,29 @@ http://blogs.newardassociates.com/blog/2023/you-want-modules-not-microservices.h
 
 ---
 
-How do browsers handle fractional pixels?
+#todo
+How do browsers handle fractional pixels? Rounding? Something different?
+Different for Retina? In general how does pixel density (PPI?) work here?
+Physical pixels vs virtual pixels
+https://www.reddit.com/r/webdev/comments/v7xrad/how_do_fractional_pixel_measurements_work/
+How it corresponds to resolution. I think 'native' resolution plays a factor here - as soon as you are not using the maximum resolution of a device, you start to change the relationship between physical and virtual pixels? Can emulate Retina that way?
+PPI of phones is a lot better than PPI of monitors?
+[[20201223162830-subpixel-rendering]] - this might be renaming
+
+How does this then work with breakpoints and media queries?
+What is a CSS pixel? How does it relate to device pixels? Is there a standard?
+https://www.quirksmode.org/blog/archives/2010/04/a_pixel_is_not.html
+https://elad.medium.com/understanding-the-difference-between-css-resolution-and-device-resolution-28acae23da0b
+How does this relate to 'viewport'? [[20210825141346-width-devices-viewport]] - this might need updating
+https://web.dev/articles/codelab-density-descriptors
+https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag
+```ini
+CSSPixelWidth = DevicePixelWidth / DevicePixelRatio??
+```
+
+How does this relate to pixels, rem, em and other a11y needs? e.g. [[20220523113342-font-scaling-a11y]]
+
+https://every-layout.dev/rudiments/units/
 
 ---
 
@@ -646,3 +690,21 @@ How does this compare to React? I think it's mostly around listening vs aggressi
 What about explicit depencnies?  
 Are these the same as observables?  
 https://svelte.dev/blog/runes
+
+---
+
+Proper breakdown on inline-block vs block vs inline
+	I know inline-block has a lot of gotchas, e.g. vertical margin/padding doesn't work but horizontal does
+How does inline-flex work in here too?
+
+Also intersects with [[20221219123110-intrinsic-sizes]] and maybe even [[intrinsiclayout]]. Especially around block not needing to be 100% width
+
+https://stackoverflow.com/questions/9189810/css-display-inline-vs-inline-block
+https://css-tricks.com/when-do-you-use-inline-block/
+
+---
+
+Diamond dependency problem
+
+---
+

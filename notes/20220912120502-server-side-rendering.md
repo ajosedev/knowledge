@@ -9,14 +9,14 @@ In CSR [[20221128042243-client-side-rendering]], the HTML returned by the server
 >With SSR every request is treated independently and will be processed as a new request by the server. Even if the output of two consecutive requests is not very different, the server will process and generate it from scratch. Since the server is common to multiple users, the processing capability is shared by all active users at a given time.
 
 Advantages:
-- Better performance than [[20221128042243-client-side-rendering]], including [[20221219125527-web-metrics#First Contentful Paint (FCP)|FCP]] and [[20221219125527-web-metrics#Time to Interactive (TTI)|TTI]]
+- Better performance than [[20221128042243-client-side-rendering]], including [[20221219125527-web-vitals#First Contentful Paint (FCP)|FCP]] and [[20221219125527-web-vitals#Time to Interactive (TTI)|TTI]]
 - Less Javascript shipped to the client
 - Can be crawled by search engines for better SEO
 - Can provide personalised information, as the site is built per-request
 - Access to request-based data, such as cookies
 
 Disadvantages:
-- Slow [[20221219125527-web-metrics#Time to First Byte (TTFB)|TTFB]]
+- Slow [[20221219125527-web-vitals#Time to First Byte (TTFB)|TTFB]]
 - By default, can't make a SPA [[20221128105028-spa-mpa]]
 - Each page rendered is unique, so most things can't be cached
 

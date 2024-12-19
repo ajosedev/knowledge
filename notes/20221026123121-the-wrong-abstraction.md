@@ -23,8 +23,8 @@ Keywords: 'Premature abstraction'
 [[20200307105301-dry]]
 
 https://sandimetz.com/blog/2016/1/20/the-wrong-abstraction
-programmingisterrible.com/post/139222674273/write-code-that-is-easy-to-delete-not-easy-to
 https://programmingisterrible.com/post/139222674273/write-code-that-is-easy-to-delete-not-easy-to
+https://kentcdodds.com/blog/aha-programming
 
 [[abstraction]]
 [[concepts]]

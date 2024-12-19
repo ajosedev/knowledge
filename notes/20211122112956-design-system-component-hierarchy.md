@@ -21,6 +21,8 @@ This idea leans into composition - recipes are often created using composed DS c
 
 Rule of thumb is to aim to build for the bottom layer, as it helps you build components that are as reusable/agnostic as possible.
 
+https://bigmedium.com/ideas/the-art-of-design-system-recipes.html
+
 [[architecture]]
 [[components]]
 [[designsystem]]

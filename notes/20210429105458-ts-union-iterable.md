@@ -13,5 +13,7 @@ export type Status = typeof status[number]
 
 https://stackoverflow.com/questions/40275832/typescript-has-unions-so-are-enums-redundant/60041791#60041791
 
+[[20220801115328-typescript-const-assertion]]
+
 [[js]]
 [[ts]]

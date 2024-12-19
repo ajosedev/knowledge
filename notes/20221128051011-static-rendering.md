@@ -2,7 +2,7 @@
 
 >Deliver pre-rendered HTML content that was generated when the site was built
 
-This aims to avoid the [[20221219125527-web-metrics#First Contentful Paint (FCP)|FCP]] and [[20221219125527-web-metrics#Time to Interactive (TTI)|TTI]] problems of [[20221128042243-client-side-rendering]], while also negating the [[20221219125527-web-metrics#Time to First Byte (TTFB)|TTFB]] of [[20220912120502-server-side-rendering]]. Static rendering is ideal for static content - you can't generate personalised content at build time (easily).
+This aims to avoid the [[20221219125527-web-vitals#First Contentful Paint (FCP)|FCP]] and [[20221219125527-web-vitals#Time to Interactive (TTI)|TTI]] problems of [[20221128042243-client-side-rendering]], while also negating the [[20221219125527-web-vitals#Time to First Byte (TTFB)|TTFB]] of [[20220912120502-server-side-rendering]]. Static rendering is ideal for static content - you can't generate personalised content at build time (easily).
 
 >A static HTML file is generated ahead of time corresponding to each route that the user can access. These static HTML files may be available on a server or a [[20221107042836-cdn]] and fetched as and when requested by the client.
 
