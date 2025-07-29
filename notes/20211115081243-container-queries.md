@@ -36,7 +36,10 @@ By default the `@container` rule matches _any_ container. `container-name` can b
 
 There are also special container query length units here: https://developer.mozilla.org/en-US/docs/Web/CSS/length#container_query_length_units
 
-Container queries use the `contain` API under the hood, which is a bit more complex and effectively works as instructions to the browser of what it needs to calculate, and what it doesn't. It's  an optimisation API.
+Container queries use the `contain` API under the hood, which is a bit more complex and effectively works as instructions to the browser of what it needs to calculate, and what it doesn't. It's an optimisation API.
+
+- doesn't replace everything, media queries still have a place. e.g. Buttons should probably be consistent on a page
+- from a DS POV/API, container queries are good to keep mostly internal. Otherwise opens a can of worms, effectively allowing people too much customisation. Don't let people change your Card padding with a container query API, as they'll pick a different number to somewhere else
 
 https://css-tricks.com/css-container-queries/
 https://www.joshwcomeau.com/css/container-queries-introduction/

@@ -8,5 +8,12 @@ but this will not:
 
 Omitting the `typeof` will trigger an error directly, as you're acting on an undefined variable.
 
+Relatedly, the following will check if a variable is `undefined` or `null`:
+```js
+if (myVar == null) {
+  // true if myVar is null or undefined
+}
+```
+
 [[js]]
 [[ts]]

@@ -52,7 +52,8 @@ Remember that note taking is a tool to help learn. Don't have to make a note on 
 	- introduce topics for common tools? e.g. babel, webpack
 	- an umbrella for web frameworks? tools? e.g. astro vs nextjs vs remix vs react vs svelte
 		- All the web stuff
-	- What is [[buildtooling]] for?
+	- [[buildtooling]] vs [[npm]] vs [[node]] vs [[architecture]]
+		- Maybe I need some high level and some low level stuff? Is something like Module Federation buildtooling?
 	- Change [[ts]] and [[js]] to the full word, to make inline linking easier
 	- What should be a topic page vs a main page? e.g. [[20210927141042-module-federation]] could be replaced by `[[modulefederation]]`.
 - Create more topic pages that have categories and such

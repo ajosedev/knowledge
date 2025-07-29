@@ -22,8 +22,16 @@ As a general rule, string literal unions are a better default.
 
 **Enums**
 - Can be iterated over
-- Easier to rename/refactor?
+- Easier to rename/refactor/find in your codebase (e.g. search for `ButtonStatus.`)
+- Can be documented individually with JSDoc
 
+Note you can actually convert an enum into a string union type fairly easily:
+```ts
+type ButtonStatusStrings = `${ButtonStatus}`
+type ButtonStatusStrings = keyof typeof ButtonStatus
+```
+
+[[20210510170807-keyof-typeof-typescript]]
 
 Old doc on this: https://medium.com/@katbusch/typescript-enums-explained-e5f9a101afc9
 

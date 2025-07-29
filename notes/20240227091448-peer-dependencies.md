@@ -16,5 +16,6 @@ There are also optional peer dependencies, but their use case is even more niche
 
 https://github.com/semver/semver/issues/502
 
+[[buildtooling]]
 [[dependencies]]
 [[npm]]

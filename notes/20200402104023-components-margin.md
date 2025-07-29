@@ -6,7 +6,7 @@ Components should only style things within themselves, otherwise it makes compon
 
 > Margin is like putting glue on something before you’ve decided what to stick it to, or if it should be stuck to anything
 
-Instead, use layout components that encapsulate margin-related styling, such as `Stack`, `Spacer`, etc. or things such as CSS Grid.
+Instead, use layout components that encapsulate margin-related styling, such as `Stack`, `Spacer`, etc. or things such as CSS Grid. Think about the 'gap'.
 
 Padding is fine as it affects inner, margin is not as it affects outer.
 

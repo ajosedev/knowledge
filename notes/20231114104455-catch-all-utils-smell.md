@@ -1,6 +1,6 @@
 # Avoid catch-all buckets
 
-It's really tempting and easy to group all of your 'helpers' or 'utilities'/'utils' into a single bucket. This bucket is often too encompassing, and starts to own everything. It becomes hard to find, hard to maintain, unknowingly duplicated, lacks a defined purpose, and usually becomes unmaintained due to a lack of owner.
+It's really tempting and easy to group all of your 'helpers' or 'utilities'/'utils'/'misc' into a single bucket. This bucket is often too encompassing, and starts to own everything. It becomes hard to find, hard to maintain, unknowingly duplicated, lacks a defined purpose, and usually becomes unmaintained due to a lack of owner.
 
 'Utils' doesn't convey a purpose, it's just 'reusable functions', which is kind of everything. I don't think it's an anti-pattern, but I do think it's a smell.
 

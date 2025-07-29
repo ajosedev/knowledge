@@ -23,7 +23,7 @@ https://inclusive-components.design/cards/
 https://adrianroselli.com/2020/02/block-links-cards-clickable-regions-etc.html
 https://css-tricks.com/block-links-are-a-pain-and-maybe-just-a-bad-idea/#comment-1755105
 
-Keywords: Block links, selectable cards, radio cards, checkbox cards, interactive cards, clickable cards
+Keywords: Block links, selectable cards, radio cards, checkbox cards, interactive cards, clickable cards, tiles
 
 [[a11y]]
 [[components]]

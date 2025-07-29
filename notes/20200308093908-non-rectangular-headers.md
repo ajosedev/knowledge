@@ -14,5 +14,7 @@ When dealing with curves, `border-radius` can be used, especially with its less 
 
 https://css-tricks.com/creating-non-rectangular-headers/
 
+[[20250717104447-css-clip-paths]]
+
 [[css]]
 [[design]]

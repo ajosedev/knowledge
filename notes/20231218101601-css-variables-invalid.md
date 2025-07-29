@@ -19,6 +19,8 @@ This means that invalid code can be used, and the fallback to known valid rules 
 }
 ```
 
+This also occurs in cases where the variable itself is not supported, e.g. when using a new unit.
+
 https://dev.to/afif/what-no-one-told-you-about-css-variables-553o#3-they-can-make-an-invalid-value-valid
 
 Similarly [[20230728020610-grouping-selectors-browser-invalid]]

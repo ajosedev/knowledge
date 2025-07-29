@@ -12,6 +12,8 @@ Alternatively, there are benefits of moving patterns or components into the desi
 
 https://amyhupe.co.uk/articles/should-design-sytsmes-include-anti-patterns/
 
+[[20250401054611-design-system-patterns]]
+
 [[concepts]]
 [[designsystem]]
 [[refactoring]]

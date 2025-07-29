@@ -19,6 +19,8 @@ Is the problem explicitness? Can keep the code DRY somewhere, but then if it's e
 
 https://jestjs.io/docs/manual-mocks
 
+[[20210305090603-jest-mock-factory]]
+
 [[jest]]
 [[mocking]]
 [[testing]]

@@ -1,8 +1,6 @@
-#todo - figure out the best way to breakdown this doc and all the other docs
+# Core philosophies for design systems
 
-Design system component philosophies
-
-See how this lines up with existing articles. Search the [[designsystem]] tag and see what I can link out to?
+This is not all encompassing as I have too many docs for that. However this is some key things I think are important to have when starting out a [[designsystem]]
 
 https://www.gabe.pizza/notes-on-component-libraries/
 ```
@@ -12,12 +10,16 @@ https://www.gabe.pizza/notes-on-component-libraries/
 4.  **Doing The Wrong Thing should be at least uncomfortable, at worst impossible.** Allow for escape hatches when necessary, but make them feel bad. The developer should think, “I should open an issue so that I don’t have to do this again.”
 ```
 
-Are there more guidelines? e.g. cost of convenience/flexibility?
-
-#todo - mine the article for more things
-
 "Components should usually take up all horizontal space given" [[20220720010623-reusable-components-and-widths]]
 "Components should probably not position themselves." [[20200402104023-components-margin]] [[20210519122422-first-class-space]]
+
+Consider how [[20220704125509-design-systems-snowflakes]] should work. Should `className` and `style` actually work on your props, or should it be a more explicit escape hatch? (e.g. `UNSAFE_className`)
+
+You need [[20220829125502-visual-regression-testing]]
+
+Where possible, [[20220627121829-use-the-platform]]
+
+Friction can be a good thing. Similar to the last point above, escape hatches should be less pleasant to use than the happy path.
 
 [[20210908155508-flexibility-components]]
 [[20220621083440-design-system-flexibility]]
@@ -25,3 +27,4 @@ Are there more guidelines? e.g. cost of convenience/flexibility?
 
 [[components]]
 [[componentapi]]
+[[designsystemapi]]

@@ -6,8 +6,11 @@
 This pattern allows you to keep a value constantly up to date, without triggering re-renders. Rather than just using the value directly, placing it inside of a `useRef` means that the ref won't trigger the dependency array of a `useEffect`.
 
 TODO - I think this is the wrong takeaway.
+
+---
+
 Update:
-`callbackRef` exists outside of the closure. Which means when this component re-renders, any existing functions will be referencing the correct props (at the time), where as this latest ref will be current. Meaning an async function that references `callback` asyncronously will receive the one at time of call, anything that references `callbackRef` will get whatever it's updated to right now.
+`callbackRef` exists outside of the closure. Which means when this component re-renders, any existing functions will be referencing the correct props (at the time), where as this latest ref will be current. Meaning an async function that references `callback` asynchronously will receive the one at time of call, anything that references `callbackRef` will get whatever it's updated to right now.
 
 ```js
 const callbackRef = React.useRef(callback)

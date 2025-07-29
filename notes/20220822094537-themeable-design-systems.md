@@ -2,29 +2,56 @@
 
 Using [[20211029153348-semantic-design-tokens]], it's possible to make a single [[designsystem]] that's consumed by visually different brands. Ultimately this gives brands the flexibility and identity they need, while you keep your code [[20200307105301-dry]] and more maintainable.
 
-A lot of the power comes from [[designtokens]] at different abstraction layers.
+A Tier 3 is not always necessary, but it becomes a lot more important once you get into the realm of theming, multi brand design systems, whitelabelling, etc.
 
-Tier 1: Brand definitions, e.g. `font-family-primary`, `color-brand-target-red`.
-Tier 2: High-level application variables, e.g. `border-color-subtle`, `font-family-heading`.
-Tier 3: Component-specific variables, e.g. `button-font-family`, `button-border-width`.
+The main benefit of having tokens in Tier 3 is to allow even more customisation across themes. **Users gain the power to change component styling WITHOUT writing CSS**. Effectively you're creating a powerful theming API based off design tokens. With only one theme, components point directly to Tier 2 tokens. You can change these Tier 2 token values, but you can't change how individual components point to different tokens.
 
-Each tier maps to the tier above it. The first two are considered the 'theme layer', and the third tier is consumed by the DS component library. Each tier adds more maintenance and can slow you down. Consider adding them over time to avoid slowing down the speed of which you can build new components.
+This makes a 'link' between components based on what Tier 2 tokens they reference.
 
-The main benefit of having tokens in Tier 3 is to allow even more customisation across themes. The groupings used in your Tier 2 can be broken. For example, if Buttons and Callouts are linked in a Tier 2, having Tier 3 tokens allows consumers to break that grouping and have the border-radius of the two components differ. Or alternatively, allowing this specific token to be referenced elsewhere - e.g. something that wants to use the button colour, and be in sync with it.
-Only once you want to break those in-built links from the component to Tier 2 (or need more customisation) does a Tier 3 become necessary.
-	For example,
-		in Theme A: `button-font-family` is linked to `font-family-body`
-		in Theme B: `button-font-family` is linked to `font-family-heading`
-	This avoids button having a hard-coded reference to `font-family-body`, and allows for more customisation.
+For example - using just Tier 2 tokens:
+```scss
+.card {
+	background-color: $brand-bg-container;
+}
 
-Personally, I don't think a Tier 3 often needs to exist, or if it does, it's a blurry extension to Tier 2. A component can reference a Tier 2 token without needing to make a Tier 3 token to self-reference. Even if that means a Tier 2 token references another Tier 2 token. [[20211029153348-semantic-design-tokens]]
+.banner {
+	background-color: $brand-bg-container;
+}
+```
 
-This can be used for more than a multi-brand design system:
-- Sub-brands
-- White-labelling
+It's possible to change `brand-bg-container` across brands, but ultimately the Card and Banner must share the same colour, they are linked.
+
+Using Tier 3 tokens, you can break that link:
+```scss
+.card {
+	$comp-card-bg: $brand-bg-container;
+	background-color: $comp-card-bg;
+	font-family: $brand-font-family;
+}
+
+.banner {
+	$comp-banner-bg: $brand-bg-container;
+	background-color: $comp-banner-bg;
+	font-family: $brand-font-family;
+}
+
+```
+
+This still resolves to the same colour in the default theme, but it crucially doesn't have to. Now if a brand wants to separate them, they could change the Tier 3 tokens (e.g. `comp-banner-bg`) to separate the link to `brand-bg-container`. This is often not necessary if you have a single brand, and may not even be necessary if you have multiple brands. You have the ability to create an intentional API of Tier 3 tokens, depending on the amount of change you need. In the above example, you can't break the `font-family` link as the Tier 3 tokens don't exist.
+	**The API is the Tier 3 tokens themselves. The token keys (not their values) represent levers that can be changed per-brand.**
+
+Less importantly, but still usefully, these keys can also be used as values, e.g. users can create a custom Card component that references the Tier 3 tokens that Card uses.
+
+ This API does take a lot of work to support, but it's a good tool to remove [[20230731113037-snowflakes-vs-modifications]] and share 'bones' of components.
+
+Depending on the amount of customisation you need, you can get away with just changing the values in Tier 1 and 2. The Tier 3 tokens just give you more fine-grained control, as required.
+
+This can be used for more than a multi-brand design system. Each of these are a different level of theming, and change different tiers as needed:
+- Sub-brands: core + brand-theme + sub-brand-theme
+- White-labelling: core + brand-theme + white-label-theme
 - Design language generations
 - Light/dark themes
-- Campaigns
+- Campaigns: core + brand-theme + campaign-theme
 - Marketing vs product
 - etc
 

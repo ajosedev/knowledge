@@ -22,4 +22,5 @@ https://opensource.google/documentation/reference/thirdparty/oneversion
 https://nx.dev/concepts/integrated-vs-package-based#integrated-repos-vs.-package-based-repos
 https://nx.dev/more-concepts/dependency-management
 
+[[buildtooling]]
 [[dependencies]]

@@ -1,7 +1,7 @@
 # Sometimes you don't need useEffect
 
 It's easy to reach for a `useEffect` to help with your code, but it's often the wrong choice. Some tips to avoid unnecessary useEffects are:
-- If you can calculate something during render, you don’t need an Effect.
+- If you can calculate something during render, you don’t need an Effect. [[20220704110742-derive-state-dont-sync]]
 - To cache expensive calculations, add `useMemo` instead of `useEffect`.
 - To reset the state of an entire component tree, pass a different `key` to it.
 - To reset a particular bit of state in response to a prop change, set it during rendering.

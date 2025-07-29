@@ -1,5 +1,7 @@
 # React Suspense rendering loop
 
+Suspense lets you display fallbacks while the child components are finished loading. It's a powerful piece in React's way of improving the relationship between data fetching and UI rendering.
+
 Copied from the React docs.
 
 ```tsx
@@ -51,6 +53,8 @@ This has an interesting implication. Even if we use a GraphQL client that collec
 ---
 
 All of this results in a UI that avoids waterfall-ing and setting dependencies. Data isn't reliant on other data retrieval, nor is it dependent on the component being rendered. This achieves a different UX for the user. Individual parts of the page render as soon as they can, rather than the entire page rendering at once.
+
+https://react.dev/reference/react/Suspense
 
 [[react]]
 [[reactsuspense]]

@@ -1,5 +1,7 @@
 # CSS attributes selectors
 
+Warning: [[20250304101252-css-attribute-selectors-class]]
+
 `[attr]`
 Represents elements with an attribute name of _attr_.
 

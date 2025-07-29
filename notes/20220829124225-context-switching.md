@@ -9,6 +9,7 @@ Over the course of a long task or project, you could be losing large amounts of 
 The key takeaway: don't let people work on more than one thing at a time.
 
 https://www.joelonsoftware.com/2001/02/12/human-task-switches-considered-harmful/
+https://swizec.com/blog/workinprogress-kills-your-progress/
 
 Keywords: multitasking, multi-tasking
 

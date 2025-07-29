@@ -150,6 +150,19 @@ non-replaced inline elements
 
 ---
 
+How to fix React context when importing from NPM modules?
+Does modules do anything weird in same cases, e.g. React context?
+
+Possible ideas:
+1. re-export from a single file
+2. single entry point, rather than [[20220911060950-code-splitting]]
+3. using `externals`
+4. imports in `esm` vs `cjs`
+
+(I don't actually remember what it does that's weird, but I think it does)
+
+---
+
 Explainer on how colours are not perceived by humans 1:1
 Different hues have different perception of brightness
 	Is this 'luminance'?
@@ -211,92 +224,33 @@ Link to from [[20221219040857-why-monorepo]]
 
 ---
 
-better understanding of async/await
-e.g. does async block the code execution of the entire async function?
+bundlers, compilers, loaders, transpilers, etc.
+Vite, esbuild, webpack, typescript, rollup, parcel, Turbopack, babel, swc, bun, deno
+Concept pages for what each thing is, e.g. what is a transpiler? How is it different from a compiler? Which of these tools is a transpiler?
+What's the difference between a bundler and whatever Vite is? rollup = bundler only?
 
-[[20230829020537-await-foreach]]
+What does Deno do?
+What does SWC or SWC-Node do?
+How do they shake things up?
+
+[[buildtooling]]
 
 ---
 
-https://github.com/frehner/modern-guide-to-packaging-js-library
-e.g. what does 'exports' do in a library's package.json?
+node_modules in production
+Are they bundled, or are you expected to run `npm i` in production?
+i.e. how does this work from a server/Docker perspective
+This isn't about sharing a library, this is about running a node application
 
-and:
-
-How does JS execution work when importing modules
-Is it different depending on the module import type? e.g. ESM vs CJS
-If I have a function or variable declaration in a separate module, does that get execute on import before the next import?
-	I think it's executed in place
-Are they only executed once?
-Are they executed synchronously?
-	Apparently different for ES2020 and async modules?
-Does ESM always result in a singleton?
-Does modules do anythign weird in same cases, e.g. React context?
-What about if an exported object references another export, does it go down the tree?
-	What if that second level of object is generated, when does that code get executed? e.g. file1 imports file2 object, file2 object spreads the object from file3. file3's object is optionally generated through something, e.g. `export const Object.keys(...`
-
-https://javascript.info/modules-intro
-https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/
-https://exploringjs.com/es6/ch_modules.html#sec_modules-in-browsers
-https://blog.isquaredsoftware.com/2023/08/esm-modernization-lessons/
-https://blog.logrocket.com/transpile-es-modules-with-webpack-node-js/
-https://bun.sh/blog/commonjs-is-not-going-away
-
-and:
-
-How to fix React context when importing from NPM modules?
-
-Possible ideas:
-1. re-export from a single file
-2. single entry point, rather than [[20220911060950-code-splitting]]
-3. using `externals`
-4. imports in `esm` vs `cjs`
+related to [[20230411040305-node-dependencies]]?
 
 [[buildtooling]]
 [[npm]]
 [[webpack]]
 
-and:
-
-Different module types: CJS, AMD, UMD, ESM
-https://dev.to/iggredible/what-the-heck-are-cjs-amd-umd-and-esm-ikm
-Does ECMAScript fit in here?
-
-How does this tie into unpkg using UMD? [[20230116113451-unpkg]]
-
-What does Deno do?
-What does SWC or SWC-Node do?
-
-What about Pure ESM packages? https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c
-How to fix ESM related errors
-How does Typescript factor into all of this? e.g. can't use mjs. TS uses ESM syntax, but converts to CJS?
-esModuleInterop
-How this interacts with package.json settings, such as `main`, `module`, and `exports`
-`type: module` and what it does
-
-https://github.com/johnloy/esm-commonjs-interop-manual
-https://redfin.engineering/node-modules-at-war-why-commonjs-and-es-modules-cant-get-along-9617135eeca1
-https://adamcoster.com/blog/commonjs-and-esm-importexport-compatibility-examples
-
-[[buildtooling]]
-[[js]]
-
-Publint https://publint.dev/
-
-What are `externals` generally speaking?
-> The `externals` configuration option provides a way of excluding dependencies from the output bundles. Instead, the created bundle relies on that dependency to be present in the consumer's (any end-user application) environment. This feature is typically most useful to **library developers**, however there are a variety of applications for it.
-
-Usually peer deps are marked as external?
-
 ---
 
 scopes in javascript
-
----
-
-node_modules in production
-
-related to [[20230411040305-node-dependencies]]?
 
 ---
 
@@ -308,14 +262,6 @@ What about next?
 [[deployment]]
 [[networking]]
 [[rendering]]
-
----
-
-bundlers, compilers, loaders, transpilers, etc.
-Vite, esbuild, webpack, typescript, rollup, parcel, Turbopack, babel, swc, bun, deno
-Concept pages for what each thing is, e.g. what is a transpiler? How is it different from a compiler? Which of these tools is a transpiler?
-
-[[buildtooling]]
 
 ---
 
@@ -482,6 +428,9 @@ CSSPixelWidth = DevicePixelWidth / DevicePixelRatio??
 
 How does this relate to pixels, rem, em and other a11y needs? e.g. [[20220523113342-font-scaling-a11y]]
 
+Tie to
+[[20250516122443-fractional-media-queries]]
+
 https://every-layout.dev/rudiments/units/
 
 ---
@@ -590,6 +539,8 @@ Why don't browsers ever delete something that's deprecated?
 If you do remove it, it's a breaking change (even if already deprecated) [[20220509012212-semantic-versioning]]
 
 https://softwareengineering.stackexchange.com/questions/381763/how-long-to-wait-before-deleting-a-deprecated-method
+
+[[20250604043540-removing-is-harder-than-adding]]
 
 [[concepts]]
 
@@ -701,10 +652,6 @@ Also intersects with [[20221219123110-intrinsic-sizes]] and maybe even [[intrins
 
 https://stackoverflow.com/questions/9189810/css-display-inline-vs-inline-block
 https://css-tricks.com/when-do-you-use-inline-block/
-
----
-
-Diamond dependency problem
 
 ---
 

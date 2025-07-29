@@ -60,8 +60,26 @@ For the SWAN tokens re-architecture, we had custom code that any token (token A)
 
 This is also true for component tokens, which by their nature usually read from a semantic token. If you are using CSS variables to control things more similar to 'state', consider separating the idea of a token from a CSS variable. i.e. calculating a width of a component is 'state', and thus should be done with non-token CSS variables all of which are set and read from the component-level class.
 
-Once you start mixing where a token can be set (e.g. root level vs mode level vs component level), it's difficult to ensure reading it will have the correct value. Might always be easiest to either set everything at the same level (what we did for SWAN), or have some contract between where things are set and where things are read.
+Once you start mixing where a token can be set (e.g. root level vs mode level vs component level), it's difficult to ensure reading it will have the correct value. **It's always be easiest to either set everything at the same level (what we did for SWAN)**, or have some contract between where things are set and where things are read.
+
 #todo - what happens if you set base and semantic on root, but component at the component class level. Does this break? I think no, but it's worth double checking. e.g. what if comp-alert-bg-error: sem-bg-error was set on a class? If sem-bg-error changes in a mode, this would still recalculate fine, right? It's just a bit harder to actually set it there when working with tooling.
+
+#todo - how does the problem work if you want to set an alternative CSS value based on some other class? e.g.
+```css
+.swan {
+	--swan-comp-button-primary-color-bg-hover: var(--swan-comp-button-primary-color-bg);
+}
+
+// Hover is red
+.swan {
+	--swan-comp-button-primary-color-bg: red;
+}
+
+// Hover is blue (wrong)
+.swan .accent {
+	--swan-comp-button-primary-color-bg: blue;
+}
+```
 
 #todo - what's the best solution here? is it a closure-like problem where you take a component-level token created in `default-theme`, and then use that value internally? e.g.
 ```css
@@ -82,8 +100,11 @@ Once you start mixing where a token can be set (e.g. root level vs mode level vs
 	--internal-alert-bg: var(--sem-bg-warning);
 }
 ```
+#todo - need to test if the above works. But in theory...
 That way you can avoid unnecessary CSS property declarations (background-color), as well as ensure you're not modifying semantic/component level tokens used in other calculations. It aims to make a clean line between public and private. We're not changing component-level tokens outside of their initial declaration, but we can change 'internal variables' (these are not necessarily tokens) at the component level.
 
 https://dev.to/afif/what-no-one-told-you-about-css-variables-553o#9-they-only-work-from-parent-to-child
+
+[[20220822094537-themeable-design-systems]]
 
 [[css]]

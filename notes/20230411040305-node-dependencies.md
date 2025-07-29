@@ -19,7 +19,10 @@ Additionally, running `npm install` in `production` mode, or running `npm instal
 Peer Dependencies are automatically installed in npm 7+ [[20230315102941-npm-7-peer-dependencies]]. Usually used for plugins, kind of like an [[20210705094040-inversion-of-control]]
 The plugin itself doesn't use the Peer Dependency ('host'), but the developer usually puts the two together. Thus the plugin states its compatibility, but relies on the developer to use the host and plug the two together.
 
-#todo - Are you able to import from/use a specified peer dependency? I would imagine no - otherwise it's a regular dependency. Using it for tests might be a weird middle ground
+You can still import from peer dependencies, it's just expected that your package doesn't provide it.
+Peer dependencies should never be bundled.
 
+[[buildtooling]]
+[[dependencies]]
 [[node]]
 [[npm]]

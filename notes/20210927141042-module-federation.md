@@ -15,6 +15,10 @@ Imagine each page being a separate microfrontend, with its own tooling, code, re
 
 Be careful of vendor lock in here. Although this technology is still quickly developing, it's mostly tied to [[webpack]] and it's derivatives. [[vite]] does have support, but from my understanding it works slightly differently. [[20220628012715-import-maps]]
 
+Note that if you have a model where an import map is populated at run-time, large risks open up. Effectively, integration is now done at run-time, not build-time. If something goes wrong, the effects could be catastrophic. Additionally, a library/component owner now has ownership of deploys, without ownership of consumption. A small innocuous update to a library could potentially break everything.
+	Note this is only the case if the [[20220628012715-import-maps]] is fetched at runtime, as opposed to build time. It may also only exist if there's *one* import map, rather than separate import maps owned by page owners or some other line.
+
+
 Single-spa was a framework(?) or library(?) in this space. Module federation is mostly an alternative to using single-spa, but can be used in conjunction.
 https://single-spa.js.org/docs/recommended-setup/#overview
 

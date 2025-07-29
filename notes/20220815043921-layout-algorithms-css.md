@@ -1,4 +1,4 @@
-# Layout modes in CSS
+# Layout algorithms in CSS
 
 Rather than thinking about [[css]] as a bunch of unrelated properties, think of them as connected layout algorithms.
 
@@ -15,7 +15,7 @@ Given a property like `z-index`, this will actually have no effect in Flow layou
 
 Another example is that something as ubiquitous as `width` works differently in Flow and Flexbox. Flexbox only uses it as a suggestion, whereas Flow considers it a rule. It's not a quirk of Flexbox, it's a deliberate implementation difference.
 
-Properties require the context of the layout mode to work. In order to understand CSS, consider the layout mode you're workng in.
+Properties require the context of the layout mode to work. In order to understand CSS, consider the layout mode you're working in.
 
 [[css]]
 [[layout]]

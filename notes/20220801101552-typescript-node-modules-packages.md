@@ -8,4 +8,3 @@ It's expected for all dependencies to be transpiled - Webpack will not transpile
 [[js]]
 [[npm]]
 [[ts]]
-[[webpack]]

@@ -6,5 +6,6 @@ Using `--force` will ignore the conflict and install the peer dependencies anywa
 
 Using `--legacy-peer-deps` ignores the peer dependencies, similar to the behaviour of older NPM versions.
 
+[[buildtooling]]
 [[node]]
 [[npm]]

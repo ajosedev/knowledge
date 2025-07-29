@@ -12,4 +12,6 @@ rgf () {
 
 https://vladimirzdrazil.com/posts/fuzzy-search-through-files-in-visual-studio-code/
 
+Seems like you can now do this in VSCode with CMD+P and `%` as a search term
+
 [[shell]]
