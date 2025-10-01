@@ -10,5 +10,7 @@ A better solution is to just not disable the button. In most cases you'll have f
 
 If that's not possible, use `aria-disabled` instead, as it keeps it in the focus order so keyboard users can know the button exists.
 
+https://kittygiraudel.com/2024/03/29/on-disabled-and-aria-disabled-attributes/
+
 [[a11y]]
 [[html]]

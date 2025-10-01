@@ -6,6 +6,7 @@ Explain things directly
 Don't add fluff words that aren't necessary (easy, simple, just, etc)
 Don't say it's easy, show them it's easy
 	You can do this by explaining things in a clear manner, properly showing tradeoffs, etc. You effectively leave them thinking that your idea is an idea that makes sense.
+	"Show, don't tell"?
 
 Use plain language
 Keep it simple

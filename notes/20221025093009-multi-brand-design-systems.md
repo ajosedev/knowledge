@@ -18,6 +18,10 @@ I'm a bit unsure about setting a default core vs requiring everything to be set 
 
 A lot of this work then becomes people problems rather than technical problems. A single design system across brands means that design system needs to support everyone, and appropriately weigh up the requests of one brand to another. If your brands have subtly different goals, this can get even more difficult. When can you find the time to make a component that is only used on a subset of brands? Something like [[20220704011551-tiered-design-systems]] can help here.
 
+I think one thing that's important for multi-brand design systems to bring value related to the business needs. e.g a design system for e-commerce will have certain components, functionalities, and more that make building an e-commerce site easy, and with a high quality output.
+Many design systems offer more functionality than an in-house design system, but they have to be generic and unopinionated. The opinions of a multi-brand design system are a pro, not a con. They bring consistency, they bring foundations, they solve problems in a designed and tested, way. e.g. you've built a design system for e-commerce - and you have solved problems in that space in the best way.
+Additionally, there's going to be a lot of base and foundations that you get for 'free' - e.g. simple things like radio buttons and checkboxes are designed with a level of skill that you may not get from open source design systems. Even things like font stacks, spacing, layout tools, etc.
+
 ---
 
 #breakdown - interoperable design systems, and different ways of making things multibrand?
@@ -37,6 +41,7 @@ https://www.supernova.io/blog/eight-multi-brand-design-systems-elevating-global-
 [[20220822094537-themeable-design-systems]]
 [[202310041150420-design-system-themes-brands-modes]]
 [[20250618022116-types-of-multi-brand-design-systems]]
+[[Yesenia Perez-Cruz - Scenario-Driven Design Systems]]
 
 [[designsystem]]
 [[designsystembranding]]

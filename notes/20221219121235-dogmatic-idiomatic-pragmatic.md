@@ -17,5 +17,6 @@ By writing idiomatic code, it should help enable consistency and understanding f
 
 Separate baseless opinions and preferences in favour of what's more objectively best.
 
+[[communication]]
 [[concepts]]
 [[engineering]]

@@ -10,6 +10,7 @@ A `Bleed` component can do this. Using negative margins, we can exceed to conten
 The tricky part is knowing how much to 'bleed'. Since this is a value set by the parent, there's maintenance difficulty if that value changes. If the two values are co-located it's easy, but this is not often the case.
 
 Some solutions for this:
+- Provide the value through a CSS variable which the Bleed component can read from
 - Provide the padding through some sort of context-like API or theme
 - Use semantic tokens, e.g. `space--card-padding` [[20210927144324-design-tokens]]
 - etc

@@ -46,6 +46,8 @@ Less importantly, but still usefully, these keys can also be used as values, e.g
 
 Depending on the amount of customisation you need, you can get away with just changing the values in Tier 1 and 2. The Tier 3 tokens just give you more fine-grained control, as required.
 
+Note that I think for a themeable system to work, your Tier 1 needs to start introducing some semantics around brand. e.g. if you use a lot of blues for your brand, that should maybe be named your `brand` palette. Then other things are more neutral, like greys, or even reds (which are often used for errors). Alternate themes can then change the brand colour as needed.
+
 This can be used for more than a multi-brand design system. Each of these are a different level of theming, and change different tiers as needed:
 - Sub-brands: core + brand-theme + sub-brand-theme
 - White-labelling: core + brand-theme + white-label-theme

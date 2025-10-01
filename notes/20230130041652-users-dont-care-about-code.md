@@ -6,7 +6,9 @@ Thus their expectations and goals aren't software related either. Ensure you fig
 
 As your knowledge of the domain improves, you'll be able to make better suggestions to help achieve their goals.
 
-[[20220509010256-engineers-business-value]]
+This is also true for the leadership of a business: [[20220509010256-engineers-business-value]]
 
+[[career]]
 [[customers]]
+[[engineering]]
 [[product]]

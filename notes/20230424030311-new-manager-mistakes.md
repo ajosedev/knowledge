@@ -11,4 +11,5 @@ Don't micromanage, but also don't throw people into the deep end. Don't just tel
 Don't angst on hypotheticals when you can solve them by asking someone. Think you've annoyed someone? Just ask them. It gets you the answer much quicker, and puts you in a position to solve the problem if necessary.
 
 [[career]]
+[[engineering]]
 [[management]]

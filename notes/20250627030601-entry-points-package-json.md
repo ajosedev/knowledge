@@ -44,8 +44,11 @@ I've found the best usage to be something like the following, taken from `clsx`:
 }
 ```
 
+Note that if you use `exports`, only the paths you have allowed for are now valid. You can no longer use deep imports, which is both good and bad.
+
 [[20250627100132-js-module-types]]
 
+https://hirok.io/posts/package-json-exports
 https://stackoverflow.com/questions/68572936/what-is-the-difference-between-main-and-module-vs-exports-in-package-json
 
 [[buildtooling]]
