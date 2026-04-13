@@ -13,6 +13,8 @@ However this doesn't mean engineers are necessarily the primary audience. It can
 
 That all being said, the primary audience for your _documentation_ may be different.
 
+https://www.shaunbent.co.uk/blog/is-there-too-much-design-in-design-systems/
+
 [[communication]]
 [[designsystem]]
 [[documentation]]

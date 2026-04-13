@@ -8,4 +8,6 @@
 
 #todo
 
+[[20251231021811-juniors-rationale]]
+
 [[career]]

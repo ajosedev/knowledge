@@ -15,4 +15,6 @@ Note that applying the RAPID model adds overhead which is not always necessary f
 
 https://www.bain.com/insights/rapid-tool-to-clarify-decision-accountability/
 
+[[decisions]]
+[[documentation]]
 [[product]]

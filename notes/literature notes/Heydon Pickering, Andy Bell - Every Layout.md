@@ -10,7 +10,11 @@ Switcher layout: [[20210830102331-flexbox-holy-albatross]]
 
 Most other things are undocumented as they are fairly straightforward, or are otherwise distilled into notes.
 
+The key takeaway is to let the browser decide things, rather than micromanaging it. [[20251030063907-intrinsic-design]]
+
+https://www.youtube.com/watch?v=5uhIiI9Ld5M
+
 [[css]]
-[[intrinsiclayout]]
+[[intrinsicdesign]]
 [[layout]]
 [[responsivedesign]]

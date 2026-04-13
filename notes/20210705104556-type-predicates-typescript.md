@@ -8,7 +8,9 @@ function isFish(pet: Fish | Bird): pet is Fish {
 }
 ```
 
-As of TS 5.5, the return type is no longer necessary, making for less brittle predicates: https://www.totaltypescript.com/type-predicate-inference
+As of TS 5.5, the return type is no longer necessary, making for less brittle predicates: https://www.totaltypescript.com/type-predicate-inference. The function itself does the narrowing, not the annotation.
+
+This is a form of 'type guard'.
 
 [[20210705102809-ts-narrowing]]
 

@@ -40,7 +40,7 @@ or re-declaring the calculation as the reassignment is done.
 }
 ```
 
-This is especially relevant for [[20211029153348-semantic-design-tokens]], where tokens often read from one another. If you have a semantic token that changes its value in a 'mode', any other token that references the changing semantic token will suffer this problem. For example:
+This is especially relevant for [[20211029153348-semantic-design-tokens]], where tokens often read from one another. If you have a semantic token that changes its value in a 'mode' (or theme), any other token that references the changing semantic token will suffer this problem. I've sometimes referred to this as the 'derived tokens' problem. For example:
 
 ```css
 .swan {
@@ -57,6 +57,8 @@ This is especially relevant for [[20211029153348-semantic-design-tokens]], where
 ```
 
 For the SWAN tokens re-architecture, we had custom code that any token (token A) that (recursively) read from another token which changed in a mode (token B), (token A) would be re-set in the mode. i.e. it re-declared the calculation as mentioned above.
+
+The alternative method is that whenever you change tokens, you force a recalculation of all tokens. In the above example, this would mean setting `.swan .swan-dark-mode` on the appropriate element, meaning it both sets dark mode, but re-calculates everything necessary.
 
 This is also true for component tokens, which by their nature usually read from a semantic token. If you are using CSS variables to control things more similar to 'state', consider separating the idea of a token from a CSS variable. i.e. calculating a width of a component is 'state', and thus should be done with non-token CSS variables all of which are set and read from the component-level class.
 

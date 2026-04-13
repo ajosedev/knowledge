@@ -8,4 +8,6 @@ However there's more focus on refreshing things, or iterating on existing things
 
 It's in the realm of gardeners vs builders in general software engineering. Platform feels closer to a garden to me
 
+https://blog.jessfraz.com/post/the-art-of-closing/
+
 [[engineering]]

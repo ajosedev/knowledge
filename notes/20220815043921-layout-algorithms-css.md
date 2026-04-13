@@ -17,5 +17,7 @@ Another example is that something as ubiquitous as `width` works differently in 
 
 Properties require the context of the layout mode to work. In order to understand CSS, consider the layout mode you're working in.
 
+Keywords: layout mode, layout system
+
 [[css]]
 [[layout]]

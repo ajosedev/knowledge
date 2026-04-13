@@ -4,6 +4,8 @@ I often struggle with telling people how to write better tests, and it's usually
 
 The question is then "what is testable code?", but that's a bit tricky. Because there's so many things. Some examples:
 
+Part of this is also writing atomic tests. Tests should be independent of one another (very important), but also ideally testing a single thing.
+
 [[20221010033955-single-responsibility-principle]]
 [[20220801022400-explicit-dependencies-principle]]
 [[20210202103254-coupling-cohesion]]

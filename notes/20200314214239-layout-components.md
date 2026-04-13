@@ -19,5 +19,6 @@ https://mxstbr.com/thoughts/margin/
 
 [[components]]
 [[css]]
+[[intrinsicdesign]]
 [[layout]]
 [[space]]

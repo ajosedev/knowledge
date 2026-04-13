@@ -17,5 +17,9 @@ A key issue with animations/transitions in [[css]] is being unable to animate to
 
 This can be used to animate to any keyword, such as `fit-content`, `max-content`, etc.
 
+You can also use [[20250120121930-calc-size]], which lets you get a similar result without having to use `interpolate-size`.
+
+https://developer.chrome.com/docs/css-ui/animate-to-height-auto
+
 [[animations]]
 [[css]]

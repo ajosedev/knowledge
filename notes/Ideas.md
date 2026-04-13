@@ -36,92 +36,6 @@ pre-mortem and post-mortem
 
 ---
 
-gridless.design
-
-TODO - figure out how this intersects with a 'intrinsic layout' doc. Is there a 'why breakpoints are bad' doc?
-
-Grid refers to the n-column grid designers use, not something like CSS Grid
-
-Originally created for print, where the content and the layout are connected together. Don't have to deal with different screen sizes, font sizes, zooms, dynamic content, etc.
-
-Designers design with specific breakpoints and dimensions. Sometimes these are multiple, but they don't show the in-between sizes.
-
-Goes against [[responsivedesign]] sometimes, but definitely always goes against [[intrinsiclayout]]
-
-"Layouts shouldn’t shift because of the device size, it should shift due to the content not fitting in the current layout."
-
-Using min/max width with margin: auto works well instead of adhering to a grid. e.g. page gutters can grow and shrink as needed but the content will stay the same size until it needs to change.
-
-CSS Grid can better replicates the n-column grid, but only affects its direct descendents (until subgrid (TODO - link)). Paradoxically, CSS Grid shines in creating intrinsic layouts, allowing for content to wrap to new rows, dynamic column sizes, extra flexibility, etc.
-
-Elements don't equally shrink together. Using a n-column grid means that every column shrinks and grows equally. Often more consideration is required, such as shrinking down the gap between them.
-
-Given a layout of text (3 columns), gap (4 columns) and an image (7 columns), shrinking the viewport size will immediately make the text wrap more before the gap is relatively shrunk. Some elements scale, other element's shouldn't.
-
-Usually the content needs to be prioritised, where as n-columns consider everything equal.
-
-n-column grids work as good guides, but there's more to consider as part of the handoff.
-
-[[css]]
-[[design]]
-[[intrinsiclayout]]
-[[responsivedesign]]
-
----
-
-
-Intrinsically responsive layout
-
-aka Intrinsic Layout, or Instrinsic Web Design, or 'The New Responsive'
-
-e.g. don't use media breakpoints
-
-- breakpoints are generally bad
-- doesn't fit with dynamic content
-- intrinsically responsive
-	- That is, it will wrap and reconfigure internally to make sure the content is visible (and well-spaced) to fit any context/screen.
-	- You may feel compelled to add @media query breakpoints, but these are considered “manual overrides” and Every Layout primitives do not depend on them.
-	- works better in a component world
-- Avoid magic numbers
-- CSS Grid intrinsic layout?
-- "The problem with this approach (media breakpoints) is it goes against content-first design"
-- "Content should be dictating the layout and layout should adjust to the available space. This means that smaller components of the page need to respond to the size of their closer ancestors. Changing the layout of buttons in a card isn’t because the page size is small, it’s because the card size is small."
-- resizeObserver helps here
-
-https://gridless.design/for-developers
-
-#todo - watch Jen Simmons' videos on these https://labs.jensimmons.com/
-#todo - https://www.youtube.com/watch?v=5uhIiI9Ld5M
-
-[[20211115081243-container-queries]]
-
-[[intrinsiclayout]]
-[[responsivedesign]]
-
----
-
-intrinsic/extrinsic web design
-
-how does this interact with designer columns
-
-how does this interact with 'declarative design'?
-
-https://adactio.com/journal/18982
-
-> Be the browser’s mentor, not its micromanager.
-
->We say CSS is “declarative”, but the more and more I write breakpoints to accommodate all the different ways a design can change across the viewport spectrum, the more I feel like I’m writing imperative code. **At what quantity does a set of declarative rules begin to look like imperative instructions?**
-
->They all focus on creating the right _inputs_ rather than trying to control every possible _output_. Leave the final calculations for those outputs to the browser—that’s what computers are good at.
-
----
-
-intrinsic css functions
-
-https://moderncss.dev/contextual-spacing-for-intrinsic-web-design/
-
----
-
 Declarative vs Imperative design systems
 
 Following on from the ideas of 'declarative design' or the methodology used by intrinsic/extrinsic design (TODO - links), is the idea of 'declarative design systems'.
@@ -371,13 +285,10 @@ esp difference between -items and -content
 
 Note: https://www.rawkblog.com/2018/03/css-grid-understanding-grid-gap-and-fr-vs-auto-units/
 
+link to something about display: contents
+
 subgrid: https://ishadeed.com/article/learn-css-subgrid/
 [[cssgrid]]
-
----
-
-flexbox primer
-[[flexbox]]
 
 ---
 
@@ -408,12 +319,29 @@ http://blogs.newardassociates.com/blog/2023/you-want-modules-not-microservices.h
 
 #todo
 How do browsers handle fractional pixels? Rounding? Something different?
+How do you deal with subpixel rendering?
+	Sometimes things round and are off by 1px
+	https://medium.com/design-bootcamp/addressing-sub-pixel-rendering-and-pixel-alignment-issues-in-web-development-cf4adb6ea6ac
 Different for Retina? In general how does pixel density (PPI?) work here?
 Physical pixels vs virtual pixels
 https://www.reddit.com/r/webdev/comments/v7xrad/how_do_fractional_pixel_measurements_work/
 How it corresponds to resolution. I think 'native' resolution plays a factor here - as soon as you are not using the maximum resolution of a device, you start to change the relationship between physical and virtual pixels? Can emulate Retina that way?
 PPI of phones is a lot better than PPI of monitors?
-[[20201223162830-subpixel-rendering]] - this might be renaming
+
+
+There's also 'Device Pixel Ratio (DPR)'
+```
+**Screen size (resolution)** is the number of physical pixels present on a screen.
+
+**Viewport** or **Viewport size** is the number of software pixels (CSS pixels) present on a screen. Usually, viewport size displays as viewport width in pixels to viewport height in pixels.
+
+**Device Pixel Ratio (DPR)** or **CSS Pixel Ratio** is the ratio between the physical pixels (screen size or resolution) and CSS pixels (viewport). Depending on device specification, one CSS pixel can equal one or mode physical pixels. Modern devices have screens with high pixel density resulting in the difference between screen size (resolution) and viewport.
+
+**Summary:**  
+Screen Size (Resolution) = Viewport size × Device Pixel Ratio.  
+Viewport size = Screen Size (Resolution) / Device Pixel Ratio.  
+CSS Pixel Ratio = Screen Size (Resolution) / Viewport size.
+```
 
 How does this then work with breakpoints and media queries?
 What is a CSS pixel? How does it relate to device pixels? Is there a standard?
@@ -648,10 +576,19 @@ Proper breakdown on inline-block vs block vs inline
 	I know inline-block has a lot of gotchas, e.g. vertical margin/padding doesn't work but horizontal does
 How does inline-flex work in here too?
 
-Also intersects with [[20221219123110-intrinsic-sizes]] and maybe even [[intrinsiclayout]]. Especially around block not needing to be 100% width
+Also intersects with [[20221219123110-intrinsic-sizes]] and maybe even [[intrinsicdesign]]. Especially around block not needing to be 100% width
 
 https://stackoverflow.com/questions/9189810/css-display-inline-vs-inline-block
 https://css-tricks.com/when-do-you-use-inline-block/
 
+[[20210726164300-line-height-css]]
+
 ---
 
+display: contents can be harmful
+
+quite annoying for CSS grid
+CSS subgrid can help? maybe?
+
+https://ericwbailey.design/published/display-contents-considered-harmful/
+https://adrianroselli.com/2022/07/its-mid-2022-and-browsers-mostly-safari-still-break-accessibility-via-display-properties.html

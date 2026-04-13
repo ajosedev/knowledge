@@ -17,4 +17,4 @@ This is great for removing the space at the bottom of containers - common when u
 https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/
 
 [[css]]
-[[intrinsiclayout]]
+[[intrinsicdesign]]

@@ -45,5 +45,5 @@ https://css-tricks.com/css-container-queries/
 https://www.joshwcomeau.com/css/container-queries-introduction/
 
 [[css]]
-[[intrinsiclayout]]
+[[intrinsicdesign]]
 [[responsivedesign]]

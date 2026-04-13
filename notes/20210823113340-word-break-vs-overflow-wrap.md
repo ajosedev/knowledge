@@ -15,6 +15,8 @@ The difference between the latter two is prevalent when dealing with flex, as th
 - `break-word` - deprecated, and has the same behaviour as `word-break: normal; overflow-wrap: anywhere`
 CJK text is used as an example in the W3C spec but the property isn't only used for CJK text. Although it does have different behaviour based on how the browser treats 'words', etc from other languages/alphabets.
 
+>**Note:** In contrast to `word-break: break-word` and `overflow-wrap: break-word`, `word-break: break-all` will create a break at the exact place where text would otherwise overflow its container (even if putting an entire word on its own line would negate the need for a break).
+
 `overflow-wrap` seems to deal with words, where as `word-break` deals more with letters?
 
 [[css]]

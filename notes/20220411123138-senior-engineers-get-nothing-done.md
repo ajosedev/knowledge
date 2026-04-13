@@ -7,6 +7,8 @@ To help protect your time and use it most efficiently, there's two strategies:
 Timeboxing - block off your calendar so you can get certain things done, e.g. 'focus time'.
 Optimisation - when someone asks you a question, document the answer. Next time someone asks you the same question, you can just re-give the same answer.
 
+Writing can be a large part of this force multiplication [[20211203043016-writing-saves-time]].
+
 [[career]]
 [[engineering]]
 [[management]]

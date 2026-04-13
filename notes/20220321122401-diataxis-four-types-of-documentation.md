@@ -1,6 +1,6 @@
-# The four types of documentation
+# Diataxis - The four types of documentation
 
-There are four different types of documentation, each with their own goals and advantages. Differentiating these types before writing helps the author how, what, and where to write. This should result in better and clearer documentation.
+Per the Diataxis model, there are four different types of documentation, each with their own goals and advantages. Differentiating these types before writing helps the author how, what, and where to write. This should result in better and clearer documentation.
 
 ## Tutorials
 **Learning-oriented**
@@ -33,7 +33,7 @@ Technical descriptions of the machinery and how to operate it. They aim to descr
 Reference docs are often blander and to the point than other documentation. Often used by those looking for information how to use a specific thing, they should aim to be clear and concise.
 
 
-https://documentation.divio.com/
+https://diataxis.fr/
 
 [[documentation]]
 [[writing]]

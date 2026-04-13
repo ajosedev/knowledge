@@ -5,6 +5,8 @@
 3. **Federated**. “_Designers from multiple product teams decide on the system together._”
 4. **Cyclical.** A combination of the 2 & 3, where the centrailised 'core team' act as a librarian and facilitate with users outside of the team that keep the DS accurate, current, and useful.
 
+Note that I've seen a few articles that argue against a federated model, mostly pointing out the same problem - when everyone owns something, no-one does. https://www.shaunbent.co.uk/blog/why-federated-design-systems-keep-failing/
+
 https://medium.com/eightshapes-llc/team-models-for-scaling-a-design-system-2cf9d03be6a0
 https://medium.com/salesforce-ux/the-salesforce-team-model-for-scaling-a-design-system-d89c2a2d404b
 https://medium.com/@nathanacurtis/the-fallacy-of-federated-design-systems-23b9a9a05542

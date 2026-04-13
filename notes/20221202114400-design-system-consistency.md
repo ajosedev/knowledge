@@ -13,7 +13,7 @@ You can build in flexibility through different levers in the design system:
 - Behaviour
 https://bradfrost.com/blog/post/pattern-variations/
 
-Important to keep in mind for [[20221025093009-multi-brand-design-systems|multi-brand design systems.]]
+Important to keep in mind for [[20221025093009-multi-brand-design-systems|multi-brand design systems.]] If you only change a few of these 'layers', you likely cannot get a design system that has differentiating brand expression. You'll get something closer to 'skins'.
 
 https://amyhupe.co.uk/articles/should-consistency-be-a-goal-for-design-systems/
 

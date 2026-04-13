@@ -15,5 +15,6 @@ Then, use `:s` as normal, appending it to the current range, e.g:
 ```
 
 [[20220520101538-smart-find-replace-emacs]]
+[[20221219100749-vim-substitution-command]]
 
 [[vim]]

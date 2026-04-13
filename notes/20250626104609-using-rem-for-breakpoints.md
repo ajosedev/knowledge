@@ -6,7 +6,7 @@ However this implementation doesn't support if a user increases their base font 
 
 Using `rem` or `em` for breakpoints helps solve this, and better supports WCAG 1.4.4 and 1.4.10.
 
-Going further, there's also the idea that using breakpoints at all is a bit outdated (#todo - [[intrinsiclayout]])
+Going further, there's also the idea that using breakpoints at all is a bit outdated (#todo - [[intrinsicdesign]])
 
 [[20211115081243-container-queries]]
 [[20250516122443-fractional-media-queries]]

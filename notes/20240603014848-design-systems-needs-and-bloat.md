@@ -6,8 +6,12 @@
 
 I personally heavily agree with this. Before adding things to a design system, you should really question **why**. A lot of the time a need is not a need, it's just a want.
 
+>Rule #1 of open-source: no is temporary, yes is forever.
+
 https://pjonori.blog/posts/design-systems-are-a-people-job/
+https://blog.jessfraz.com/post/the-art-of-closing/
 
 [[20231219102038-combinatorial-explosion]]
+[[20250514103019-owning-a-platform]]
 
 [[designsystem]]

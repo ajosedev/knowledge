@@ -24,3 +24,4 @@ https://www.tempertemper.net/blog/using-image-aspect-ratios-to-avoiding-janky-pa
 
 [[browsers]]
 [[css]]
+[[layout]]

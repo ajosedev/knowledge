@@ -35,7 +35,10 @@ https://heydonworks.com/article/the-flexbox-holy-albatross-reincarnated/
 
 Every layout calls this the 'Switcher' layout.
 
+This is likely easier to do with [[20211115081243-container-queries]] now.
+
 [[css]]
-[[intrinsiclayout]]
+[[flexbox]]
+[[intrinsicdesign]]
 [[layout]]
 [[responsivedesign]]

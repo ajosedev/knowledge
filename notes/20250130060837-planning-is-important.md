@@ -4,6 +4,8 @@ Senior+ engineers focus on thinking ahead, planning work, alignment, among other
 
 Remember that this work is important. This is where your value is! Hours of planning can save weeks of coding.
 
+Going even further, 'planning' can be about seeing trends and consolidating before you sink any time in. You can connect dots that others miss, and even go as far to spiking out work and ideas before presenting it to the team.
+
 >The coding may be slowing you down! A bottleneck to your value. You'll have a much bigger impact by getting 5 engineers aligned and pulling in the same direction than by trying to do the work yourself.
 
 > My job is not to build a winning car for next race. My job is to create a system that builds a winning car for every race.

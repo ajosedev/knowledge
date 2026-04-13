@@ -22,16 +22,6 @@ I think one thing that's important for multi-brand design systems to bring value
 Many design systems offer more functionality than an in-house design system, but they have to be generic and unopinionated. The opinions of a multi-brand design system are a pro, not a con. They bring consistency, they bring foundations, they solve problems in a designed and tested, way. e.g. you've built a design system for e-commerce - and you have solved problems in that space in the best way.
 Additionally, there's going to be a lot of base and foundations that you get for 'free' - e.g. simple things like radio buttons and checkboxes are designed with a level of skill that you may not get from open source design systems. Even things like font stacks, spacing, layout tools, etc.
 
----
-
-#breakdown - interoperable design systems, and different ways of making things multibrand?
-#todo
-Theming two different different design systems to be interoperable is difficult, and maybe not even possible. Often not all components have a 1:1 replacement, meaning you're using different APIs, conventions, layout, abstractions, etc. Ideally, most things are achieved through [[designtokens]]. But depending on the flexibility between brands, that may or may not be possible. Once you get outside the realm of tokens (think, functionality), the complexity grows quickly.
-
-A somewhat similar approach is to make your components brandless, and each brand can compose them into something that fits their brand. This approach probably relies on each brand bringing more to the table, as many components won't exist in the base. https://www.designsystems.com/the-forge-harrys-approach-to-multi-brand-design-systems/
-
-Alternatively, align on a visual language, with separate codebases. Akin to Material Design which has different implementations, this allows you some wiggle room while still achieving cohesion across different brands. It becomes blurry on if this is one design system or multiple, but there's wiggle room as needed.
-
 https://saleena.design/portfolio/project-5/
 https://medium.com/bts-design-team/building-a-multi-brand-design-system-79469d425bf3
 https://uxdesign.cc/challenges-of-multi-brand-design-systems-42d7e7b1d18c

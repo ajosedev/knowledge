@@ -5,7 +5,7 @@ Usually to position a popover or a menu, you'd have to use absolute positioning 
 - **Anchor:** This is the element used as a reference for positioning other elements, hence the _anchor_ name.
 - **Target:** This is an absolutely positioned element placed relative to one or more anchors. The _target_ is the name we will use from now on, but you will often find it as just an “absolutely positioned element” in the spec.
 
-There's quite a lot of functionality in the spec, allowing for multiple fallbacks, overflow behaviour, custom positioning, etc.
+There's quite a lot of functionality in the spec, allowing for multiple fallbacks, overflow behaviour, custom positioning, etc. Work has begun on anchor container queries, which lets you use [[20211115081243-container-queries]] to be aware of its anchor positioning.
 
 ```css
 .anchor {

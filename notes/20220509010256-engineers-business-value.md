@@ -22,8 +22,10 @@ Anecdotally the people that exude product thinking are the ones that get promote
 
 To categorise things, maybe 'business' is large scale and product is slightly smaller? Anecdotally I'm better at the latter. As you become more senior, your scale gets larger. Product managers naturally have a larger scale too as that's their job. When you are more junior, you need to consider more things like small technical tradeoffs.
 
-Either way you still need to consider the justification of why you're doing something. Ask the right questions, make the tradeoffs, thinking about effort/reward.
+Either way you still need to consider the justification or rationale of why you're doing something. Ask the right questions, make the tradeoffs, thinking about effort/reward.
 [[20231006045323-five-whys]]
+
+Going even further, you're not responsible for just evaluating priorities, you're responsible for populating and defining priorities. Finding the work that should be done. https://swizec.com/blog/the-job-behind-the-job-of-a-high-level-ic/
 
 [[20250728012225-valuable-work-done]]
 

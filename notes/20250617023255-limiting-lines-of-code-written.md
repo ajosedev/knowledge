@@ -2,7 +2,7 @@
 
 As I become more senior, more of my job becomes around planning, managing scope, maintenance, balancing priorities, etc.
 
-As such, my personal priorities shift towards reducing the amount of work ongoing for myself and my team, at any one point. Jokingly, the goal is to 'do as little work as possible' (while of course, still hitting your goals).
+As such, my personal priorities shift towards reducing the amount of work ongoing for myself and my team, at any one point. Somewhat jokingly, the goal is to 'do as little work as possible' (while of course, still hitting your goals).
 
 Large parts of this are helping manage things like [[20230411101852-scope-creep]], or generally considering maintenance cost [[20250514103019-owning-a-platform]].
 

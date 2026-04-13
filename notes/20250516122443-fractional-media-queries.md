@@ -51,7 +51,7 @@ However, in these situations, range context queries (which are not limited to â€
 
 https://stackoverflow.com/questions/70120238/do-i-consider-decimal-point-of-px-in-media-query
 
-[[20201223162830-subpixel-rendering]]
+[[20201223162830-subpixel-rendering-animations]]
 
 [[browsers]]
 [[css]]

@@ -18,6 +18,4 @@ This treats each span as effectively a block element, meaning text wraps within 
 ```
 This keeps the text wrapping more natural, where individual words will wrap to a new line without breaking everything.
 
-[[20250401103724-flexbox]]
-
 [[flexbox]]
