@@ -6,7 +6,7 @@ Remember that CSS variables flow down from the parent to the child only. This in
 .default-theme {
   --c1: red;
   --c2: blue;
-  --grad: linear-gradient(var(--c1),var(--c2);
+  --grad: linear-gradient(var(--c1),var(--c2));
 }
 
 .box {
@@ -35,12 +35,12 @@ or re-declaring the calculation as the reassignment is done.
 ```css
 .box {
   --c1: green;
-  --grad: linear-gradient(var(--c1),var(--c2);
+  --grad: linear-gradient(var(--c1),var(--c2));
   background: var(--grad);
 }
 ```
 
-This is especially relevant for [[20211029153348-semantic-design-tokens]], where tokens often read from one another. If you have a semantic token that changes its value in a 'mode' (or theme), any other token that references the changing semantic token will suffer this problem. I've sometimes referred to this as the 'derived tokens' problem. For example:
+This is especially relevant for [[20211029153348-semantic-design-tokens]], where tokens often read from one another. If you have a semantic token that changes its value in a 'mode' (or theme), any other token that references the changing semantic token will suffer this problem. I've sometimes referred to this as the 'derived tokens' problem, or the difference between implicit and explicit tokens. For example:
 
 ```css
 .swan {
@@ -58,7 +58,7 @@ This is especially relevant for [[20211029153348-semantic-design-tokens]], where
 
 For the SWAN tokens re-architecture, we had custom code that any token (token A) that (recursively) read from another token which changed in a mode (token B), (token A) would be re-set in the mode. i.e. it re-declared the calculation as mentioned above.
 
-The alternative method is that whenever you change tokens, you force a recalculation of all tokens. In the above example, this would mean setting `.swan .swan-dark-mode` on the appropriate element, meaning it both sets dark mode, but re-calculates everything necessary.
+The alternative method is that whenever you change tokens, you force a recalculation of all tokens. In the above example, this would mean setting `.swan .swan-dark-mode` on the appropriate element, meaning it both sets dark mode, but re-calculates everything necessary. However this can run into issues when a theme could beat out another theme by using an explicit token vs an implicit token.
 
 This is also true for component tokens, which by their nature usually read from a semantic token. If you are using CSS variables to control things more similar to 'state', consider separating the idea of a token from a CSS variable. i.e. calculating a width of a component is 'state', and thus should be done with non-token CSS variables all of which are set and read from the component-level class.
 

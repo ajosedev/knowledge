@@ -12,5 +12,12 @@ type DataKeys = keyof Data; // "x" | "y"
 type Keys = keyof typeof dataObj;
 ```
 
+You can also get a type based on the object's values:
+```ts
+const dataObj = { x: 'foo', y: 1 };
+
+type Values = (typeof dataObj)[keyof typeof dataObj];
+```
+
 [[js]]
 [[ts]]
