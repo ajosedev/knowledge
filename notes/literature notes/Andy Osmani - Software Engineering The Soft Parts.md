@@ -5,6 +5,7 @@ Read: 31/12/25
 https://addyosmani.com/blog/software-engineering-soft-parts/
 
 ---
+#breakdown #todo 
 
 ```
 #### Technical mastery implies a high ratio of value shipped to hours worked.

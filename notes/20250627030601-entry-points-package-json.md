@@ -7,7 +7,7 @@ There's three different ways of dictating the entry point of your package in a `
 `main` is supported in all versions of Node, but doesn't have much flexibility. It's recommended to still use it for backwards compatibility of other tools/plugins.
 `exports` allows multiple entry points to be defined, including different entry points depending on environments, such as CJS/ESM. `exports` takes priority over `main`, in supported versions.
 
-Note that `module` is still used by Typescript is `moduleResolution` is set to `node`. 
+Note that `module` is still used by Typescript if `moduleResolution` is set to `node`. 
 
 I've found the best usage to be something like the following, taken from `clsx`:
 ```json
@@ -44,7 +44,7 @@ I've found the best usage to be something like the following, taken from `clsx`:
 }
 ```
 
-Note that if you use `exports`, only the paths you have allowed for are now valid. You can no longer use deep imports, which is both good and bad.
+Note that if you use `exports`, only the paths you have allowed for are now valid. You can no longer use deep imports (aka wildcard imports, e.g. `@package/nested/file`), which is both good and bad. You can re-export a wildcard like `/*` to allow this explicitly.
 
 [[20250627100132-js-module-types]]
 

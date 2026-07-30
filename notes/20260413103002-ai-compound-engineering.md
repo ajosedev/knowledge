@@ -5,9 +5,12 @@ The core philosophy of compound engineering is that each unit of engineering wor
 Compound engineering uses a four-step loop:
 Plan (incl Brainstorm) → Work → Review → Compound → Repeat
 
+Note: CE now mentions this as 6 steps: Brainstorm -> Plan -> Work -> Simplify -> Review -> Compound
+	This sort of adds to my feeling that the overall idea is sound and inline with [[20260528095327-ai-sdlc]], but the exact plugin is still not a science.
+
 Without the fourth step, it's basic software engineering with AI assistance. The loop should be used whether  you are fixing a bug in five minutes or building a feature over several days. You just spend more or less time on each step.
 
-The plan and review steps should comprise 80 percent of an engineer's time, and work and compound the other 20 percent. In other words, most thinking happens before and after the code gets written.
+The plan and review steps should comprise 80 percent of an engineer's time, and work and compound the other 20 percent. In other words, most thinking happens before and after the code gets written. Remember when using Compound Engineering to actually read the MD files. If you embrace the vibe coding philosophy, you need to devote time to reviewing any instruction files thoroughly. These are what is guiding your AI, and will matter for the future.
 
 In the Compound step, these are the actions you should take:
 - **Capture the solution.** Ask yourself: What worked? What didn't? What's the reusable insight?

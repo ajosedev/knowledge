@@ -24,7 +24,10 @@ When you're truly stuck, that's usually the time to call in some extra help. Whe
 
 If you can't articulate these well, you might be asking for help too early.
 
+Once you've found the problem, ideally pair it with a proposal. That's what makes someone the best problem-solver.
+
 [[20240223105141-mentoring-answer]]
+[[20230130041841-getting-stuck-on-problems]]
 
 [[career]]
 [[communication]]

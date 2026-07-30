@@ -1,4 +1,4 @@
-#todo 
+# Code review nitpicks
 
 Where possible, reduce nitpicks by increasing automation
 

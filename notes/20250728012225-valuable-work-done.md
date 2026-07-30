@@ -3,7 +3,7 @@
 https://www.seangoedecke.com/getting-things-done/ is an interesting article that proposes that getting work 'done' is 'finishing' things. Or more specifically:
 >It means **getting them to a point where the decision-makers at the company are happy**
 
-I understand this point to a degree, but it's a bit bleak and it's not truly sustainable. Ideally your reporting lines are solid and have good engineering practices. Things like [[20211011115919-tech-debt]] and tech health is valued. You get the time to consider maintenance, building for the future, writing quality code, etc etc.
+I understand this point to a degree, but it's a bit bleak and it's not truly sustainable. Ideally your reporting lines are solid and have good engineering practices. Things like [[20211011115919-technical-debt]] and tech health is valued. You get the time to consider maintenance, building for the future, writing quality code, etc etc.
 
 However sometimes you don't, and in those instances the concept of 'done' being misaligned between you and upper management is important.
 

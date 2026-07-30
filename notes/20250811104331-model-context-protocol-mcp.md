@@ -19,10 +19,11 @@ The data layer protocol is the most interesting. Here, MCP defines three **primi
 - **Tools**: Executable functions that AI applications can invoke to perform actions (e.g., file operations, API calls, database queries)
 - **Resources**: Data sources that provide contextual information to AI applications (e.g., file contents, database records, API responses)
 - **Prompts**: Reusable templates that help structure interactions with language models (e.g., system prompts, few-shot examples)
+	- In theory this means a MCP server can call a [[20260306121850-ai-agent-skills]] directly?
 
 Each primitive type has associated methods for discovery (`*/list`), retrieval (`*/get`), and in some cases, execution (`tools/call`).
 
-This is the key part, as AI agents can discover these primitives at **runtime**. Meaning in the same request, an MCP Client can discover and then use a given tool. This is sometimes known as 'dynamic self discovery'?
+This is the key part, as AI agents can discover these primitives at **runtime**. Meaning in the same request, an MCP Client can discover and then use a given tool. This is sometimes known as 'dynamic self discovery'(?)
 
 MCP is similar, to different than something like REST.
 - Both are abstractions around ways to interface with a service

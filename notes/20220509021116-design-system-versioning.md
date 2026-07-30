@@ -22,4 +22,8 @@ Design documentation should be kept up to date as the components change. Use a s
 [[20220509021714-design-system-versioning-docs]]
 [[20220509021750-design-system-version-tokens]]
 
+https://zeroheight.com/blog/handling-breaking-changes-in-a-design-system-without-causing-chaos/
+
+An interesting article on versioning with [[20210415103930-feature-flags]]: https://builders.fullscript.com/posts/feature-flagging-a-major-design-system-upgrade
+
 [[designsystem]]

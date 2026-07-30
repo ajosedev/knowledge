@@ -1,3 +1,7 @@
+#todo - dumping ground of things I should write about
+
+---
+
 Test in production
 https://increment.com/testing/i-test-in-production/
 Canaries, feature flags, multi-tenancy(?)
@@ -146,6 +150,10 @@ What's the difference between a bundler and whatever Vite is? rollup = bundler o
 What does Deno do?
 What does SWC or SWC-Node do?
 How do they shake things up?
+
+How does a TSConfig matter here - is it used for both transpiling and bundling? Does adding something like `type: module` matter for the generated output
+
+Note that I have lots of files about modules going around, so need to clean them all up
 
 [[buildtooling]]
 
@@ -412,15 +420,6 @@ To read: https://gustafnk.github.io/microservice-websites/
 ---
 
 OWASP 10
-
----
-
-How do NPM package locks work?
-When will it actually update the version in the package-lock
-	I think it's only if the package-lock version doesn't satisfy the new package.json version
-npm ci vs npm i
-npm shrinkwrap?
-	I think this was the old tech: https://www.reddit.com/r/javascript/comments/6dgnnq/npm_v500_released_save_by_default_lockfile_better/di3mjuk/
 
 ---
 
