@@ -1,6 +1,6 @@
 # Figma's Code Connect
 
-Code Connect is a bridge between your codebase and Figma, connecting components in your repositories directly to components in your design files. With the introduction of [[20250811031606-figma-mcp]], the value of this has massively increased. There's more reasons to have an automatic connection between Figma and Code, regardless of direction. While agents can kind of figure out what's needed from looking at Figma and code separately, Code Connect makes this link a lot stronger.
+Code Connect is a bridge between your codebase and Figma, connecting components in your repositories directly to components in your design files. With the introduction of [[20250811031606-figma-mcp]], the value of this has massively increased. There's more reasons to have an automatic connection between Figma and Code, regardless of direction. While agents can interpret the translation from Figma to Code, Code Connect lets a maintainer dictate exactly how that translation should work.
 
 There's two different setup methods, UI and CLI. The latter is a lot stronger, but requires more setup and maintenance. The CLI uses Template files, typescript files that define how code snippets appear and how Figma properties map to code examples.
 ```ts
@@ -23,9 +23,9 @@ export default {
 }
 ```
 
-I still need to do some more experiments of it, as it does tie you to Figma more. You could in theory solve this with different [[20260306121823-ai-instructions]]. You definitely need something to help with the translation though, as a browser and Figma are different tools, and thus require different solutions. For example a Grid component doesn't work as well in Figma, and sometimes it makes sense to make convenience properties to make the API better than code.
+It starts to get a bit tricky as you want a direct 1:1 mapping for two environments that operate differently. Figma sometimes needs different components or workarounds, and things like [[20200314214239-layout-components]] don't often exist in Figma. So there's a bit of creative interpretation and holes that still need to be plugged by things like [[20260306121823-ai-instructions]].
 
-This is the most concrete explanation I've found of why Code Connect helps with AI: https://developers.figma.com/docs/figma-mcp-server/server-returning-web-code/#about-the-get_design_context-tool
+This is the most concrete official explanation I've found of why Code Connect helps with AI: https://developers.figma.com/docs/figma-mcp-server/server-returning-web-code/#about-the-get_design_context-tool
 >When you use the `get_design_context` tool, the MCP server encodes a Figma design into a format that preserves visual fidelity and is structured in a way that large language models (LLMs) can readily interpret.
 >If you have Code Connect set up, the `get_design_context` tool will use it to include information about your codebase which you provided.
 
@@ -50,7 +50,7 @@ Once you add Code Connect, you get embedded snippets that follow your system, bu
 
 I don't see the conversational context changing much about the response, but it influences how the agent attempts to translate that Tailwind code.
 
-Slots are a bit unexpected with Code Connect. They represent an unknown black box that can contain anything, but they're also like their own component which can have styling, auto layout, etc. In the Dev Mode UI it doesn't work great - they appear as a clickable element, which takes you to the slot element. That in itself has no code preview - it does not iterate over its children to show you its UI. However, when using the Figma MCP, because it traverses everything it will return the code snippets for all components inside the slot. It does do the iteration. With the small caveat that it renders Tailwind styling for said slot, which needs to functionally be ignored most of the time.
+Slots are powerful with Code Connect, but also a bit unexpected. As they're an unknown black box, you can't rely on the parent component to render its children. Each child has to render itself, and then it's composed through something like the [[20250811031606-figma-mcp]] which can recursively loop through everything. This doesn't look great in the Dev Mode UI, but that's something that may change in the future.
 	Effectively you need to treat it as a void, and then ensure everything that could be inside the slot is hooked up to Code Connect.
 	https://github.com/figma/code-connect/issues/387
 

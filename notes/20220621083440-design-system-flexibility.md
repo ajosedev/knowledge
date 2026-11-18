@@ -11,7 +11,6 @@ Designers and engineers aligned towards a singular goal enables you to create a 
 There's a scale between 'configuration' and 'customisation': https://engineering.atspotify.com/2021/04/customization-vs-configuration-in-evolving-design-systems/
 
 [[20210908155508-flexibility-components]]
-[[20210908155508-flexibility-components]]
 [[20221202114400-design-system-consistency]]
 [[20231219094041-design-system-complexity]]
 

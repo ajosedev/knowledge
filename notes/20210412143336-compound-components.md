@@ -10,7 +10,7 @@ Two main methods of sharing state between related components:
 - React.cloneElement
 - Context
 
-The former is easier to create, but the latter allows for more flexibility as the child compound component doesn't have to be a direct descendent of its parent.
+The former is easier to create, but is sometimes overly brittle, if the consumer adds additional wrapping components or similar. The latter is more resilient and allows for more flexibility as the child compound component doesn't have to be a direct descendent of its parent.
 
 With React.cloneElement, the parent component will re-render its children extending new props:
 ```javascript

@@ -39,17 +39,23 @@ tl;dr - object props are more consistent, type safe and thus restrictive too. Co
 - Potentially better for more complicated components when an array/object data structure becomes too bloated
 
 ### Hooks
-- Is that an alternative?
-    - Allows you to store state at the call site, so it's already 'lifted up'
+- Is this a newer third alternative?
+- Allows you to store state at the call site, so it's already 'lifted up'
+- Lets the props to the component be a lot more detailed, as a hook can do the finessing required
+- However may require two config places which can get out of sync, leading to more footguns.
+	- Don't pass props and the hook return at the same time? Mixing is weird
 - Creates 'headless' UI components
+- [[20260730114009-semantic-hooks]]
 
 [[20210922153924-headless-ui-components]]
 [[20210908155508-flexibility-components]]
 [[20241121114816-props-vs-subcomponents]]
+[[20241121120807-component-slots]]
 
 https://twitter.com/brad_frost/status/1090733766950223878
 https://twitter.com/housecor/status/1405512541846052871
 
+[[componentapi]]
 [[components]]
 [[designpatterns]]
 [[react]]

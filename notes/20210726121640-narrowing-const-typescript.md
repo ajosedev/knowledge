@@ -10,6 +10,8 @@ function f1(x: unknown) {
 }
 ```
 
+Similarly in Typescript 4.6, Typescript couldn't narrow properly based on destructured properties of a discriminated union: https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-6.html#control-flow-analysis-for-destructured-discriminated-unions
+
 [[20210705102809-ts-narrowing]]
 
 [[ts]]

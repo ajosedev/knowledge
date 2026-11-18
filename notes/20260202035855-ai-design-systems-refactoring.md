@@ -6,4 +6,6 @@ It takes out a lot of the work of repetitive changes, and usually gets it correc
 
 It's also useful for auditing the current system. e.g. where are you using certain props, where do you have outliers, etc. As design systems are often massive amounts of documentation [[20231219094041-design-system-complexity]], these audits are often necessary.
 
+https://bun.com/blog/bun-in-rust
+
 [[designsystem]]

@@ -6,6 +6,9 @@
 A decent model with a great harness beats a great model with a bad harness. A model itself cannot execute code, maintain state, setup environments, learn, etc. That's where the harness comes in. It includes things like [[20260306121823-ai-instructions]], [[20250811104331-model-context-protocol-mcp]] servers, orchestration logic (subagents, handoffs), bundled infrastructure, observability, memory, etc. It's the structure around the model which makes it smart, lets it handle errors, lets it realistically work.
 
 Claude Code, Cursor, Codex, they're all harnesses. They wrap a model and give it purpose and behaviour. Taking something less intelligent and giving it more business value.
+	Technically, those are not harnesses. They're harnesses AND an interface put together. Each application has a harness under the hood, such as the Claude Agent SDK.
+	Humans see interfaces, LLMs see harnesses.
+	https://x.com/theo/status/2113424203345265053
 
 Issues with AI should not be immediately blamed on the model. Instead think of it as a configuration problem, something that can be improved with harness engineering. This goes into the 'whack a mole' behaviour I sometimes used to describe AI engineering, but it's about codifying it. Every mistake should become a rule. Every fix becomes codified.
 

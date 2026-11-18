@@ -17,7 +17,7 @@ Often, you'll find that each caller is actually quite unique, despite them tryin
 
 Just because existing code is already there, doesn't mean it's correct, nor the best it could be. [[20221202011240-existing-code]]
 
-Keywords: 'Premature abstraction'
+Keywords: 'Premature abstraction', WET, AHA, 
 
 [[20211115112656-rule-of-three]]
 [[20200307105301-dry]]

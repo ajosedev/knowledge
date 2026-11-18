@@ -8,5 +8,8 @@ A render prop doesn't need to use a prop named `render`. In fact, you can use `c
 
 Render props can often be rewritten using the [[20221205104644-react-hooks-pattern]].
 
+[[componentapi]]
+[[components]]
 [[designpatterns]]
 [[react]]
+[[reactapi]]

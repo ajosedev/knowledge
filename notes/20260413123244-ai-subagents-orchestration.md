@@ -6,7 +6,9 @@ Copilot has the `/fleet` slash command which breaks down a complex request into 
 
 Claude has something similar with 'Agent Teams'. All of these tools are ways of co-ordinating multiple agents to finish a task more efficiently, with one agent acting as the main coordinator.
 
-I'm still working how you should do this best with OpenCode. #todo
+#todo
+I'm still working how you should do this best with OpenCode. Especially how you do this not with agents + sub-agents, but something closer to parallel agents all at the same level, communicating with each other.
+	The simplest way I can think of is just writing instructions to disk with some sort of polling or pubsub thing, but that feels like something that should be figured out already, and does not need to be re-written.
 
 I honestly see this is the responsibility of harnesses (and similar, like skills), rather than the responsibility of the engineer. As we take the human more and more out of the [[20260604045417-ai-software-development-loops]], it makes sense that. AI can figure out how to best orchestrate itself to achieve a goal.
 [[20260413105415-models-and-harnesses]]
@@ -14,5 +16,7 @@ I honestly see this is the responsibility of harnesses (and similar, like skills
 This also feels like something that's often changing as the tools evolve, standards change, etc.
 
 https://addyosmani.com/blog/code-agent-orchestra/
+
+[[20260625121144-loop-engineering-ai]]
 
 [[ai]]

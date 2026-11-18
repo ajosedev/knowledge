@@ -7,6 +7,8 @@ Usually to position a popover or a menu, you'd have to use absolute positioning 
 
 There's quite a lot of functionality in the spec, allowing for multiple fallbacks, overflow behaviour, custom positioning, etc. Work has begun on anchor container queries, which lets you use [[20211115081243-container-queries]] to be aware of its anchor positioning.
 
+TODO - difference in anchors when ancestor or not ancestor of target. anchor-name, anchor-scope, how it changes with positioned ancestors
+
 ```css
 .anchor {
   anchor-name: --my-anchor;
@@ -25,5 +27,8 @@ There's quite a lot of functionality in the spec, allowing for multiple fallback
 ```
 
 https://css-tricks.com/css-anchor-positioning-guide/
+https://www.joshwcomeau.com/css/anchor-positioning/
+
+[[20261013042135-css-containing-block]]
 
 [[css]]
